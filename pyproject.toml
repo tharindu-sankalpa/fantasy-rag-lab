@@ -31,6 +31,8 @@ dependencies = [
     "ipykernel",
     "structlog>=25.5.0",
     "pydantic-settings>=2.12.0",
+    "langchain-voyageai>=0.3.0",
+    "pypandoc>=1.16.2",
 ]
 
 [build-system]
