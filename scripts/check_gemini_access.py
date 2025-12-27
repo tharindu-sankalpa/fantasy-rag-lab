@@ -1,80 +1,101 @@
+# Dependencies:
+# pip install google-genai python-dotenv structlog
+
 import os
+import structlog
+import logging
+import sys
+from typing import List, Optional
 from google import genai
 from dotenv import load_dotenv
 
-# Get the path to the project root (assuming script is in scripts/ subdir)
+# Configure structlog (Scenario A: Standalone Script)
+structlog.configure(
+    processors=[
+        structlog.contextvars.merge_contextvars,
+        structlog.processors.add_log_level,
+        structlog.processors.StackInfoRenderer(),
+        structlog.dev.set_exc_info,
+        structlog.processors.TimeStamper(fmt="%H:%M:%S", utc=False),
+        structlog.dev.ConsoleRenderer(colors=True),
+    ],
+    context_class=dict,
+    logger_factory=structlog.PrintLoggerFactory(),
+    cache_logger_on_first_use=True,
+)
+logger = structlog.get_logger()
+
+# Get the path to the project root
 script_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.dirname(script_dir)
 load_dotenv(os.path.join(project_root, ".env"))
 
-def check_gemini_access():
+def check_gemini_access() -> None:
     """
-    Checks if the GEMINI_API_KEY has access to Gemini models,
-    specifically looking for 'Gemini 3' or the latest available versions.
+    Checks if the GEMINI_API_KEY has access to Gemini models.
+
+    Specifically looks for 'Gemini 3' or the latest available versions and tests
+    generation capabilities.
+
+    Raises:
+        Exception: If there is an error during API checks or client configuration.
     """
-    api_key = os.getenv("GEMINI_API_KEY")
-    print(api_key)
+    log = logger.bind(task="check_gemini_access")
+    
+    api_key: Optional[str] = os.getenv("GEMINI_API_KEY")
+    
     if not api_key:
-        print("❌ Error: GEMINI_API_KEY not found in .env or environment variables.")
-        print("   Please ensure you have a .env file with GEMINI_API_KEY set.")
+        log.error("api_key_missing", hint="Ensure GEMINI_API_KEY is set in .env")
         return
 
-    # Mask key for privacy in output
+    # Mask key for privacy
     masked_key = f"{api_key[:8]}...{api_key[-4:]}" if len(api_key) > 12 else "***"
-    print(f"🔑 Found GEMINI_API_KEY: {masked_key}")
+    log.info("api_key_found", key_preview=masked_key)
     
     # Configure the client
     try:
         client = genai.Client(api_key=api_key)
     except Exception as e:
-        print(f"❌ Error configuring Gemini client: {e}")
+        log.error("client_config_failed", error=str(e))
         return
 
-    print("\n-------- Checking Available Models --------")
+    log.info("checking_available_models")
+    
     try:
         # List all models
-        # Note: genai.list_models() returns a generator
         all_models = list(client.models.list())
         
-        # Filter for 'generateContent' capable models (usually what we care about for chat/text)
-        # and specifically look for 'gemini' models
+        # Filter for 'generateContent' capable models and 'gemini' in name
         chat_models = [
             m for m in all_models 
             if m.supported_actions and 'generateContent' in m.supported_actions and 'gemini' in m.name
         ]
-        
-        # Sort for easier reading
         chat_models.sort(key=lambda x: x.name)
 
         if not chat_models:
-            print("⚠️  No 'gemini' models found that support content generation.")
+            log.warning("no_gemini_models_found")
             return
         
         gemini_3_models = []
-        latest_model = None
-
-        print(f"Found {len(chat_models)} accessible Gemini models:")
-        for model in chat_models:
-            print(f" • {model.name}")
-            
-            # Check for Gemini 3 specific string
-            if "gemini-3" in model.name.lower():
-                gemini_3_models.append(model)
+        model_names = [m.name for m in chat_models]
         
-        print("-------------------------------------------")
+        log.info("models_found", count=len(chat_models), models=model_names)
+        
+        for model in chat_models:
+             if "gemini-3" in model.name.lower():
+                gemini_3_models.append(model)
 
-        # Determine which model to test
-        target_model_name = ""
+        ifgemini_3_models_found = bool(gemini_3_models)
         
         if gemini_3_models:
-            print(f"✅ Success! Found {len(gemini_3_models)} model(s) explicitly matching 'gemini-3':")
-            for m in gemini_3_models:
-                print(f"   - {m.name}")
+            g3_names = [m.name for m in gemini_3_models]
+            log.info("gemini_3_models_found", count=len(gemini_3_models), models=g3_names)
             
-            print("\n-------- Testing ALL Found Gemini 3 Models --------")
+            log.info("testing_gemini_3_models")
             for model in gemini_3_models:
                 target_name = model.name
-                print(f"\n🧪 Testing generation with model: {target_name}...")
+                log.info("testing_model", model=target_name)
+                
                 try:
                     response = client.models.generate_content(
                         model=target_name,
@@ -82,32 +103,22 @@ def check_gemini_access():
                     )
                     
                     if response and response.text:
-                        print("✅ Generation Successful!")
-                        print(f"🤖 Response: {response.text.strip()}")
+                        log.info("generation_successful", model=target_name, response=response.text.strip())
                     else:
-                        print("⚠️  Generation completed but returned no text content.")
+                        log.warning("generation_empty", model=target_name)
                         
                 except Exception as e:
-                    error_str = str(e)
-                    if "429" in error_str or "quota" in error_str.lower():
-                        print("⚠️  Quota Exceeded (429): You have access to this model, but your current plan/quota prevents generation.")
-                    elif "404" in error_str:
-                        print(f"❌ Model not found (404).")
-                    elif "403" in error_str:
-                        print(f"❌ Permission Denied (403).")
-                    else:
-                        print(f"❌ Generation failed with unexpected error: {error_str}")
+                     log.exception("generation_failed", model=target_name)
 
         else:
-            print("ℹ️  'Gemini 3' was NOT explicitly found in the model list.")
-            # ... (keep existing fallback logic if desired, or just exit)
-            return
+            log.info("gemini_3_not_explicitly_found")
+            # Could add fallback test here if desired
 
     except Exception as e:
-        print(f"❌ Error during API model list check: {e}")
+        log.exception("api_check_failed")
 
 if __name__ == "__main__":
-    # Suppress warnings about future deprecation to keep output clean
+    # Suppress warnings
     import warnings
     warnings.simplefilter("ignore")
     check_gemini_access()

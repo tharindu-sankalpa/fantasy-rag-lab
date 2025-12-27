@@ -1,44 +1,64 @@
+# Dependencies:
+# pip install pymilvus structlog
+
 import structlog
+from typing import List, Dict, Any, Optional
 from pymilvus import (
     connections,
     FieldSchema, CollectionSchema, DataType,
     Collection, utility
 )
 from src.core.config import settings
-
-logger = structlog.get_logger()
+from src.utils.logger import logger
 
 class MilvusService:
+    """
+    Service for interacting with Milvus/Zilliz Cloud vector database.
+    
+    Attributes:
+        uri (str): Milvus URI.
+        token (str): Authentication token.
+        collection_name (str): Name of the collection.
+        log (structlog.stdlib.BoundLogger): Logger instance.
+    """
+
     def __init__(self):
         """
-        Initialize the Milvus Service.
-        Establishes a connection to the Milvus/Zilliz server.
+        Initialize the Milvus Service and establish connection.
+        
+        Raises:
+            Exception: If connection to Milvus fails.
         """
+        self.log = logger.bind(component="milvus_service")
         self.uri = settings.MILVUS_URI
         self.token = settings.MILVUS_TOKEN
         self.collection_name = "fantasy_rag_collection"
         
-        # Connect to Milvus
         try:
             connections.connect(
                 alias="default", 
                 uri=self.uri, 
                 token=self.token
             )
-            logger.info("Connected to Milvus", uri=self.uri)
+            self.log.info("milvus_connected", uri=self.uri)
         except Exception as e:
-            logger.error("Failed to connect to Milvus", error=str(e))
+            self.log.error("milvus_connect_failed", error=str(e))
             raise e
 
-    def create_collection_if_not_exists(self):
+    def create_collection_if_not_exists(self) -> Collection:
         """
         Creates the collection with the specific schema if it doesn't exist.
+        
+        Returns:
+            Collection: The loaded Milvus Collection object.
         """
+        log = self.log.bind(collection=self.collection_name)
+        
         if utility.has_collection(self.collection_name):
-            logger.info("Collection already exists", collection=self.collection_name)
+            log.info("collection_exists")
             return Collection(self.collection_name)
 
-        logger.info("Creating new collection", collection=self.collection_name)
+        log.info("creating_new_collection")
         
         # Define Schema
         fields = [
@@ -69,22 +89,25 @@ class MilvusService:
             "params": {}
         }
         collection.create_index(field_name="embedding", index_params=index_params)
-        logger.info("Collection created and indexed", collection=self.collection_name)
+        log.info("collection_created_and_indexed")
         
         return collection
 
-    def insert_documents(self, documents: list):
+    def insert_documents(self, documents: List[Dict[str, Any]]) -> Any:
         """
         Insert processed documents into Milvus.
-        Expects a list of dictionaries with keys matching the schema.
+
+        Args:
+            documents: List of dictionaries matching the schema.
+                       Expected keys: embedding, text, universe, book_title, chapter.
+
+        Returns:
+            MutationResult: Result of the insertion operation.
+
+        Raises:
+            Exception: If insertion fails.
         """
         collection = Collection(self.collection_name)
-        
-        # Prepare data for insertion (column-based format for some Milvus versions, but PyMilvus supports row-based too now)
-        # But safest is usually column-based or list of dicts if using high level client.
-        # Here using ORM-style Collection object, which accepts list of rows?
-        # Actually Collection.insert expects list of lists (columns) or list of dicts.
-        # Let's verify data format.
         
         # Flatten documents to match schema
         data_rows = []
@@ -101,15 +124,23 @@ class MilvusService:
         try:
             res = collection.insert(data_rows)
             # collection.flush() # Heavy operation, use sparsely in loop
-            logger.info("Inserted documents", count=len(data_rows), ids=res.primary_keys)
+            self.log.info("documents_inserted", count=len(data_rows), ids_count=len(res.primary_keys))
             return res
         except Exception as e:
-            logger.error("Failed to insert documents", error=str(e))
+            self.log.error("insert_failed", error=str(e))
             raise e
 
-    def search(self, query_embedding: list, top_k: int = 20, universe: str = None):
+    def search(self, query_embedding: List[float], top_k: int = 20, universe: Optional[str] = None) -> Any:
         """
-        Search for relevant documents.
+        Search for relevant documents using vector similarity.
+
+        Args:
+            query_embedding: The query vector.
+            top_k: Number of results to return.
+            universe: Optional filter by universe.
+
+        Returns:
+            SearchResult: Milvus search results.
         """
         collection = Collection(self.collection_name)
         collection.load() # Ensure collection is loaded

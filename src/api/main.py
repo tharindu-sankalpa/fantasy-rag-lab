@@ -1,15 +1,19 @@
+# Dependencies:
+# pip install fastapi uvicorn structlog
+
+import structlog
 from fastapi import FastAPI
 from src.core.config import settings
-from src.core.logging import configure_logging
-import structlog
-
+from src.utils.logger import logger
 from src.api.endpoints import rag_naive, rag_advanced, rag_hybrid, rag_graph, rag_agentic
 
-logger = structlog.get_logger()
-
 def create_app() -> FastAPI:
-    configure_logging()
-    
+    """
+    Creates and configures the FastAPI application.
+
+    Returns:
+        FastAPI: The configured application instance.
+    """
     app = FastAPI(
         title=settings.PROJECT_NAME,
         version=settings.VERSION,
@@ -18,11 +22,20 @@ def create_app() -> FastAPI:
     )
     
     @app.on_event("startup")
-    async def startup_event():
-        logger.info("Application setup", status="started")
+    async def startup_event() -> None:
+        """
+        Actions to perform on application startup.
+        """
+        logger.info("application_setup", status="started", version=settings.VERSION)
 
     @app.get("/health")
-    async def health_check():
+    async def health_check() -> dict:
+        """
+        Health check endpoint.
+
+        Returns:
+            dict: Status of the application.
+        """
         return {"status": "ok", "app": settings.PROJECT_NAME}
 
     app.include_router(rag_naive.router, prefix="/rag/naive", tags=["Naive RAG"])

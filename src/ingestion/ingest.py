@@ -12,7 +12,6 @@ import json
 
 import pandas as pd
 from src.utils.logger import logger
-from src.utils.logger import logger
 from src.ingestion.processor import FantasyBookProcessor
 from src.ingestion.analyzer import ChunkAnalyzer
 from src.services.milvus_service import MilvusService
@@ -167,7 +166,7 @@ async def ingest(directory: str, universe: str, embedding_model: str = "voyage",
 
     if dry_run:
         analyzer = ChunkAnalyzer(docs)
-        analyzer.print_summary()
+        analyzer.log_summary()
         if output:
             analyzer.save_data(output)
         return
