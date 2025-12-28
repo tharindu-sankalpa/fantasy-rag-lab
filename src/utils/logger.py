@@ -17,3 +17,6 @@ structlog.configure(
 )
 
 logger = structlog.get_logger()
+
+def get_logger(name=None):
+    return structlog.get_logger(name)

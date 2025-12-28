@@ -15,6 +15,7 @@ class Settings(BaseSettings):
     # OpenAI / LLM
     OPENAI_API_KEY: str = ""
     GOOGLE_API_KEY: str = ""
+    GEMINI_API_KEY: str = ""
     VOYAGE_API_KEY: str = ""
     
     # Milvus / Zilliz

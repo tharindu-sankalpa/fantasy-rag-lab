@@ -19,16 +19,15 @@ class LLMService:
         google_key (str): Google API key.
         voyage_key (str): Voyage AI API key.
         embedding_models (Dict[str, Any]): Dictionary of initialized embedding models.
-        chat_model (Optional[ChatOpenAI]): Initialized chat model.
+        chat_model (Optional[ChatOpenAI]): Initialized OpenAI chat model.
+        google_chat_model (Optional[ChatGoogleGenerativeAI]): Initialized Google chat model.
     """
 
     def __init__(self):
-        """
-        Initialize the LLMService and set up embedding/chat models based on available API keys.
-        """
+        """Initializes the LLMService with models based on available API keys."""
         self.log = logger.bind(component="llm_service")
         self.openai_key = settings.OPENAI_API_KEY
-        self.google_key = settings.GOOGLE_API_KEY
+        self.google_key = settings.GOOGLE_API_KEY or settings.GEMINI_API_KEY
         self.voyage_key = settings.VOYAGE_API_KEY
         
         self.embedding_models: Dict[str, Any] = {}
@@ -71,10 +70,69 @@ class LLMService:
 
         # Chat Model (Generic - defaults to GPT-4o)
         # TODO: Allow switching chat models too if needed
+        # 4. Google Chat Model (Gemini)
+        if self.google_key:
+            try:
+                self.google_chat_model = ChatGoogleGenerativeAI(
+                    google_api_key=self.google_key,
+                    model="gemini-3-pro-preview", 
+                    temperature=0
+                )
+                self.log.info("google_chat_model_initialized", model="gemini-3-pro-preview")
+            except Exception as e:
+                self.log.error("google_chat_model_init_failed", error=str(e))
+                self.google_chat_model = None
+        else:
+            self.google_chat_model = None
+
+        # Chat Model (Generic - defaults to GPT-4o)
+        # TODO: Allow switching chat models too if needed
         if self.openai_key:
             self.chat_model = ChatOpenAI(api_key=self.openai_key, model="gpt-4o")
         else:
             self.chat_model = None
+            
+    async def generate_structured_response(self, prompt: str, schema: Any, context: str = "", provider: str = "google") -> Any:
+        """Generates a response from the LLM that strictly adheres to a Pydantic schema.
+
+        Args:
+            prompt (str): The specific task or question for the LLM.
+            schema (Any): The Pydantic model class to enforce the output structure.
+            context (str, optional): Background information or source text. Defaults to "".
+            provider (str, optional): The LLM provider to use ('google' or 'openai'). Defaults to "google".
+
+        Returns:
+            Any: An instance of the provided Pydantic schema populated with the LLM's response.
+
+        Raises:
+            ValueError: If the requested provider is not initialized.
+            Exception: If generation fails.
+        """
+        log = self.log.bind(task="generate_structured_response", provider=provider)
+        
+        model = None
+        if provider == "google" and self.google_chat_model:
+            model = self.google_chat_model
+        elif provider == "openai" and self.chat_model:
+            model = self.chat_model
+            
+        if not model:
+            log.error("requested_model_provider_not_available", provider=provider)
+            raise ValueError(f"Provider {provider} not initialized")
+
+        log.info("generating_structured", prompt_len=len(prompt), context_len=len(context))
+        
+        structured_llm = model.with_structured_output(schema)
+        
+        full_prompt = f"Context:\n{context}\n\nTask: {prompt}"
+        
+        try:
+            response = await structured_llm.ainvoke(full_prompt)
+            log.info("structured_response_generated")
+            return response
+        except Exception as e:
+            log.exception("structured_generation_failed")
+            raise e
 
     async def generate_response(self, prompt: str, context: str = "") -> str:
         """
