@@ -675,6 +675,7 @@ name = "fantasy-rag-lab"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "beautifulsoup4" },
     { name = "ebooklib" },
     { name = "fastapi" },
     { name = "google-genai" },
@@ -707,6 +708,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "beautifulsoup4" },
     { name = "ebooklib" },
     { name = "fastapi" },
     { name = "google-genai" },
