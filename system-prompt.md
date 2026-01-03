@@ -1,10 +1,10 @@
-## **Global Code Generation Rules (Mandatory)**
+# **Global Code Generation Rules (Mandatory)**
 
 From this point onward, **all generated code, scripts, and Python programs must strictly follow the rules below**. These rules apply repository-wide and override any default assumptions.
 
 I am **no longer using Jupyter Notebooks**. All development is done in **production-grade Python scripts (`.py`)**.
 
-Your objective is to generate **debug-ready, production-quality code** that provides **full execution visibility via logs**, without relying on interactive cells or print statements.
+Your objective is to generate **debug-ready, production-quality code** that is **highly readable and transparent**. The code must provide full execution visibility via logs and be immediately understandable to a human reader through simplicity and extensive commentary.
 
 ---
 
@@ -12,7 +12,7 @@ Your objective is to generate **debug-ready, production-quality code** that prov
 
 ### **No `print()` statements**
 
-- Absolutely **no `print()`** usage.
+- Absolutely **no `print()**` usage.
 - **All output must be logged** using `structlog`.
 
 ### **Configuration Strategy**
@@ -58,7 +58,7 @@ Logs must be **structured, event-based, and machine-readable**.
 
 ### **Data Profiling Instead of Printing**
 
-When loading, transforming, or inspecting data (e.g., DataFrames, tensors, arrays, lists, JSON and dictionaries):
+When loading, transforming, or inspecting data (e.g., DataFrames, tensors, arrays, lists, JSON, and dictionaries):
 
 - **Do NOT print the data.**
 - **Log a profile instead**, including:
@@ -70,7 +70,20 @@ When loading, transforming, or inspecting data (e.g., DataFrames, tensors, array
 
 ---
 
-## **2. Debugging & Code Structure Requirements**
+## **2. Architecture, Simplicity & Anti-Over-Engineering**
+
+### **Radical Readability & Simplicity**
+
+- **Avoid Over-Engineering:** Do not use complex design patterns (e.g., Decorators, Factories, Metaclasses) unless strictly necessary for functionality.
+- **Explicit > Implicit:** Logic must be immediately visible. Do not hide behavior behind obscure abstractions.
+- **Linear Flow:** Prefer linear, procedural logic within functions over deeply nested structures or recursive complexity.
+- **Goal:** A developer should be able to read the code once and understand exactly what it does without jumping between multiple files or classes unnecessarily.
+
+### **Modular, Debug-Friendly Design**
+
+- Break logic into **small, single-purpose functions**.
+- **Type Hinting is Mandatory:** All functions must have Python type hints (e.g., `def process_data(df: pd.DataFrame) -> dict:`).
+- Code must be friendly to **Step-Through Debugging** (avoid one-liners that do too much).
 
 ### **Contextual Logging**
 
@@ -83,12 +96,6 @@ log = logger.bind(task="data_cleaning", file_id=file_path)
 
 All subsequent logs in that function **must use the bound `log` variable**.
 
-### **Modular, Debug-Friendly Design**
-
-- Break logic into **small, single-purpose functions**.
-- **Type Hinting is Mandatory:** All functions must have Python type hints (e.g., `def process_data(df: pd.DataFrame) -> dict:`).
-- Code must be friendly to **Step-Through Debugging** (avoid one-liners that do too much).
-
 ### **Exception Handling (Never Silent)**
 
 - **Never swallow exceptions.**
@@ -97,14 +104,23 @@ All subsequent logs in that function **must use the bound `log` variable**.
 
 ---
 
-## **3. Documentation & Output Standards**
+## **3. Documentation, Comments & Output Standards**
 
-### **Google-Style Docstrings Required**
+### **High-Resolution Docstrings**
 
-- Every module, function, and class must have a docstring following the **Google Python Style Guide**.
-- **Args:** List parameters and types.
-- **Returns:** Describe output.
-- **Raises:** List possible exceptions.
+- Every module, function, and class must have a **Google-Style Docstring**.
+- **Tone:** Professional, yet highly explanatory.
+- **Content:** Do not just describe _what_ the function does, but _how_ it fits into the broader workflow.
+- **Args/Returns/Raises:** Must be exhaustively detailed.
+
+### **Dense, Line-by-Line Commentary**
+
+- **Code must be self-narrating.**
+- **Algorithmic/Complex Logic:** You must provide **line-by-line comments** explaining the functionality.
+- _Example:_ If performing a tensor operation or complex DataFrame filter, explain why this specific operation is happening right above the line.
+
+- **Business Logic:** Comments should explain the "Why" behind the code, ensuring the intent is clear to future maintainers.
+- **Visual Scannability:** Use whitespace and comment blocks to visually separate logical steps within a function.
 
 ### **Output Requirements**
 
