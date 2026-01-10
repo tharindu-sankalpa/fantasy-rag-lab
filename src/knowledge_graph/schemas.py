@@ -38,7 +38,14 @@ class RelationshipType(BaseModel):
     properties: List[str] = Field(default_factory=list, description="Properties associated with this relationship (e.g., 'start_date').")
 
 class SchemaVersion(BaseModel):
-    """Metadata tracking the version and evolution of the ontology."""
+    """Metadata tracking the version and evolution of the ontology.
+    
+    Attributes:
+        version: Semantic version of the schema.
+        created_at: Timestamp of schema creation/update.
+        changelog: List of changes in this version.
+        evolution_suggestions: Pending or proposed schema changes.
+    """
     version: str = Field(default="1.0.0", description="Semantic version of the schema.")
     created_at: datetime = Field(default_factory=datetime.utcnow, description="Timestamp of schema creation/update.")
     changelog: List[str] = Field(default_factory=list, description="List of changes in this version.")
@@ -70,19 +77,41 @@ class Ontology(BaseModel):
 # These models often contain extra fields like 'confidence', 'evidence', 'provenance' specific to the extraction job.
 
 class SourceReference(BaseModel):
-    """Detailed provenance for an extraction."""
+    """Detailed provenance for an extraction.
+    
+    Attributes:
+        file_name: Name of the source file (e.g., 'chem_section_01.txt').
+        chunk_id: Specific chunk identifier if applicable.
+    """
     file_name: str = Field(..., description="Name of the source file (e.g., 'chem_section_01.txt').")
     chunk_id: Optional[str] = Field(None, description="Specific chunk identifier if applicable.")
     # In a real system, might include start_char, end_char indices
     
 class ExtractionConfidence(BaseModel):
-    """Confidence scoring and review flags for extracted items."""
+    """Confidence scoring and review flags for extracted items.
+    
+    Attributes:
+        score: Model's confidence score (0.0 to 1.0).
+        needs_review: Flag indicating if manual review is recommended.
+        review_reason: Reason for flagging for review (e.g., 'ambiguous_reference').
+    """
     score: float = Field(..., ge=0.0, le=1.0, description="Model's confidence score (0.0 to 1.0).")
     needs_review: bool = Field(default=False, description="Flag indicating if manual review is recommended.")
     review_reason: Optional[str] = Field(None, description="Reason for flagging for review (e.g., 'ambiguous_reference').")
 
 class EntityInstance(BaseModel):
-    """An instance of an entity extracted from text."""
+    """An instance of an entity extracted from text.
+    
+    Attributes:
+        id: Unique canonical ID for the entity (e.g., 'harry_potter').
+        type: Entity type from the ontology.
+        name: Canonical display name.
+        aliases: Aliases found in the text.
+        attributes: Extracted attributes.
+        description: Brief description/summary from the text.
+        mentions: List of places this entity was mentioned.
+        confidence: Confidence metadata.
+    """
     id: str = Field(..., description="Unique canonical ID for the entity (e.g., 'harry_potter').")
     type: str = Field(..., description="Entity type from the ontology.")
     name: str = Field(..., description="Canonical display name.")
@@ -95,7 +124,18 @@ class EntityInstance(BaseModel):
     confidence: Optional[ExtractionConfidence] = Field(None, description="Confidence metadata.")
     
 class RelationshipInstance(BaseModel):
-    """An instance of a relationship extracted between two entities."""
+    """An instance of a relationship extracted between two entities.
+    
+    Attributes:
+        source_id: Canonical ID of the source entity.
+        target_id: Canonical ID of the target entity.
+        type: Relationship type from the ontology.
+        description: Contextual description of the relationship.
+        evidence: Quote or text snippet proving the relationship.
+        properties: Extracted properties (e.g., duration).
+        source_ref: Where this relationship was found.
+        confidence: Confidence metadata.
+    """
     source_id: str = Field(..., description="Canonical ID of the source entity.")
     target_id: str = Field(..., description="Canonical ID of the target entity.")
     type: str = Field(..., description="Relationship type from the ontology.")
@@ -107,6 +147,20 @@ class RelationshipInstance(BaseModel):
     source_ref: Optional[SourceReference] = Field(None, description="Where this relationship was found.")
     confidence: Optional[ExtractionConfidence] = Field(None, description="Confidence metadata.")
 
+class SchemaUpdateProposal(BaseModel):
+    """A proposal to update the ontology based on extraction findings.
+    
+    Attributes:
+        proposal_type: Type of update proposed.
+        name: Name of the new type or alias.
+        description: Reason for the proposal and definition.
+        confidence: Confidence that this is a necessary schema change (0.0 to 1.0).
+    """
+    proposal_type: Literal["new_entity_type", "new_relationship_type", "new_renaming_rule"] = Field(..., description="Type of update proposed.")
+    name: str = Field(..., description="Name of the new type or alias.")
+    description: str = Field(..., description="Reason for the proposal and definition.")
+    confidence: float = Field(..., description="Confidence that this is a necessary schema change (0.0 to 1.0).")
+
 class ExtractionResult(BaseModel):
     """Validates the output of the extraction phase.
     
@@ -114,3 +168,4 @@ class ExtractionResult(BaseModel):
     """
     entities: List[EntityInstance]
     relationships: List[RelationshipInstance]
+    schema_proposals: List[SchemaUpdateProposal] = Field(default_factory=list, description="Proposed updates to the ontology.")

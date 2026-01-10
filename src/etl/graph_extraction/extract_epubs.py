@@ -236,8 +236,8 @@ def get_series_definitions(data_root: Path) -> Dict[str, Tuple[Path, List[List[s
     """Defines the file groups and directory structures for specific book series.
 
     This configuration function maps series names to their directory paths and
-    logical groupings of books. Groupings may overlap to provide context continuity
-    for machine learning models.
+    logical groupings of books. Groupings are strictly 2 books per section with
+    a 1-book overlap (sliding window).
 
     Args:
         data_root: The root path where series subdirectories are located.
@@ -249,98 +249,127 @@ def get_series_definitions(data_root: Path) -> Dict[str, Tuple[Path, List[List[s
             1. The Path to the series directory.
             2. A List of Lists of strings (the filename groups).
     """
+    
+
+    # Pre-calculated token estimates to avoid expensive re-computation
+    # Keys are partial filenames to ensure robust matching
+    BOOK_TOKEN_ESTIMATES = {
+        'Harry Potter 1': 109449, 'Harry Potter 2': 122812, 'Harry Potter 3': 155791, 
+        'Harry Potter 4': 274449, 'Harry Potter 5': 371076, 'Harry Potter 6': 244530, 'Harry Potter 7': 284043,
+        'Fire _ Blood': 361274, 'Rise of the Dragon': 120038, 'Knight of the Seven': 139967,
+        'Game Of Thrones': 401146, 'Clash of Kings': 440695, 'Storm of Swords': 573252,
+        'Feast For Crows': 427198, 'Dance With Dragons': 578037,
+        'New Spring': 170245, 'Eye of the World': 425298, 'Great Hunt': 363711, 'Dragon Reborn': 340677,
+        'Shadow Rising': 539117, 'Fires of Heaven': 484025, 'Lord of Chaos': 555478, 'Crown of Swords': 409717,
+        'Path of Daggers': 318535, 'Winter_s Heart': 336712, 'Crossroads of Twilight': 378022,
+        'Knife of Dreams': 449528, 'Gathering Storm': 427662, 'Towers of Midnight': 468399,
+        'Memory of Light': 497967, 'Wheel of Time Companion': 551940
+    }
+
+    def get_token_estimate(filename: str) -> int:
+        for key, tokens in BOOK_TOKEN_ESTIMATES.items():
+            if key in filename:
+                return tokens
+        return 0 # Should not happen with correct keys
+
+    def create_safe_sliding_windows(books: List[str]) -> List[List[str]]:
+        if not books:
+            return []
+        if len(books) == 1:
+            return [books]
+
+        groups = []
+        pairs = []
+        # Generate candidate pairs
+        for i in range(len(books) - 1):
+            pairs.append((books[i], books[i+1]))
+
+        for i, (b1, b2) in enumerate(pairs):
+            s1 = get_token_estimate(b1)
+            s2 = get_token_estimate(b2)
+            total_tokens = s1 + s2
+             
+            if total_tokens < 1_000_000:
+                groups.append([b1, b2])
+            else:
+                # Pair exceeds limit. 
+                # Strategy: Break the link. Valid strategy is "one book only".
+                
+                # If this is the very first pair and it failed, we must ensure b1 is covered.
+                if i == 0:
+                    groups.append([b1])
+                
+                # Now decide for b2.
+                # If the NEXT pair is safe, b2 will be covered there (as the first element of next pair).
+                # If the next pair is NOT safe (or doesn't exist), we must cover b2 here as a singleton.
+                next_is_safe = False
+                if i + 1 < len(pairs):
+                    nb1, nb2 = pairs[i+1]
+                    ns1 = get_token_estimate(nb1)
+                    ns2 = get_token_estimate(nb2)
+                    if ns1 + ns2 < 1_000_000:
+                        next_is_safe = True
+                
+                if not next_is_safe:
+                    groups.append([b2])
+                    
+        return groups
+
     # Harry Potter
     hp_dir = data_root / "harry_potter"
-    hp_groups = [
-        # Section 1: Books 1-4
-        [
-            "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
-            "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
-            "Harry Potter 3 - Harry Potter and the Prisoner of Azkaban - J. K. Rowling _ Mary Grandpre.epub",
-            "Harry Potter 4 - Harry Potter and the Goblet of Fire - J. K. Rowling _ Mary Grandpre.epub",
-        ],
-        # Section 2: Books 4-7 (Overlap Book 4)
-        [
-            "Harry Potter 4 - Harry Potter and the Goblet of Fire - J. K. Rowling _ Mary Grandpre.epub",
-            "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
-            "Harry Potter 6 - Harry Potter and the Half-Blood Prince - J. K. Rowling _ Mary Grandpre.epub",
-            "Harry Potter 7 - Harry Potter and the Deathly Hallows - J. K. Rowling _ Mary Grandpre.epub",
-        ]
+    hp_books = [
+        "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+        "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+        "Harry Potter 3 - Harry Potter and the Prisoner of Azkaban - J. K. Rowling _ Mary Grandpre.epub",
+        "Harry Potter 4 - Harry Potter and the Goblet of Fire - J. K. Rowling _ Mary Grandpre.epub",
+        "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+        "Harry Potter 6 - Harry Potter and the Half-Blood Prince - J. K. Rowling _ Mary Grandpre.epub",
+        "Harry Potter 7 - Harry Potter and the Deathly Hallows - J. K. Rowling _ Mary Grandpre.epub",
     ]
+    hp_groups = create_safe_sliding_windows(hp_books)
 
     # ASOIAF (A Song of Ice and Fire) - Timeline Order
     asoiaf_dir = data_root / "song_of_ice_and_fire"
-    asoiaf_groups = [
-        # Section 1: Pre-Game of Thrones (History & Prequels)
-        [
-            "Fire _ Blood by George R.r. Martin.epub",
-            "The Rise of the Dragon - An Illustrated History of the Targaryen Dynasty, Volume One (US Edition).epub",
-            "A Knight of the Seven Kingdoms.epub",
-        ],
-        # Section 2: Main Series Start (overlap with Knight)
-        [
-            "A Knight of the Seven Kingdoms.epub",
-            "A Game Of Thrones - George RR Martin.epub",
-            "A Clash of Kings - George RR Martin.epub",
-        ],
-         # Section 3: Mid Series
-        [
-            "A Clash of Kings - George RR Martin.epub",
-            "A Storm of Swords - George RR Martin.epub",
-            "A Feast For Crows - George RR Martin.epub",
-        ],
-        # Section 4: Current End
-        [
-            "A Feast For Crows - George RR Martin.epub",
-            "A Dance With Dragons - George RR Martin.epub",
-        ]
+    asoiaf_books = [
+        "Fire _ Blood by George R.r. Martin.epub",
+        "The Rise of the Dragon - An Illustrated History of the Targaryen Dynasty, Volume One (US Edition).epub",
+        "A Knight of the Seven Kingdoms.epub",
+        "A Game Of Thrones - George RR Martin.epub",
+        "A Clash of Kings - George RR Martin.epub",
+        "A Storm of Swords - George RR Martin.epub",
+        "A Feast For Crows - George RR Martin.epub",
+        "A Dance With Dragons - George RR Martin.epub",
     ]
+    asoiaf_groups = create_safe_sliding_windows(asoiaf_books)
 
     # Wheel of Time
     wot_dir = data_root / "wheel_of_time"
-    wot_groups = [
-        # Section 1: Books 0-3 (Including New Spring)
-        [
-            "00. New Spring.epub",
-            "01. The Eye of the World.epub",
-            "02. The Great Hunt.epub",
-            "03. The Dragon Reborn.epub",
-        ],
-        # Section 2: Books 3-6
-        [
-            "03. The Dragon Reborn.epub",
-            "04. The Shadow Rising.epub",
-            "05. The Fires of Heaven.epub",
-            "06. Lord of Chaos.epub",
-        ],
-        # Section 3: Books 6-9
-        [
-            "06. Lord of Chaos.epub",
-            "07. A Crown of Swords.epub",
-            "08. The Path of Daggers.epub",
-            "09. Winter_s Heart.epub",
-        ],
-        # Section 4: Books 9-12
-        [
-            "09. Winter_s Heart.epub",
-            "10. Crossroads of Twilight.epub",
-            "11. Knife of Dreams.epub",
-            "12. The Gathering Storm.epub",
-        ],
-        # Section 5: Books 12-14 + Companion
-        [
-            "12. The Gathering Storm.epub",
-            "13. Towers of Midnight.epub",
-            "14. A Memory of Light.epub",
-            "The Wheel of Time Companion _ The People, Places and History of the Bestselling Series.epub"
-        ]
+    wot_books = [
+        "00. New Spring.epub",
+        "01. The Eye of the World.epub",
+        "02. The Great Hunt.epub",
+        "03. The Dragon Reborn.epub",
+        "04. The Shadow Rising.epub",
+        "05. The Fires of Heaven.epub",
+        "06. Lord of Chaos.epub",
+        "07. A Crown of Swords.epub",
+        "08. The Path of Daggers.epub",
+        "09. Winter_s Heart.epub",
+        "10. Crossroads of Twilight.epub",
+        "11. Knife of Dreams.epub",
+        "12. The Gathering Storm.epub",
+        "13. Towers of Midnight.epub",
+        "14. A Memory of Light.epub",
+        "The Wheel of Time Companion _ The People, Places and History of the Bestselling Series.epub"
     ]
+    wot_groups = create_safe_sliding_windows(wot_books)
 
     return {
         "harry_potter": (hp_dir, hp_groups),
         "asoiaf": (asoiaf_dir, asoiaf_groups),
         "wheel_of_time": (wot_dir, wot_groups)
     }
+
 
 
 if __name__ == "__main__":

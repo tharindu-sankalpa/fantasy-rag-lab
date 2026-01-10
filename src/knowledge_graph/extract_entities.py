@@ -10,9 +10,12 @@ from src.knowledge_graph.schemas import (
     ExtractionResult, 
     Ontology, 
     SourceReference, 
-    ExtractionConfidence
+    ExtractionConfidence,
+    EntityInstance,
+    RelationshipInstance
 )
 from src.utils.logger import get_logger
+
 
 logger = get_logger(__name__)
 
@@ -20,11 +23,13 @@ EXTRACTION_PROMPT_TEMPLATE = """
 You are an expert knowledge graph extractor for the "{series_name}" series.
 Your goal is to extract a comprehensive list of entities and relationships from the provided text chunk.
 
-STRICT ADHERENCE TO SCHEMA:
-You must use the provided Ontology Schema to categorize entities and relationships.
-- Only use Entity Types defined in the schema.
-- Only use Relationship Types defined in the schema.
-- Use the Canonical Renaming Rules to normalize entity names (e.g., if text says "{alias_example}", output "{canonical_example}").
+STRICT ADHERENCE & ADAPTIVE EVOLOUTION:
+1. You must primarily use the provided Ontology Schema to categorize entities and relationships.
+2. IF you encounter a significant entity or relationship that strongly clearly does NOT fit existing definitions:
+   - DO NOT force it into an incorrect category.
+   - DO NOT ignore it if it is important.
+   - PROPOSE a schema update in the `schema_proposals` field (e.g., "new_entity_type", "new_relationship_type").
+3. Use the Canonical Renaming Rules to normalize entity names.
 
 INPUT CONTEXT:
 This text is from: {book_names}
@@ -35,11 +40,36 @@ TASK:
 2. Extract detailed attributes for each entity.
 3. Identify all relationships between these entities.
 4. Extract evidence (quotes) for relationships.
-5. assign a CONFIDENCE score (0.0-1.0) to each extraction based on how explicitly it is supported by the text.
+5. Assign a CONFIDENCE score (0.0-1.0) to each extraction.
+6. Identify gaps in the schema and propose updates in `schema_proposals`.
 
 OUTPUT FORMAT:
 Return a JSON object strictly matching the `ExtractionResult` Pydantic model.
 """
+
+
+SERIES_CONFIG = {
+    "Harry Potter": {
+        "schema": "harry_potter_schema.json",
+        "prefix": "harry_potter"
+    },
+    "A Song of Ice and Fire": {
+        "schema": "a_song_of_ice_and_fire_schema.json",
+        "prefix": "asoiaf"
+    },
+    "asoiaf": {
+        "schema": "a_song_of_ice_and_fire_schema.json",
+        "prefix": "asoiaf"
+    },
+    "The Wheel of Time": {
+        "schema": "the_wheel_of_time_schema.json",
+        "prefix": "wheel_of_time"
+    },
+    "wheel_of_time": {
+        "schema": "the_wheel_of_time_schema.json",
+        "prefix": "wheel_of_time"
+    }
+}
 
 class EntityExtractor:
     """Extracts entities and relationships from text sections using LLMs.
@@ -49,14 +79,19 @@ class EntityExtractor:
         llm_service (LLMService): Service for LLM interactions.
     """
 
-    def __init__(self, output_dir: str = "data/extracted_graph"):
+
+    def __init__(self, output_dir: str = "data/extracted_graph", provider: str = "google", model_name: str = None):
         """Initializes the EntityExtractor.
 
         Args:
             output_dir (str): Path to the output directory. Defaults to "data/extracted_graph".
+            provider (str): The LLM provider to use. Defaults to "google".
+            model_name (str): Specific model name to use. Defaults to None (provider default).
         """
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
+        self.provider = provider
+        self.model_name = model_name
         self.llm_service = LLMService()
 
     def load_schema(self, series_name: str) -> Ontology:
@@ -71,7 +106,14 @@ class EntityExtractor:
         Raises:
             FileNotFoundError: If the schema file does not exist.
         """
-        schema_path = Path("data/schemas") / f"{series_name.lower().replace(' ', '_')}_schema.json"
+        # Look up schema filename from config or fall back to default convention
+        config = SERIES_CONFIG.get(series_name)
+        if config:
+            schema_filename = config["schema"]
+        else:
+            schema_filename = f"{series_name.lower().replace(' ', '_')}_schema.json"
+            
+        schema_path = Path("data/schemas") / schema_filename
         if not schema_path.exists():
             raise FileNotFoundError(f"Schema not found for {series_name} at {schema_path}")
         
@@ -101,26 +143,9 @@ class EntityExtractor:
             Path: The path where the extraction result should be saved.
         """
         return self.output_dir / f"{section_file.stem}_extracted.json"
-
+    
     async def extract_section(self, series_name: str, section_file: Path, schema: Ontology):
-        """Extracts entities and relationships from a single text section.
-
-        This method:
-        1. Checks for existing checkpoints to skip processing.
-        2. Loads text and metadata.
-        3. Constructs the LLM prompt with schema context.
-        4. Calls the LLM to generate structured output.
-        5. Post-processes the result to add source references.
-        6. Saves the result to disk.
-
-        Args:
-            series_name (str): The name of the series.
-            section_file (Path): The path to the text section file.
-            schema (Ontology): The ontology definition for the series.
-
-        Raises:
-            Exception: If extraction fails, it logs the error and re-raises/continues based on policy.
-        """
+        """Extracts entities and relationships from a single text section."""
         checkpoint_path = self.get_checkpoint_path(section_file)
         
         if checkpoint_path.exists():
@@ -129,10 +154,9 @@ class EntityExtractor:
 
         logger.info("processing_section_start", file=section_file.name)
         
-        # Load text and metadata
         text_content = self.load_text_section(section_file)
         
-        # Load metadata if exists
+        # Load metadata
         meta_path = section_file.with_suffix(".meta.json")
         book_names = "Unknown"
         section_id = "Unknown"
@@ -142,7 +166,7 @@ class EntityExtractor:
                 book_names = ", ".join(meta.get("books", []))
                 section_id = str(meta.get("section", "Unknown"))
 
-        # Pick an alias example from schema for the prompt
+        schema_context = f"ONTOLOGY:\n{schema.model_dump_json(indent=2)}"
         alias, canonical = next(iter(schema.canonical_renaming_rules.items())) if schema.canonical_renaming_rules else ("Alias", "Canonical")
 
         prompt = EXTRACTION_PROMPT_TEMPLATE.format(
@@ -153,40 +177,36 @@ class EntityExtractor:
             canonical_example=canonical
         )
         
-        # We pass the Schema definitions as context to the model 
-        schema_context = f"ONTOLOGY:\n{schema.model_dump_json(indent=2)}"
-
         try:
-            # Call LLM with strict schema enforcement
+            # Use LLMService with failover
             result: ExtractionResult = await self.llm_service.generate_structured_response(
                 prompt=prompt,
                 schema=ExtractionResult,
                 context=f"{schema_context}\n\nTEXT CONTENT:\n{text_content}",
-                provider="google"
+                provider=self.provider,
+                model_name=self.model_name
             )
             
-            # Post-processing: Add Source References and Defaults
+            # Attach source ref immediately
             source_ref = SourceReference(file_name=section_file.name, chunk_id=section_id)
-            
             for entity in result.entities:
-                # Add source ref if not present (though prompt doesn't key it, we add it here)
                 entity.mentions.append(source_ref)
-                
-                # Default confidence if model missed it
-                if not entity.confidence:
-                    entity.confidence = ExtractionConfidence(score=1.0, needs_review=False)
+                if not entity.confidence: 
+                    entity.confidence = ExtractionConfidence(score=1.0)
             
             for rel in result.relationships:
                 rel.source_ref = source_ref
-                 # Default confidence if model missed it
-                if not rel.confidence:
-                     rel.confidence = ExtractionConfidence(score=1.0, needs_review=False)
-
-            # Save result (Checkpoint)
+                if not rel.confidence: 
+                    rel.confidence = ExtractionConfidence(score=1.0)
+            
+            # Persist Results
             with open(checkpoint_path, "w") as f:
                 f.write(result.model_dump_json(indent=2))
                 
-            logger.info("extraction_complete", file=section_file.name, entities=len(result.entities), relationships=len(result.relationships))
+            logger.info("extraction_complete", 
+                        file=section_file.name, 
+                        entities=len(result.entities), 
+                        relationships=len(result.relationships))
             
         except Exception as e:
             logger.error("extraction_failed", file=section_file.name, error=str(e))
@@ -204,8 +224,12 @@ class EntityExtractor:
         # Find all section files for this series
         # Naming convention: {series_name}_section_{idx}.txt
         # We need to map friendly name to file prefix
-        # Harry Potter -> harry_potter
-        file_prefix = series_name.lower().replace(" ", "_")
+        
+        config = SERIES_CONFIG.get(series_name)
+        if config:
+            file_prefix = config["prefix"]
+        else:
+            file_prefix = series_name.lower().replace(" ", "_")
         
         files = sorted([f for f in input_dir.glob(f"{file_prefix}_section_*.txt")])
         
@@ -221,9 +245,12 @@ async def main():
     parser.add_argument("--series", type=str, help="Specific series to process")
     parser.add_argument("--input-dir", type=str, default="data/processed_books", help="Directory containing text sections")
     parser.add_argument("--output-dir", type=str, default="data/extracted_graph", help="Directory to save extracted graphs")
+    parser.add_argument("--provider", type=str, default="google", help="LLM Provider (google, openai, openrouter, anthropic)")
+    parser.add_argument("--model", type=str, help="Specific model name (e.g. gpt-4o, claude-3-opus)")
+
     args = parser.parse_args()
 
-    extractor = EntityExtractor(output_dir=args.output_dir)
+    extractor = EntityExtractor(output_dir=args.output_dir, provider=args.provider, model_name=args.model)
     input_dir = Path(args.input_dir)
 
     series_list = ["Harry Potter", "A Song of Ice and Fire", "The Wheel of Time"]
