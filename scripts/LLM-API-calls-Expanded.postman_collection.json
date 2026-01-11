@@ -1,0 +1,1953 @@
+{
+	"info": {
+		"_postman_id": "ea6eff8d-41ae-4dae-b4f4-58994dadb88f",
+		"name": "LLM-API-calls-Expanded",
+		"description": "Comprehensive LLM API collection including chat, embeddings, and structured outputs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13629262"
+	},
+	"item": [
+		{
+			"name": "OpenAI",
+			"item": [
+				{
+					"name": "Chat Completion API",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{OPENAI_API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"model\": \"gpt-5.2-chat-latest\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Can you explain what is GraphRAG and why it is better than normal RAG?\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.openai.com/v1/chat/completions",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openai",
+								"com"
+							],
+							"path": [
+								"v1",
+								"chat",
+								"completions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Chat Completion API",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{OPENAI_API_KEY}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"model\": \"gpt-5.2-chat-latest\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Can you explain what is GraphRAG and why it is better than normal RAG?\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.openai.com/v1/chat/completions",
+									"protocol": "https",
+									"host": [
+										"api",
+										"openai",
+										"com"
+									],
+									"path": [
+										"v1",
+										"chat",
+										"completions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 17:51:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "X-Request-ID"
+								},
+								{
+									"key": "openai-organization",
+									"value": "acme-nnyesy"
+								},
+								{
+									"key": "openai-processing-ms",
+									"value": "11763"
+								},
+								{
+									"key": "openai-project",
+									"value": "proj_wnBi71CrnoOgt0E1fvaLzcfb"
+								},
+								{
+									"key": "openai-version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "x-envoy-upstream-service-time",
+									"value": "11962"
+								},
+								{
+									"key": "x-ratelimit-limit-requests",
+									"value": "500"
+								},
+								{
+									"key": "x-ratelimit-limit-tokens",
+									"value": "500000"
+								},
+								{
+									"key": "x-ratelimit-remaining-requests",
+									"value": "499"
+								},
+								{
+									"key": "x-ratelimit-remaining-tokens",
+									"value": "499980"
+								},
+								{
+									"key": "x-ratelimit-reset-requests",
+									"value": "120ms"
+								},
+								{
+									"key": "x-ratelimit-reset-tokens",
+									"value": "2ms"
+								},
+								{
+									"key": "x-request-id",
+									"value": "req_597f23dc320943aab42c05d156ed57f2"
+								},
+								{
+									"key": "x-openai-proxy-wasm",
+									"value": "v0.1"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "__cf_bm=BTGTzhMxke3TsSUuWlVxfxTrIWfwyB6Q6clQO5JFkPk-1768067512-1.0.1.1-CkQfXHFjmI_sJOvuFRjlJqIM45d5p3kmShKCmfoga.ukW10TY9xnyLPD.qq9FXn.BGrn7CcUZnBuaoEt5vfh4WIoig8lvTgIoezi8tHHVCc; path=/; expires=Sat, 10-Jan-26 18:21:52 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "9bbe06141f045132-CMB"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"chatcmpl-CwXPhoBB4pyCi3pSZtXKaixbY4ZKQ\",\n    \"object\": \"chat.completion\",\n    \"created\": 1768067501,\n    \"model\": \"gpt-5.2-chat-latest\",\n    \"choices\": [\n        {\n            \"index\": 0,\n            \"message\": {\n                \"role\": \"assistant\",\n                \"content\": \"**GraphRAG** (Graph‑based Retrieval‑Augmented Generation) is an evolution of **RAG (Retrieval‑Augmented Generation)** that adds **structured knowledge graphs** to the retrieval process. It’s designed to help LLMs reason more accurately over complex, interconnected information.\\n\\nLet’s break this down clearly.\\n\\n---\\n\\n## 1. What is “normal” RAG?\\n\\n**Standard RAG** works like this:\\n\\n1. Your documents are split into chunks\\n2. Each chunk is embedded into vectors\\n3. A vector database retrieves the most semantically similar chunks\\n4. The LLM generates an answer using those chunks as context\\n\\n### Strengths of normal RAG\\n✅ Simple to implement  \\n✅ Works well for FAQs and isolated facts  \\n✅ Scales well with large document collections  \\n\\n### Weaknesses of normal RAG\\n❌ Retrieval is based only on semantic similarity  \\n❌ Poor at multi-hop reasoning (“How is A related to B through C?”)  \\n❌ Loses relationships between entities  \\n❌ Often retrieves *relevant but incomplete* context  \\n\\nExample problem:\\n> “Why did Company A acquire Company B, and how did it affect Product C?”\\n\\nVector RAG may retrieve:\\n- A chunk about Company A  \\n- A chunk about Product C  \\n\\nBut miss:\\n- The *relationship* (acquisition → strategy → product impact)\\n\\n---\\n\\n## 2. What is GraphRAG?\\n\\n**GraphRAG** enhances RAG by introducing a **knowledge graph** that explicitly models relationships between entities.\\n\\nInstead of just storing text chunks, GraphRAG:\\n\\n1. Extracts entities (people, companies, concepts, events)\\n2. Extracts relationships between them\\n3. Stores these in a **graph database**\\n4. Uses graph traversal + vector search to retrieve context\\n\\nSo retrieval is no longer just:\\n> “Which text is similar?”\\n\\nIt becomes:\\n> “Which entities are connected, and how?”\\n\\n---\\n\\n## 3. How GraphRAG works (simplified)\\n\\n### Ingestion phase\\nFrom documents, GraphRAG:\\n- Identifies entities (e.g., *Company A*, *Company B*, *Product C*)\\n- Identifies relationships (e.g., *acquired*, *influenced*, *depends on*)\\n- Builds:\\n  - A **knowledge graph**\\n  - Vector embeddings for text and entities\\n\\n### Query phase\\nWhen a question is asked:\\n1. Identify key entities in the query\\n2. Traverse the graph to find related entities\\n3. Retrieve supporting documents for those relationships\\n4. Feed *structured + unstructured* context to the LLM\\n\\n---\\n\\n## 4. Why GraphRAG is better than normal RAG\\n\\n### 1. Better multi‑hop reasoning\\nGraphRAG explicitly supports reasoning chains.\\n\\n✅ “A → acquired → B → influenced → C”  \\n❌ Vector RAG often retrieves only fragments\\n\\n---\\n\\n### 2. Preserves relationships\\nVector embeddings blur structure. Graphs preserve it.\\n\\nExample:\\n- “CEO of Company X”\\n- “Company X CEO”\\n\\nVectors may treat these as similar text.\\nGraphs know:\\n> **CEO → leads → Company X**\\n\\n---\\n\\n### 3. More precise retrieval\\nGraph filters reduce noise before text retrieval.\\n\\nInstead of:\\n> Top‑5 similar chunks from 1M documents\\n\\nGraphRAG:\\n> Only chunks connected to *these entities* through *these relationships*\\n\\n---\\n\\n### 4. Better explainability\\nGraphRAG can show *why* an answer was produced:\\n\\n> “This answer is based on:\\n> Company A → acquired → Company B (2021)  \\n> Company B → owns → Product C”\\n\\nThis is hard with pure vector search.\\n\\n---\\n\\n### 5. Improved factual accuracy\\nBy grounding generation in explicit relationships, GraphRAG:\\n- Reduces hallucinations\\n- Improves consistency across answers\\n\\n---\\n\\n## 5. When GraphRAG is worth it (and when it isn’t)\\n\\n### ✅ Good use cases\\n- Enterprise knowledge bases\\n- Legal, medical, financial analysis\\n- Research papers and patents\\n- Product dependency analysis\\n- Historical or causal reasoning\\n\\n### ❌ Overkill for\\n- Simple FAQs\\n- Chatbots with short, flat documents\\n- Small datasets (< a few thousand docs)\\n\\n---\\n\\n## 6. GraphRAG vs Normal RAG (summary table)\\n\\n| Aspect | Normal RAG | GraphRAG |\\n|------|-----------|----------|\\n| Retrieval | Vector similarity | Graph traversal + vectors |\\n| Structure | Unstructured text | Structured relationships |\\n| Multi-hop reasoning | Weak | Strong |\\n| Explainability | Low | High |\\n| Complexity | Low | Higher |\\n| Cost | Lower | Higher |\\n\\n---\\n\\n## 7. Mental model\\n\\nThink of it this way:\\n\\n- **Normal RAG** = “Find similar paragraphs”\\n- **GraphRAG** = “Understand the world described by the documents”\\n\\n---\\n\\nIf you want, I can:\\n- Show a concrete GraphRAG architecture\\n- Compare GraphRAG vs hybrid search\\n- Explain how to build one step‑by‑step\\n- Give code examples (Neo4j, LlamaIndex, LangChain)\\n\\nJust tell me.\",\n                \"refusal\": null,\n                \"annotations\": []\n            },\n            \"finish_reason\": \"stop\"\n        }\n    ],\n    \"usage\": {\n        \"prompt_tokens\": 24,\n        \"completion_tokens\": 1061,\n        \"total_tokens\": 1085,\n        \"prompt_tokens_details\": {\n            \"cached_tokens\": 0,\n            \"audio_tokens\": 0\n        },\n        \"completion_tokens_details\": {\n            \"reasoning_tokens\": 0,\n            \"audio_tokens\": 0,\n            \"accepted_prediction_tokens\": 0,\n            \"rejected_prediction_tokens\": 0\n        }\n    },\n    \"service_tier\": \"default\",\n    \"system_fingerprint\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Responses API",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model\": \"gpt-5.2-pro\",\n    \"input\": \"Can you explain what is GraphRAG and why it is better than normal RAG?\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.openai.com/v1/responses",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openai",
+								"com"
+							],
+							"path": [
+								"v1",
+								"responses"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Responses API",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer XXXXXX",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"model\": \"gpt-5.2-pro\",\n    \"input\": \"Can you explain what is GraphRAG and why it is better than normal RAG?\"\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.openai.com/v1/responses",
+									"protocol": "https",
+									"host": [
+										"api",
+										"openai",
+										"com"
+									],
+									"path": [
+										"v1",
+										"responses"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 17:52:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "x-ratelimit-limit-requests",
+									"value": "500"
+								},
+								{
+									"key": "x-ratelimit-limit-tokens",
+									"value": "500000"
+								},
+								{
+									"key": "x-ratelimit-remaining-requests",
+									"value": "499"
+								},
+								{
+									"key": "x-ratelimit-remaining-tokens",
+									"value": "499206"
+								},
+								{
+									"key": "x-ratelimit-reset-requests",
+									"value": "120ms"
+								},
+								{
+									"key": "x-ratelimit-reset-tokens",
+									"value": "95ms"
+								},
+								{
+									"key": "openai-version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "openai-organization",
+									"value": "acme-nnyesy"
+								},
+								{
+									"key": "openai-project",
+									"value": "proj_wnBi71CrnoOgt0E1fvaLzcfb"
+								},
+								{
+									"key": "x-request-id",
+									"value": "req_dd115d47f5554d56ae178a7150738638"
+								},
+								{
+									"key": "openai-processing-ms",
+									"value": "34219"
+								},
+								{
+									"key": "x-envoy-upstream-service-time",
+									"value": "34222"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "9bbe068fcb1b5132-CMB"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"resp_05be8bad306c925100696291c1f20081a0b816f83faa053025\",\n    \"object\": \"response\",\n    \"created_at\": 1768067521,\n    \"status\": \"completed\",\n    \"background\": false,\n    \"billing\": {\n        \"payer\": \"developer\"\n    },\n    \"completed_at\": 1768067556,\n    \"error\": null,\n    \"frequency_penalty\": 0,\n    \"incomplete_details\": null,\n    \"instructions\": null,\n    \"max_output_tokens\": null,\n    \"max_tool_calls\": null,\n    \"model\": \"gpt-5.2-pro-2025-12-11\",\n    \"output\": [\n        {\n            \"id\": \"rs_05be8bad306c925100696291e3f51881a089a1299c1fbe22e9\",\n            \"type\": \"reasoning\",\n            \"summary\": []\n        },\n        {\n            \"id\": \"msg_05be8bad306c925100696291e3f61c81a081340b1b59a1b446\",\n            \"type\": \"message\",\n            \"status\": \"completed\",\n            \"content\": [\n                {\n                    \"type\": \"output_text\",\n                    \"annotations\": [],\n                    \"logprobs\": [],\n                    \"text\": \"**RAG (Retrieval-Augmented Generation)** is the pattern where you:\\n1) embed documents into vectors,  \\n2) retrieve the top‑k most similar chunks for a question, and  \\n3) give those chunks to an LLM to answer.\\n\\n**GraphRAG** is a variant where, in addition to (or instead of) plain “top‑k similar chunks,” you build and use a **graph of entities and relationships** (a knowledge graph / document graph) to retrieve and organize context. The model then answers using **connected, structured context** (often including summaries of subgraphs/communities), not just isolated text snippets.\\n\\n---\\n\\n## What GraphRAG is (conceptually)\\nA typical GraphRAG pipeline looks like:\\n\\n### 1) Index/build phase\\n- Extract **entities** (people, products, services, concepts), **relations** (“A depends on B”, “C is part of D”), and **claims/events** from documents.\\n- Create a **graph**: nodes = entities/concepts/docs; edges = relationships and references.\\n- Often also compute **community clusters** (groups of closely related nodes) and generate **summaries** for those clusters.\\n\\n### 2) Query/answer phase\\n- Map the user query to relevant entities/topics in the graph.\\n- Retrieve:\\n  - **local neighborhood** (1–n hops around key entities), and/or\\n  - **community summaries** (for broad questions).\\n- Provide this structured context (plus citations) to the LLM to generate an answer.\\n\\n---\\n\\n## Why GraphRAG can be better than “normal” vector RAG\\n\\n### 1) Handles multi-hop questions better\\nNormal RAG usually retrieves chunks that are individually similar to the query. If the answer requires **connecting facts across documents** (A relates to B relates to C), top‑k similarity often misses one of the links.\\n\\nGraphRAG can follow relationships:\\n- “Which services are impacted if we deprecate library X?”  \\n  → X → used by → service A → owned by → team T → on-call rotation, etc.\\n\\n### 2) Reduces “lost-in-the-middle” and context fragmentation\\nVector RAG often returns:\\n- many redundant chunks,\\n- partial chunks missing key context,\\n- scattered pieces that the LLM must stitch together.\\n\\nGraphRAG retrieves **coherent neighborhoods** or **summaries of a connected subgraph**, which tends to produce more complete, less contradictory context.\\n\\n### 3) Improves disambiguation (entity-centric retrieval)\\nWith vector RAG, “Mercury” might retrieve astronomy, the element, or the company depending on wording. GraphRAG can anchor the query to a specific **entity node** (and its connections), improving precision.\\n\\n### 4) Better global questions via community summaries\\nQuestions like:\\n- “What are the main themes in our incident reports last quarter?”  \\nGraphRAG can answer using **graph communities + summaries**, rather than trying to cram lots of chunks into context.\\n\\n### 5) More explainable grounding\\nBecause evidence is structured as nodes/edges (“this claim comes from doc D; linked to entity E”), it’s often easier to:\\n- provide citations,\\n- show reasoning paths (“A → B → C”),\\n- debug why a piece of context was retrieved.\\n\\n---\\n\\n## When normal RAG can be just as good (or better)\\nGraphRAG isn’t universally better. Normal vector RAG is often preferable when:\\n- questions are **simple fact lookup** (“What is the PTO policy?”),\\n- you need **fast, low-complexity** deployment,\\n- your data changes constantly and you want minimal indexing overhead.\\n\\n---\\n\\n## Trade-offs / costs of GraphRAG\\n- **More complex indexing** (entity/relation extraction, graph construction, clustering/summaries).\\n- **Higher build cost** (often uses LLM calls to extract/normalize entities and relations).\\n- **Potential extraction errors** (bad edges can mislead retrieval).\\n- **Maintenance** (schema/ontology decisions, updating graphs as documents change).\\n\\n---\\n\\n## Practical rule of thumb\\n- Use **normal RAG** for: straightforward Q&A over documents where similarity search reliably finds the answer.\\n- Use **GraphRAG** for: **multi-document, multi-step reasoning**, dependency/impact analysis, “how things connect,” and broad synthesis questions.\\n\\nIf you tell me what kind of content you’re querying (policies, code docs, incidents, research, CRM, etc.) and the kinds of questions users ask, I can recommend whether GraphRAG is worth the added complexity and what design (entity graph vs. claim graph vs. doc graph) fits best.\"\n                }\n            ],\n            \"role\": \"assistant\"\n        }\n    ],\n    \"parallel_tool_calls\": true,\n    \"presence_penalty\": 0,\n    \"previous_response_id\": null,\n    \"prompt_cache_key\": null,\n    \"prompt_cache_retention\": null,\n    \"reasoning\": {\n        \"effort\": \"medium\",\n        \"summary\": null\n    },\n    \"safety_identifier\": null,\n    \"service_tier\": \"default\",\n    \"store\": true,\n    \"temperature\": 1,\n    \"text\": {\n        \"format\": {\n            \"type\": \"text\"\n        },\n        \"verbosity\": \"medium\"\n    },\n    \"tool_choice\": \"auto\",\n    \"tools\": [],\n    \"top_logprobs\": 0,\n    \"top_p\": 0.98,\n    \"truncation\": \"disabled\",\n    \"usage\": {\n        \"input_tokens\": 24,\n        \"input_tokens_details\": {\n            \"cached_tokens\": 0\n        },\n        \"output_tokens\": 1075,\n        \"output_tokens_details\": {\n            \"reasoning_tokens\": 112\n        },\n        \"total_tokens\": 1099\n    },\n    \"user\": null,\n    \"metadata\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "Structured Output - Chat Completions API",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{OPENAI_API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"model\": \"gpt-5.2-chat-latest\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Extract the following information: name, age, and email from this text: John Doe is 30 years old and his email is john@example.com\"\n    }\n  ],\n  \"response_format\": {\n    \"type\": \"json_schema\",\n    \"json_schema\": {\n      \"name\": \"person_info\",\n      \"strict\": true,\n      \"schema\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"The person's full name\"\n          },\n          \"age\": {\n            \"type\": \"number\",\n            \"description\": \"The person's age\"\n          },\n          \"email\": {\n            \"type\": \"string\",\n            \"description\": \"The person's email address\"\n          }\n        },\n        \"required\": [\"name\", \"age\", \"email\"],\n        \"additionalProperties\": false\n      }\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.openai.com/v1/chat/completions",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openai",
+								"com"
+							],
+							"path": [
+								"v1",
+								"chat",
+								"completions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Structured Output - Chat Completions API",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{OPENAI_API_KEY}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"model\": \"gpt-5.2-chat-latest\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Extract the following information: name, age, and email from this text: John Doe is 30 years old and his email is john@example.com\"\n    }\n  ],\n  \"response_format\": {\n    \"type\": \"json_schema\",\n    \"json_schema\": {\n      \"name\": \"person_info\",\n      \"strict\": true,\n      \"schema\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"The person's full name\"\n          },\n          \"age\": {\n            \"type\": \"number\",\n            \"description\": \"The person's age\"\n          },\n          \"email\": {\n            \"type\": \"string\",\n            \"description\": \"The person's email address\"\n          }\n        },\n        \"required\": [\"name\", \"age\", \"email\"],\n        \"additionalProperties\": false\n      }\n    }\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.openai.com/v1/chat/completions",
+									"protocol": "https",
+									"host": [
+										"api",
+										"openai",
+										"com"
+									],
+									"path": [
+										"v1",
+										"chat",
+										"completions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 16:36:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "X-Request-ID"
+								},
+								{
+									"key": "openai-organization",
+									"value": "acme-nnyesy"
+								},
+								{
+									"key": "openai-processing-ms",
+									"value": "1371"
+								},
+								{
+									"key": "openai-project",
+									"value": "proj_wnBi71CrnoOgt0E1fvaLzcfb"
+								},
+								{
+									"key": "openai-version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "x-envoy-upstream-service-time",
+									"value": "1640"
+								},
+								{
+									"key": "x-ratelimit-limit-requests",
+									"value": "500"
+								},
+								{
+									"key": "x-ratelimit-limit-tokens",
+									"value": "500000"
+								},
+								{
+									"key": "x-ratelimit-remaining-requests",
+									"value": "499"
+								},
+								{
+									"key": "x-ratelimit-remaining-tokens",
+									"value": "499965"
+								},
+								{
+									"key": "x-ratelimit-reset-requests",
+									"value": "120ms"
+								},
+								{
+									"key": "x-ratelimit-reset-tokens",
+									"value": "4ms"
+								},
+								{
+									"key": "x-request-id",
+									"value": "req_c31c6d29109696d2a1286c2d2ddcae0c"
+								},
+								{
+									"key": "x-openai-proxy-wasm",
+									"value": "v0.1"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "9bbd97edeaad5132-CMB"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"chatcmpl-CwWEuKm1VelQ4bfZ9L3Lz70Ye15Xm\",\n    \"object\": \"chat.completion\",\n    \"created\": 1768062988,\n    \"model\": \"gpt-5.2-chat-latest\",\n    \"choices\": [\n        {\n            \"index\": 0,\n            \"message\": {\n                \"role\": \"assistant\",\n                \"content\": \"{\\\"name\\\":\\\"John Doe\\\",\\\"age\\\":30,\\\"email\\\":\\\"john@example.com\\\"}\",\n                \"refusal\": null,\n                \"annotations\": []\n            },\n            \"finish_reason\": \"stop\"\n        }\n    ],\n    \"usage\": {\n        \"prompt_tokens\": 95,\n        \"completion_tokens\": 29,\n        \"total_tokens\": 124,\n        \"prompt_tokens_details\": {\n            \"cached_tokens\": 0,\n            \"audio_tokens\": 0\n        },\n        \"completion_tokens_details\": {\n            \"reasoning_tokens\": 0,\n            \"audio_tokens\": 0,\n            \"accepted_prediction_tokens\": 0,\n            \"rejected_prediction_tokens\": 0\n        }\n    },\n    \"service_tier\": \"default\",\n    \"system_fingerprint\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Embeddings",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{OPENAI_API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"model\": \"text-embedding-3-small\",\n  \"input\": \"GraphRAG is an advanced retrieval augmented generation technique.\",\n  \"encoding_format\": \"float\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.openai.com/v1/embeddings",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openai",
+								"com"
+							],
+							"path": [
+								"v1",
+								"embeddings"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Embeddings",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{OPENAI_API_KEY}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"model\": \"text-embedding-3-small\",\n  \"input\": \"GraphRAG is an advanced retrieval augmented generation technique.\",\n  \"encoding_format\": \"float\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.openai.com/v1/embeddings",
+									"protocol": "https",
+									"host": [
+										"api",
+										"openai",
+										"com"
+									],
+									"path": [
+										"v1",
+										"embeddings"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 17:57:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "X-Request-ID"
+								},
+								{
+									"key": "openai-model",
+									"value": "text-embedding-3-small"
+								},
+								{
+									"key": "openai-organization",
+									"value": "acme-nnyesy"
+								},
+								{
+									"key": "openai-processing-ms",
+									"value": "81"
+								},
+								{
+									"key": "openai-project",
+									"value": "proj_wnBi71CrnoOgt0E1fvaLzcfb"
+								},
+								{
+									"key": "openai-version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "via",
+									"value": "envoy-router-747dbb5476-p9cxm"
+								},
+								{
+									"key": "x-envoy-upstream-service-time",
+									"value": "296"
+								},
+								{
+									"key": "x-ratelimit-limit-requests",
+									"value": "3000"
+								},
+								{
+									"key": "x-ratelimit-limit-tokens",
+									"value": "1000000"
+								},
+								{
+									"key": "x-ratelimit-remaining-requests",
+									"value": "2999"
+								},
+								{
+									"key": "x-ratelimit-remaining-tokens",
+									"value": "999984"
+								},
+								{
+									"key": "x-ratelimit-reset-requests",
+									"value": "20ms"
+								},
+								{
+									"key": "x-ratelimit-reset-tokens",
+									"value": "0s"
+								},
+								{
+									"key": "x-request-id",
+									"value": "req_42b82d7c342d49c0b44a0b35b1b14c51"
+								},
+								{
+									"key": "x-openai-proxy-wasm",
+									"value": "v0.1"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "9bbe0e07d93d5132-CMB"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"object\": \"list\",\n    \"data\": [\n        {\n            \"object\": \"embedding\",\n            \"index\": 0,\n            \"embedding\": [\n                -0.010316555,\n                0.03735738,\n                0.02692914,\n                -0.020088665,\n                -0.028897522,\n                -0.028213475,\n                0.011419408,\n                0.00020035006,\n                -0.035710078,\n                -0.0042438875,\n                -0.007531504,\n                -0.012222117,\n                -0.023760185,\n                -0.01435104,\n                0.0020346928,\n                -0.002685585,\n                -0.0197257,\n                -0.047017805,\n                -0.019167295,\n                0.039255958,\n                0.021331118,\n                -0.027389826,\n                0.03417446,\n                -0.00058545405,\n                0.0040763654,\n                -0.0036017203,\n                0.0305169,\n                0.041573346,\n                0.004041465,\n                -0.011461288,\n                0.0008895237,\n                -0.045147143,\n                0.0074966038,\n                -0.028115755,\n                0.061480526,\n                0.04098702,\n                0.0126688415,\n                0.016863868,\n                -0.0012232587,\n                0.05634319,\n                0.03233172,\n                0.00533976,\n                0.011775391,\n                0.04651524,\n                0.025784409,\n                0.04927935,\n                0.020102624,\n                -0.014274259,\n                0.03671521,\n                0.054360848,\n                -0.031633712,\n                -0.027599229,\n                -0.0592469,\n                0.008892619,\n                -0.060531236,\n                0.018022561,\n                -0.038865075,\n                -0.0073919026,\n                0.017282672,\n                0.024793237,\n                -0.0015277646,\n                -0.019041652,\n                0.019460458,\n                0.025547085,\n                -0.019195214,\n                0.002860087,\n                -0.056734074,\n                0.032527164,\n                -0.0069940384,\n                -0.019292936,\n                -0.012410578,\n                -0.040679894,\n                0.009506866,\n                -0.054332927,\n                -0.03841835,\n                -0.0076362053,\n                0.01696159,\n                -0.003922804,\n                0.0037483019,\n                -0.003402788,\n                0.039618924,\n                -0.031857077,\n                -0.004027505,\n                -0.042773917,\n                0.003130565,\n                -0.041657105,\n                -0.034481585,\n                -0.047911257,\n                -0.04048445,\n                -0.0057864846,\n                -0.0151188485,\n                0.044477057,\n                -0.00058065524,\n                0.043444004,\n                0.003399298,\n                0.046291877,\n                -0.021917446,\n                0.020828553,\n                0.016445063,\n                0.020200346,\n                -0.004896525,\n                -0.050814968,\n                0.041433744,\n                -0.026342815,\n                0.056036066,\n                -0.037859943,\n                -0.055114694,\n                0.04280184,\n                0.0035563498,\n                0.009220683,\n                -0.05667823,\n                -0.046263956,\n                -0.04193631,\n                -0.004090326,\n                0.043444004,\n                -0.033783577,\n                -0.019739661,\n                0.002682095,\n                0.033448532,\n                0.03213628,\n                -0.02670578,\n                0.009890771,\n                -0.02596589,\n                -0.033727735,\n                0.015663294,\n                -0.007329082,\n                0.03428614,\n                -0.034397826,\n                -0.011363567,\n                -0.019432537,\n                0.0048790746,\n                0.0062995204,\n                0.004191537,\n                0.013555312,\n                -0.021931404,\n                -0.03847419,\n                -0.049809836,\n                -0.023774145,\n                -0.046403557,\n                0.008634357,\n                -0.001749382,\n                -0.015188649,\n                -0.02420691,\n                0.033616055,\n                -0.051485054,\n                0.006976588,\n                -0.046012674,\n                0.04844174,\n                0.0007337807,\n                0.007336062,\n                -0.08264412,\n                0.011866133,\n                -0.041657105,\n                -0.008313273,\n                -0.02416503,\n                -0.025714608,\n                -0.018874131,\n                0.008620396,\n                0.0037343418,\n                -0.030098096,\n                -0.0014335335,\n                0.044700418,\n                0.009122962,\n                0.0013742029,\n                -0.016640507,\n                0.019055612,\n                -0.050675366,\n                0.019167295,\n                -0.040596135,\n                0.0034429235,\n                -0.0320246,\n                -0.061983094,\n                -0.03853003,\n                0.010553878,\n                -0.017980682,\n                0.0034376883,\n                -0.013129527,\n                -0.01873453,\n                0.03040522,\n                -0.032387562,\n                -0.0232297,\n                0.04386281,\n                -0.0092067225,\n                0.03769242,\n                -0.023676425,\n                -0.004320668,\n                0.02945593,\n                -0.040624052,\n                -0.0033434574,\n                0.05341156,\n                -0.030768184,\n                0.09185783,\n                0.019739661,\n                0.015956458,\n                0.012661861,\n                -0.02609153,\n                0.0679022,\n                -0.027375866,\n                0.030963626,\n                -0.048609264,\n                0.013066706,\n                0.014239359,\n                -0.013708873,\n                -0.045565948,\n                -0.012033654,\n                0.011552029,\n                0.015481813,\n                -0.028520599,\n                -0.0031986206,\n                0.006791616,\n                0.027599229,\n                -0.029595532,\n                -0.012822404,\n                0.02335534,\n                -0.0125432005,\n                -0.008452875,\n                -0.024863038,\n                0.042690158,\n                0.02409523,\n                -0.037385296,\n                -0.06343495,\n                -0.020423708,\n                -0.03677105,\n                0.019362736,\n                -0.00077696994,\n                0.01167069,\n                0.054193325,\n                -0.03755282,\n                0.03392318,\n                -0.029176725,\n                0.009604587,\n                0.0137298135,\n                -0.021652201,\n                -0.056063987,\n                0.01971174,\n                0.018594928,\n                -0.0032823817,\n                -0.0062087793,\n                0.020298067,\n                0.022713173,\n                -0.00037561543,\n                -0.009311424,\n                0.011168125,\n                -0.012312857,\n                0.011468268,\n                0.027515467,\n                -0.028213475,\n                0.022852775,\n                0.05271355,\n                0.020102624,\n                -0.027543388,\n                -0.026482416,\n                0.025226003,\n                -0.018050482,\n                0.0015068243,\n                -0.002493633,\n                -0.03300181,\n                0.052992754,\n                -0.048078775,\n                -0.023913747,\n                0.020828553,\n                -0.025212042,\n                -0.023983547,\n                0.033588134,\n                -0.024402352,\n                0.016305462,\n                0.008655297,\n                -0.0048162537,\n                -0.0445329,\n                0.0051443176,\n                -0.023048218,\n                0.0070917592,\n                0.031242829,\n                -0.034369905,\n                -0.03224796,\n                0.013576251,\n                0.035961363,\n                0.0042718076,\n                0.00064609345,\n                0.049949437,\n                0.0067881257,\n                0.000718948,\n                0.041657105,\n                0.03562632,\n                -0.007922389,\n                0.037273616,\n                0.013897335,\n                -0.008669257,\n                -0.0070917592,\n                -0.0059644766,\n                0.06019619,\n                -0.062373977,\n                0.035375036,\n                0.005796955,\n                -0.007922389,\n                -0.006819536,\n                0.0391722,\n                -0.001742402,\n                0.026747659,\n                -0.000693209,\n                0.010128093,\n                -0.013625112,\n                -0.0014003782,\n                0.013897335,\n                -0.027822591,\n                0.026468456,\n                -0.033755656,\n                -0.039116357,\n                0.0067392653,\n                0.0196559,\n                -0.020800631,\n                -0.010847041,\n                0.02507244,\n                -0.020521428,\n                -0.019558178,\n                0.017240793,\n                0.041545425,\n                -0.020744791,\n                -0.017464155,\n                -0.040763654,\n                0.016500905,\n                -0.042606395,\n                0.03933972,\n                -0.02341118,\n                -0.03160579,\n                -0.04196423,\n                0.006365831,\n                -0.01612398,\n                -0.007343042,\n                -0.0048127635,\n                0.034202382,\n                0.0015207845,\n                0.012480379,\n                0.030684423,\n                0.055170536,\n                -0.025156202,\n                -0.021917446,\n                0.011391487,\n                0.038250826,\n                -0.04559387,\n                -0.030126017,\n                -0.02239209,\n                -0.0053362697,\n                -0.028199514,\n                -0.026105491,\n                0.056175668,\n                -0.022713173,\n                0.069074854,\n                -0.040065646,\n                0.0027431706,\n                0.037915785,\n                -0.0015172944,\n                0.014141638,\n                0.031522032,\n                0.0046382616,\n                -0.0148396455,\n                0.00011637099,\n                -0.012773543,\n                -0.028520599,\n                -0.014078817,\n                -0.030126017,\n                0.044951703,\n                0.00268384,\n                -0.0044393297,\n                0.0040624053,\n                0.02415107,\n                -0.027501507,\n                0.039842285,\n                0.010288635,\n                -0.0215824,\n                -0.03936764,\n                0.01966986,\n                -0.023494942,\n                -0.009311424,\n                0.01976758,\n                0.010386356,\n                -0.0038879034,\n                -0.034565344,\n                0.017101191,\n                0.05109417,\n                -0.011244905,\n                -0.033699818,\n                -0.02505848,\n                -0.024765316,\n                0.043444004,\n                -0.005011696,\n                0.008662277,\n                0.0019579118,\n                -0.04830214,\n                0.031103227,\n                -0.07242529,\n                -0.0036087004,\n                -0.018134242,\n                -0.03833459,\n                -0.008487775,\n                -0.011433368,\n                -0.0138554545,\n                -0.031047387,\n                0.02585421,\n                0.023955628,\n                0.025184121,\n                -0.000060039576,\n                -0.013918276,\n                0.010114133,\n                0.00023426887,\n                0.054277085,\n                0.039591003,\n                0.07153184,\n                0.04185255,\n                -0.029735133,\n                0.023927707,\n                -0.01605418,\n                0.019153334,\n                -0.022671293,\n                0.0109517425,\n                -0.0071685403,\n                0.008487775,\n                0.018957892,\n                -0.024039388,\n                0.031829156,\n                -0.0018060951,\n                -0.033783577,\n                -0.03333685,\n                -0.03847419,\n                0.02250377,\n                0.011782371,\n                0.04475626,\n                -0.0075524445,\n                0.006086628,\n                -0.00988379,\n                -0.0018706609,\n                0.010358436,\n                0.016724266,\n                -0.009367265,\n                -0.017533956,\n                0.015928539,\n                0.055198457,\n                0.027962193,\n                0.008815839,\n                -0.01788296,\n                0.0026559196,\n                -0.027403787,\n                -0.04403033,\n                -0.052853152,\n                -0.05109417,\n                0.0087530175,\n                -0.03565424,\n                -0.01341571,\n                -0.026356775,\n                -0.035458796,\n                -0.052099302,\n                0.024360472,\n                -0.015439932,\n                -0.012319838,\n                0.006868397,\n                -0.024472153,\n                0.041573346,\n                -0.00074774085,\n                0.050172802,\n                -0.00005205066,\n                0.0320246,\n                0.005290899,\n                -0.051540896,\n                0.03512375,\n                0.045370508,\n                -0.011873113,\n                -0.01520261,\n                0.036436006,\n                0.021805763,\n                -0.018469287,\n                -0.011063424,\n                0.0077269464,\n                -0.031159068,\n                -0.009304444,\n                0.008529656,\n                0.012927105,\n                0.03847419,\n                -0.029288407,\n                -0.026175292,\n                -0.004289258,\n                -0.0053921104,\n                -0.000014519108,\n                0.045928914,\n                -0.007852588,\n                -0.02057727,\n                0.055812705,\n                0.0040624053,\n                -0.037050255,\n                -0.0051827077,\n                0.004292748,\n                0.013024826,\n                0.0085505955,\n                0.041573346,\n                -0.016221702,\n                -0.00358078,\n                0.05639903,\n                0.008494755,\n                -0.04930727,\n                0.00063562335,\n                -0.054053724,\n                -0.0021306688,\n                0.012033654,\n                -0.0026192742,\n                0.016821988,\n                -0.029986415,\n                -0.01335289,\n                0.00067008747,\n                0.04472834,\n                0.005088477,\n                0.033783577,\n                0.019362736,\n                -0.0114054475,\n                0.0071685403,\n                0.010630659,\n                0.04564971,\n                0.001662131,\n                -0.02152656,\n                0.06628282,\n                -0.0043346286,\n                -0.025281843,\n                0.009290484,\n                0.018525127,\n                -0.047380768,\n                -0.037859943,\n                0.02237813,\n                -0.018162163,\n                -0.008215552,\n                -0.06712043,\n                -0.03649185,\n                -0.003661051,\n                0.042690158,\n                -0.010121113,\n                0.036882732,\n                0.03769242,\n                -0.059526104,\n                -0.082588285,\n                -0.0006369321,\n                0.021945365,\n                -0.033420615,\n                -0.022936536,\n                0.0048022936,\n                0.037022334,\n                -0.001032179,\n                -0.0020992584,\n                -0.013164427,\n                -0.00625415,\n                0.029428009,\n                -0.009618548,\n                0.013038786,\n                0.033253092,\n                0.03855795,\n                0.0066973846,\n                0.041629184,\n                -0.040624052,\n                0.020004904,\n                -0.019083533,\n                0.012117416,\n                0.011419408,\n                -0.018204043,\n                -0.012326818,\n                0.00533976,\n                0.036463927,\n                0.0021777842,\n                -0.02236417,\n                0.000379978,\n                0.061983094,\n                0.0075803646,\n                0.00019555124,\n                0.0010993623,\n                -0.010449177,\n                0.008383074,\n                -0.016403183,\n                0.029790973,\n                0.06991246,\n                0.0068509467,\n                0.029344248,\n                0.0062716003,\n                -0.001299167,\n                0.019153334,\n                0.03034938,\n                -0.018315725,\n                -0.0048127635,\n                -0.007102229,\n                -0.03160579,\n                -0.03682689,\n                -0.028129714,\n                0.0067287954,\n                0.028241396,\n                0.021568442,\n                -0.012431519,\n                0.027250225,\n                0.017157031,\n                -0.0058493055,\n                -0.02054935,\n                -0.011112284,\n                -0.0072732414,\n                -0.0012258762,\n                -0.011112284,\n                -0.048246298,\n                0.036910653,\n                0.038027465,\n                -0.0009309679,\n                -0.037134014,\n                0.0073779426,\n                0.0147140045,\n                -0.003324262,\n                0.00092660537,\n                0.015872696,\n                0.030907786,\n                -0.023955628,\n                -0.018134242,\n                0.010288635,\n                -0.028785842,\n                -0.034202382,\n                -0.027236264,\n                0.050479922,\n                -0.026538257,\n                0.0076641254,\n                0.009046181,\n                -0.03316933,\n                0.021666162,\n                -0.023062177,\n                0.009988491,\n                0.0006378046,\n                0.010923822,\n                0.021205477,\n                0.0019963023,\n                -0.024779277,\n                -0.031019466,\n                -0.011189065,\n                -0.00061468314,\n                0.01347155,\n                -0.002771091,\n                -0.01162881,\n                -0.030768184,\n                0.0114054475,\n                -0.022015166,\n                -0.018399486,\n                0.01514677,\n                -0.026049651,\n                0.022071006,\n                0.04484002,\n                -0.0039960947,\n                0.0019736171,\n                0.049726076,\n                -0.027054783,\n                0.0006879739,\n                0.03322517,\n                0.0034586287,\n                0.011768412,\n                -0.01698951,\n                -0.024904918,\n                0.029204646,\n                -0.027068742,\n                0.013031806,\n                -0.0044044293,\n                0.019181253,\n                0.009639488,\n                0.0050396165,\n                0.0197257,\n                -0.016584665,\n                0.0027187404,\n                -0.033727735,\n                -0.023676425,\n                -0.031717476,\n                0.05282523,\n                -0.013101607,\n                0.029372169,\n                -0.028394958,\n                0.0086273765,\n                0.032499243,\n                -0.054249167,\n                0.0034813138,\n                0.021917446,\n                -0.0013410475,\n                -0.020228267,\n                -0.00003683627,\n                -0.010058292,\n                -0.015677255,\n                -0.014700044,\n                -0.012382658,\n                0.028199514,\n                -0.027138542,\n                -0.025533125,\n                0.03928388,\n                0.02417899,\n                -0.0012005734,\n                -0.026971022,\n                -0.010051312,\n                0.004666182,\n                0.00038826684,\n                0.010379376,\n                0.03129867,\n                -0.010435216,\n                0.032610923,\n                0.008620396,\n                0.03830667,\n                0.025547085,\n                -0.030879864,\n                -0.05637111,\n                0.018120283,\n                0.052099302,\n                -0.030684423,\n                -0.031019466,\n                0.015579534,\n                -0.03651977,\n                -0.0047255126,\n                0.001434406,\n                0.030321458,\n                -0.0061250185,\n                0.00075253966,\n                -0.007503584,\n                -0.021177556,\n                0.012284937,\n                -0.011286786,\n                0.044225775,\n                0.011712571,\n                0.008327233,\n                0.043444004,\n                -0.04115454,\n                -0.043360244,\n                0.016249621,\n                -0.024653636,\n                -0.054444607,\n                -0.048218377,\n                0.0036191705,\n                -0.011244905,\n                -0.014043917,\n                -0.027948232,\n                -0.0048790746,\n                0.021777844,\n                0.008013129,\n                0.01701743,\n                -0.004296238,\n                0.022629414,\n                0.007866547,\n                -0.007629225,\n                -0.021554481,\n                -0.014909446,\n                -0.012263997,\n                0.0133249685,\n                -0.00800615,\n                -0.012717702,\n                0.021191517,\n                0.0022807405,\n                0.03847419,\n                0.05095457,\n                0.03392318,\n                0.01347155,\n                -0.009423105,\n                -0.035486717,\n                0.012766562,\n                -0.00806897,\n                -0.0027902862,\n                -0.008355154,\n                0.0023976567,\n                0.032052517,\n                -0.026259053,\n                -0.017366434,\n                -0.009381224,\n                0.007901448,\n                -0.0030171387,\n                0.0074966038,\n                0.010616698,\n                0.0038111226,\n                0.0048057837,\n                0.01342967,\n                0.0057411143,\n                -0.03501207,\n                0.024514034,\n                0.0049802857,\n                0.01964194,\n                0.023006337,\n                -0.0049593453,\n                0.043276485,\n                0.015398052,\n                0.04570555,\n                0.0003141035,\n                -0.04121038,\n                0.054416686,\n                0.022545652,\n                -0.018427406,\n                -0.008899599,\n                -0.005632923,\n                -0.008864699,\n                0.0054898313,\n                0.003654071,\n                0.009227663,\n                -0.006170389,\n                -0.05098249,\n                -0.024569875,\n                0.019614018,\n                0.013827534,\n                -0.028129714,\n                0.012836363,\n                0.028045954,\n                -0.029288407,\n                -0.08778146,\n                0.008194611,\n                0.011216985,\n                -0.004090326,\n                0.012180236,\n                0.02413711,\n                0.0024238322,\n                -0.023774145,\n                -0.00045283255,\n                -0.00069757155,\n                -0.029400088,\n                -0.058074247,\n                -0.022573572,\n                0.0096115675,\n                0.0082225315,\n                -0.024039388,\n                0.013520411,\n                -0.013171407,\n                0.015928539,\n                -0.00891356,\n                -0.021442799,\n                -0.035570476,\n                0.016877828,\n                -0.0033713777,\n                -0.0046103415,\n                0.0035738,\n                -0.006341401,\n                0.029148806,\n                0.01599834,\n                0.017198913,\n                -0.012117416,\n                0.0038809234,\n                -0.009786069,\n                0.015928539,\n                0.01789692,\n                -0.033867337,\n                0.030824024,\n                -0.0019282466,\n                0.038167067,\n                -0.011042483,\n                0.014881526,\n                -0.03696649,\n                0.027599229,\n                -0.008606436,\n                0.019921143,\n                0.051987622,\n                0.036212645,\n                0.007329082,\n                0.004763903,\n                0.0077129863,\n                0.0066624843,\n                0.017673558,\n                0.011210005,\n                -0.0056678234,\n                0.0039193137,\n                -0.017617717,\n                0.063099906,\n                -0.0054898313,\n                -0.024430273,\n                0.02424879,\n                -0.0004157509,\n                0.017101191,\n                0.034509506,\n                -0.010498038,\n                0.004041465,\n                -0.027501507,\n                -0.02230833,\n                0.0130736865,\n                -0.011168125,\n                -0.013108587,\n                -0.012759582,\n                0.012689781,\n                -0.028925443,\n                -0.0002933814,\n                0.027627148,\n                -0.011182085,\n                0.027599229,\n                0.03503999,\n                -0.0149932075,\n                -0.010037352,\n                0.0063099903,\n                0.0038704532,\n                -0.043304402,\n                0.008327233,\n                -0.023201779,\n                0.0078944685,\n                0.0044777202,\n                -0.004924445,\n                -0.0068300064,\n                0.023606624,\n                0.027306065,\n                -0.01342967,\n                0.026635978,\n                0.024821157,\n                -0.0149932075,\n                -0.026119452,\n                0.003052039,\n                -0.004121736,\n                0.051457133,\n                -0.02415107,\n                0.02589609,\n                0.031438272,\n                -0.04732493,\n                0.0030625092,\n                -0.035375036,\n                -0.02504452,\n                0.018301765,\n                -0.027445666,\n                0.005734134,\n                -0.018608889,\n                -0.016026258,\n                0.009402165,\n                -0.028548518,\n                -0.048050858,\n                0.016472984,\n                0.0067462455,\n                0.03749698,\n                0.021624282,\n                -0.039591003,\n                0.0028775372,\n                0.042606395,\n                -0.001886366,\n                0.014518562,\n                0.03403486,\n                -0.022126848,\n                0.006093608,\n                0.0019805972,\n                0.0031131147,\n                0.014672124,\n                0.019320857,\n                -0.007329082,\n                -0.012382658,\n                -0.01158693,\n                0.014881526,\n                -0.0039332737,\n                0.0047569233,\n                0.027361905,\n                0.020535389,\n                -0.042606395,\n                0.037999544,\n                0.0049593453,\n                -0.011175104,\n                0.055728942,\n                -0.012173256,\n                -0.038194988,\n                -0.015300331,\n                0.0063134804,\n                -0.011754451,\n                -0.03749698,\n                0.00799917,\n                -0.008152731,\n                -0.026217174,\n                -0.0069486676,\n                -0.013150467,\n                0.0057655443,\n                0.028869603,\n                -0.0073151216,\n                0.056036066,\n                0.017729398,\n                0.020270146,\n                0.014769845,\n                0.05355116,\n                0.0038111226,\n                -0.024918878,\n                -0.0033521825,\n                -0.023536824,\n                0.0107493205,\n                -0.0035266844,\n                -0.027040822,\n                0.0047255126,\n                -0.014009017,\n                -0.03199668,\n                0.011803312,\n                0.033504374,\n                -0.04199215,\n                0.022168728,\n                0.06081044,\n                0.01335289,\n                0.01167767,\n                0.015286371,\n                -0.034341983,\n                0.021331118,\n                0.002237115,\n                0.06857228,\n                0.014937367,\n                -0.020856474,\n                -0.009060142,\n                -0.029790973,\n                -0.004264828,\n                -0.0018444856,\n                -0.04735285,\n                0.022908617,\n                0.02676162,\n                -0.012019694,\n                0.0032754017,\n                0.012647902,\n                -0.0029979434,\n                -0.0044916803,\n                0.0033434574,\n                -0.010386356,\n                -0.046291877,\n                0.026412616,\n                0.009102021,\n                -0.009290484,\n                0.03222004,\n                0.029818892,\n                -0.018092362,\n                -0.010023392,\n                -0.026468456,\n                0.032666765,\n                -0.010574819,\n                -0.02951177,\n                -0.01517469,\n                0.016654465,\n                0.010588778,\n                0.047269087,\n                -0.029372169,\n                0.035319194,\n                -0.007615265,\n                -0.020200346,\n                -0.01799464,\n                -0.04014941,\n                -0.0268733,\n                0.0074756634,\n                0.0035022541,\n                0.008285353,\n                0.0086273765,\n                -0.013031806,\n                -0.013317989,\n                0.005203648,\n                -0.0027518957,\n                0.0026733698,\n                0.012096475,\n                0.006645034,\n                0.037050255,\n                0.018874131,\n                -0.033504374,\n                0.00025324596,\n                -0.0029857284,\n                -0.024737397,\n                -0.00046155765,\n                -0.014532522,\n                0.024625715,\n                0.012250037,\n                -0.03487247,\n                -0.014211439,\n                0.0064775124,\n                0.026440535,\n                0.0070533687,\n                0.0051338472,\n                -0.010281655,\n                0.000044497996,\n                0.038278747,\n                0.0006177369,\n                0.011391487,\n                0.009925671,\n                0.005015186,\n                0.024500074,\n                0.008131791,\n                -0.03138243,\n                -0.013820554,\n                -0.010539918,\n                0.037189856,\n                -0.015495773,\n                0.021875564,\n                -0.005828365,\n                -0.000063802276,\n                -0.025267882,\n                -0.0049698157,\n                0.031131148,\n                0.026733698,\n                0.017240793,\n                -0.0153701315,\n                0.009807009,\n                -0.04902807,\n                -0.004655712,\n                0.019209174,\n                -0.037245695,\n                0.014811725,\n                -0.009499886,\n                -0.0058597755,\n                0.016947629,\n                -0.0410987,\n                -0.00065307354,\n                0.0016455534,\n                -0.00985587,\n                -0.041405823,\n                0.02424879,\n                -0.00011244469,\n                0.0140578775,\n                0.005706214,\n                0.024025429,\n                -0.02135904,\n                -0.03294597,\n                0.027836552,\n                0.02875792,\n                0.004749943,\n                0.004100796,\n                0.04210383,\n                -0.003671521,\n                0.013911296,\n                0.021386959,\n                0.014141638,\n                -0.022643372,\n                0.04634772,\n                0.011314707,\n                -0.014630243,\n                -0.021708043,\n                0.021317158,\n                -0.019167295,\n                -0.016891789,\n                0.055114694,\n                -0.021861603,\n                0.008320253,\n                0.012403599,\n                -0.0062995204,\n                -0.021889525,\n                0.016821988,\n                -0.017352473,\n                -0.040679894,\n                -0.0079433285,\n                0.031047387,\n                0.01525845,\n                0.00018388144,\n                -0.00015454329,\n                -0.009590627,\n                -0.025728567,\n                0.019837381,\n                -0.027878432,\n                0.024039388,\n                0.014937367,\n                0.03029354,\n                -0.01432312,\n                0.025156202,\n                0.027990112,\n                -0.011949893,\n                -0.033532295,\n                0.0013733304,\n                -0.031801235,\n                -0.006460062,\n                -0.0060412576,\n                -0.0062716003,\n                -0.0015068243,\n                0.00984191,\n                -0.024779277,\n                -0.00536419,\n                0.010721399,\n                -0.02512828,\n                0.030907786,\n                0.005915616,\n                0.08806066,\n                -0.0090810815,\n                -0.045286745,\n                0.005796955,\n                -0.035263356,\n                0.0069486676,\n                -0.01968382,\n                0.0026489396,\n                -0.009367265,\n                -0.00037736047,\n                0.01517469,\n                0.001651661,\n                0.011377527,\n                -0.028297236,\n                -0.00806897,\n                0.00075166713,\n                -0.021023994,\n                -0.00012236949,\n                0.024360472,\n                0.0046417518,\n                0.029958494,\n                0.0148675665,\n                0.0014719239,\n                0.019362736,\n                0.0006343146,\n                -0.0061389785,\n                0.018231964,\n                0.030935705,\n                0.023885828,\n                0.02054935,\n                0.02067499,\n                -0.012096475,\n                -0.012752603,\n                0.0070219585,\n                -0.036324326,\n                0.026342815,\n                -0.0047569233,\n                -0.03665937,\n                0.026677858,\n                -0.006348381,\n                0.014727965,\n                0.012703742,\n                0.02148468,\n                0.027278144,\n                0.0180086,\n                -0.020786673,\n                0.02857644,\n                -0.012208156,\n                -0.019181253,\n                -0.04765997,\n                -0.0023540312,\n                0.015063008,\n                -0.0036156804,\n                0.0022859755,\n                0.026328854,\n                -0.05095457,\n                -0.017799199,\n                0.007308142,\n                0.0086762365,\n                -0.025184121,\n                -0.019474417,\n                -0.009074101,\n                -0.011824252,\n                -0.022545652,\n                -0.028785842,\n                -0.025393523,\n                -0.022015166,\n                0.019460458,\n                0.00057542016,\n                -0.003859983,\n                0.0002103839,\n                -0.005427011,\n                0.004390469,\n                -0.005810915,\n                0.028897522,\n                0.04207591,\n                0.027361905,\n                0.012885224,\n                0.00718948,\n                0.05656655,\n                -0.011461288,\n                -0.04497962,\n                -0.032610923,\n                -0.010149034,\n                -0.0320246,\n                0.013094626,\n                0.017352473,\n                0.022796934,\n                -0.006079648,\n                0.030963626,\n                0.028408917,\n                -0.0197257,\n                0.019041652,\n                0.02067499,\n                -0.006145959,\n                0.0005309222,\n                -0.017729398,\n                0.004767393,\n                -0.00014919917,\n                0.034621187,\n                -0.0031986206,\n                0.010609719,\n                -0.028213475,\n                -0.020004904,\n                -0.0015103144,\n                0.0019805972,\n                -0.018204043,\n                0.0068439664,\n                -0.0035650749,\n                0.040903255,\n                -0.009325384,\n                0.022057047,\n                -0.018148202,\n                0.038837153,\n                -0.012096475,\n                0.0020870434,\n                -0.034341983,\n                0.0038879034,\n                0.00358776,\n                -0.060531236,\n                0.034314062,\n                0.051568817,\n                0.022196649,\n                -0.013967136,\n                0.043751128,\n                -0.02335534,\n                0.0013000395,\n                -0.040791575,\n                0.040568214,\n                -0.0058632656,\n                -0.023913747,\n                -0.006892827,\n                0.01252924,\n                0.023746226,\n                0.040763654,\n                -0.008152731,\n                -0.024318593,\n                -0.021624282,\n                -0.009234644,\n                -0.009953591,\n                -0.0072941813,\n                0.027180424,\n                -0.016640507,\n                -0.031019466,\n                -0.0016219956,\n                -0.013066706,\n                0.004987266,\n                0.018078402,\n                -0.016417144,\n                0.010302595,\n                -0.020479549,\n                -0.016849909,\n                -0.008766978,\n                0.039618924,\n                -0.018162163,\n                0.047101565,\n                0.024765316,\n                -0.03492831,\n                0.011307727,\n                -0.00086989225,\n                -0.022098927,\n                -0.002509338,\n                0.011461288,\n                -0.034202382,\n                0.05190386,\n                -0.031940836,\n                -0.012459439,\n                0.018929971,\n                0.00028116626,\n                -0.00224933,\n                -0.015649335,\n                -0.0058423253,\n                0.011552029,\n                -0.00010944544,\n                -0.035179593,\n                -0.061983094,\n                -0.009304444,\n                0.03403486,\n                0.029735133,\n                0.05087081,\n                -0.011398467,\n                -0.019795502,\n                0.037413217,\n                0.0036156804,\n                -0.026482416,\n                -0.008759998,\n                0.015705176,\n                -0.008110851,\n                -0.017282672,\n                0.00029599894,\n                0.021875564,\n                -0.020186385,\n                0.003399298,\n                0.024304632,\n                -0.028380997,\n                0.05025656,\n                0.033029728,\n                -0.031159068,\n                0.011035503,\n                0.033616055,\n                -0.03492831,\n                -0.004034485,\n                0.038083304,\n                0.025519164,\n                0.02504452,\n                0.00012029728,\n                -0.031522032,\n                -0.009388205,\n                -0.012654881,\n                -0.016040219,\n                0.015509733,\n                -0.046319798,\n                -0.010016412,\n                0.014043917,\n                -0.027948232,\n                -0.014853606,\n                0.007824668,\n                0.013052746,\n                0.01707327,\n                0.004819744,\n                -0.03135451,\n                -0.017464155,\n                -0.00894846,\n                0.006966118,\n                -0.0046068514,\n                0.03850211,\n                -0.001655151,\n                -0.0057690344,\n                0.000117134434,\n                0.060307875,\n                -0.0023924217,\n                -0.0053467397,\n                -0.012424539,\n                -0.015439932,\n                0.00016643123,\n                -0.0051582777,\n                -0.051875938,\n                -0.011461288,\n                0.0074756634,\n                -0.003045059,\n                -0.008773958,\n                0.03833459,\n                0.04757621,\n                -0.0124734,\n                0.010330515,\n                0.019558178,\n                0.019432537,\n                0.007908428,\n                -0.015984379,\n                -0.0002504103,\n                0.012312857,\n                0.03772034,\n                -0.0013314498,\n                -0.037776183,\n                -0.0018514657,\n                -0.016263582,\n                -0.01964194,\n                0.020353908,\n                -0.015900617,\n                0.021065876,\n                -0.021261318,\n                0.016766148,\n                0.020172425,\n                -0.025728567,\n                -0.01953026,\n                0.019013733,\n                0.00036449096,\n                0.0121383555,\n                0.001877641,\n                -0.011454308,\n                -0.004003075,\n                0.0010583543,\n                -0.017659597,\n                -0.0072243805,\n                0.007343042,\n                0.040316932,\n                0.016207742,\n                0.011251885,\n                0.0013366849,\n                -0.012780523,\n                0.00899732,\n                -0.009758149,\n                0.0090043,\n                -0.012340778,\n                0.029288407,\n                0.0070045083,\n                -0.0197257,\n                -0.025784409,\n                0.0070324284,\n                0.0069626276,\n                0.00626811,\n                0.02945593,\n                0.0056643332,\n                -0.008983361,\n                0.015984379,\n                -0.030209778,\n                -0.009269544,\n                -0.021135677,\n                -0.00014778133,\n                0.021498641,\n                -0.01161485,\n                0.01074234,\n                0.003217816,\n                -0.007336062,\n                -0.00072374684,\n                0.041685026,\n                -0.01698951,\n                0.0049488754,\n                0.005894676,\n                -0.024514034,\n                0.03844627,\n                -0.044197854,\n                0.010442196,\n                0.029344248,\n                0.036073044,\n                -0.0057690344,\n                -0.00052655966,\n                0.00055840623,\n                -0.033448532,\n                0.016305462,\n                -0.009011281,\n                0.009088062,\n                -0.017282672,\n                -0.0053362697,\n                0.04305312,\n                -0.0037901823,\n                -0.011084364,\n                0.009932651,\n                0.006603154,\n                0.005280429,\n                0.010183934,\n                0.028018033,\n                0.030991547,\n                0.0013593702,\n                -0.0144627215,\n                0.0152444905,\n                0.008480795,\n                -0.0017450195,\n                0.027766751,\n                -0.00086683844,\n                -0.03467703,\n                0.010197894,\n                0.0042718076,\n                0.01697555,\n                0.0115310885,\n                0.015984379,\n                0.014281239,\n                -0.019432537,\n                0.03490039,\n                -0.02676162,\n                -0.0049663256,\n                0.0055386918,\n                0.052741468,\n                -0.039479323,\n                0.03933972,\n                0.0066380543,\n                -0.032610923,\n                0.012689781,\n                -0.006467042,\n                0.028674161,\n                -0.0065996638,\n                -0.012780523,\n                0.036324326,\n                0.013220267,\n                0.008103871,\n                0.02853456,\n                -0.015705176,\n                0.0047080624,\n                0.010847041,\n                0.006145959,\n                0.008836779,\n                -0.0048686042,\n                -0.01976758,\n                -0.0020695932,\n                -0.014979247,\n                -0.042410955,\n                -0.053244036,\n                -0.021903485,\n                0.020758752,\n                -0.06321158,\n                0.005639903,\n                -0.01342269,\n                -0.009995472,\n                -0.03322517,\n                -0.014644204,\n                -0.005465401,\n                -0.0045370506,\n                0.038781315,\n                -0.012166276\n            ]\n        }\n    ],\n    \"model\": \"text-embedding-3-small\",\n    \"usage\": {\n        \"prompt_tokens\": 11,\n        \"total_tokens\": 11\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Anthropic",
+			"item": [
+				{
+					"name": "Messages (Chat)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{ANTHROPIC_API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "anthropic-version",
+								"value": "2023-06-01",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"model\": \"claude-opus-4-5-20251101\",\n  \"max_tokens\": 1024,\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Can you explain what is GraphRAG and why it is better than normal RAG?\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.anthropic.com/v1/messages",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropic",
+								"com"
+							],
+							"path": [
+								"v1",
+								"messages"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Messages (Chat)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "{{ANTHROPIC_API_KEY}}",
+										"type": "text"
+									},
+									{
+										"key": "anthropic-version",
+										"value": "2023-06-01",
+										"type": "text"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"model\": \"claude-opus-4-5-20251101\",\n  \"max_tokens\": 1024,\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Can you explain what is GraphRAG and why it is better than normal RAG?\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.anthropic.com/v1/messages",
+									"protocol": "https",
+									"host": [
+										"api",
+										"anthropic",
+										"com"
+									],
+									"path": [
+										"v1",
+										"messages"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 17:52:54 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-limit",
+									"value": "450000"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-remaining",
+									"value": "450000"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-reset",
+									"value": "2026-01-10T17:52:47Z"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-limit",
+									"value": "90000"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-remaining",
+									"value": "90000"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-reset",
+									"value": "2026-01-10T17:52:54Z"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-limit",
+									"value": "1000"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-remaining",
+									"value": "999"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-reset",
+									"value": "2026-01-10T17:52:46Z"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-limit",
+									"value": "540000"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-remaining",
+									"value": "540000"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-reset",
+									"value": "2026-01-10T17:52:47Z"
+								},
+								{
+									"key": "request-id",
+									"value": "req_011CWz895Na4mychMmvus83U"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "anthropic-organization-id",
+									"value": "9b462889-47ab-43c2-bd49-774b7ed392e1"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "x-envoy-upstream-service-time",
+									"value": "8795"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "none"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "9bbe07ae3db6513a-CMB"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"model\": \"claude-opus-4-5-20251101\",\n    \"id\": \"msg_01Xhq6Lip84KTVQNgRdS4B3x\",\n    \"type\": \"message\",\n    \"role\": \"assistant\",\n    \"content\": [\n        {\n            \"type\": \"text\",\n            \"text\": \"# GraphRAG Explained\\n\\n## What is Standard RAG?\\n\\n**Retrieval-Augmented Generation (RAG)** retrieves relevant text chunks from a document store based on semantic similarity, then feeds them to an LLM to generate answers.\\n\\n## What is GraphRAG?\\n\\n**GraphRAG** enhances RAG by building a **knowledge graph** from your documents before retrieval. It extracts entities (people, places, concepts) and their relationships, then uses this graph structure during retrieval.\\n\\n## Key Differences\\n\\n| Aspect | Standard RAG | GraphRAG |\\n|--------|-------------|----------|\\n| **Structure** | Flat text chunks | Connected graph of entities |\\n| **Retrieval** | Similarity search | Graph traversal + similarity |\\n| **Context** | Isolated chunks | Relationship-aware context |\\n\\n## Why GraphRAG Can Be Better\\n\\n### 1. **Multi-hop Reasoning**\\n```\\nQuestion: \\\"What companies has the CEO of Tesla founded?\\\"\\n\\nStandard RAG: May miss connections across documents\\nGraphRAG: Traverses Elon Musk → founded → SpaceX, Neuralink, etc.\\n```\\n\\n### 2. **Global Summarization**\\nBetter at answering broad questions like *\\\"What are the main themes in this dataset?\\\"*\\n\\n### 3. **Reduced Hallucination**\\nExplicit relationships provide more grounded context\\n\\n## Trade-offs\\n\\n- **Higher indexing cost** (graph construction)\\n- **More complex setup**\\n- **Overkill for simple Q&A**\\n\\nGraphRAG shines when documents contain complex, interconnected information.\"\n        }\n    ],\n    \"stop_reason\": \"end_turn\",\n    \"stop_sequence\": null,\n    \"usage\": {\n        \"input_tokens\": 25,\n        \"cache_creation_input_tokens\": 0,\n        \"cache_read_input_tokens\": 0,\n        \"cache_creation\": {\n            \"ephemeral_5m_input_tokens\": 0,\n            \"ephemeral_1h_input_tokens\": 0\n        },\n        \"output_tokens\": 371,\n        \"service_tier\": \"standard\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Structured Output (Tool Use)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{ANTHROPIC_API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "anthropic-version",
+								"value": "2023-06-01",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"model\": \"claude-opus-4-5-20251101\",\n  \"max_tokens\": 1024,\n  \"tools\": [\n    {\n      \"name\": \"extract_person_info\",\n      \"description\": \"Extracts structured information about a person\",\n      \"input_schema\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"The person's full name\"\n          },\n          \"age\": {\n            \"type\": \"number\",\n            \"description\": \"The person's age\"\n          },\n          \"email\": {\n            \"type\": \"string\",\n            \"description\": \"The person's email address\"\n          }\n        },\n        \"required\": [\"name\", \"age\", \"email\"]\n      }\n    }\n  ],\n  \"tool_choice\": {\"type\": \"tool\", \"name\": \"extract_person_info\"},\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Extract information: John Doe is 30 years old and his email is john@example.com\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.anthropic.com/v1/messages",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropic",
+								"com"
+							],
+							"path": [
+								"v1",
+								"messages"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Structured Output (Tool Use)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "{{ANTHROPIC_API_KEY}}",
+										"type": "text"
+									},
+									{
+										"key": "anthropic-version",
+										"value": "2023-06-01",
+										"type": "text"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"model\": \"claude-opus-4-5-20251101\",\n  \"max_tokens\": 1024,\n  \"tools\": [\n    {\n      \"name\": \"extract_person_info\",\n      \"description\": \"Extracts structured information about a person\",\n      \"input_schema\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"The person's full name\"\n          },\n          \"age\": {\n            \"type\": \"number\",\n            \"description\": \"The person's age\"\n          },\n          \"email\": {\n            \"type\": \"string\",\n            \"description\": \"The person's email address\"\n          }\n        },\n        \"required\": [\"name\", \"age\", \"email\"]\n      }\n    }\n  ],\n  \"tool_choice\": {\"type\": \"tool\", \"name\": \"extract_person_info\"},\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Extract information: John Doe is 30 years old and his email is john@example.com\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.anthropic.com/v1/messages",
+									"protocol": "https",
+									"host": [
+										"api",
+										"anthropic",
+										"com"
+									],
+									"path": [
+										"v1",
+										"messages"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 17:53:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-limit",
+									"value": "450000"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-remaining",
+									"value": "450000"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-reset",
+									"value": "2026-01-10T17:53:03Z"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-limit",
+									"value": "90000"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-remaining",
+									"value": "90000"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-reset",
+									"value": "2026-01-10T17:53:03Z"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-limit",
+									"value": "1000"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-remaining",
+									"value": "999"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-reset",
+									"value": "2026-01-10T17:53:01Z"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-limit",
+									"value": "540000"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-remaining",
+									"value": "540000"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-reset",
+									"value": "2026-01-10T17:53:03Z"
+								},
+								{
+									"key": "request-id",
+									"value": "req_011CWz8ADTGj281QrGybkySc"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "anthropic-organization-id",
+									"value": "9b462889-47ab-43c2-bd49-774b7ed392e1"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "x-envoy-upstream-service-time",
+									"value": "2054"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "none"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "9bbe080edb6f513a-CMB"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"model\": \"claude-opus-4-5-20251101\",\n    \"id\": \"msg_01APZuNxBqfwh4xL9AfHs1F8\",\n    \"type\": \"message\",\n    \"role\": \"assistant\",\n    \"content\": [\n        {\n            \"type\": \"tool_use\",\n            \"id\": \"toolu_018RLvzNHA57Kacf55BsWA8H\",\n            \"name\": \"extract_person_info\",\n            \"input\": {\n                \"name\": \"John Doe\",\n                \"age\": 30,\n                \"email\": \"john@example.com\"\n            }\n        }\n    ],\n    \"stop_reason\": \"tool_use\",\n    \"stop_sequence\": null,\n    \"usage\": {\n        \"input_tokens\": 736,\n        \"cache_creation_input_tokens\": 0,\n        \"cache_read_input_tokens\": 0,\n        \"cache_creation\": {\n            \"ephemeral_5m_input_tokens\": 0,\n            \"ephemeral_1h_input_tokens\": 0\n        },\n        \"output_tokens\": 73,\n        \"service_tier\": \"standard\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Google (Gemini)",
+			"item": [
+				{
+					"name": "Generate Content (Chat)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"contents\": [\n    {\n      \"role\": \"user\",\n      \"parts\": [\n        {\n          \"text\": \"Can you explain what is GraphRAG and why it is better than normal RAG?\"\n        }\n      ]\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-preview:generateContent?key={{GOOGLE_API_KEY}}",
+							"protocol": "https",
+							"host": [
+								"generativelanguage",
+								"googleapis",
+								"com"
+							],
+							"path": [
+								"v1beta",
+								"models",
+								"gemini-3-pro-preview:generateContent"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{GOOGLE_API_KEY}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Generate Content (Chat)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"contents\": [\n    {\n      \"role\": \"user\",\n      \"parts\": [\n        {\n          \"text\": \"Can you explain what is GraphRAG and why it is better than normal RAG?\"\n        }\n      ]\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-preview:generateContent?key={{GOOGLE_API_KEY}}",
+									"protocol": "https",
+									"host": [
+										"generativelanguage",
+										"googleapis",
+										"com"
+									],
+									"path": [
+										"v1beta",
+										"models",
+										"gemini-3-pro-preview:generateContent"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{GOOGLE_API_KEY}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "X-Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Referer"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 17:53:34 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "scaffolding on HTTPServer2"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "gfet4t7; dur=24292"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"candidates\": [\n        {\n            \"content\": {\n                \"parts\": [\n                    {\n                        \"text\": \"**GraphRAG** (Graph Retrieval-Augmented Generation) is an advanced method for interacting with your data using Large Language Models (LLMs). It combines the power of **Knowledge Graphs** with the standard RAG workflow to solve complex problems that traditional vector-based RAG cannot handle.\\n\\nTo understand why it is better, we first need to look at the limitations of \\\"Normal\\\" RAG.\\n\\n---\\n\\n### The Problem with \\\"Normal\\\" RAG (Vector RAG)\\n\\nIn a standard RAG system, documents are sliced into text chunks, turned into numbers (vectors), and stored in a database. When you ask a question, the system looks for chunks that are mathematically similar to your query.\\n\\n**The Limitations:**\\n1.  **Tunnel Vision:** It only retrieves specific chunks. If the answer requires connecting a fact from Page 5 with a fact from Page 500, normal RAG often fails to make that connection.\\n2.  **Failure on \\\"Global\\\" Questions:** If you ask, *\\\"What are the main themes of this entire dataset?\\\"*, normal RAG fails. It looks for chunks containing the word \\\"theme\\\" rather than reading and understanding the whole dataset.\\n3.  **Lack of Structure:** It relies on fuzzy semantic similarity. It doesn't explicitly understand that \\\"Alice\\\" is the *manager* of \\\"Bob.\\\"\\n\\n---\\n\\n### What is GraphRAG?\\n\\nGraphRAG injects structure into your data. Instead of just treating text as a pile of unrelated chunks, it processes your data to build a **Knowledge Graph**.\\n\\n**How it works (The Microsoft Research Approach):**\\n1.  **Extraction:** The LLM reads your documents and extracts **Entities** (people, places, organizations, concepts) and **Relationships** (how they interact).\\n    *   *Example:* Node A (Elon Musk) $\\\\rightarrow$ Edge (CEO of) $\\\\rightarrow$ Node B (Tesla).\\n2.  **Graph Building:** It constructs a massive web connecting all these data points.\\n3.  **Community Detection:** Algorithms scan the graph to find clusters (communities) of closely related items.\\n4.  **Summarization:** The LLM generates summaries for each of these communities.\\n5.  **Querying:** When you ask a question, the system doesn't just look for keywords; it traverses the web of relationships and reads the community summaries to provide a comprehensive answer.\\n\\n---\\n\\n### Why is GraphRAG Better?\\n\\nHere are the three main reasons GraphRAG outperforms normal RAG:\\n\\n#### 1. \\\"Connecting the Dots\\\" (Multi-Hop Reasoning)\\nImagine a murder mystery.\\n*   **Document A says:** \\\"The Butler bought arsenic.\\\"\\n*   **Document B says:** \\\" The Duke died of poisoning.\\\"\\n*   **Query:** \\\"Did the Butler kill the Duke?\\\"\\n\\n**Normal RAG:** Might fail because \\\"Butler\\\" and \\\"Duke\\\" are in different documents, and neither chunk contains the full answer.\\n**GraphRAG:** It sees a link in the graph: *Butler $\\\\rightarrow$ bought $\\\\rightarrow$ Arsenic $\\\\rightarrow$ causes $\\\\rightarrow$ Poisoning $\\\\rightarrow$ killed $\\\\rightarrow$ Duke.* It can traverse the \\\"hops\\\" to find the answer.\\n\\n#### 2. Answering Global/Holistic Questions\\nThis is GraphRAG’s superpower.\\n*   **Query:** \\\"How does the relationship between climate change and economic policy evolve across these 1,000 news articles?\\\"\\n\\n**Normal RAG:** Will fetch the top 5 chunks mentioning \\\"climate\\\" and \\\"economy,\\\" likely missing the big picture evolution.\\n**GraphRAG:** Uses pre-generated **Community Summaries**. It looks at the high-level summaries of the data clusters to write an essay-quality answer that synthesizes the entire dataset, not just a few sentences.\\n\\n#### 3. Reduced Hallucinations & Higher Precision\\nBecause GraphRAG relies on structured relationships extracted by an LLM during the indexing phase, it is less likely to guess. It knows explicitly that Entity A is related to Entity B. It grounds the LLM in specific, mapped facts rather than just similar-sounding text.\\n\\n---\\n\\n### The Analogy\\n\\n*   **Normal RAG** is like using a **Library Card Catalog**. You search for a keyword, get a specific book, and read one page.\\n*   **GraphRAG** is like a **Detective's Wall**. It has photos of suspects (entities) with red strings connecting them (relationships). It allows you to see the network, understanding how the guy in the top left interacts with the guy in the bottom right, and summarizes the entire plot at a glance.\\n\\n### The Trade-off\\nGraphRAG is \\\"better\\\" for quality, but it is **more expensive and slower to build**. Creating the graph requires passing all your data through an LLM to extract entities, which costs money (tokens) and time. Normal RAG is cheaper and faster to set up, but less capable of complex reasoning.\",\n                        \"thoughtSignature\": \"Es0iCsoiAXLI2nwwBgBZZOoYy8xfxKIl9iMmTFdZW3hP4jgcBQlO/8tIGsmcVGes/UMwoT5mXtDXm5vlA0un+qHa9g7tsYmIgArpUijSZjpFrQ9YZ36wkYzcpwaFvG5vy73HL89ys5IUCoHjzK2n8UY8ln3/TkRVJT4In8tOVeh+ZEC3pm+UN1VVN1CtqM2yQNhmoRUFumlyJ+YXe9Rf1Acky8F9pSLQjPSjlAeWtabyr3TwBpbL2GaqEjaG6MpMsEQfEe8flRlAMcQI7qKhMtGSdQpxSM0dqe6cxyx2bnkkL50bXj4VLap0xg4i8l2CpmSKoUZ1UaWrhcqEtjO0dRJrV5SM/cA0s3fVBkE8Z5llWPONzs+VkaB2/+RxrSDGEsnwnbM50HjTrsqe57kXlzGBQtaA5vt/bPPRHJu2nqZisIOQw2IUn+alAkDReCbCogdOvw79hrQUEXjzAUQhmqeePyDbr1Dw17sGbHvfk95zZL8Yzr8i6fOUUzUT4QuBonZHL8AiS8cuWa+XRc32eik1nY+VbUjpP4GjLKv4ypPdS3yvlVjbS9WlDtkyOK0VuY5EKB6P0/IIaE58cz19VO+3Ok0KuzUoAaWUOrJSHX4yAEHBvuoeEOHNQVYDG3zy/byb3SG0pjbH8a9ohVn73KCVQ1Q2MD0jnH2pssFaA78oOp7Wrm7xXTevoSEMqoD9IY5gtJnvoUCKAviH/U9ZgRLGL6DvNlAJMutXC3Zo36EW/+5NKot2Siej+3GUiLpOrv96PRVWKwOz0unLVc1qNt/kC60nk3ZAXfE/nWNQQ/i27BOUOcRVpPeQFF0AE9nCoco/f/bFxRXpys+am8NioTaNjzQtnrfLqmrV2rm2KK021rnPx7kC7rKjM7vOPUx085Y5plZ/8RWS62aOPWwVUW+0W2a5YR/r/vOi1Fd9v7M3g/I9Y2gK8J3XoB5yKVbghAowzIAuKi9IZs+ttRdthaZ4LwEkAE5iOr66APsZR1P9ZEooJW44rDLtwVFdbpuLt8Qg0vTrLTEGl2wn5jXOaulv0eRU4fWpbyUTMc5I6vK949yGbgtfLV9AJd1yAmV287+lA2NgRAjKlqaH8vN933ZKzHh14oD3wc09SAj8LXifPtdiNlwuauAiO/P+x4FI0DoyjBVf0F2UHodx9QVlHZj1+cdCRTpL+2OGSXrZgDoN8XTKhd5iHD+RbxEEctvVdizZaf904HQ2KXtAybzxCq3BxDW9Y45hMtnbF33Es5/H8nZESOBjoerBtdZ77vvzJn7rNd6oqTFf79WrCeZrP9vi6WIkGd5cdrwY8oVzc6iokZKdxM8xTJeJE6Dc8S7WSktzSeJnK1o5DanrRY5TMIU0/kHGb3PZjVN7LhWQdGHXVwFuLDam9OEtmxzxeOSeze5Duv1lEEFD+Pn7Z5pa4kufig7qLPZUHovSZDLTJ3ndkQjsHAkp6XeNA08O3sVds9sUSOmZt98eX9yBy0/yqPf/NjNbvonMMv0vL1A8F8HV0TnW5KtQpdBdAGirVoI2iWOYoj9IkjgDplGqGIxQQC3zGqT+kiOwQlgSm6CHe/d6+NGpqwU1yMCeuxapGSWET4N+O9oY2JxQoWTOOaQ2W3XGwu/Y97Uo/olfTMaCXGfzy6zdLm84B3gfrBMUWpkcqltcvI38nWlLkIZmxHKEwdsHQrS7cfpEji7IoNPbXXO7tKq6Z+rg9bgSV0oKpbevNIF+kAXVBbc/vvfL6xXJayARIc2KS0QZ1Ye88neL8qJj5BDDJpwjAbO47kxR7k20Q/Ic1Mk7F3AjPdh+NdHjGGTof3LWxB9idNtJPx+zIcy3X+sM/+1vnKEM1t6jQPmw0yN9L2GHZeUqrXqpMJ7AfwSlQRLpB/TWQVSt5cDSZzF3CZeZ5knwzI1KEigR9ct25TDtHqFLy/EkUCjHySHrLY4FJifmIs4HLBbRAfiSmdDUW6rfFbkdmEC13FP27OEiRpXFfuKY/k+4bh428YGE5eKXVUJ8DPU/XaHwlGpBFaefrmql/YyALIiI+W73rKvMtLlWx3Y8LQJ3f898b1k16WB5YN0llqcgPkzvi3MFHPeYg5mUNUApK59fPTEmavToEbs4yCjTBH4udRzXTwnfmkKxjPz06D7ts0W6jwEXN/wGqWSwmMvT3oxMJnIbzkGX/U9Vks6EL+yoRkXjek//RF1qCvirz4OTgAqg95szWxjufe0XKVGT8wfgq1QUQnqyu+/gQytbjfbRHFmb4KZL6DN3waxGIneJb0ih7FZeey1Nkt4SxPeKr7TMILUJy4medd8QXB8OcASx4Kbt8U7VSk0FPnUBhHDed/AoDPDnON7/mmWj6aeoQ+NDVjUgqNDHPzZlntjEbLaYYx/d1BkUjMYkzfvU3CED81sejrllfU+voLHbYO3E3HoeQ9IIlfUhqen9JQ5K7kI/6Bw6sujHqlpbLUxXFw/kg7fsNUACntUqb3NEFA5QBR7F5fhbEPaYBKz///sok1p89wfyH5Vs7PcB0zerDKXwr4KPZA38gEaCx4lqkhhr9HeXj5mQPNi2HSOZzAmpeFUW9Qz+FYb+6olt+4MvQdKwvBCdn68hkNqGootTWnI6GpL3dVeqIdHX1FXXcPBJy8WlYPxe8VRFsDW23E+wVNZlSxhJrSoXPf39CY5V7B99kHFKl0BmsBihQdMN1bpp7ApkZfN5TQFBAu1eQSyah7xN7uywzUtvBO+xUehxgAt3Ogc3zOvsGpw4MyHfgG+2EBNcpZ21mL0FxBi58fGCvq1uhIferKcYeORLMVohU2sJTO3sY7G5/+Cmi2etet4MUMi00lBzthF27JEMf9YKAT/67hdmEpDDGruZjw50S9hUhowaFdjfGPVfn5zTuWCkGEfyO2ITntlELAk0/NAi8YuaEFAVzeIDzzg0twSprAja3ran1zXrHfEu1B3r8iNqhFZx4onPQXG5CY9rklofTUpr7yH1j8jGKw+mhoWdSfoFWi0au+E0RivmDvuY03sfh2AhcqR/XRDQS9a8kWdQnMMC4D39MmB9NqOXqlWRtTREHh1eIaELD5XuRDp6uZEaMRUIlGARr3iolBku0UFN9uSwkPYKsPKtntVo/KX8qIcPbIEKqz/CNcpST1xf/vC9QJ9atafte8W5GEFCjA1tZrhKyQuodAa+Rn36Nj4p2IktBiVJ5b13Hfm1I0iAUt+So8RQe6B/F+fP2EBpotVqJ6b+hxdqI25unY/1fySJoAfPj/OMdCjwF5swebby2TLx0qnE5jc0FkJv9raAXJuyEwEVxhg7DUn7FmBSjIL08/TfReUUCbJnmAQ43dxWljoNVPKkdpM9EGmqMj+1FiB0eECZmgfLs/t1nJ/FWqr/sApw7NmMFZllgJup4n0+4qpUcY49pRKtHDI2OyJmEMVfxnNrXye3/UZvOpqw0r/TsBtiVFlLzDEcbRxAno8nWXL+s21InWDr5wLbbFwZyXdeEyv3mJHjsEeGvAcW9rtPbAG/xqx1k9CWBnEvqXCmsw7AwuRC8ZKHbSeSdnrFtOU59lRcI3TIzrDmbx+oh4bq52Mg+LnMnQaMY4DDBMizVgZ3QmoCYOnGc9D/ARLxZHXPcNcYHN5c7OMqhRQS8Ry28q6V7Zjfxb7TPTpLGvtBdaDgnbRY1JN6u5uq0zRKbzblR2DlFLg8ivt+OybRqXN6m8ayNrhFXdRENLdCR3N9DILmjm0T59GET5f1Zjo8kNYjaQC36Dnut2UO3CgeAxVEe+6Z1uZXu6bCFdyKITEPx0hJFsXwPiyhKL5rZYkw3UvcB7zphzu7J0mOzHZYQByuyHs/Jr1dRShXIK5KcP7XAKHuSa7VxubxOrAU0a1n53N7oH7UaHz5MWkfFqTdE0kHHFhRyuPCKAH7qPQ13gMMqCIi/6iA1iHj02uFHL5xOaMnTzr20DKEEpyDlYoh4oZNcEtmSJUO5YUwQ+8uNgc2D58uKoEdikVwr9Rx/Yiuu0TlnpMD/AZVS2K5NuwhPvV7dOazj9nvThc+7WAm8fAqFg4QT4RKac3fXQlpYmKF1v95eEKzOZ+3fybOOrMvt4FxIkelNaXpAV2HS/rrp1sxeplAwNi/lpWyQOVt2rlwtVhFo/e3chwegaVCrjz8BvQicezcp2EEndlRuycThlqCyDxzEEVAcrqG0Gka2ZKpW7LnPzPs1H94lkv/64nJfoMY3milL01KPzh5hWPpam5OOwsKIto2qzzUa2SZLwIZplb8LYg9gphEfScvtJk8azreqmv89+xp/w9wtrvYWR8/9eBDY0j6Y+ybjGoQ+EucMYAt/xrPWNSeugEfBN9JRE/1MHgXylaEl4zz0X5NBibeDXeUXs9nz+ollWklMhSBhLuFiBL4zrniCmzgSnBoai+v8Vv57PEojgxUsmFyeYSg+Hm7cZfi/vdSxuUqYIr+4UMPa8r2kFMs8NB5QdaZXN477cDi13DBikojxRSDKNTjQt5WCJVVfBNOiU5SSdasC9FVsVIK6XBxRg5CYUfqQ1ov7HmXRqPtQOtvA90EUmuH3GShwt52s/ghzoCQOzRnPEAh0cK0pDsKIkxzzMdT94Obq6hNU/svO2LLS1tEWU9UAblyYw4yY0fXkcJ3weOGEH9VQRUGzELWUk/s8MTm0mw++Do+jpRFeJDSyJEeDY//hc9xIOwqNubmTSUczoVLbev0NZVYCgRAAdJsHqM16a68uc0zu3RKoFfxb1lFIqrE/ZdTAD97NiEMEc3vlZyzKdRpgMf4R+TMu/kBVwrh+9ywxP7JY9Vwk6XsAUjg+1z3+ZmLSfBbdnUhxzEMKEyHPzz2x51HjpBnyXtLDI2KxoQiDrNYXWky3aWf84JtwPJJ1LAf6Omsx0RtIsZZLvQhO/wdQ7d2Bz3acTuTIcJJLe4ynO5aqd1ecx+egN3tuYTP+HsRHPsxYIHJVGb/HECuNlD+XsPflRED+PiCMAjrvlwbyZcEscMHQwidXHoKzaDoJZHmBF4Y/qh9v9fCMKgZZXpTjN4XZyEMQNtrfUKVZTwBDmBqJl3jG99lBrqGR87G3woSMErwQprAqn3vblxdJOMdz63pq6awRYGZD6sZtLWwwrqnbemxYi0WYJi94M2a0ezBQ6cpCi/1YEAV82Bydr12OYSjuVWgdFpeDRAkgIzCb7jxVrj9hH96k3b+0OL3RTtkxusCwXq03CWlzJN1lEbIPyT7SoruPGPuTg41fVX2qhj8iHIp33wjR+OyQvTVA3GHkErK5eaY7p5gN4o29XsZ6vkQd1i6l0K1j43rZF+lJTIKKMVUbxyMPjm8vk0uPiUisef/WLr/MHHRVGiidaPuPMVWTldpeOyxAbG67xeHSPNNjeMFVpBu1WSFNLf8biqbXr+uLfAnbAs/HbuHWHbA+9KE6fjwZZbV6ilB7MeqSwZmuFkptq6M8f2bGrsDEBRDi2w1no2BXrMt1IBzHOrzVa+j65N1Tctt9pwLVHD4nw2xloww5zkCAdYl+7yMgSn/+YyzRRkRH/oFrx/hvI6nKIlgnUkslZp6WxcplnP2oGuSpPz3H9xKAOABfoMG5Meaze0YQalboBSgoYoYUfqWBonRIIgW+erLFYYvIJkN72qvDzA7/3UQgpUgQ9yf/6ZwJp6739ILnidTN6KLSyPXc5a32c9AmySD0csLQaCyWbOZ5vddCGhUB6CqhUv4SKhDmH1guVqPKUe9pYl1S/CP4glC7LBPnGZaMOlfTqpwjzpntb+0ESp56q0+rnVkB3avlkrZnbQj4ORT3ymCEOSo9HT98ikfOsSDy9Gv5AOW6VhPsSoC1ZWGjPbcdctdyzOo97/3nMXO9GBHHhZtfhJIAvcGz6G8yNZAfyXaB1HvmcWaoOlVFdwjLEQD5ToA6GeKvZjbNCjoDTwk5g==\"\n                    }\n                ],\n                \"role\": \"model\"\n            },\n            \"finishReason\": \"STOP\",\n            \"index\": 0\n        }\n    ],\n    \"usageMetadata\": {\n        \"promptTokenCount\": 19,\n        \"candidatesTokenCount\": 1052,\n        \"totalTokenCount\": 2172,\n        \"promptTokensDetails\": [\n            {\n                \"modality\": \"TEXT\",\n                \"tokenCount\": 19\n            }\n        ],\n        \"thoughtsTokenCount\": 1101\n    },\n    \"modelVersion\": \"gemini-3-pro-preview\",\n    \"responseId\": \"HZJiadmBPbLXjuMP3LqV8A4\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Structured Output (Response Schema)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"contents\": [\n    {\n      \"role\": \"user\",\n      \"parts\": [\n        {\n          \"text\": \"Extract the following information: name, age, and email from this text: John Doe is 30 years old and his email is john@example.com\"\n        }\n      ]\n    }\n  ],\n  \"generationConfig\": {\n    \"response_mime_type\": \"application/json\",\n    \"response_schema\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The person's full name\"\n        },\n        \"age\": {\n          \"type\": \"number\",\n          \"description\": \"The person's age\"\n        },\n        \"email\": {\n          \"type\": \"string\",\n          \"description\": \"The person's email address\"\n        }\n      },\n      \"required\": [\"name\", \"age\", \"email\"]\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-preview:generateContent?key={{GOOGLE_API_KEY}}",
+							"protocol": "https",
+							"host": [
+								"generativelanguage",
+								"googleapis",
+								"com"
+							],
+							"path": [
+								"v1beta",
+								"models",
+								"gemini-3-pro-preview:generateContent"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{GOOGLE_API_KEY}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Structured Output (Response Schema)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"contents\": [\n    {\n      \"role\": \"user\",\n      \"parts\": [\n        {\n          \"text\": \"Extract the following information: name, age, and email from this text: John Doe is 30 years old and his email is john@example.com\"\n        }\n      ]\n    }\n  ],\n  \"generationConfig\": {\n    \"response_mime_type\": \"application/json\",\n    \"response_schema\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The person's full name\"\n        },\n        \"age\": {\n          \"type\": \"number\",\n          \"description\": \"The person's age\"\n        },\n        \"email\": {\n          \"type\": \"string\",\n          \"description\": \"The person's email address\"\n        }\n      },\n      \"required\": [\"name\", \"age\", \"email\"]\n    }\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-preview:generateContent?key={{GOOGLE_API_KEY}}",
+									"protocol": "https",
+									"host": [
+										"generativelanguage",
+										"googleapis",
+										"com"
+									],
+									"path": [
+										"v1beta",
+										"models",
+										"gemini-3-pro-preview:generateContent"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{GOOGLE_API_KEY}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "X-Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Referer"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 17:53:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "scaffolding on HTTPServer2"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "gfet4t7; dur=4031"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"candidates\": [\n        {\n            \"content\": {\n                \"parts\": [\n                    {\n                        \"text\": \"{\\n  \\\"name\\\": \\\"John Doe\\\",\\n  \\\"age\\\": 30,\\n  \\\"email\\\": \\\"john@example.com\\\"\\n}\",\n                        \"thoughtSignature\": \"EoUFCoIFAXLI2ny3O+QMKk/q2eqZmODyWYUX/hH22Z9Amww/1rrJK8824HiEo4DDxRwydoyQjl3LgQm4nUknjzfwdsYmfPFD3kisaYydAjP6ikV3q5J+y/wKEJj5hk1+dP6nfu6bbk0EsBS/Qc9fk8M1TBKzB2Wu0ox8xI+RpBUUDHhO4o3DFwIRhbyazYChYtyUcFF9DN7CAIrXz959FpBk88C4/xmHsB0ZF+14rFjn9iU+ukN8V6DcnLRmbUrNJBT/BtE/jhLhB5aciawe9ofTAVrC1NsgJSl5dXQeeWSxHuqJpvOkYkgpWpy2EPs/vMukxPt/Qh0qRI3oIeDJhRpk3QP8LGkISwUFdd26tRwS3XNWi73kk6tHoYsJoUP93kr4o+z1wmSk8cIAYrDx1Iia4cNLQNzOjLnLcQsUjA98IlxrDgtb9X+7NfnSDsXRaPXrkeILGSHQ1IvFr8BA98203c4USNLCSgn5zczkvDWRqkWuBMdDmYYOnjljzaR6AMIdZuBvM+npOwq5aqQmY/m1c2EJl6WVTrhKk+JaZ3O5yGX1h91sSqjh6oLRL8WqE1DGmKa5RykYOzgrLXfRqBQtd9lV0bkVPKs8gM3yYe+juvus/tvm4PTKI1CbmV3E8JhT12zaVy0w7nBmpgCyZsUnlvLs8Q6ZeaVspBKjgMb0BnvDncYAsBzyRmJ7clYreLW/LbafEOPDw52qZdUhtbShe5CT7Nf3YfemA42+euKsZSBpqiaSkVI2kvr1oqgDgsHqanUR0mXf6S8JM1Qq1NTRDnJKQrO+3vzvZhR17RLzzj/OpAxMLSRXdiVAy5XVqISa/prN3LdVh23fdtCVUR/Tq6hkDsAV\"\n                    }\n                ],\n                \"role\": \"model\"\n            },\n            \"finishReason\": \"STOP\",\n            \"index\": 0\n        }\n    ],\n    \"usageMetadata\": {\n        \"promptTokenCount\": 33,\n        \"candidatesTokenCount\": 33,\n        \"totalTokenCount\": 253,\n        \"promptTokensDetails\": [\n            {\n                \"modality\": \"TEXT\",\n                \"tokenCount\": 33\n            }\n        ],\n        \"thoughtsTokenCount\": 187\n    },\n    \"modelVersion\": \"gemini-3-pro-preview\",\n    \"responseId\": \"KZJiaa2TCLKL4-EPlejRuA4\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Embeddings",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"model\": \"models/text-embedding-004\",\n  \"content\": {\n    \"parts\": [\n      {\n        \"text\": \"GraphRAG is an advanced retrieval augmented generation technique.\"\n      }\n    ]\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:embedContent?key={{GOOGLE_API_KEY}}",
+							"protocol": "https",
+							"host": [
+								"generativelanguage",
+								"googleapis",
+								"com"
+							],
+							"path": [
+								"v1beta",
+								"models",
+								"text-embedding-004:embedContent"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{GOOGLE_API_KEY}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Embeddings",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"model\": \"models/text-embedding-004\",\n  \"content\": {\n    \"parts\": [\n      {\n        \"text\": \"GraphRAG is an advanced retrieval augmented generation technique.\"\n      }\n    ]\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:embedContent?key={{GOOGLE_API_KEY}}",
+									"protocol": "https",
+									"host": [
+										"generativelanguage",
+										"googleapis",
+										"com"
+									],
+									"path": [
+										"v1beta",
+										"models",
+										"text-embedding-004:embedContent"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{GOOGLE_API_KEY}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "X-Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Referer"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 17:53:53 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "scaffolding on HTTPServer2"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "gfet4t7; dur=155"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"embedding\": {\n        \"values\": [\n            -0.058415778,\n            -0.012173154,\n            -0.06592809,\n            -0.01856277,\n            -0.021158705,\n            -0.0023823231,\n            0.048121706,\n            -0.0330302,\n            0.04067827,\n            -0.07243218,\n            -0.024944728,\n            0.0013472444,\n            -0.015283614,\n            0.055733625,\n            -0.02229808,\n            -0.025416514,\n            0.029273706,\n            0.029008247,\n            -0.044597548,\n            0.002146087,\n            0.016236935,\n            0.03484345,\n            -0.056193043,\n            -0.076397635,\n            0.03345626,\n            0.041333057,\n            0.011546312,\n            0.031286385,\n            -0.0015117275,\n            -0.046539422,\n            -0.014759686,\n            0.016585635,\n            0.05046224,\n            0.0076984665,\n            -0.05026233,\n            0.02253067,\n            0.00021395377,\n            -0.02447721,\n            0.05190314,\n            -0.042634856,\n            -0.022948878,\n            -0.004338414,\n            0.00047657394,\n            -0.012739638,\n            -0.0017593533,\n            -0.05684461,\n            -0.00031764264,\n            0.061147008,\n            -0.054219898,\n            0.045228697,\n            -0.0018579101,\n            -0.068659626,\n            -0.012675325,\n            0.0044603557,\n            -0.026287135,\n            -0.01728331,\n            -0.044199012,\n            0.01989567,\n            0.049683776,\n            -0.005121647,\n            0.06939939,\n            -0.014678565,\n            -0.023566859,\n            -0.021228563,\n            0.06790196,\n            -0.020076644,\n            -0.061095975,\n            0.04639763,\n            -0.00009771915,\n            0.005918292,\n            -0.025736967,\n            0.00059992116,\n            0.0012416302,\n            0.049158826,\n            -0.040833082,\n            -0.048787124,\n            0.049172126,\n            -0.017707096,\n            0.049124807,\n            -0.012592162,\n            -0.029000852,\n            0.009608054,\n            0.02805954,\n            -0.022498136,\n            0.024298716,\n            -0.025774725,\n            0.040544614,\n            -0.0838941,\n            -0.04334274,\n            -0.046966862,\n            0.11334205,\n            -0.010658502,\n            -0.0050992547,\n            0.02800432,\n            0.03209029,\n            -0.022318646,\n            0.008671549,\n            -0.109966464,\n            0.021683274,\n            0.07209478,\n            -0.06199711,\n            -0.027317135,\n            0.0022255569,\n            -0.03733043,\n            0.04750304,\n            0.07192013,\n            0.035513196,\n            -0.035425056,\n            -0.06417581,\n            0.00017435364,\n            -0.01058204,\n            -0.004576115,\n            0.0008513167,\n            -0.07996756,\n            -0.044985898,\n            -0.028136479,\n            -0.04004304,\n            -0.008449328,\n            -0.014199952,\n            -0.0398631,\n            0.007317022,\n            -0.014287956,\n            0.012984633,\n            0.07046605,\n            0.025323236,\n            -0.047751214,\n            0.030796891,\n            0.007831473,\n            -0.06047215,\n            0.007935051,\n            0.11439315,\n            -0.033722155,\n            -0.00025077196,\n            -0.026438251,\n            0.04580733,\n            -0.03698448,\n            0.006826546,\n            0.009206552,\n            -0.0032336542,\n            0.008934415,\n            0.030543573,\n            -0.015140444,\n            -0.03258003,\n            -0.029595729,\n            0.012977576,\n            -0.05124113,\n            -0.010877942,\n            0.006152776,\n            0.025759142,\n            -0.023223866,\n            0.0040908847,\n            -0.032098066,\n            -0.036295734,\n            0.026471209,\n            -0.019547282,\n            -0.031143365,\n            -0.02234452,\n            -0.050379727,\n            0.05316004,\n            0.007035418,\n            0.035009373,\n            -0.031635176,\n            0.07465375,\n            -0.02541618,\n            -0.097184695,\n            -0.00746662,\n            0.0042776973,\n            -0.06898972,\n            -0.008460454,\n            -0.0045288648,\n            -0.019674426,\n            0.009315605,\n            -0.034818616,\n            -0.004975751,\n            0.019334158,\n            0.0038498044,\n            -0.011348996,\n            -0.03487823,\n            -0.04093484,\n            -0.0116485525,\n            0.09462858,\n            0.01382848,\n            -0.025623487,\n            -0.04957249,\n            0.0055402913,\n            0.008296783,\n            -0.0093700085,\n            -0.001035235,\n            0.005583896,\n            0.026393693,\n            0.028737446,\n            -0.04808662,\n            0.032435596,\n            -0.029819561,\n            0.030986736,\n            -0.004819385,\n            0.007874929,\n            -0.066055395,\n            -0.0027973726,\n            -0.051367003,\n            0.0043647615,\n            -0.030514773,\n            0.04186604,\n            -0.04348705,\n            0.011378025,\n            -0.039768457,\n            0.032396212,\n            -0.04015145,\n            0.063464195,\n            0.028041523,\n            0.047609832,\n            -0.014229305,\n            0.002914464,\n            -0.018195612,\n            0.04580293,\n            -0.004420252,\n            0.054810528,\n            0.030899253,\n            0.06924526,\n            -0.011349294,\n            0.009889701,\n            -0.047836162,\n            -0.073528804,\n            -0.026023464,\n            0.03894802,\n            0.0062456485,\n            -0.03766609,\n            0.013831772,\n            -0.0034046974,\n            -0.048897754,\n            0.056666087,\n            0.033700936,\n            0.013587924,\n            0.057019193,\n            -0.002360089,\n            0.022763403,\n            0.03283255,\n            0.007891631,\n            -0.010259393,\n            0.0045567825,\n            -0.076855265,\n            0.10034616,\n            0.0942186,\n            -0.015235185,\n            0.017349977,\n            0.042362623,\n            0.018304333,\n            0.047719207,\n            -0.007231371,\n            -0.031241877,\n            0.005557108,\n            -0.014364382,\n            -0.018417649,\n            -0.03189931,\n            -0.013871173,\n            -0.03681022,\n            0.028000347,\n            -0.0030814966,\n            -0.07396659,\n            0.0053470195,\n            -0.04145672,\n            0.008852732,\n            -0.00051120966,\n            -0.048038915,\n            0.008605334,\n            -0.024950635,\n            -0.027985241,\n            0.025623968,\n            0.06265445,\n            0.014396532,\n            0.036303334,\n            -0.04076498,\n            -0.018035697,\n            -0.05304287,\n            0.0018510101,\n            0.000028048373,\n            -0.0024344868,\n            0.0030115158,\n            0.030653838,\n            -0.006277561,\n            0.026989955,\n            0.0043323003,\n            -0.037456255,\n            -0.025435777,\n            0.03510893,\n            -0.033970412,\n            0.01928921,\n            -0.0036094044,\n            -0.014249969,\n            -0.043315407,\n            0.056045532,\n            -0.0049916655,\n            -0.060857166,\n            -0.03452363,\n            0.01943635,\n            0.010862021,\n            0.020750748,\n            0.011474011,\n            -0.059695818,\n            -0.0033293518,\n            0.009231748,\n            0.05211914,\n            -0.056790616,\n            0.059323024,\n            0.0135531835,\n            -0.028408194,\n            0.05113008,\n            -0.004367889,\n            -0.07551864,\n            0.01590781,\n            0.06798261,\n            0.003632802,\n            0.027118895,\n            -0.052231196,\n            -0.052553065,\n            0.015590671,\n            -0.05044487,\n            -0.0072231377,\n            0.012388356,\n            -0.02394535,\n            -0.001909112,\n            0.048568286,\n            0.004719811,\n            0.062173527,\n            0.037277933,\n            0.057415955,\n            -0.019801771,\n            -0.045046158,\n            -0.00037240094,\n            0.05893985,\n            0.043991104,\n            0.033059426,\n            -0.016235704,\n            -0.057177816,\n            0.012630287,\n            -0.019996554,\n            -0.009727059,\n            0.053322844,\n            0.031053875,\n            -0.017012749,\n            -0.005249302,\n            0.04959762,\n            0.017934091,\n            0.013887091,\n            -0.0071843048,\n            0.025364606,\n            0.014630943,\n            -0.03321775,\n            0.026364038,\n            0.01389949,\n            -0.039158646,\n            0.041283008,\n            0.030096244,\n            -0.015766924,\n            -0.03206204,\n            0.010474997,\n            0.012816481,\n            -0.014340538,\n            0.037390392,\n            -0.027745096,\n            -0.0037336762,\n            -0.017846474,\n            -0.03366554,\n            0.05838124,\n            -0.011645487,\n            -0.03071492,\n            0.05465162,\n            -0.022795474,\n            -0.004356607,\n            -0.0056970916,\n            -0.016740046,\n            0.03129844,\n            0.04448641,\n            -0.011852756,\n            0.031875044,\n            -0.02665707,\n            0.0385207,\n            0.046108644,\n            0.00019672427,\n            0.013843718,\n            -0.021800147,\n            -0.033749606,\n            0.014137647,\n            0.0040765284,\n            -0.03717132,\n            0.07167733,\n            -0.022049323,\n            -0.032780927,\n            0.01199325,\n            -0.07092128,\n            0.06010295,\n            0.023956887,\n            0.029856069,\n            0.0026951,\n            0.037721384,\n            0.029743634,\n            -0.0049062283,\n            0.057604328,\n            0.026097475,\n            0.03813354,\n            0.007173895,\n            -0.024737718,\n            0.013730577,\n            -0.016827699,\n            -0.058779422,\n            -0.02273608,\n            0.040307608,\n            -0.010847336,\n            -0.02657087,\n            0.017610578,\n            -0.049313754,\n            -0.022189658,\n            -0.024972083,\n            0.065280765,\n            -0.04781725,\n            0.0009771386,\n            0.018166913,\n            -0.03346608,\n            -0.012535964,\n            0.020569503,\n            -0.015241659,\n            -0.046048615,\n            0.057749268,\n            0.027745409,\n            0.0052171773,\n            -0.033472218,\n            0.0067637637,\n            -0.039082587,\n            0.007916422,\n            0.022363415,\n            0.015008016,\n            -0.027370784,\n            -0.009538979,\n            0.010177296,\n            0.050032277,\n            0.012233718,\n            0.013871392,\n            -0.023003062,\n            -0.0019638778,\n            0.00040166458,\n            -0.020776436,\n            -0.0043934635,\n            -0.00095231,\n            0.04251634,\n            -0.033966426,\n            0.043663785,\n            0.04631509,\n            0.041424002,\n            0.0665827,\n            -0.07938454,\n            0.022443231,\n            0.029418647,\n            -0.01163576,\n            -0.048356768,\n            -0.055029254,\n            0.036847748,\n            0.023345588,\n            0.025301237,\n            -0.066887066,\n            -0.008481014,\n            -0.07971775,\n            -0.019622063,\n            0.077935465,\n            0.034716573,\n            0.002250105,\n            -0.060524285,\n            -0.008191132,\n            0.01611967,\n            -0.030181173,\n            0.0040818397,\n            0.072746165,\n            0.018982569,\n            0.040324666,\n            0.012781679,\n            -0.05305777,\n            -0.024441306,\n            0.07483397,\n            -0.02617011,\n            0.043507133,\n            -0.09202014,\n            0.029744297,\n            -0.0046794945,\n            0.003442532,\n            -0.005600455,\n            -0.011468102,\n            -0.014862266,\n            -0.023161555,\n            0.016578317,\n            0.046638105,\n            -0.0076475125,\n            -0.00822079,\n            -0.033191703,\n            -0.08651142,\n            -0.024676837,\n            -0.031367213,\n            0.030386398,\n            0.05414795,\n            -0.040502287,\n            0.02115476,\n            0.008389132,\n            -0.0037413198,\n            0.0058971783,\n            -0.01930513,\n            -0.010945073,\n            0.0029603832,\n            0.047795516,\n            -0.04362774,\n            -0.024014195,\n            -0.011877449,\n            -0.0026031407,\n            -0.026931012,\n            -0.044735555,\n            -0.008554857,\n            0.0029453142,\n            -0.05335174,\n            0.06490338,\n            -0.08687882,\n            0.019163419,\n            -0.040454715,\n            -0.012864405,\n            -0.025805218,\n            0.03762541,\n            0.04842173,\n            -0.02997799,\n            -0.058422692,\n            -0.0074393474,\n            -0.028768955,\n            0.021739272,\n            0.040134445,\n            -0.038707383,\n            0.007045776,\n            0.039212976,\n            0.01929502,\n            0.027155524,\n            -0.019378463,\n            0.11036726,\n            0.037807375,\n            0.0012877877,\n            0.026399106,\n            0.048798576,\n            -0.005671441,\n            -0.011140778,\n            0.023280976,\n            0.03520084,\n            0.057441503,\n            -0.044993922,\n            -0.0061407494,\n            0.017575791,\n            0.00079322944,\n            0.09876806,\n            0.031099562,\n            -0.019991362,\n            0.014473062,\n            0.0127018755,\n            0.002664381,\n            0.00552315,\n            0.029464807,\n            -0.0028272422,\n            -0.0063584554,\n            0.0046397764,\n            0.036213942,\n            -0.0091869235,\n            -0.020312894,\n            0.015151525,\n            -0.043783493,\n            -0.032416247,\n            -0.020744026,\n            0.011865358,\n            -0.052284747,\n            -0.04786204,\n            0.01346795,\n            -0.015834654,\n            0.039485227,\n            -0.011958122,\n            -0.03382324,\n            0.008495903,\n            -0.04109441,\n            0.042974282,\n            0.008040312,\n            -0.048111193,\n            -0.004542716,\n            0.017934525,\n            0.048194867,\n            -0.031252936,\n            -0.04913447,\n            0.030288702,\n            0.001178509,\n            -0.019260366,\n            -0.023772828,\n            -0.014260128,\n            -0.044427972,\n            0.004311372,\n            0.028257497,\n            -0.031719614,\n            0.026338715,\n            -0.043470696,\n            -0.08839835,\n            -0.01756867,\n            0.023459222,\n            0.03520965,\n            0.0061457125,\n            -0.053702064,\n            0.06488729,\n            0.019144038,\n            -0.04029978,\n            -0.022981402,\n            -0.013701019,\n            -0.030718258,\n            -0.026688695,\n            -0.020446612,\n            -0.023548087,\n            0.049973458,\n            -0.021569043,\n            -0.026342954,\n            -0.07281638,\n            -0.0076262453,\n            0.0042072483,\n            -0.004166219,\n            0.011814078,\n            -0.015496849,\n            0.0137402695,\n            0.028737087,\n            0.017462557,\n            -0.01882806,\n            -0.021844922,\n            -0.007912761,\n            0.025064664,\n            0.047575206,\n            0.019342879,\n            -0.04051585,\n            0.002705785,\n            0.03972816,\n            0.0017565117,\n            -0.04131013,\n            -0.029856132,\n            0.02033344,\n            0.039385166,\n            -0.035514317,\n            -0.033256426,\n            0.028587904,\n            0.00814953,\n            0.013587036,\n            0.0051527675,\n            -0.023486188,\n            -0.023003811,\n            0.005739731,\n            -0.017444994,\n            -0.0027614194,\n            0.020857098,\n            0.031944226,\n            0.0035697578,\n            0.039533563,\n            -0.032342054,\n            0.015635442,\n            -0.07254545,\n            -0.028838105,\n            -0.057323903,\n            -0.046031628,\n            -0.021380207,\n            0.019823859,\n            0.006166084,\n            -0.0162856,\n            0.002020127,\n            0.013057482,\n            -0.04351238,\n            -0.0021324044,\n            -0.0009685431,\n            0.05247649,\n            -0.039083794,\n            0.054697495,\n            0.0068366337,\n            -0.022494841,\n            0.05952936,\n            0.055140503,\n            0.013922761,\n            0.025443316,\n            0.036003307,\n            0.042643223,\n            -0.0021981439,\n            0.0182371,\n            -0.0038918653,\n            -0.06902352,\n            -0.07444001,\n            0.012966138,\n            0.043108385,\n            -0.055040937,\n            -0.018721301,\n            0.011118071,\n            -0.018397966,\n            -0.015574721,\n            -0.0038693266,\n            -0.00774976,\n            -0.07506952,\n            -0.008826015,\n            -0.017694613,\n            0.07527997,\n            0.014673488,\n            0.054296613,\n            -0.07663232,\n            -0.024950994,\n            0.044092998,\n            -0.0014285306,\n            -0.053714152,\n            0.008567019,\n            0.05328885,\n            -0.018386196,\n            -0.0029364876,\n            0.004611403,\n            -0.08342942,\n            0.023112983,\n            -0.035508946,\n            0.050885808,\n            0.0206158,\n            0.052593898,\n            -0.014089347,\n            -0.01031579,\n            -0.0033731102,\n            0.047780737,\n            0.010456623,\n            -0.039933056,\n            0.07626781,\n            -0.079740085,\n            0.08485761,\n            0.036925126,\n            0.01190754,\n            -0.012040271,\n            -0.024241326,\n            -0.0011012387,\n            0.03166042,\n            0.013796861,\n            0.05901083,\n            -0.028231326,\n            -0.02072177,\n            0.039298564,\n            0.021637704,\n            -0.025524845,\n            -0.028800482,\n            -0.007310527,\n            -0.025655163,\n            -0.010076954,\n            0.05306648,\n            -0.007964673,\n            -0.010475427,\n            0.014896256,\n            -0.027815392,\n            -0.03220792,\n            -0.032363072,\n            -0.015844658,\n            0.013936759,\n            -0.022207279,\n            -0.032840446,\n            -0.006632743,\n            0.043142572,\n            0.00028912455,\n            0.017418653,\n            0.00030300877,\n            0.007197591,\n            -0.00779418,\n            0.029631184,\n            0.00040786678,\n            -0.036002737,\n            0.04835718,\n            0.0055268346,\n            0.00036328388,\n            -0.0019931989,\n            -0.045757093,\n            0.05926545,\n            -0.042342063\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "OpenRouter",
+			"item": [
+				{
+					"name": "Chat Completion",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{OPENROUTER_API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"model\": \"anthropic/claude-sonnet-4\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Can you explain what is GraphRAG and why it is better than normal RAG?\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://openrouter.ai/api/v1/chat/completions",
+							"protocol": "https",
+							"host": [
+								"openrouter",
+								"ai"
+							],
+							"path": [
+								"api",
+								"v1",
+								"chat",
+								"completions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Chat Completion",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{OPENROUTER_API_KEY}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"model\": \"anthropic/claude-opus-4.5\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Can you explain what is GraphRAG and why it is better than normal RAG?\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://openrouter.ai/api/v1/chat/completions",
+									"protocol": "https",
+									"host": [
+										"openrouter",
+										"ai"
+									],
+									"path": [
+										"api",
+										"v1",
+										"chat",
+										"completions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 17:54:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "payment=(self \"https://checkout.stripe.com\" \"https://connect-js.stripe.com\" \"https://js.stripe.com\" \"https://*.js.stripe.com\" \"https://hooks.stripe.com\")"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer, strict-origin-when-cross-origin"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "9bbe0ac74df85138-CMB"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"gen-1768067693-RRFafmPtcG5X5HIg3TGJ\",\n    \"provider\": \"Amazon Bedrock\",\n    \"model\": \"anthropic/claude-opus-4.5\",\n    \"object\": \"chat.completion\",\n    \"created\": 1768067696,\n    \"choices\": [\n        {\n            \"logprobs\": null,\n            \"finish_reason\": \"stop\",\n            \"native_finish_reason\": \"stop\",\n            \"index\": 0,\n            \"message\": {\n                \"role\": \"assistant\",\n                \"content\": \"# GraphRAG Explained\\n\\n## What is Standard RAG?\\n\\n**RAG (Retrieval-Augmented Generation)** retrieves relevant text chunks from a document store based on semantic similarity, then feeds them to an LLM to generate answers.\\n\\n```\\nQuery → Vector Search → Retrieve Chunks → LLM → Answer\\n```\\n\\n## What is GraphRAG?\\n\\n**GraphRAG** enhances RAG by building a **knowledge graph** from your documents, capturing entities and their relationships, then using this structured representation for retrieval.\\n\\n```\\nDocuments → Extract Entities/Relationships → Build Graph\\nQuery → Graph Traversal + Vector Search → LLM → Answer\\n```\\n\\n## Key Differences\\n\\n| Aspect | Standard RAG | GraphRAG |\\n|--------|-------------|----------|\\n| **Structure** | Flat text chunks | Connected knowledge graph |\\n| **Retrieval** | Similarity search | Graph traversal + similarity |\\n| **Context** | Isolated chunks | Related entities & connections |\\n\\n## Why GraphRAG Can Be Better\\n\\n### 1. **Multi-hop Reasoning**\\n```\\nQ: \\\"How is Company A connected to Person B?\\\"\\n- Standard RAG might miss indirect connections\\n- GraphRAG can traverse: A → works_with → C → knows → B\\n```\\n\\n### 2. **Global Summarization**\\nBetter at answering broad questions like *\\\"What are the main themes?\\\"* by using community detection in the graph.\\n\\n### 3. **Reduced Hallucination**\\nExplicit relationships provide grounded facts.\\n\\n## When Standard RAG is Sufficient\\n- Simple Q&A\\n- Single-document queries\\n- Cost/complexity constraints\\n\\nWould you like a code example or deeper dive into any aspect?\",\n                \"refusal\": null,\n                \"reasoning\": null\n            }\n        }\n    ],\n    \"usage\": {\n        \"prompt_tokens\": 25,\n        \"completion_tokens\": 393,\n        \"total_tokens\": 418,\n        \"cost\": 0.00995,\n        \"is_byok\": false,\n        \"prompt_tokens_details\": {\n            \"cached_tokens\": 0,\n            \"cache_write_tokens\": 0,\n            \"audio_tokens\": 0,\n            \"video_tokens\": 0\n        },\n        \"cost_details\": {\n            \"upstream_inference_cost\": null,\n            \"upstream_inference_prompt_cost\": 0.000125,\n            \"upstream_inference_completions_cost\": 0.009825\n        },\n        \"completion_tokens_details\": {\n            \"reasoning_tokens\": 0,\n            \"image_tokens\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Structured Output - OpenAI",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{OPENROUTER_API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"model\": \"openai/gpt-5.2\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Extract the following information: name, age, and email from this text: John Doe is 30 years old and his email is john@example.com\"\n    }\n  ],\n  \"response_format\": {\n    \"type\": \"json_schema\",\n    \"json_schema\": {\n      \"name\": \"person_info\",\n      \"strict\": true,\n      \"schema\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\"type\": \"string\"},\n          \"age\": {\"type\": \"number\"},\n          \"email\": {\"type\": \"string\"}\n        },\n        \"required\": [\"name\", \"age\", \"email\"],\n        \"additionalProperties\": false\n      }\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://openrouter.ai/api/v1/chat/completions",
+							"protocol": "https",
+							"host": [
+								"openrouter",
+								"ai"
+							],
+							"path": [
+								"api",
+								"v1",
+								"chat",
+								"completions"
+							]
+						},
+						"description": "Note: Structured output support depends on the underlying model used through OpenRouter"
+					},
+					"response": [
+						{
+							"name": "Structured Output - OpenAI",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{OPENROUTER_API_KEY}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"model\": \"openai/gpt-5.2\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Extract the following information: name, age, and email from this text: John Doe is 30 years old and his email is john@example.com\"\n    }\n  ],\n  \"response_format\": {\n    \"type\": \"json_schema\",\n    \"json_schema\": {\n      \"name\": \"person_info\",\n      \"strict\": true,\n      \"schema\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\"type\": \"string\"},\n          \"age\": {\"type\": \"number\"},\n          \"email\": {\"type\": \"string\"}\n        },\n        \"required\": [\"name\", \"age\", \"email\"],\n        \"additionalProperties\": false\n      }\n    }\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://openrouter.ai/api/v1/chat/completions",
+									"protocol": "https",
+									"host": [
+										"openrouter",
+										"ai"
+									],
+									"path": [
+										"api",
+										"v1",
+										"chat",
+										"completions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 17:55:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "payment=(self \"https://checkout.stripe.com\" \"https://connect-js.stripe.com\" \"https://js.stripe.com\" \"https://*.js.stripe.com\" \"https://hooks.stripe.com\")"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer, strict-origin-when-cross-origin"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "9bbe0b532c505138-CMB"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"gen-1768067715-2dHhuwJFFev5HW0k0JNy\",\n    \"provider\": \"OpenAI\",\n    \"model\": \"openai/gpt-5.2\",\n    \"object\": \"chat.completion\",\n    \"created\": 1768067715,\n    \"choices\": [\n        {\n            \"logprobs\": null,\n            \"finish_reason\": \"stop\",\n            \"native_finish_reason\": \"completed\",\n            \"index\": 0,\n            \"message\": {\n                \"role\": \"assistant\",\n                \"content\": \"{\\\"name\\\":\\\"John Doe\\\",\\\"age\\\":30,\\\"email\\\":\\\"john@example.com\\\"}\",\n                \"refusal\": null,\n                \"reasoning\": null\n            }\n        }\n    ],\n    \"usage\": {\n        \"prompt_tokens\": 71,\n        \"completion_tokens\": 24,\n        \"total_tokens\": 95,\n        \"cost\": 0.00046025,\n        \"is_byok\": false,\n        \"prompt_tokens_details\": {\n            \"cached_tokens\": 0,\n            \"audio_tokens\": 0,\n            \"video_tokens\": 0\n        },\n        \"cost_details\": {\n            \"upstream_inference_cost\": null,\n            \"upstream_inference_prompt_cost\": 0.00012425,\n            \"upstream_inference_completions_cost\": 0.000336\n        },\n        \"completion_tokens_details\": {\n            \"reasoning_tokens\": 0,\n            \"image_tokens\": 0\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "OPENAI_API_KEY",
+			"value": "sk-..."
+		},
+		{
+			"key": "ANTHROPIC_API_KEY",
+			"value": "sk-ant-..."
+		},
+		{
+			"key": "GOOGLE_API_KEY",
+			"value": "AIza..."
+		},
+		{
+			"key": "OPENROUTER_API_KEY",
+			"value": "sk-or-v1-..."
+		}
+	]
+}
