@@ -5,35 +5,48 @@ description = "Fantasy RAG Project using Wheel of Time and other series"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    # Web framework and server
     "fastapi",
     "uvicorn",
+
+    # LLM providers (official SDKs)
+    "anthropic>=0.50.0",  # Anthropic/Claude
+    "openai>=1.0.0",  # OpenAI/GPT
+    "google-genai>=1.0.0",  # Google Gemini (unified SDK)
+    "voyageai>=0.3.0",  # Voyage embeddings
+
+    # Core utilities
     "python-dotenv",
-    "langchain",
-    "langchain-community",
-    "langchain-openai",
-    "langchain-text-splitters",
-    "langgraph",
-    "google-genai",
-    "langchain-google-genai",
+    "structlog>=25.5.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.12.0",
+    "httpx>=0.28.1",
+    "tenacity>=9.0.0",  # Retry logic
+
+    # Vector and graph databases
     "pymilvus",
     "neo4j",
+
+    # Document processing
     "pypdf",
     "ebooklib",
     "unstructured",
+    "pypandoc>=1.16.2",
+    "beautifulsoup4",
+
+    # Embeddings and ML
     "sentence-transformers",
-    "requests",
-    "openai",
     "tiktoken",
+
+    # Data processing
     "pandas",
     "pyarrow",
+    "requests",
+
+    # Development and notebooks
     "jupyter",
     "notebook",
     "ipykernel",
-    "structlog>=25.5.0",
-    "pydantic-settings>=2.12.0",
-    "langchain-voyageai>=0.3.0",
-    "pypandoc>=1.16.2",
-    "beautifulsoup4",
 ]
 
 [build-system]

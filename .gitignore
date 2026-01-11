@@ -5,5 +5,6 @@ __pycache__/
 .ipynb_checkpoints/
 cache/
 # Ignore book files but keep directories
-
-data/*
+data/wheel_of_time/*
+data/song_of_ice_and_fire/*
+data/harry_potter/*
