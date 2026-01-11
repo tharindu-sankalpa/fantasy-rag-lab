@@ -1,0 +1,859 @@
+{
+  "entities": [
+    {
+      "id": "harry_potter",
+      "type": "Character",
+      "name": "Harry Potter",
+      "aliases": [
+        "The Boy Who Lived",
+        "The Chosen One",
+        "Undesirable Number One",
+        "Barny Weasley",
+        "Vernon Dudley"
+      ],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "wand_core": "Phoenix feather",
+        "patronus_form": "Stag",
+        "gender": "Male"
+      },
+      "description": "The protagonist of the series, a wizard who is prophesied to defeat Lord Voldemort. He hunts Horcruxes and eventually masters the Deathly Hallows.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 6 - Harry Potter and the Half-Blood Prince",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 7 - Harry Potter and the Deathly Hallows",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "lord_voldemort",
+      "type": "Character",
+      "name": "Lord Voldemort",
+      "aliases": [
+        "Tom Marvolo Riddle",
+        "Tom Riddle",
+        "You-Know-Who",
+        "He-Who-Must-Not-Be-Named",
+        "The Dark Lord"
+      ],
+      "attributes": {
+        "hogwarts_house": "Slytherin",
+        "blood_status": "Half-blood",
+        "gender": "Male"
+      },
+      "description": "The primary antagonist, a dark wizard seeking immortality through Horcruxes and domination over the wizarding and muggle worlds.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 6 - Harry Potter and the Half-Blood Prince",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 7 - Harry Potter and the Deathly Hallows",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "albus_dumbledore",
+      "type": "Character",
+      "name": "Albus Dumbledore",
+      "aliases": [],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "gender": "Male",
+        "role": "Headmaster"
+      },
+      "description": "The Headmaster of Hogwarts and founder of the Order of the Phoenix. He mentors Harry in hunting Horcruxes before his death.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 6 - Harry Potter and the Half-Blood Prince",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "severus_snape",
+      "type": "Character",
+      "name": "Severus Snape",
+      "aliases": [
+        "The Half-Blood Prince",
+        "Snivellus"
+      ],
+      "attributes": {
+        "hogwarts_house": "Slytherin",
+        "patronus_form": "Doe",
+        "gender": "Male"
+      },
+      "description": "The Potions Master and later Headmaster of Hogwarts. He acts as a double agent for Dumbledore while appearing to serve Voldemort.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 6 - Harry Potter and the Half-Blood Prince",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 7 - Harry Potter and the Deathly Hallows",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "ronald_weasley",
+      "type": "Character",
+      "name": "Ronald Weasley",
+      "aliases": [
+        "Ron",
+        "Won-Won",
+        "Stan Shunpike",
+        "Barny Weasley",
+        "Dragomir Despard"
+      ],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "gender": "Male"
+      },
+      "description": "Harry's best friend who accompanies him on the hunt for Horcruxes.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 7 - Harry Potter and the Deathly Hallows",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "hermione_granger",
+      "type": "Character",
+      "name": "Hermione Granger",
+      "aliases": [
+        "Penelope Clearwater",
+        "Mafalda Hopkirk",
+        "Bellatrix Lestrange"
+      ],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "gender": "Female",
+        "blood_status": "Muggle-born"
+      },
+      "description": "Harry's best friend, known for her intelligence and magical skill. She plays a crucial role in the Horcrux hunt.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 7 - Harry Potter and the Deathly Hallows",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "ginny_weasley",
+      "type": "Character",
+      "name": "Ginevra Weasley",
+      "aliases": [
+        "Ginny"
+      ],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "gender": "Female"
+      },
+      "description": "Ron's sister and Harry's love interest. She co-leads Dumbledore's Army in Harry's absence.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 6 - Harry Potter and the Half-Blood Prince",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "draco_malfoy",
+      "type": "Character",
+      "name": "Draco Malfoy",
+      "aliases": [],
+      "attributes": {
+        "hogwarts_house": "Slytherin",
+        "gender": "Male"
+      },
+      "description": "A Slytherin student tasked by Voldemort to kill Dumbledore. He unwittingly becomes the master of the Elder Wand.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 6 - Harry Potter and the Half-Blood Prince",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "bellatrix_lestrange",
+      "type": "Character",
+      "name": "Bellatrix Lestrange",
+      "aliases": [
+        "Bella"
+      ],
+      "attributes": {
+        "hogwarts_house": "Slytherin",
+        "gender": "Female"
+      },
+      "description": "A fanatical Death Eater and Voldemort's most loyal servant.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 7 - Harry Potter and the Deathly Hallows",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "neville_longbottom",
+      "type": "Character",
+      "name": "Neville Longbottom",
+      "aliases": [],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "gender": "Male"
+      },
+      "description": "A Gryffindor student who leads the resistance at Hogwarts and destroys the final Horcrux, Nagini.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 7 - Harry Potter and the Deathly Hallows",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "molly_weasley",
+      "type": "Character",
+      "name": "Molly Weasley",
+      "aliases": [
+        "Mollywobbles"
+      ],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "gender": "Female"
+      },
+      "description": "The matriarch of the Weasley family.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 7 - Harry Potter and the Deathly Hallows",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "elder_wand",
+      "type": "Artifact",
+      "name": "The Elder Wand",
+      "aliases": [
+        "The Deathstick",
+        "The Wand of Destiny"
+      ],
+      "attributes": {
+        "is_hallow": "true",
+        "magical_properties": "Unbeatable wand"
+      },
+      "description": "One of the Deathly Hallows, an unbeatable wand sought by Voldemort.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 7 - Harry Potter and the Deathly Hallows",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "resurrection_stone",
+      "type": "Artifact",
+      "name": "The Resurrection Stone",
+      "aliases": [],
+      "attributes": {
+        "is_hallow": "true",
+        "is_horcrux": "true"
+      },
+      "description": "One of the Deathly Hallows, capable of recalling the dead. It was set in Marvolo Gaunt's ring and turned into a Horcrux.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 7 - Harry Potter and the Deathly Hallows",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "invisibility_cloak",
+      "type": "Artifact",
+      "name": "The Invisibility Cloak",
+      "aliases": [],
+      "attributes": {
+        "is_hallow": "true"
+      },
+      "description": "One of the Deathly Hallows, a cloak that renders the wearer completely invisible and does not fade with age.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 7 - Harry Potter and the Deathly Hallows",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "slytherins_locket",
+      "type": "Artifact",
+      "name": "Slytherin's Locket",
+      "aliases": [],
+      "attributes": {
+        "is_horcrux": "true"
+      },
+      "description": "A locket originally belonging to Salazar Slytherin, turned into a Horcrux by Voldemort.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 6 - Harry Potter and the Half-Blood Prince",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 7 - Harry Potter and the Deathly Hallows",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "hufflepuffs_cup",
+      "type": "Artifact",
+      "name": "Hufflepuff's Cup",
+      "aliases": [],
+      "attributes": {
+        "is_horcrux": "true"
+      },
+      "description": "A cup originally belonging to Helga Hufflepuff, stolen by Tom Riddle and turned into a Horcrux.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 7 - Harry Potter and the Deathly Hallows",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "ravenclaws_diadem",
+      "type": "Artifact",
+      "name": "Ravenclaw's Diadem",
+      "aliases": [
+        "The Lost Diadem"
+      ],
+      "attributes": {
+        "is_horcrux": "true"
+      },
+      "description": "A diadem belonging to Rowena Ravenclaw, turned into a Horcrux and hidden in the Room of Requirement.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 7 - Harry Potter and the Deathly Hallows",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "sword_of_gryffindor",
+      "type": "Artifact",
+      "name": "Sword of Gryffindor",
+      "aliases": [],
+      "attributes": {
+        "creator": "Goblins",
+        "magical_properties": "Imbibes that which strengthens it"
+      },
+      "description": "A goblin-made sword belonging to Godric Gryffindor, capable of destroying Horcruxes because it is impregnated with basilisk venom.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 7 - Harry Potter and the Deathly Hallows",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "nagini",
+      "type": "Creature",
+      "name": "Nagini",
+      "aliases": [],
+      "attributes": {
+        "is_horcrux": "true"
+      },
+      "description": "Voldemort's giant pet snake and the final Horcrux to be created.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 7 - Harry Potter and the Deathly Hallows",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "regulus_black",
+      "type": "Character",
+      "name": "Regulus Arcturus Black",
+      "aliases": [
+        "R.A.B."
+      ],
+      "attributes": {
+        "hogwarts_house": "Slytherin",
+        "gender": "Male"
+      },
+      "description": "Sirius Black's brother, a Death Eater who turned against Voldemort and stole the locket Horcrux.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 6 - Harry Potter and the Half-Blood Prince",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 7 - Harry Potter and the Deathly Hallows",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dobby",
+      "type": "Character",
+      "name": "Dobby",
+      "aliases": [],
+      "attributes": {
+        "gender": "Male"
+      },
+      "description": "A free house-elf who rescues Harry and his friends from Malfoy Manor.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 7 - Harry Potter and the Deathly Hallows",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "battle_of_hogwarts",
+      "type": "Event",
+      "name": "Battle of Hogwarts",
+      "aliases": [],
+      "attributes": {},
+      "description": "The final battle between Voldemort's forces and the defenders of Hogwarts.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 7 - Harry Potter and the Deathly Hallows",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "severus_snape",
+      "target_id": "albus_dumbledore",
+      "type": "killed_by",
+      "description": "Snape kills Dumbledore on the Astronomy Tower, as per their prior agreement.",
+      "evidence": "Snape raised his wand and pointed it directly at Dumbledore. 'Avada Kedavra!'",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "lord_voldemort",
+      "type": "killed_by",
+      "description": "Harry defeats Voldemort when the Killing Curse rebounds.",
+      "evidence": "Tom Riddle hit the floor with a mundane finality... Voldemort was dead, killed by his own rebounding curse",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "lord_voldemort",
+      "target_id": "severus_snape",
+      "type": "killed_by",
+      "description": "Voldemort orders Nagini to kill Snape in an attempt to master the Elder Wand.",
+      "evidence": "The snake's fangs pierced his neck... I regret it,' said Voldemort coldly.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "bellatrix_lestrange",
+      "target_id": "molly_weasley",
+      "type": "killed_by",
+      "description": "Molly Weasley kills Bellatrix during the Battle of Hogwarts.",
+      "evidence": "Molly's curse soared beneath Bellatrix's outstretched arm and hit her squarely in the chest, directly over her heart.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "dobby",
+      "target_id": "bellatrix_lestrange",
+      "type": "killed_by",
+      "description": "Bellatrix kills Dobby with a silver knife as he escapes Malfoy Manor.",
+      "evidence": "The elf swayed slightly, stars reflected in his wide, shining eyes. Together, he and Harry looked down at the silver hilt of the knife protruding from the elf's heaving chest.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "neville_longbottom",
+      "target_id": "nagini",
+      "type": "killed_by",
+      "description": "Neville kills Nagini with the Sword of Gryffindor.",
+      "evidence": "With a single stroke Neville sliced off the great snake's head",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "severus_snape",
+      "target_id": "harry_potter",
+      "type": "mentors",
+      "description": "Snape provides Harry with his memories to reveal the truth about Dumbledore's plan and Harry's destiny.",
+      "evidence": "Take... it.... Take... it....",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "ginny_weasley",
+      "type": "familial_bond",
+      "description": "Harry and Ginny are married with children in the future.",
+      "evidence": "Harry, Ginny, Lily, and Albus had drawn right up to them.",
+      "properties": {
+        "relation_type": "spouse"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ronald_weasley",
+      "target_id": "hermione_granger",
+      "type": "familial_bond",
+      "description": "Ron and Hermione are married with children in the future.",
+      "evidence": "Ron... Make sure you beat him in every test, Rosie. Thank God you inherited your mother's brains.",
+      "properties": {
+        "relation_type": "spouse"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "severus_snape",
+      "target_id": "lord_voldemort",
+      "type": "member_of",
+      "description": "Snape acts as a Death Eater but is secretly loyal to Dumbledore.",
+      "evidence": "Severus Snape was never the true master of the Elder Wand. He never defeated Dumbledore.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "elder_wand",
+      "type": "wields",
+      "description": "Harry becomes the true master of the Elder Wand after disarming Draco Malfoy.",
+      "evidence": "I am the true master of the Elder Wand.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "regulus_black",
+      "target_id": "slytherins_locket",
+      "type": "wields",
+      "description": "Regulus stole the locket from the cave to destroy it.",
+      "evidence": "I have stolen the real Horcrux and intend to destroy it as soon as I can.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "battle_of_hogwarts",
+      "type": "participated_in",
+      "description": "Harry plays a central role in the Battle of Hogwarts, defeating Voldemort.",
+      "evidence": "Harry Potter is dead! ... He beat you!",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "schema_proposals": []
+}

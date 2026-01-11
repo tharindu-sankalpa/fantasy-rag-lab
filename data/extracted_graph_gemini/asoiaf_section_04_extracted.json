@@ -1,0 +1,1351 @@
+{
+  "entities": [
+    {
+      "id": "eddard_stark",
+      "type": "Character",
+      "name": "Eddard Stark",
+      "aliases": [
+        "Ned",
+        "Ned Stark",
+        "Lord Eddard",
+        "The Hand of the King",
+        "Lord of Winterfell"
+      ],
+      "attributes": {
+        "status": "Deceased",
+        "title": "Lord of Winterfell, Hand of the King"
+      },
+      "description": "Lord of Winterfell and Hand of the King, executed for treason by Joffrey Baratheon.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "catelyn_stark",
+      "type": "Character",
+      "name": "Catelyn Stark",
+      "aliases": [
+        "Cat",
+        "Catelyn Tully",
+        "Lady Stark"
+      ],
+      "attributes": {
+        "house": "Tully"
+      },
+      "description": "Wife of Eddard Stark, originally of House Tully. She captures Tyrion Lannister and later acts as an envoy for her son Robb.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "robb_stark",
+      "type": "Character",
+      "name": "Robb Stark",
+      "aliases": [
+        "The Young Wolf",
+        "King in the North",
+        "Lord of Winterfell"
+      ],
+      "attributes": {
+        "title": "King in the North"
+      },
+      "description": "Eldest son of Eddard Stark, declared King in the North by his bannermen after his father's execution.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "jon_snow",
+      "type": "Character",
+      "name": "Jon Snow",
+      "aliases": [
+        "Lord Snow",
+        "The Bastard of Winterfell"
+      ],
+      "attributes": {
+        "status": "Brother of the Night's Watch"
+      },
+      "description": "Bastard son of Eddard Stark, sworn brother of the Night's Watch, and steward to Lord Commander Mormont.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "daenerys_targaryen",
+      "type": "Character",
+      "name": "Daenerys Targaryen",
+      "aliases": [
+        "Dany",
+        "Daenerys Stormborn",
+        "Khaleesi",
+        "Mother of Dragons",
+        "The Unburnt"
+      ],
+      "attributes": {
+        "title": "Queen",
+        "house": "Targaryen"
+      },
+      "description": "Exiled princess of House Targaryen, wife of Khal Drogo, and Mother of Dragons.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "tyrion_lannister",
+      "type": "Character",
+      "name": "Tyrion Lannister",
+      "aliases": [
+        "The Imp",
+        "Halfman",
+        "Lord Tyrion"
+      ],
+      "attributes": {
+        "title": "Acting Hand of the King"
+      },
+      "description": "Dwarf son of Tywin Lannister, serving as acting Hand of the King in King's Landing during the War of the Five Kings.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "joffrey_baratheon",
+      "type": "Character",
+      "name": "Joffrey Baratheon",
+      "aliases": [
+        "Joff",
+        "King Joffrey"
+      ],
+      "attributes": {
+        "title": "King of the Andals and the First Men"
+      },
+      "description": "Eldest son of Cersei Lannister and Robert Baratheon, crowned King after Robert's death. Cruel and impulsive.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "cersei_lannister",
+      "type": "Character",
+      "name": "Cersei Lannister",
+      "aliases": [
+        "The Queen Regent"
+      ],
+      "attributes": {
+        "title": "Queen Regent"
+      },
+      "description": "Widow of Robert Baratheon and mother of King Joffrey. She serves as Queen Regent.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "jaime_lannister",
+      "type": "Character",
+      "name": "Jaime Lannister",
+      "aliases": [
+        "The Kingslayer"
+      ],
+      "attributes": {
+        "title": "Ser",
+        "role": "Lord Commander of the Kingsguard"
+      },
+      "description": "Twin brother of Queen Cersei and knight of the Kingsguard. Captured by Robb Stark at the Battle of the Whispering Wood.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "stannis_baratheon",
+      "type": "Character",
+      "name": "Stannis Baratheon",
+      "aliases": [
+        "King Stannis"
+      ],
+      "attributes": {
+        "title": "Lord of Dragonstone",
+        "claim": "King of Westeros"
+      },
+      "description": "Brother of Robert Baratheon, claims the Iron Throne as Robert's true heir. Operates from Dragonstone.",
+      "mentions": [
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "renly_baratheon",
+      "type": "Character",
+      "name": "Renly Baratheon",
+      "aliases": [
+        "King Renly"
+      ],
+      "attributes": {
+        "title": "Lord of Storm's End",
+        "claim": "King of Westeros"
+      },
+      "description": "Youngest brother of Robert Baratheon, declared himself King. Murdered by a shadow assassin.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "theon_greyjoy",
+      "type": "Character",
+      "name": "Theon Greyjoy",
+      "aliases": [
+        "Prince of Winterfell",
+        "Turncloak"
+      ],
+      "attributes": {
+        "title": "Prince"
+      },
+      "description": "Ward of Eddard Stark who betrays the Starks to seize Winterfell for his father, Balon Greyjoy.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "melisandre",
+      "type": "Character",
+      "name": "Melisandre",
+      "aliases": [
+        "The Red Woman"
+      ],
+      "attributes": {
+        "role": "Priestess of R'hllor"
+      },
+      "description": "A red priestess of R'hllor from Asshai, serving Stannis Baratheon.",
+      "mentions": [
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "davos_seaworth",
+      "type": "Character",
+      "name": "Davos Seaworth",
+      "aliases": [
+        "The Onion Knight"
+      ],
+      "attributes": {
+        "title": "Ser"
+      },
+      "description": "A former smuggler turned knight and loyal counselor to Stannis Baratheon.",
+      "mentions": [
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "arya_stark",
+      "type": "Character",
+      "name": "Arya Stark",
+      "aliases": [
+        "Arry",
+        "Weasel",
+        "Nan",
+        "Arya Horseface"
+      ],
+      "attributes": {
+        "house": "Stark"
+      },
+      "description": "Youngest daughter of Eddard Stark. Escapes King's Landing and travels incognito toward the North.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "sansa_stark",
+      "type": "Character",
+      "name": "Sansa Stark",
+      "aliases": [
+        "Little Bird"
+      ],
+      "attributes": {
+        "house": "Stark"
+      },
+      "description": "Eldest daughter of Eddard Stark, held hostage in King's Landing and betrothed to Joffrey.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "bran_stark",
+      "type": "Character",
+      "name": "Brandon Stark",
+      "aliases": [
+        "Bran",
+        "Bran the Broken"
+      ],
+      "attributes": {
+        "house": "Stark"
+      },
+      "description": "Second son of Eddard Stark, crippled after being pushed from a tower. Acts as Lord of Winterfell in Robb's absence.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "rickon_stark",
+      "type": "Character",
+      "name": "Rickon Stark",
+      "aliases": [],
+      "attributes": {
+        "house": "Stark"
+      },
+      "description": "Youngest son of Eddard Stark.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "samwell_tarly",
+      "type": "Character",
+      "name": "Samwell Tarly",
+      "aliases": [
+        "Sam",
+        "Ser Piggy",
+        "Lord of Ham"
+      ],
+      "attributes": {
+        "status": "Brother of the Night's Watch"
+      },
+      "description": "A fat, timid but intelligent recruit to the Night's Watch who becomes Jon Snow's closest friend.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "jeor_mormont",
+      "type": "Character",
+      "name": "Jeor Mormont",
+      "aliases": [
+        "The Old Bear"
+      ],
+      "attributes": {
+        "title": "Lord Commander of the Night's Watch"
+      },
+      "description": "Commander of the Night's Watch. Father of Jorah Mormont.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "jorah_mormont",
+      "type": "Character",
+      "name": "Jorah Mormont",
+      "aliases": [
+        "Jorah the Andal"
+      ],
+      "attributes": {
+        "title": "Ser"
+      },
+      "description": "Exiled knight serving Daenerys Targaryen.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "varys",
+      "type": "Character",
+      "name": "Varys",
+      "aliases": [
+        "The Spider"
+      ],
+      "attributes": {
+        "title": "Master of Whisperers"
+      },
+      "description": "Eunuch and Master of Whisperers on the Small Council.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "petyr_baelish",
+      "type": "Character",
+      "name": "Petyr Baelish",
+      "aliases": [
+        "Littlefinger"
+      ],
+      "attributes": {
+        "title": "Master of Coin"
+      },
+      "description": "Master of Coin on the Small Council. Manipulative and ambitious.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "winterfell",
+      "type": "Location",
+      "name": "Winterfell",
+      "aliases": [],
+      "attributes": {
+        "region": "The North"
+      },
+      "description": "Ancestral seat of House Stark.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "kings_landing",
+      "type": "Location",
+      "name": "King's Landing",
+      "aliases": [],
+      "attributes": {
+        "region": "The Crownlands"
+      },
+      "description": "Capital of the Seven Kingdoms and seat of the Iron Throne.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "the_wall",
+      "type": "Location",
+      "name": "The Wall",
+      "aliases": [],
+      "attributes": {},
+      "description": "A massive fortification of ice defending the Seven Kingdoms from the north.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "ice",
+      "type": "Artifact",
+      "name": "Ice",
+      "aliases": [],
+      "attributes": {
+        "material": "Valyrian steel",
+        "type": "Greatsword"
+      },
+      "description": "Ancestral Valyrian steel greatsword of House Stark.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "needle",
+      "type": "Artifact",
+      "name": "Needle",
+      "aliases": [],
+      "attributes": {
+        "type": "Sword"
+      },
+      "description": "Small sword given to Arya Stark by Jon Snow.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "longclaw",
+      "type": "Artifact",
+      "name": "Longclaw",
+      "aliases": [],
+      "attributes": {
+        "material": "Valyrian steel",
+        "type": "Bastard sword"
+      },
+      "description": "Valyrian steel sword of House Mormont, given to Jon Snow by Jeor Mormont.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "lightbringer",
+      "type": "Artifact",
+      "name": "Lightbringer",
+      "aliases": [
+        "The Red Sword of Heroes"
+      ],
+      "attributes": {
+        "type": "Sword"
+      },
+      "description": "A sword pulled from the fire by Stannis Baratheon, claimed to be the legendary sword of Azor Ahai.",
+      "mentions": [
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dragons",
+      "type": "Creature",
+      "name": "Dragons",
+      "aliases": [
+        "Drogon",
+        "Rhaegal",
+        "Viserion"
+      ],
+      "attributes": {
+        "is_magical": "true"
+      },
+      "description": "Three dragons hatched by Daenerys Targaryen: Drogon (black), Rhaegal (green), and Viserion (cream/gold).",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "direwolves",
+      "type": "Creature",
+      "name": "Direwolves",
+      "aliases": [
+        "Ghost",
+        "Grey Wind",
+        "Summer",
+        "Shaggydog",
+        "Nymeria",
+        "Lady"
+      ],
+      "attributes": {},
+      "description": "Large, intelligent wolves bonded to the Stark children.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "battle_of_blackwater",
+      "type": "Event",
+      "name": "Battle of the Blackwater",
+      "aliases": [],
+      "attributes": {},
+      "description": "A massive naval and land battle at King's Landing between the forces of King Joffrey and Stannis Baratheon.",
+      "mentions": [
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "bronns_wildfire",
+      "type": "Artifact",
+      "name": "Wildfire",
+      "aliases": [
+        "The Substance"
+      ],
+      "attributes": {},
+      "description": "A volatile, green liquid explosive used by Tyrion Lannister to defend King's Landing.",
+      "mentions": [
+        {
+          "file_name": "A Clash of Kings - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "eddard_stark",
+      "target_id": "catelyn_stark",
+      "type": "spouse_of",
+      "description": "Eddard and Catelyn are married.",
+      "evidence": "Eddard Stark had married her in Brandon's place, as custom decreed",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "eddard_stark",
+      "target_id": "robb_stark",
+      "type": "parent_of",
+      "description": "Eddard is the father of Robb.",
+      "evidence": "Robb, the heir to Winterfell, fourteen years of age",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "eddard_stark",
+      "target_id": "jon_snow",
+      "type": "parent_of",
+      "description": "Eddard is the father of Jon Snow.",
+      "evidence": "Lord Eddard Stark is my father",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "cersei_lannister",
+      "target_id": "joffrey_baratheon",
+      "type": "parent_of",
+      "description": "Cersei is the mother of Joffrey.",
+      "evidence": "Queen Cersei, of House Lannister ... PRINCE JOFFREY, heir to the Iron Throne",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "jaime_lannister",
+      "target_id": "cersei_lannister",
+      "type": "sibling_of",
+      "description": "Jaime and Cersei are twins.",
+      "evidence": "Ser Jaime Lannister was twin to Queen Cersei",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "tyrion_lannister",
+      "target_id": "cersei_lannister",
+      "type": "sibling_of",
+      "description": "Tyrion is the brother of Cersei.",
+      "evidence": "My sister Cersei",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "daenerys_targaryen",
+      "target_id": "khal_drogo",
+      "type": "spouse_of",
+      "description": "Daenerys is married to Khal Drogo.",
+      "evidence": "Daenerys Targaryen wed Khal Drogo",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "jon_snow",
+      "target_id": "nights_watch",
+      "type": "member_of",
+      "description": "Jon Snow joins the Night's Watch.",
+      "evidence": "I want to serve in the Night's Watch, Uncle.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "eddard_stark",
+      "target_id": "ice",
+      "type": "wields",
+      "description": "Ned Stark uses the greatsword Ice.",
+      "evidence": "He took hold of Ice with both hands",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "arya_stark",
+      "target_id": "needle",
+      "type": "wields",
+      "description": "Arya wields the sword Needle given to her by Jon.",
+      "evidence": "Arya lifted it out almost tenderly and drew the slender blade from its sheath. Needle.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "jon_snow",
+      "target_id": "longclaw",
+      "type": "wields",
+      "description": "Jeor Mormont gives Jon the Valyrian steel sword Longclaw.",
+      "evidence": "The Old Bear gave it to me... Longclaw, it was called.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "jon_snow",
+      "target_id": "ghost",
+      "type": "bonded_with",
+      "description": "Jon Snow is bonded with the direwolf Ghost.",
+      "evidence": "Jon and his wolf were nowhere to be found",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "daenerys_targaryen",
+      "target_id": "dragons",
+      "type": "bonded_with",
+      "description": "Daenerys is the Mother of Dragons.",
+      "evidence": "Drogon, Viserion, Rhaegal... Mother of Dragons",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ilyn_payne",
+      "target_id": "eddard_stark",
+      "type": "killed",
+      "description": "Ser Ilyn Payne executes Eddard Stark.",
+      "evidence": "Ser Ilyn drew a two-handed greatsword... Arya heard her sister scream.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "theon_greyjoy",
+      "target_id": "winterfell",
+      "type": "captured",
+      "description": "Theon Greyjoy captures Winterfell.",
+      "evidence": "I am the Prince of Winterfell! This is my seat",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "melisandre",
+      "target_id": "renly_baratheon",
+      "type": "killed",
+      "description": "Melisandre's shadow assassin kills Renly Baratheon.",
+      "evidence": "The shadow... the steel of his gorget parted like cheesecloth... Renly was dead",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "tyrion_lannister",
+      "target_id": "battle_of_blackwater",
+      "type": "participated_in",
+      "description": "Tyrion leads the defense of King's Landing during the Battle of the Blackwater.",
+      "evidence": "Tyrion drove into the gap hard on the king's hooves... 'Halfman! Halfman!'",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "davos_seaworth",
+      "target_id": "stannis_baratheon",
+      "type": "sworn_to",
+      "description": "Davos is a loyal knight to Stannis.",
+      "evidence": "I am yours to command, my king. As ever.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "schema_proposals": [
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "sibling_of",
+      "description": "Indicates a sibling relationship between two characters.",
+      "confidence": 1.0
+    },
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "betrothed_to",
+      "description": "Indicates a formal engagement to marry.",
+      "confidence": 1.0
+    },
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "captured",
+      "description": "Indicates one entity capturing or holding another prisoner (person or location).",
+      "confidence": 0.9
+    }
+  ]
+}

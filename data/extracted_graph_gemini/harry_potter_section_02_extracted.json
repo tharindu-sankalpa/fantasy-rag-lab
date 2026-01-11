@@ -1,0 +1,969 @@
+{
+  "entities": [
+    {
+      "id": "harry_potter",
+      "type": "Character",
+      "name": "Harry Potter",
+      "aliases": [
+        "The Boy Who Lived",
+        "Potter",
+        "Saint Potter"
+      ],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "wand_core": "Phoenix feather",
+        "gender": "Male",
+        "eyes": "Green",
+        "hair": "Jet-black, untidy",
+        "distinctive_feature": "Lightning-shaped scar on forehead"
+      },
+      "description": "The protagonist, a wizard who survived Lord Voldemort's killing curse as an infant. He possesses the ability to speak Parseltongue and is a talented Seeker.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "Harry Potter 3 - Harry Potter and the Prisoner of Azkaban - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "ronald_weasley",
+      "type": "Character",
+      "name": "Ronald Weasley",
+      "aliases": [
+        "Ron",
+        "Weasley",
+        "The Weasel"
+      ],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "gender": "Male",
+        "hair": "Red",
+        "pet": "Scabbers"
+      },
+      "description": "Harry Potter's best friend, a member of the Weasley family. He owns a rat named Scabbers which turns out to be Peter Pettigrew.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "Harry Potter 3 - Harry Potter and the Prisoner of Azkaban - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "hermione_granger",
+      "type": "Character",
+      "name": "Hermione Granger",
+      "aliases": [
+        "Hermione",
+        "Miss Granger",
+        "Mudblood"
+      ],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "blood_status": "Muggle-born",
+        "gender": "Female",
+        "pet": "Crookshanks"
+      },
+      "description": "Harry's intelligent and studious best friend. She uses a Time-Turner to attend multiple classes and helps Harry save Sirius Black.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "Harry Potter 3 - Harry Potter and the Prisoner of Azkaban - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "lord_voldemort",
+      "type": "Character",
+      "name": "Lord Voldemort",
+      "aliases": [
+        "Tom Marvolo Riddle",
+        "Tom Riddle",
+        "You-Know-Who",
+        "He-Who-Must-Not-Be-Named",
+        "The Dark Lord"
+      ],
+      "attributes": {
+        "hogwarts_house": "Slytherin",
+        "blood_status": "Half-blood",
+        "gender": "Male"
+      },
+      "description": "The main antagonist, heir of Slytherin. He preserved his sixteen-year-old self in a diary to open the Chamber of Secrets.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "ginny_weasley",
+      "type": "Character",
+      "name": "Ginevra Weasley",
+      "aliases": [
+        "Ginny"
+      ],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "gender": "Female",
+        "hair": "Red"
+      },
+      "description": "Ron's younger sister who is possessed by Tom Riddle's diary and forced to open the Chamber of Secrets.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "albus_dumbledore",
+      "type": "Character",
+      "name": "Albus Dumbledore",
+      "aliases": [
+        "Professor Dumbledore",
+        "Headmaster"
+      ],
+      "attributes": {
+        "gender": "Male",
+        "role": "Headmaster of Hogwarts"
+      },
+      "description": "The Headmaster of Hogwarts School of Witchcraft and Wizardry.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "severus_snape",
+      "type": "Character",
+      "name": "Severus Snape",
+      "aliases": [
+        "Professor Snape",
+        "Snivellus"
+      ],
+      "attributes": {
+        "hogwarts_house": "Slytherin",
+        "gender": "Male",
+        "role": "Potions Master"
+      },
+      "description": "The Potions Master at Hogwarts and Head of Slytherin House. He holds a grudge against Harry because of James Potter.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 - Harry Potter and the Prisoner of Azkaban - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "rubeus_hagrid",
+      "type": "Character",
+      "name": "Rubeus Hagrid",
+      "aliases": [
+        "Hagrid"
+      ],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "gender": "Male",
+        "role": "Gamekeeper",
+        "blood_status": "Half-giant"
+      },
+      "description": "The gamekeeper and later Care of Magical Creatures teacher at Hogwarts. He was framed for opening the Chamber of Secrets.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "sirius_black",
+      "type": "Character",
+      "name": "Sirius Black",
+      "aliases": [
+        "Padfoot",
+        "The Prisoner of Azkaban"
+      ],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "gender": "Male",
+        "animagus_form": "Black Dog"
+      },
+      "description": "Harry's godfather and an unregistered Animagus. He escapes Azkaban to find Peter Pettigrew and protect Harry.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 - Harry Potter and the Prisoner of Azkaban - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "remus_lupin",
+      "type": "Character",
+      "name": "Remus Lupin",
+      "aliases": [
+        "Moony",
+        "Professor Lupin"
+      ],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "gender": "Male",
+        "condition": "Werewolf"
+      },
+      "description": "The Defense Against the Dark Arts teacher in Harry's third year. He is a werewolf and a creator of the Marauder's Map.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 - Harry Potter and the Prisoner of Azkaban - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "peter_pettigrew",
+      "type": "Character",
+      "name": "Peter Pettigrew",
+      "aliases": [
+        "Wormtail",
+        "Scabbers"
+      ],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "gender": "Male",
+        "animagus_form": "Rat"
+      },
+      "description": "A former friend of James Potter who betrayed the Potters to Voldemort. He has been living as Ron Weasley's pet rat, Scabbers.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 - Harry Potter and the Prisoner of Azkaban - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dobby",
+      "type": "Character",
+      "name": "Dobby",
+      "aliases": [],
+      "attributes": {
+        "species": "House-elf"
+      },
+      "description": "A house-elf formerly serving the Malfoy family who tries to warn Harry about the Chamber of Secrets. Harry tricks Lucius Malfoy into freeing him.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "gilderoy_lockhart",
+      "type": "Character",
+      "name": "Gilderoy Lockhart",
+      "aliases": [],
+      "attributes": {
+        "gender": "Male",
+        "role": "Defense Against the Dark Arts Teacher"
+      },
+      "description": "A celebrity wizard who becomes the Defense Against the Dark Arts teacher. He is a fraud who steals other wizards' achievements using Memory Charms.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "draco_malfoy",
+      "type": "Character",
+      "name": "Draco Malfoy",
+      "aliases": [],
+      "attributes": {
+        "hogwarts_house": "Slytherin",
+        "gender": "Male",
+        "blood_status": "Pure-blood"
+      },
+      "description": "Harry's rival at Hogwarts. He is prejudiced against Muggle-borns and his father, Lucius Malfoy, was a Death Eater.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "lucius_malfoy",
+      "type": "Character",
+      "name": "Lucius Malfoy",
+      "aliases": [],
+      "attributes": {
+        "hogwarts_house": "Slytherin",
+        "gender": "Male",
+        "blood_status": "Pure-blood"
+      },
+      "description": "Draco Malfoy's father. He slipped Tom Riddle's diary into Ginny Weasley's cauldron.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "chamber_of_secrets",
+      "type": "Location",
+      "name": "The Chamber of Secrets",
+      "aliases": [],
+      "attributes": {
+        "creator": "Salazar Slytherin",
+        "location": "Hogwarts Castle"
+      },
+      "description": "A legendary secret chamber within Hogwarts created by Salazar Slytherin, housing a Basilisk.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "azkaban",
+      "type": "Location",
+      "name": "Azkaban",
+      "aliases": [],
+      "attributes": {
+        "type": "Prison"
+      },
+      "description": "The wizard prison guarded by dementors.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "shrieking_shack",
+      "type": "Location",
+      "name": "The Shrieking Shack",
+      "aliases": [],
+      "attributes": {
+        "location": "Hogsmeade"
+      },
+      "description": "An abandoned house in Hogsmeade, rumored to be haunted, but actually used by Remus Lupin for his werewolf transformations.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 - Harry Potter and the Prisoner of Azkaban - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "marauders_map",
+      "type": "Artifact",
+      "name": "The Marauder's Map",
+      "aliases": [],
+      "attributes": {
+        "creators": "Moony, Wormtail, Padfoot, and Prongs"
+      },
+      "description": "A magical map of Hogwarts that shows the location of everyone in the castle.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 - Harry Potter and the Prisoner of Azkaban - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "firebolt",
+      "type": "Artifact",
+      "name": "Firebolt",
+      "aliases": [],
+      "attributes": {
+        "type": "Broomstick"
+      },
+      "description": "A world-class racing broom sent to Harry Potter by Sirius Black.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 - Harry Potter and the Prisoner of Azkaban - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "tom_riddle_diary",
+      "type": "Artifact",
+      "name": "Tom Riddle's Diary",
+      "aliases": [],
+      "attributes": {
+        "creator": "Tom Marvolo Riddle",
+        "is_horcrux": "true"
+      },
+      "description": "A diary that preserved the memory of the sixteen-year-old Tom Riddle and possessed Ginny Weasley.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "basilisk",
+      "type": "Creature",
+      "name": "Basilisk",
+      "aliases": [
+        "The King of Serpents",
+        "The Monster of Slytherin"
+      ],
+      "attributes": {
+        "abilities": "Kill with a stare, venomous fangs"
+      },
+      "description": "A giant serpent controlled by the Heir of Slytherin that resides in the Chamber of Secrets.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dementor",
+      "type": "Creature",
+      "name": "Dementor",
+      "aliases": [],
+      "attributes": {
+        "abilities": "Suck happiness, Dementor's Kiss"
+      },
+      "description": "Dark creatures that guard Azkaban prison. They feed on human happiness.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 - Harry Potter and the Prisoner of Azkaban - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "buckbeak",
+      "type": "Creature",
+      "name": "Buckbeak",
+      "aliases": [
+        "Beaky"
+      ],
+      "attributes": {
+        "species": "Hippogriff"
+      },
+      "description": "A hippogriff kept by Hagrid. He is sentenced to death for attacking Draco Malfoy but is saved by Harry and Hermione.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 - Harry Potter and the Prisoner of Azkaban - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aragog",
+      "type": "Creature",
+      "name": "Aragog",
+      "aliases": [],
+      "attributes": {
+        "species": "Acromantula"
+      },
+      "description": "A giant spider raised by Hagrid, living in the Forbidden Forest.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "time_turner",
+      "type": "Artifact",
+      "name": "Time-Turner",
+      "aliases": [],
+      "attributes": {
+        "owner": "Hermione Granger"
+      },
+      "description": "A magical device used by Hermione to attend multiple classes at once, and later to save Sirius Black and Buckbeak.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 - Harry Potter and the Prisoner of Azkaban - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "harry_potter",
+      "target_id": "ronald_weasley",
+      "type": "friend_of",
+      "description": "Harry and Ron are best friends.",
+      "evidence": "Harry missed his best friends, Ron Weasley and Hermione Granger.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "hermione_granger",
+      "type": "friend_of",
+      "description": "Harry and Hermione are best friends.",
+      "evidence": "Harry missed his best friends, Ron Weasley and Hermione Granger.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ginny_weasley",
+      "target_id": "tom_riddle_diary",
+      "type": "possessed_by",
+      "description": "Ginny was possessed by Tom Riddle through his diary.",
+      "evidence": "Ginny Weasley opened the Chamber of Secrets. ... I grew stronger and stronger on a diet of her deepest fears, her darkest secrets.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "sirius_black",
+      "target_id": "harry_potter",
+      "type": "godfather_of",
+      "description": "Sirius Black is Harry Potter's godfather.",
+      "evidence": "I’m also — I don’t know if anyone ever told you — I’m your godfather.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "peter_pettigrew",
+      "target_id": "ronald_weasley",
+      "type": "pet_of",
+      "description": "Peter Pettigrew lived as Ron's rat, Scabbers.",
+      "evidence": "Scabbers the rat was secondhand... He had once belonged to Ron’s brother Percy.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "remus_lupin",
+      "target_id": "sirius_black",
+      "type": "friend_of",
+      "description": "Lupin and Sirius were friends at school and reconciled in the Shrieking Shack.",
+      "evidence": "For the first time ever, I had friends, three great friends. Sirius Black … Peter Pettigrew … and, of course, your father, Harry — James Potter.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "dobby",
+      "type": "freed_by",
+      "description": "Harry Potter freed Dobby by tricking Lucius Malfoy into giving him a sock.",
+      "evidence": "Harry Potter freed Dobby! ... Harry Potter set Dobby free!",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "firebolt",
+      "type": "owns",
+      "description": "Harry receives a Firebolt from Sirius Black.",
+      "evidence": "It was I who sent you the Firebolt.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "marauders_map",
+      "type": "owns",
+      "description": "Fred and George gave the map to Harry.",
+      "evidence": "We bequeath it to you. We don’t really need it anymore.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "basilisk",
+      "type": "killed",
+      "description": "Harry killed the Basilisk with the Sword of Gryffindor.",
+      "evidence": "Harry threw his whole weight behind the sword and drove it to the hilt into the roof of the serpent’s mouth.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "tom_riddle_diary",
+      "type": "destroyed",
+      "description": "Harry destroyed the diary with a basilisk fang.",
+      "evidence": "Harry seized the basilisk fang on the floor next to him and plunged it straight into the heart of the book.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "schema_proposals": [
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "godfather_of",
+      "description": "Indicates a godfather-godchild relationship.",
+      "confidence": 1.0
+    },
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "pet_of",
+      "description": "Indicates that an animal (or Animagus) is the pet of a character.",
+      "confidence": 1.0
+    },
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "freed_by",
+      "description": "Indicates that a house-elf or enslaved entity was freed by a character.",
+      "confidence": 0.9
+    },
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "destroyed",
+      "description": "Indicates that a character destroyed an artifact (especially significant ones like Horcruxes).",
+      "confidence": 1.0
+    },
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "friend_of",
+      "description": "Indicates a friendship between two characters.",
+      "confidence": 1.0
+    },
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "possessed_by",
+      "description": "Indicates a character being controlled or possessed by another entity or artifact.",
+      "confidence": 0.9
+    }
+  ]
+}

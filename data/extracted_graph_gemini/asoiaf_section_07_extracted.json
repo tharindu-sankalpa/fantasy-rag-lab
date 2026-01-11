@@ -1,0 +1,439 @@
+{
+  "entities": [
+    {
+      "id": "tyrion_lannister",
+      "type": "Character",
+      "name": "Tyrion Lannister",
+      "aliases": [
+        "The Imp",
+        "Hugor Hill",
+        "Yollo"
+      ],
+      "attributes": {
+        "physical_description": "dwarf with half a nose and a scar from eye to chin",
+        "status": "Exile"
+      },
+      "description": "A dwarf of House Lannister, currently in exile in Pentos after killing his father and his lover.",
+      "mentions": [
+        {
+          "file_name": "A Dance With Dragons - George RR Martin.epub",
+          "chunk_id": "7"
+        },
+        {
+          "file_name": "asoiaf_section_07.txt",
+          "chunk_id": "7"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "illyrio_mopatis",
+      "type": "Character",
+      "name": "Illyrio Mopatis",
+      "aliases": [
+        "Magister Illyrio",
+        "lord of cheese"
+      ],
+      "attributes": {
+        "physical_description": "grotesque fat man with a forked yellow beard",
+        "role": "Magister of Pentos"
+      },
+      "description": "A wealthy Magister of Pentos who shelters Tyrion Lannister and conspires with Varys.",
+      "mentions": [
+        {
+          "file_name": "A Dance With Dragons - George RR Martin.epub",
+          "chunk_id": "7"
+        },
+        {
+          "file_name": "asoiaf_section_07.txt",
+          "chunk_id": "7"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "varys",
+      "type": "Character",
+      "name": "Varys",
+      "aliases": [
+        "The Spider"
+      ],
+      "attributes": {},
+      "description": "The Master of Whisperers who helped Tyrion escape King's Landing and delivered him to Illyrio.",
+      "mentions": [
+        {
+          "file_name": "A Dance With Dragons - George RR Martin.epub",
+          "chunk_id": "7"
+        },
+        {
+          "file_name": "asoiaf_section_07.txt",
+          "chunk_id": "7"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "tywin_lannister",
+      "type": "Character",
+      "name": "Tywin Lannister",
+      "aliases": [],
+      "attributes": {},
+      "description": "The deceased Lord of Casterly Rock and Hand of the King, killed by his son Tyrion.",
+      "mentions": [
+        {
+          "file_name": "A Dance With Dragons - George RR Martin.epub",
+          "chunk_id": "7"
+        },
+        {
+          "file_name": "asoiaf_section_07.txt",
+          "chunk_id": "7"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "shae",
+      "type": "Character",
+      "name": "Shae",
+      "aliases": [],
+      "attributes": {},
+      "description": "Tyrion's former lover whom he strangled.",
+      "mentions": [
+        {
+          "file_name": "A Dance With Dragons - George RR Martin.epub",
+          "chunk_id": "7"
+        },
+        {
+          "file_name": "asoiaf_section_07.txt",
+          "chunk_id": "7"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "stannis_baratheon",
+      "type": "Character",
+      "name": "Stannis Baratheon",
+      "aliases": [],
+      "attributes": {
+        "status": "King"
+      },
+      "description": "A claimant to the Iron Throne currently located at the Wall.",
+      "mentions": [
+        {
+          "file_name": "A Dance With Dragons - George RR Martin.epub",
+          "chunk_id": "7"
+        },
+        {
+          "file_name": "asoiaf_section_07.txt",
+          "chunk_id": "7"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "oberyn_martell",
+      "type": "Character",
+      "name": "Oberyn Martell",
+      "aliases": [
+        "The Red Viper"
+      ],
+      "attributes": {},
+      "description": "Prince of Dorne, killed by Gregor Clegane.",
+      "mentions": [
+        {
+          "file_name": "A Dance With Dragons - George RR Martin.epub",
+          "chunk_id": "7"
+        },
+        {
+          "file_name": "asoiaf_section_07.txt",
+          "chunk_id": "7"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "gregor_clegane",
+      "type": "Character",
+      "name": "Gregor Clegane",
+      "aliases": [
+        "The Mountain"
+      ],
+      "attributes": {},
+      "description": "A knight who killed Oberyn Martell.",
+      "mentions": [
+        {
+          "file_name": "A Dance With Dragons - George RR Martin.epub",
+          "chunk_id": "7"
+        },
+        {
+          "file_name": "asoiaf_section_07.txt",
+          "chunk_id": "7"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "myrcella_baratheon",
+      "type": "Character",
+      "name": "Myrcella Baratheon",
+      "aliases": [],
+      "attributes": {},
+      "description": "Tyrion's niece, currently in Dorne.",
+      "mentions": [
+        {
+          "file_name": "A Dance With Dragons - George RR Martin.epub",
+          "chunk_id": "7"
+        },
+        {
+          "file_name": "asoiaf_section_07.txt",
+          "chunk_id": "7"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "daenerys_targaryen",
+      "type": "Character",
+      "name": "Daenerys Targaryen",
+      "aliases": [
+        "Dragon Queen",
+        "A dragon with three heads"
+      ],
+      "attributes": {},
+      "description": "Targaryen claimant to the throne, supported by Illyrio Mopatis.",
+      "mentions": [
+        {
+          "file_name": "A Dance With Dragons - George RR Martin.epub",
+          "chunk_id": "7"
+        },
+        {
+          "file_name": "asoiaf_section_07.txt",
+          "chunk_id": "7"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "pentos",
+      "type": "Location",
+      "name": "Pentos",
+      "aliases": [],
+      "attributes": {},
+      "description": "One of the Free Cities, where Illyrio Mopatis resides.",
+      "mentions": [
+        {
+          "file_name": "A Dance With Dragons - George RR Martin.epub",
+          "chunk_id": "7"
+        },
+        {
+          "file_name": "asoiaf_section_07.txt",
+          "chunk_id": "7"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "the_wall",
+      "type": "Location",
+      "name": "The Wall",
+      "aliases": [],
+      "attributes": {},
+      "description": "A massive fortification in the North of Westeros where Stannis Baratheon is currently located.",
+      "mentions": [
+        {
+          "file_name": "A Dance With Dragons - George RR Martin.epub",
+          "chunk_id": "7"
+        },
+        {
+          "file_name": "asoiaf_section_07.txt",
+          "chunk_id": "7"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "tyrion_lannister",
+      "target_id": "tywin_lannister",
+      "type": "killed",
+      "description": "Tyrion killed his father Tywin with a crossbow.",
+      "evidence": "I’ve killed my father... A bolt in the belly, my lord, and all for you.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_07.txt",
+        "chunk_id": "7"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "tyrion_lannister",
+      "target_id": "shae",
+      "type": "killed",
+      "description": "Tyrion confessed to killing Shae.",
+      "evidence": "I killed Shae too, he confessed to Varys.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_07.txt",
+        "chunk_id": "7"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "gregor_clegane",
+      "target_id": "oberyn_martell",
+      "type": "killed",
+      "description": "Gregor Clegane killed Oberyn Martell.",
+      "evidence": "Oberyn was dead, though, his head smashed to bloody ruin by the armored fist of Ser Gregor Clegane.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_07.txt",
+        "chunk_id": "7"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "tyrion_lannister",
+      "target_id": "pentos",
+      "type": "located_in",
+      "description": "Tyrion arrived in Pentos.",
+      "evidence": "This is Pentos, yes? ... Just so. Where else?",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_07.txt",
+        "chunk_id": "7"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "stannis_baratheon",
+      "target_id": "the_wall",
+      "type": "located_in",
+      "description": "Stannis is currently at the Wall.",
+      "evidence": "Stannis is at the Wall? Tyrion rubbed at his nose.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_07.txt",
+        "chunk_id": "7"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "myrcella_baratheon",
+      "target_id": "dorne",
+      "type": "located_in",
+      "description": "Myrcella is in Dorne.",
+      "evidence": "My niece Myrcella is in Dorne, as it happens.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_07.txt",
+        "chunk_id": "7"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "illyrio_mopatis",
+      "target_id": "pentos",
+      "type": "located_in",
+      "description": "Illyrio is a magister of Pentos.",
+      "evidence": "I have the honor to be a magister of this great city",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_07.txt",
+        "chunk_id": "7"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "schema_proposals": [
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "host_of",
+      "description": "Indicates that one entity is providing shelter or hospitality to another.",
+      "confidence": 0.9
+    },
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "ally_of",
+      "description": "Indicates a political or personal alliance between entities that does not fit strict hierarchy like sworn_to.",
+      "confidence": 0.8
+    }
+  ]
+}

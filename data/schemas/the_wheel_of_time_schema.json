@@ -1,0 +1,237 @@
+{
+  "series_name": "The Wheel of Time",
+  "version_info": {
+    "version": "1.0.0",
+    "created_at": "2025-12-28T13:54:05.080292",
+    "changelog": [],
+    "evolution_suggestions": []
+  },
+  "entity_types": [
+    {
+      "name": "Character",
+      "description": "An individual being, human or otherwise, with agency in the narrative.",
+      "attributes": [
+        "gender",
+        "nationality",
+        "is_taveren",
+        "channeling_ability",
+        "eye_color",
+        "hair_color"
+      ]
+    },
+    {
+      "name": "Location",
+      "description": "A physical or metaphysical place, ranging from cities and nations to extra-dimensional realms.",
+      "attributes": [
+        "region",
+        "terrain_type",
+        "political_affiliation",
+        "magical_properties"
+      ]
+    },
+    {
+      "name": "Organization",
+      "description": "A formalized group with a hierarchy, purpose, or political standing.",
+      "attributes": [
+        "headquarters",
+        "leader_title",
+        "founding_date",
+        "ideology"
+      ]
+    },
+    {
+      "name": "CulturalGroup",
+      "description": "An ethnic or social group defined by customs, lineage, or lifestyle rather than formal hierarchy.",
+      "attributes": [
+        "customs",
+        "geographic_origin",
+        "dialect"
+      ]
+    },
+    {
+      "name": "Artifact",
+      "description": "An object of power, historical significance, or magical utility.",
+      "attributes": [
+        "power_class",
+        "material",
+        "creator",
+        "condition"
+      ]
+    },
+    {
+      "name": "Species",
+      "description": "Biological or magical classifications of beings.",
+      "attributes": [
+        "lifespan",
+        "origin",
+        "is_shadowspawn"
+      ]
+    },
+    {
+      "name": "Event",
+      "description": "A specific occurrence in time, such as a battle, treaty, or discovery.",
+      "attributes": [
+        "date_ne",
+        "outcome",
+        "casualties"
+      ]
+    },
+    {
+      "name": "MagicalConstruct",
+      "description": "A manifestation of the One Power or True Power, or a metaphysical phenomenon.",
+      "attributes": [
+        "elements_used",
+        "complexity",
+        "function"
+      ]
+    },
+    {
+      "name": "Prophecy",
+      "description": "A foretelling of future events, crucial to the pattern of the ages.",
+      "attributes": [
+        "source",
+        "interpretation",
+        "fulfillment_status"
+      ]
+    }
+  ],
+  "relationship_types": [
+    {
+      "name": "bonded_to",
+      "description": "A magical and spiritual link between two individuals (e.g., Aes Sedai and Warder).",
+      "source_type": "Character",
+      "target_type": "Character",
+      "properties": [
+        "bond_type",
+        "compulsion_level"
+      ]
+    },
+    {
+      "name": "affiliated_with",
+      "description": "Membership or allegiance to a group or nation.",
+      "source_type": "Character",
+      "target_type": "Organization",
+      "properties": [
+        "rank",
+        "status"
+      ]
+    },
+    {
+      "name": "located_in",
+      "description": "Spatial containment of an entity within a location.",
+      "source_type": "Character",
+      "target_type": "Location",
+      "properties": [
+        "start_date",
+        "end_date"
+      ]
+    },
+    {
+      "name": "wields",
+      "description": "The possession or utilization of an artifact or weapon.",
+      "source_type": "Character",
+      "target_type": "Artifact",
+      "properties": [
+        "mastery_level",
+        "acquisition_method"
+      ]
+    },
+    {
+      "name": "reincarnation_of",
+      "description": "Indicates a character possesses the soul of a past individual.",
+      "source_type": "Character",
+      "target_type": "Character",
+      "properties": [
+        "age_difference"
+      ]
+    },
+    {
+      "name": "participated_in",
+      "description": "Involvement in a specific event.",
+      "source_type": "Character",
+      "target_type": "Event",
+      "properties": [
+        "role",
+        "impact"
+      ]
+    },
+    {
+      "name": "enemy_of",
+      "description": "Antagonistic relationship between entities.",
+      "source_type": "Character",
+      "target_type": "Character",
+      "properties": [
+        "reason",
+        "intensity"
+      ]
+    },
+    {
+      "name": "romantic_relationship_with",
+      "description": "Romantic or marital connection.",
+      "source_type": "Character",
+      "target_type": "Character",
+      "properties": [
+        "type",
+        "is_polyamorous"
+      ]
+    },
+    {
+      "name": "member_of_species",
+      "description": "Biological classification of a character.",
+      "source_type": "Character",
+      "target_type": "Species",
+      "properties": []
+    },
+    {
+      "name": "killed_by",
+      "description": "The cause of an entity's death.",
+      "source_type": "Character",
+      "target_type": "Character",
+      "properties": [
+        "method",
+        "weapon_used"
+      ]
+    },
+    {
+      "name": "fulfills",
+      "description": "An action or person that satisfies the conditions of a prophecy.",
+      "source_type": "Character",
+      "target_type": "Prophecy",
+      "properties": [
+        "confidence_level"
+      ]
+    },
+    {
+      "name": "channels",
+      "description": "The ability to access and manipulate a magical power source.",
+      "source_type": "Character",
+      "target_type": "MagicalConstruct",
+      "properties": [
+        "strength",
+        "potential"
+      ]
+    }
+  ],
+  "canonical_renaming_rules": {
+    "The Dragon Reborn": "Rand al'Thor",
+    "Lews Therin Kinslayer": "Lews Therin Telamon",
+    "Lord of the Morning": "Lews Therin Telamon",
+    "The Gambler": "Matrim Cauthon",
+    "Prince of the Ravens": "Matrim Cauthon",
+    "Young Bull": "Perrin Aybara",
+    "Lord Goldeneyes": "Perrin Aybara",
+    "Ba'alzamon": "Ishamael",
+    "Elan Morin Tedronai": "Ishamael",
+    "Moridin": "Ishamael",
+    "Mierin Eronaile": "Lanfear",
+    "Cyndane": "Lanfear",
+    "Daughter of the Nine Moons": "Tuon",
+    "Fortuona": "Tuon",
+    "Shai'tan": "The Dark One",
+    "Father of Lies": "The Dark One",
+    "Dayeinic": "The Dark One",
+    "Amathera": "Thera",
+    "Tom": "Thomdril Merrilin",
+    "Taim": "Mazrim Taim"
+  }
+}

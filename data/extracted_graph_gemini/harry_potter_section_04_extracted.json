@@ -1,0 +1,753 @@
+{
+  "entities": [
+    {
+      "id": "harry_potter",
+      "type": "Character",
+      "name": "Harry Potter",
+      "aliases": [],
+      "attributes": {},
+      "description": "The protagonist, recently returned from Hogwarts for the summer holidays, attacked by Dementors in Little Whinging, and subsequently escorted to the headquarters of the Order of the Phoenix.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "ronald_weasley",
+      "type": "Character",
+      "name": "Ronald Weasley",
+      "aliases": [],
+      "attributes": {},
+      "description": "Harry's best friend, currently staying at Grimmauld Place.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "hermione_granger",
+      "type": "Character",
+      "name": "Hermione Granger",
+      "aliases": [],
+      "attributes": {},
+      "description": "Harry's best friend, currently staying at Grimmauld Place.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "fred_weasley",
+      "type": "Character",
+      "name": "Fred Weasley",
+      "aliases": [],
+      "attributes": {},
+      "description": "Ron's older brother, twin to George, aspiring joke shop owner.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "george_weasley",
+      "type": "Character",
+      "name": "George Weasley",
+      "aliases": [],
+      "attributes": {},
+      "description": "Ron's older brother, twin to Fred, aspiring joke shop owner.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "ludo_bagman",
+      "type": "Character",
+      "name": "Ludo Bagman",
+      "aliases": [],
+      "attributes": {},
+      "description": "Head of the Department of Magical Games and Sports, revealed to have paid Fred and George with disappearing leprechaun gold.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "vernon_dursley",
+      "type": "Character",
+      "name": "Vernon Dursley",
+      "aliases": [],
+      "attributes": {},
+      "description": "Harry's uncle, hostile toward magic.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "petunia_dursley",
+      "type": "Character",
+      "name": "Petunia Dursley",
+      "aliases": [],
+      "attributes": {},
+      "description": "Harry's aunt, who receives a Howler reminding her of her pact to keep Harry.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dudley_dursley",
+      "type": "Character",
+      "name": "Dudley Dursley",
+      "aliases": [],
+      "attributes": {},
+      "description": "Harry's cousin, attacked by Dementors in Little Whinging.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "arabella_figg",
+      "type": "Character",
+      "name": "Arabella Figg",
+      "aliases": [],
+      "attributes": {},
+      "description": "Harry's neighbor in Little Whinging, revealed to be a Squib working for Dumbledore to watch over Harry.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "mundungus_fletcher",
+      "type": "Character",
+      "name": "Mundungus Fletcher",
+      "aliases": [],
+      "attributes": {},
+      "description": "A member of the Order of the Phoenix who abandoned his post guarding Harry to buy stolen cauldrons.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "nymphadora_tonks",
+      "type": "Character",
+      "name": "Nymphadora Tonks",
+      "aliases": [
+        "Tonks"
+      ],
+      "attributes": {},
+      "description": "An Auror and member of the Order of the Phoenix; a Metamorphmagus.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "remus_lupin",
+      "type": "Character",
+      "name": "Remus Lupin",
+      "aliases": [],
+      "attributes": {},
+      "description": "Former professor and member of the Order of the Phoenix who helps escort Harry to London.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "alastor_moody",
+      "type": "Character",
+      "name": "Alastor Moody",
+      "aliases": [
+        "Mad-Eye Moody"
+      ],
+      "attributes": {},
+      "description": "Ex-Auror and member of the Order of the Phoenix who leads the Advance Guard.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "kingsley_shacklebolt",
+      "type": "Character",
+      "name": "Kingsley Shacklebolt",
+      "aliases": [],
+      "attributes": {},
+      "description": "An Auror and member of the Order of the Phoenix.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "sirius_black",
+      "type": "Character",
+      "name": "Sirius Black",
+      "aliases": [],
+      "attributes": {},
+      "description": "Harry's godfather and owner of Number 12, Grimmauld Place.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "kreacher",
+      "type": "Character",
+      "name": "Kreacher",
+      "aliases": [],
+      "attributes": {},
+      "description": "The house-elf of the Noble and Most Ancient House of Black.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "percy_weasley",
+      "type": "Character",
+      "name": "Percy Weasley",
+      "aliases": [],
+      "attributes": {},
+      "description": "Ron's brother, now Junior Assistant to the Minister for Magic, estranged from his family.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "bellatrix_lestrange",
+      "type": "Character",
+      "name": "Bellatrix Lestrange",
+      "aliases": [],
+      "attributes": {},
+      "description": "A Death Eater and cousin of Sirius Black, depicted on the Black family tapestry.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "narcissa_malfoy",
+      "type": "Character",
+      "name": "Narcissa Malfoy",
+      "aliases": [],
+      "attributes": {},
+      "description": "Cousin of Sirius Black and sister of Bellatrix Lestrange and Andromeda Tonks.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "andromeda_tonks",
+      "type": "Character",
+      "name": "Andromeda Tonks",
+      "aliases": [],
+      "attributes": {},
+      "description": "Sirius Black's favorite cousin and mother of Nymphadora Tonks; blasted off the family tree for marrying a Muggle-born.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "regulus_black",
+      "type": "Character",
+      "name": "Regulus Black",
+      "aliases": [],
+      "attributes": {},
+      "description": "Sirius Black's younger brother who joined the Death Eaters and was killed.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "number_12_grimmauld_place",
+      "type": "Location",
+      "name": "Number 12, Grimmauld Place",
+      "aliases": [],
+      "attributes": {},
+      "description": "The ancestral home of the Black family and headquarters of the Order of the Phoenix.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "order_of_the_phoenix",
+      "type": "Organization",
+      "name": "Order of the Phoenix",
+      "aliases": [],
+      "attributes": {},
+      "description": "A secret society founded by Albus Dumbledore to oppose Lord Voldemort.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "harry_potter",
+      "target_id": "fred_weasley",
+      "type": "mentors",
+      "description": "Harry acts as a financier/supporter for Fred and George.",
+      "evidence": "Harry gives his 1000 Galleon Triwizard winnings to Fred and George to start their joke shop.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "fred_weasley",
+      "target_id": "ludo_bagman",
+      "type": "enemy_of",
+      "description": "Fred and George are angry at Bagman for paying them with disappearing leprechaun gold.",
+      "evidence": "Fred and George discuss blackmailing Bagman because he paid them with leprechaun gold that vanished.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "arabella_figg",
+      "target_id": "harry_potter",
+      "type": "mentors",
+      "description": "Mrs. Figg watches over Harry in Little Whinging on Dumbledore's orders.",
+      "evidence": "Mrs. Figg reveals she is a Squib and has been watching Harry for Dumbledore.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "sirius_black",
+      "target_id": "harry_potter",
+      "type": "mentors",
+      "description": "Sirius acts as Harry's godfather and guardian figure.",
+      "evidence": "Sirius corresponds with Harry and offers his home as a refuge.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "sirius_black",
+      "target_id": "number_12_grimmauld_place",
+      "type": "wields",
+      "description": "Sirius owns the house.",
+      "evidence": "Sirius states, 'This was my parents' house... but I'm the last Black left, so it's mine now.'",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "order_of_the_phoenix",
+      "target_id": "number_12_grimmauld_place",
+      "type": "located_in",
+      "description": "The Order uses the house as headquarters.",
+      "evidence": "The headquarters of the Order of the Phoenix may be found at number twelve, Grimmauld Place, London.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "kreacher",
+      "target_id": "sirius_black",
+      "type": "member_of",
+      "description": "Kreacher is the house-elf of the Black family.",
+      "evidence": "Kreacher lives to serve the noble house of Black.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "nymphadora_tonks",
+      "target_id": "andromeda_tonks",
+      "type": "familial_bond",
+      "description": "Nymphadora is the daughter of Andromeda.",
+      "evidence": "Sirius mentions Andromeda is Tonks's mother.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "bellatrix_lestrange",
+      "target_id": "sirius_black",
+      "type": "familial_bond",
+      "description": "Bellatrix is Sirius's cousin.",
+      "evidence": "Sirius identifies Bellatrix as his cousin on the family tapestry.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "percy_weasley",
+      "target_id": "cornelius_fudge",
+      "type": "mentors",
+      "description": "Percy works as Junior Assistant to Fudge.",
+      "evidence": "Percy has been promoted to Junior Assistant to the Minister.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "schema_proposals": []
+}

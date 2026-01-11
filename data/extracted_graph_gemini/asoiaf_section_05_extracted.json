@@ -1,0 +1,1154 @@
+{
+  "entities": [
+    {
+      "id": "chett",
+      "type": "Character",
+      "name": "Chett",
+      "aliases": [],
+      "attributes": {},
+      "description": "Steward of the Night's Watch who conspires to kill Lord Commander Mormont and desert.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "jeor_mormont",
+      "type": "Character",
+      "name": "Jeor Mormont",
+      "aliases": [
+        "The Old Bear",
+        "Lord Commander Mormont"
+      ],
+      "attributes": {},
+      "description": "Lord Commander of the Night's Watch, leads the ranging beyond the Wall. Murdered by his own men at Craster's Keep.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "samwell_tarly",
+      "type": "Character",
+      "name": "Samwell Tarly",
+      "aliases": [
+        "Sam",
+        "Ser Piggy",
+        "Sam the Slayer"
+      ],
+      "attributes": {},
+      "description": "A brother of the Night's Watch. He slays an Other with dragonglass and orchestrates the election of Jon Snow as Lord Commander.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "jon_snow",
+      "type": "Character",
+      "name": "Jon Snow",
+      "aliases": [
+        "Lord Snow",
+        "The Bastard of Winterfell"
+      ],
+      "attributes": {},
+      "description": "Bastard son of Eddard Stark, brother of the Night's Watch. He infiltrates the wildlings, defends the Wall, and is elected Lord Commander.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "mance_rayder",
+      "type": "Character",
+      "name": "Mance Rayder",
+      "aliases": [
+        "King-beyond-the-Wall"
+      ],
+      "attributes": {},
+      "description": "Leader of the Free Folk (wildlings) attempting to cross the Wall. Captured by Stannis Baratheon.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "jaime_lannister",
+      "type": "Character",
+      "name": "Jaime Lannister",
+      "aliases": [
+        "The Kingslayer"
+      ],
+      "attributes": {},
+      "description": "Lord Commander of the Kingsguard. Captured by Robb Stark, released by Catelyn Stark, maimed by Vargo Hoat (loses his sword hand), and returns to King's Landing.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "brienne_of_tarth",
+      "type": "Character",
+      "name": "Brienne of Tarth",
+      "aliases": [
+        "The Maid of Tarth",
+        "Brienne"
+      ],
+      "attributes": {},
+      "description": "A female warrior sworn to Catelyn Stark. Escorts Jaime Lannister to King's Landing. Given the sword Oathkeeper by Jaime.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "catelyn_stark",
+      "type": "Character",
+      "name": "Catelyn Stark",
+      "aliases": [
+        "Lady Catelyn",
+        "Lady Stoneheart"
+      ],
+      "attributes": {},
+      "description": "Mother of Robb Stark. She releases Jaime Lannister. Murdered at the Red Wedding and resurrected as Lady Stoneheart.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "robb_stark",
+      "type": "Character",
+      "name": "Robb Stark",
+      "aliases": [
+        "The Young Wolf",
+        "King in the North"
+      ],
+      "attributes": {},
+      "description": "King in the North. Marries Jeyne Westerling, breaking his vow to House Frey. Betrayed and murdered at the Red Wedding.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "walder_frey",
+      "type": "Character",
+      "name": "Walder Frey",
+      "aliases": [
+        "Lord of the Crossing"
+      ],
+      "attributes": {},
+      "description": "Lord of the Twins. Orchestrates the Red Wedding to massacre the Starks and Tullys in revenge for a broken marriage pact.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "roose_bolton",
+      "type": "Character",
+      "name": "Roose Bolton",
+      "aliases": [
+        "The Leech Lord"
+      ],
+      "attributes": {},
+      "description": "Lord of the Dreadfort. Betrays Robb Stark at the Red Wedding and is named Warden of the North by Tywin Lannister.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "tyrion_lannister",
+      "type": "Character",
+      "name": "Tyrion Lannister",
+      "aliases": [
+        "The Imp",
+        "Halfman"
+      ],
+      "attributes": {},
+      "description": "Son of Tywin Lannister. Master of Coin. Forced to marry Sansa Stark. Accused of poisoning King Joffrey. Escapes prison and kills his father Tywin.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "sansa_stark",
+      "type": "Character",
+      "name": "Sansa Stark",
+      "aliases": [
+        "Alayne Stone"
+      ],
+      "attributes": {},
+      "description": "Daughter of Eddard Stark. Forced to marry Tyrion Lannister. Escapes King's Landing with Petyr Baelish after Joffrey's death and poses as his bastard daughter Alayne in the Vale.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "joffrey_baratheon",
+      "type": "Character",
+      "name": "Joffrey Baratheon",
+      "aliases": [],
+      "attributes": {},
+      "description": "King on the Iron Throne. Marries Margaery Tyrell. Dies from poison at his own wedding feast (the Purple Wedding).",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "petyr_baelish",
+      "type": "Character",
+      "name": "Petyr Baelish",
+      "aliases": [
+        "Littlefinger"
+      ],
+      "attributes": {},
+      "description": "Master of Coin, later Lord of Harrenhal and Lord Protector of the Vale. Orchestrates Sansa's escape and Lysa Arryn's death.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "lysa_arryn",
+      "type": "Character",
+      "name": "Lysa Arryn",
+      "aliases": [],
+      "attributes": {},
+      "description": "Lady of the Eyrie. Marries Petyr Baelish. Murdered by Petyr Baelish who pushes her out the Moon Door.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "daenerys_targaryen",
+      "type": "Character",
+      "name": "Daenerys Targaryen",
+      "aliases": [
+        "Mother of Dragons",
+        "Khaleesi"
+      ],
+      "attributes": {},
+      "description": "Queen of the Seven Kingdoms (claimant). Conquers Astapor, Yunkai, and Meereen in Slaver's Bay with her dragons and Unsullied army.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "jorah_mormont",
+      "type": "Character",
+      "name": "Jorah Mormont",
+      "aliases": [],
+      "attributes": {},
+      "description": "Exiled knight serving Daenerys. Banished by her after his past betrayal (spying for Varys) is revealed.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "barristan_selmy",
+      "type": "Character",
+      "name": "Barristan Selmy",
+      "aliases": [
+        "Arstan Whitebeard",
+        "Barristan the Bold"
+      ],
+      "attributes": {},
+      "description": "Former Lord Commander of the Kingsguard. Serves Daenerys disguised as Arstan Whitebeard before revealing his identity.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "arya_stark",
+      "type": "Character",
+      "name": "Arya Stark",
+      "aliases": [
+        "Squab",
+        "Arry"
+      ],
+      "attributes": {},
+      "description": "Daughter of Eddard Stark. Travels with the Brotherhood Without Banners, then captured by the Hound. Leaves for Braavos at the end.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "sandor_clegane",
+      "type": "Character",
+      "name": "Sandor Clegane",
+      "aliases": [
+        "The Hound"
+      ],
+      "attributes": {},
+      "description": "Former sworn shield of Joffrey. Captures Arya Stark intending to ransom her. Dying of wounds, left by Arya.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "beric_dondarrion",
+      "type": "Character",
+      "name": "Beric Dondarrion",
+      "aliases": [
+        "The Lightning Lord"
+      ],
+      "attributes": {},
+      "description": "Leader of the Brotherhood Without Banners. Resurrected multiple times by Thoros of Myr. Gives his life to resurrect Catelyn Stark.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "tywin_lannister",
+      "type": "Character",
+      "name": "Tywin Lannister",
+      "aliases": [],
+      "attributes": {},
+      "description": "Hand of the King and Lord of Casterly Rock. Architect of the Red Wedding. Murdered by his son Tyrion in the privy.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "oberyn_martell",
+      "type": "Character",
+      "name": "Oberyn Martell",
+      "aliases": [
+        "The Red Viper"
+      ],
+      "attributes": {},
+      "description": "Prince of Dorne. Champions Tyrion in a trial by combat against Gregor Clegane and is killed.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "gregor_clegane",
+      "type": "Character",
+      "name": "Gregor Clegane",
+      "aliases": [
+        "The Mountain"
+      ],
+      "attributes": {},
+      "description": "A massive knight in service to House Lannister. Fights Oberyn Martell in a trial by combat, killing him but being poisoned in the process.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "stannis_baratheon",
+      "type": "Character",
+      "name": "Stannis Baratheon",
+      "aliases": [],
+      "attributes": {},
+      "description": "Claimant to the Iron Throne. Sails north to the Wall, defeats Mance Rayder's wildling army, and stays at Castle Black.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "davos_seaworth",
+      "type": "Character",
+      "name": "Davos Seaworth",
+      "aliases": [
+        "The Onion Knight"
+      ],
+      "attributes": {},
+      "description": "Hand of the King to Stannis Baratheon. Saves Edric Storm from being sacrificed by Melisandre.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "melisandre",
+      "type": "Character",
+      "name": "Melisandre",
+      "aliases": [
+        "The Red Woman"
+      ],
+      "attributes": {},
+      "description": "A red priestess of R'hllor serving Stannis Baratheon. Uses magic to aid his cause.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "bran_stark",
+      "type": "Character",
+      "name": "Bran Stark",
+      "aliases": [],
+      "attributes": {},
+      "description": "Son of Eddard Stark. Travels north of the Wall with the Reeds and Hodor to find the three-eyed crow.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "ygritte",
+      "type": "Character",
+      "name": "Ygritte",
+      "aliases": [],
+      "attributes": {},
+      "description": "A wildling spearwife and lover of Jon Snow. Killed during the attack on Castle Black.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "vargo_hoat",
+      "type": "Character",
+      "name": "Vargo Hoat",
+      "aliases": [
+        "The Goat"
+      ],
+      "attributes": {},
+      "description": "Leader of the Brave Companions. Orders Jaime Lannister's hand cut off. Killed by Gregor Clegane at Harrenhal.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "shae",
+      "type": "Character",
+      "name": "Shae",
+      "aliases": [],
+      "attributes": {},
+      "description": "Tyrion Lannister's concubine. Betrays him at his trial and sleeps with Tywin Lannister. Strangled by Tyrion.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "olenna_tyrell",
+      "type": "Character",
+      "name": "Olenna Tyrell",
+      "aliases": [
+        "The Queen of Thorns"
+      ],
+      "attributes": {},
+      "description": "Grandmother of Margaery Tyrell. Plots Joffrey's poisoning using Sansa's hairnet.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "margaery_tyrell",
+      "type": "Character",
+      "name": "Margaery Tyrell",
+      "aliases": [],
+      "attributes": {},
+      "description": "Queen of Joffrey Baratheon. Widowed at her wedding feast.",
+      "mentions": [
+        {
+          "file_name": "A Storm of Swords - George RR Martin.epub",
+          "chunk_id": "5"
+        },
+        {
+          "file_name": "asoiaf_section_05.txt",
+          "chunk_id": "5"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "chett",
+      "target_id": "jeor_mormont",
+      "type": "killed",
+      "description": "Chett conspired to kill Lord Commander Mormont, though the mutiny unfolded differently with others doing the deed.",
+      "evidence": "We need to kill all the officers, I say... The Old Bear dies... That's all. We kill them quiet, while they sleep.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_05.txt",
+        "chunk_id": "5"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "brienne_of_tarth",
+      "target_id": "jaime_lannister",
+      "type": "participated_in",
+      "description": "Brienne escorts Jaime to King's Landing, protecting him along the way.",
+      "evidence": "I am delivering you to King's Landing... You are under my protection.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_05.txt",
+        "chunk_id": "5"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "vargo_hoat",
+      "target_id": "jaime_lannister",
+      "type": "killed",
+      "description": "Vargo Hoat orders Zollo to cut off Jaime Lannister's hand, maiming him (though not killing him).",
+      "evidence": "The goat... losing his sword hand to the blade of Zollo the Fat.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_05.txt",
+        "chunk_id": "5"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "tyrion_lannister",
+      "target_id": "sansa_stark",
+      "type": "spouse_of",
+      "description": "Tyrion and Sansa are forced to marry.",
+      "evidence": "I do solemnly proclaim Tyrion of House Lannister and Sansa of House Stark to be man and wife.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_05.txt",
+        "chunk_id": "5"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "robb_stark",
+      "target_id": "catelyn_stark",
+      "type": "parent_of",
+      "description": "Catelyn is the mother of Robb Stark.",
+      "evidence": "Mother... I have a new daughter... my lady wife.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_05.txt",
+        "chunk_id": "5"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "walder_frey",
+      "target_id": "robb_stark",
+      "type": "killed",
+      "description": "Walder Frey orchestrates the Red Wedding where Robb Stark is killed.",
+      "evidence": "Roose Bolton... thrust his longsword through her son's heart... Lord Walder... sat on his carved oaken throne, watching greedily.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_05.txt",
+        "chunk_id": "5"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "roose_bolton",
+      "target_id": "robb_stark",
+      "type": "killed",
+      "description": "Roose Bolton personally kills Robb Stark at the Red Wedding.",
+      "evidence": "Jaime Lannister sends his regards. He thrust his longsword through her son's heart, and twisted.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_05.txt",
+        "chunk_id": "5"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "olenna_tyrell",
+      "target_id": "joffrey_baratheon",
+      "type": "killed",
+      "description": "Olenna Tyrell (implied) poisons Joffrey at the wedding feast.",
+      "evidence": "I dreamt of a maid at a feast with purple serpents in her hair, venom dripping from their fangs... The Queen of Thorns... straightened Sansa's hair net.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_05.txt",
+        "chunk_id": "5"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "petyr_baelish",
+      "target_id": "sansa_stark",
+      "type": "participated_in",
+      "description": "Littlefinger rescues Sansa from King's Landing and takes her to the Vale.",
+      "evidence": "Come to the godswood tonight if you want to go home... It had to be the godswood.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_05.txt",
+        "chunk_id": "5"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "petyr_baelish",
+      "target_id": "lysa_arryn",
+      "type": "killed",
+      "description": "Littlefinger pushes Lysa Arryn out the Moon Door.",
+      "evidence": "Only Cat. He gave her a short, sharp shove. Lysa stumbled backward... And then she was gone.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_05.txt",
+        "chunk_id": "5"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "tyrion_lannister",
+      "target_id": "tywin_lannister",
+      "type": "killed",
+      "description": "Tyrion shoots Tywin with a crossbow in the privy.",
+      "evidence": "The crossbow whanged... You shot me... Do me a kindness now, and die quickly.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_05.txt",
+        "chunk_id": "5"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "tyrion_lannister",
+      "target_id": "shae",
+      "type": "killed",
+      "description": "Tyrion strangles Shae in his father's bed.",
+      "evidence": "Tyrion slid a hand under his father's chain, and twisted... He gave cold hands another twist as the warm ones beat away his tears.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_05.txt",
+        "chunk_id": "5"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "stannis_baratheon",
+      "target_id": "mance_rayder",
+      "type": "participated_in",
+      "description": "Stannis defeats Mance Rayder's wildling army at the Wall.",
+      "evidence": "Stannis landed his knights at Eastwatch... He smashed them. Mance Rayder was taken captive.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_05.txt",
+        "chunk_id": "5"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "jon_snow",
+      "target_id": "ygritte",
+      "type": "spouse_of",
+      "description": "Jon and Ygritte become lovers.",
+      "evidence": "You're mine, she whispered. Mine, as I'm yours.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_05.txt",
+        "chunk_id": "5"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "jon_snow",
+      "target_id": "ygritte",
+      "type": "killed",
+      "description": "Ygritte is killed during the attack on Castle Black (Jon finds her dying).",
+      "evidence": "He found Ygritte sprawled across a patch of old snow... You know nothing, Jon Snow, she sighed, dying.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_05.txt",
+        "chunk_id": "5"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "daenerys_targaryen",
+      "target_id": "jorah_mormont",
+      "type": "participated_in",
+      "description": "Daenerys banishes Jorah for his past betrayal.",
+      "evidence": "You are banished, ser... If you're found in Meereen past break of day, I will have Strong Belwas twist your head off.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_05.txt",
+        "chunk_id": "5"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "oberyn_martell",
+      "target_id": "gregor_clegane",
+      "type": "killed",
+      "description": "Oberyn fights Gregor. Gregor kills Oberyn, but Oberyn's poisoned spear leaves Gregor dying.",
+      "evidence": "The Red Viper of Dorne... smashed her fucking head in... The spearhead went through... The flesh mortifies and the wounds ooze pus.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_05.txt",
+        "chunk_id": "5"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "samwell_tarly",
+      "target_id": "jon_snow",
+      "type": "participated_in",
+      "description": "Samwell manipulates the election to make Jon Snow Lord Commander.",
+      "evidence": "Sam did it! You're not the ones who got chosen as the nine-hundredth-and-ninety-eighth Lord Commander.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_05.txt",
+        "chunk_id": "5"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "schema_proposals": []
+}

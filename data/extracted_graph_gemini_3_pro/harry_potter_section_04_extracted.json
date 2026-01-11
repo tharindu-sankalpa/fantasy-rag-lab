@@ -1,0 +1,756 @@
+{
+  "entities": [
+    {
+      "id": "harry_potter",
+      "type": "Character",
+      "name": "Harry Potter",
+      "aliases": [
+        "The Boy Who Lived",
+        "The Chosen One",
+        "Potter"
+      ],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "patronus_form": "Stag",
+        "wand_wood": "Holly",
+        "wand_core": "Phoenix feather",
+        "gender": "Male"
+      },
+      "description": "The protagonist, a student at Hogwarts who was entered into the Triwizard Tournament against his will, witnessed the return of Lord Voldemort, and later formed Dumbledore's Army to teach fellow students defense.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "lord_voldemort",
+      "type": "Character",
+      "name": "Lord Voldemort",
+      "aliases": [
+        "He-Who-Must-Not-Be-Named",
+        "You-Know-Who",
+        "The Dark Lord",
+        "Tom Marvolo Riddle"
+      ],
+      "attributes": {
+        "blood_status": "Half-blood",
+        "gender": "Male"
+      },
+      "description": "The primary antagonist who regained his physical body during the Triwizard Tournament and seeks to kill Harry Potter and take over the wizarding world.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "ronald_weasley",
+      "type": "Character",
+      "name": "Ronald Weasley",
+      "aliases": [
+        "Ron",
+        "Weasel King"
+      ],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "blood_status": "Pure-blood",
+        "gender": "Male"
+      },
+      "description": "Harry's best friend, who becomes a Prefect and the Gryffindor Quidditch Keeper.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "hermione_granger",
+      "type": "Character",
+      "name": "Hermione Granger",
+      "aliases": [],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "blood_status": "Muggle-born",
+        "patronus_form": "Otter",
+        "gender": "Female"
+      },
+      "description": "Harry's best friend, a highly intelligent witch who organizes Dumbledore's Army and creates S.P.E.W.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "sirius_black",
+      "type": "Character",
+      "name": "Sirius Black",
+      "aliases": [
+        "Padfoot",
+        "Snuffles"
+      ],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "blood_status": "Pure-blood",
+        "gender": "Male",
+        "animagus": "Black Dog"
+      },
+      "description": "Harry's godfather and a member of the Order of the Phoenix, who offers his family home as headquarters and is eventually killed by Bellatrix Lestrange.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "albus_dumbledore",
+      "type": "Character",
+      "name": "Albus Dumbledore",
+      "aliases": [],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "gender": "Male",
+        "title": "Headmaster"
+      },
+      "description": "Headmaster of Hogwarts and founder of the Order of the Phoenix, the only wizard Voldemort fears.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dolores_umbridge",
+      "type": "Character",
+      "name": "Dolores Umbridge",
+      "aliases": [
+        "High Inquisitor"
+      ],
+      "attributes": {
+        "gender": "Female",
+        "affiliation": "Ministry of Magic"
+      },
+      "description": "Senior Undersecretary to the Minister and Defense Against the Dark Arts teacher who imposes strict rules and punishments at Hogwarts.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "cedric_diggory",
+      "type": "Character",
+      "name": "Cedric Diggory",
+      "aliases": [],
+      "attributes": {
+        "hogwarts_house": "Hufflepuff",
+        "gender": "Male"
+      },
+      "description": "The Hufflepuff champion in the Triwizard Tournament who is murdered by Peter Pettigrew on Voldemort's orders.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "barty_crouch_jr",
+      "type": "Character",
+      "name": "Barty Crouch Jr.",
+      "aliases": [
+        "Mad-Eye Moody (Impersonation)"
+      ],
+      "attributes": {
+        "blood_status": "Pure-blood",
+        "gender": "Male",
+        "affiliation": "Death Eaters"
+      },
+      "description": "A Death Eater who impersonated Alastor Moody to manipulate the Triwizard Tournament and deliver Harry to Voldemort.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "bellatrix_lestrange",
+      "type": "Character",
+      "name": "Bellatrix Lestrange",
+      "aliases": [
+        "Bella"
+      ],
+      "attributes": {
+        "blood_status": "Pure-blood",
+        "gender": "Female",
+        "affiliation": "Death Eaters"
+      },
+      "description": "A fanatical Death Eater who escapes Azkaban and kills Sirius Black during the battle at the Department of Mysteries.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "neville_longbottom",
+      "type": "Character",
+      "name": "Neville Longbottom",
+      "aliases": [],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "blood_status": "Pure-blood",
+        "gender": "Male"
+      },
+      "description": "A Gryffindor student who joins Dumbledore's Army and fights in the Department of Mysteries; his parents were tortured into insanity by Bellatrix Lestrange.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "luna_lovegood",
+      "type": "Character",
+      "name": "Luna Lovegood",
+      "aliases": [
+        "Loony Lovegood"
+      ],
+      "attributes": {
+        "hogwarts_house": "Ravenclaw",
+        "gender": "Female"
+      },
+      "description": "A Ravenclaw student who joins Dumbledore's Army and accompanies Harry to the Ministry of Magic.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "severus_snape",
+      "type": "Character",
+      "name": "Severus Snape",
+      "aliases": [
+        "Snivellus"
+      ],
+      "attributes": {
+        "hogwarts_house": "Slytherin",
+        "gender": "Male",
+        "title": "Professor"
+      },
+      "description": "The Potions Master at Hogwarts and a member of the Order of the Phoenix who teaches Harry Occlumency.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "kreacher",
+      "type": "Character",
+      "name": "Kreacher",
+      "aliases": [],
+      "attributes": {
+        "gender": "Male"
+      },
+      "description": "The house-elf of the Black family who betrays Sirius to Narcissa Malfoy.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dobby",
+      "type": "Character",
+      "name": "Dobby",
+      "aliases": [],
+      "attributes": {
+        "gender": "Male"
+      },
+      "description": "A free house-elf working at Hogwarts who helps Harry by finding the Room of Requirement and giving him Gillyweed (in the book context, though the movie differs).",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "triwizard_tournament",
+      "type": "Event",
+      "name": "Triwizard Tournament",
+      "aliases": [],
+      "attributes": {
+        "outcome": "Victory for Harry Potter (and posthumously Cedric Diggory)",
+        "casualties": "Cedric Diggory"
+      },
+      "description": "A magical competition between Hogwarts, Beauxbatons, and Durmstrang schools.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dumbledores_army",
+      "type": "Organization",
+      "name": "Dumbledore's Army",
+      "aliases": [
+        "D.A."
+      ],
+      "attributes": {
+        "founded_date": "1995",
+        "ideology": "Defense Against the Dark Arts practice"
+      },
+      "description": "A secret student organization founded by Harry, Ron, and Hermione to teach practical defense against the Dark Arts.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "order_of_the_phoenix",
+      "type": "Organization",
+      "name": "Order of the Phoenix",
+      "aliases": [],
+      "attributes": {
+        "headquarters": "Number Twelve, Grimmauld Place"
+      },
+      "description": "A secret society founded by Albus Dumbledore to oppose Lord Voldemort and his Death Eaters.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "department_of_mysteries",
+      "type": "Location",
+      "name": "Department of Mysteries",
+      "aliases": [],
+      "attributes": {
+        "affiliation": "Ministry of Magic"
+      },
+      "description": "A secret department within the Ministry of Magic where the prophecy concerning Harry and Voldemort was stored.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "the_prophecy",
+      "type": "Artifact",
+      "name": "The Prophecy",
+      "aliases": [],
+      "attributes": {
+        "creator": "Sibyll Trelawney"
+      },
+      "description": "A glass sphere containing a prediction about the one with the power to vanquish the Dark Lord.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 5 - Harry Potter and the Order of the Phoenix.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_04.txt",
+          "chunk_id": "4"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "harry_potter",
+      "target_id": "lord_voldemort",
+      "type": "enemy_of",
+      "description": "The central conflict of the series; Voldemort seeks to kill Harry.",
+      "evidence": "Voldemort raised his wand, and before Harry could do anything to defend himself, before he could even move, he had been hit again by the Cruciatus Curse.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "cedric_diggory",
+      "target_id": "lord_voldemort",
+      "type": "killed_by",
+      "description": "Cedric is killed by Peter Pettigrew on Voldemort's orders.",
+      "evidence": "From far away, above his head, he heard a high, cold voice say, 'Kill the spare.' A swishing noise and a second voice, which screeched the words to the night: 'Avada Kedavra!'",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "sirius_black",
+      "target_id": "bellatrix_lestrange",
+      "type": "killed_by",
+      "description": "Sirius is killed by Bellatrix during the battle at the Department of Mysteries.",
+      "evidence": "The second jet of light hit him squarely on the chest. The laughter had not quite died from his face, but his eyes widened in shock. ... He fell through the ancient doorway and disappeared behind the veil",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "dumbledores_army",
+      "type": "member_of",
+      "description": "Harry is the leader and teacher of Dumbledore's Army.",
+      "evidence": "Harry's leader,' said Cho at once... 'All in favor of the D.A.?' said Hermione bossily... 'That's a majority — motion passed!'",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "dolores_umbridge",
+      "type": "enemy_of",
+      "description": "Umbridge persecutes Harry throughout his fifth year.",
+      "evidence": "I want you to write 'I must not tell lies,' she told him softly.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "severus_snape",
+      "target_id": "harry_potter",
+      "type": "mentors",
+      "description": "Snape attempts to teach Harry Occlumency.",
+      "evidence": "The headmaster has sent me to tell you, Potter, that it is his wish for you to study Occlumency this term.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "triwizard_tournament",
+      "type": "participated_in",
+      "description": "Harry is a champion in the tournament.",
+      "evidence": "Harry Potter is the fourth Triwizard champion.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "sirius_black",
+      "target_id": "number_twelve_grimmauld_place",
+      "type": "located_in",
+      "description": "Sirius is confined to his family home.",
+      "evidence": "I've been stuck inside for a month.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "barty_crouch_jr",
+      "target_id": "alastor_moody",
+      "type": "enemy_of",
+      "description": "Barty Crouch Jr. imprisoned and impersonated Moody.",
+      "evidence": "I drank it; I became Moody's double. I took his leg and his eye.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_04.txt",
+        "chunk_id": "4"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "schema_proposals": [
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "impersonates",
+      "description": "Indicates that one entity is disguising themselves as another (e.g., using Polyjuice Potion).",
+      "confidence": 0.9
+    },
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "possesses",
+      "description": "Indicates a magical control or inhabitation of one entity by another (e.g., Voldemort possessing Harry or a snake).",
+      "confidence": 0.8
+    }
+  ]
+}

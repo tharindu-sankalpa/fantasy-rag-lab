@@ -1,0 +1,1289 @@
+{
+  "entities": [
+    {
+      "id": "duncan_the_tall",
+      "type": "Character",
+      "name": "Ser Duncan the Tall",
+      "aliases": [
+        "Dunk",
+        "The Gallows Knight"
+      ],
+      "attributes": {},
+      "description": "A hedge knight of humble origins who travels Westeros.",
+      "mentions": [
+        {
+          "file_name": "A Knight of the Seven Kingdoms.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aegon_v_targaryen",
+      "type": "Character",
+      "name": "Aegon V Targaryen",
+      "aliases": [
+        "Egg",
+        "Aegon"
+      ],
+      "attributes": {},
+      "description": "Squire to Ser Duncan the Tall, secretly a Targaryen prince.",
+      "mentions": [
+        {
+          "file_name": "A Knight of the Seven Kingdoms.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "arlan_of_pennytree",
+      "type": "Character",
+      "name": "Ser Arlan of Pennytree",
+      "aliases": [],
+      "attributes": {},
+      "description": "A hedge knight who trained Duncan the Tall.",
+      "mentions": [
+        {
+          "file_name": "A Knight of the Seven Kingdoms.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "baelor_targaryen",
+      "type": "Character",
+      "name": "Baelor Targaryen",
+      "aliases": [
+        "Baelor Breakspear"
+      ],
+      "attributes": {},
+      "description": "Prince of Dragonstone and Hand of the King, a champion of chivalry.",
+      "mentions": [
+        {
+          "file_name": "A Knight of the Seven Kingdoms.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "maekar_targaryen",
+      "type": "Character",
+      "name": "Maekar Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "Prince of Summerhall, brother to Baelor Breakspear.",
+      "mentions": [
+        {
+          "file_name": "A Knight of the Seven Kingdoms.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aerion_targaryen",
+      "type": "Character",
+      "name": "Aerion Targaryen",
+      "aliases": [
+        "Aerion Brightflame",
+        "The Bright Prince"
+      ],
+      "attributes": {},
+      "description": "Cruel son of Maekar Targaryen.",
+      "mentions": [
+        {
+          "file_name": "A Knight of the Seven Kingdoms.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "daeron_targaryen_drunken",
+      "type": "Character",
+      "name": "Daeron Targaryen",
+      "aliases": [
+        "Daeron the Drunken"
+      ],
+      "attributes": {},
+      "description": "Eldest son of Maekar Targaryen, known for his prophetic dreams and drinking.",
+      "mentions": [
+        {
+          "file_name": "A Knight of the Seven Kingdoms.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "rohanne_webber",
+      "type": "Character",
+      "name": "Rohanne Webber",
+      "aliases": [
+        "The Red Widow"
+      ],
+      "attributes": {},
+      "description": "Lady of Coldmoat, known for her red hair and multiple deceased husbands.",
+      "mentions": [
+        {
+          "file_name": "A Knight of the Seven Kingdoms.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "eustace_osgrey",
+      "type": "Character",
+      "name": "Ser Eustace Osgrey",
+      "aliases": [
+        "The Chequy Lion"
+      ],
+      "attributes": {},
+      "description": "A landed knight of Standfast, former supporter of the Black Dragon.",
+      "mentions": [
+        {
+          "file_name": "A Knight of the Seven Kingdoms.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "bennis_of_the_brown_shield",
+      "type": "Character",
+      "name": "Ser Bennis of the Brown Shield",
+      "aliases": [],
+      "attributes": {},
+      "description": "An ill-tempered hedge knight in service to Ser Eustace Osgrey.",
+      "mentions": [
+        {
+          "file_name": "A Knight of the Seven Kingdoms.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "daemon_ii_blackfyre",
+      "type": "Character",
+      "name": "Daemon II Blackfyre",
+      "aliases": [
+        "John the Fiddler",
+        "The Brown Dragon"
+      ],
+      "attributes": {},
+      "description": "A Blackfyre pretender posing as a hedge knight named John the Fiddler.",
+      "mentions": [
+        {
+          "file_name": "A Knight of the Seven Kingdoms.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "brynden_rivers",
+      "type": "Character",
+      "name": "Brynden Rivers",
+      "aliases": [
+        "Bloodraven",
+        "Maynard Plumm"
+      ],
+      "attributes": {},
+      "description": "Hand of the King and master of whisperers, a Great Bastard.",
+      "mentions": [
+        {
+          "file_name": "A Knight of the Seven Kingdoms.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "eddard_stark",
+      "type": "Character",
+      "name": "Eddard Stark",
+      "aliases": [
+        "Ned"
+      ],
+      "attributes": {},
+      "description": "Lord of Winterfell and Hand of the King.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "catelyn_stark",
+      "type": "Character",
+      "name": "Catelyn Stark",
+      "aliases": [
+        "Catelyn Tully",
+        "Cat"
+      ],
+      "attributes": {},
+      "description": "Lady of Winterfell, wife of Eddard Stark.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "robb_stark",
+      "type": "Character",
+      "name": "Robb Stark",
+      "aliases": [
+        "The Young Wolf"
+      ],
+      "attributes": {},
+      "description": "Eldest son of Eddard and Catelyn Stark, heir to Winterfell.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "jon_snow",
+      "type": "Character",
+      "name": "Jon Snow",
+      "aliases": [
+        "Lord Snow"
+      ],
+      "attributes": {},
+      "description": "Bastard son of Eddard Stark, brother of the Night's Watch.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "sansa_stark",
+      "type": "Character",
+      "name": "Sansa Stark",
+      "aliases": [],
+      "attributes": {},
+      "description": "Eldest daughter of Eddard and Catelyn Stark.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "arya_stark",
+      "type": "Character",
+      "name": "Arya Stark",
+      "aliases": [
+        "Arya Underfoot",
+        "Arya Horseface"
+      ],
+      "attributes": {},
+      "description": "Youngest daughter of Eddard and Catelyn Stark.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "brandon_stark",
+      "type": "Character",
+      "name": "Brandon Stark",
+      "aliases": [
+        "Bran"
+      ],
+      "attributes": {},
+      "description": "Second son of Eddard and Catelyn Stark, crippled by a fall.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "daenerys_targaryen",
+      "type": "Character",
+      "name": "Daenerys Targaryen",
+      "aliases": [
+        "Dany",
+        "Daenerys Stormborn",
+        "Khaleesi"
+      ],
+      "attributes": {},
+      "description": "Last princess of House Targaryen, wife of Khal Drogo, Mother of Dragons.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "viserys_targaryen",
+      "type": "Character",
+      "name": "Viserys Targaryen",
+      "aliases": [
+        "The Beggar King",
+        "Khal Rhaggat"
+      ],
+      "attributes": {},
+      "description": "Exiled Targaryen prince, brother to Daenerys.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "khal_drogo",
+      "type": "Character",
+      "name": "Khal Drogo",
+      "aliases": [],
+      "attributes": {},
+      "description": "A powerful Dothraki horselord.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "jorah_mormont",
+      "type": "Character",
+      "name": "Jorah Mormont",
+      "aliases": [
+        "Jorah the Andal"
+      ],
+      "attributes": {},
+      "description": "Exiled knight serving Daenerys Targaryen.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "tyrion_lannister",
+      "type": "Character",
+      "name": "Tyrion Lannister",
+      "aliases": [
+        "The Imp",
+        "Halfman"
+      ],
+      "attributes": {},
+      "description": "Dwarf son of Tywin Lannister, possessing a sharp intellect.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "jaime_lannister",
+      "type": "Character",
+      "name": "Jaime Lannister",
+      "aliases": [
+        "The Kingslayer"
+      ],
+      "attributes": {},
+      "description": "Knight of the Kingsguard, twin to Queen Cersei.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "cersei_lannister",
+      "type": "Character",
+      "name": "Cersei Lannister",
+      "aliases": [],
+      "attributes": {},
+      "description": "Queen of the Seven Kingdoms, wife of Robert Baratheon.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "robert_baratheon",
+      "type": "Character",
+      "name": "Robert Baratheon",
+      "aliases": [
+        "The Usurper"
+      ],
+      "attributes": {},
+      "description": "King of the Seven Kingdoms.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "joffrey_baratheon",
+      "type": "Character",
+      "name": "Joffrey Baratheon",
+      "aliases": [],
+      "attributes": {},
+      "description": "Crown Prince, later King.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "petyr_baelish",
+      "type": "Character",
+      "name": "Petyr Baelish",
+      "aliases": [
+        "Littlefinger"
+      ],
+      "attributes": {},
+      "description": "Master of Coin on the small council.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "varys",
+      "type": "Character",
+      "name": "Varys",
+      "aliases": [
+        "The Spider"
+      ],
+      "attributes": {},
+      "description": "Master of Whisperers, a eunuch.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "tywin_lannister",
+      "type": "Character",
+      "name": "Tywin Lannister",
+      "aliases": [],
+      "attributes": {},
+      "description": "Lord of Casterly Rock and Warden of the West.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "jeor_mormont",
+      "type": "Character",
+      "name": "Jeor Mormont",
+      "aliases": [
+        "The Old Bear"
+      ],
+      "attributes": {},
+      "description": "Lord Commander of the Night's Watch.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "samwell_tarly",
+      "type": "Character",
+      "name": "Samwell Tarly",
+      "aliases": [
+        "Ser Piggy",
+        "Lord of Ham"
+      ],
+      "attributes": {},
+      "description": "A sworn brother of the Night's Watch, friend to Jon Snow.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "mirri_maz_duur",
+      "type": "Character",
+      "name": "Mirri Maz Duur",
+      "aliases": [],
+      "attributes": {},
+      "description": "A godswife and maegi of the Lhazareen.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "ashford_meadow",
+      "type": "Location",
+      "name": "Ashford Meadow",
+      "aliases": [],
+      "attributes": {},
+      "description": "Site of a famous tourney in the Reach.",
+      "mentions": [
+        {
+          "file_name": "A Knight of the Seven Kingdoms.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "whitewalls",
+      "type": "Location",
+      "name": "Whitewalls",
+      "aliases": [],
+      "attributes": {},
+      "description": "A castle of white stone, site of the Second Blackfyre Rebellion.",
+      "mentions": [
+        {
+          "file_name": "A Knight of the Seven Kingdoms.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "longclaw",
+      "type": "Artifact",
+      "name": "Longclaw",
+      "aliases": [],
+      "attributes": {},
+      "description": "Valyrian steel bastard sword of House Mormont, given to Jon Snow.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "needle",
+      "type": "Artifact",
+      "name": "Needle",
+      "aliases": [],
+      "attributes": {},
+      "description": "A thin sword given to Arya Stark by Jon Snow.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dragon_eggs",
+      "type": "Artifact",
+      "name": "Dragon Eggs",
+      "aliases": [],
+      "attributes": {},
+      "description": "Three petrified dragon eggs given to Daenerys, which later hatch.",
+      "mentions": [
+        {
+          "file_name": "A Game Of Thrones - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "duncan_the_tall",
+      "target_id": "arlan_of_pennytree",
+      "type": "sworn_to",
+      "description": "Dunk was squire to Ser Arlan.",
+      "evidence": "The old man had taught Dunk all he knew of swords and shields and lances",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "aegon_v_targaryen",
+      "target_id": "duncan_the_tall",
+      "type": "sworn_to",
+      "description": "Egg becomes Dunk's squire.",
+      "evidence": "I’m your squire,” the boy said.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "duncan_the_tall",
+      "target_id": "aerion_targaryen",
+      "type": "killed",
+      "description": "Dunk fights Aerion in a Trial of Seven (though doesn't kill him, he defeats him).",
+      "evidence": "Dunk lurched to his feet and pulled Prince Aerion up after him... 'YIELD!' he shouted.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 0.9,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "maekar_targaryen",
+      "target_id": "baelor_targaryen",
+      "type": "killed",
+      "description": "Maekar accidentally kills his brother Baelor in the Trial of Seven.",
+      "evidence": "And it was my mace that dealt the fatal blow, I have no doubt.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "daenerys_targaryen",
+      "target_id": "khal_drogo",
+      "type": "spouse_of",
+      "description": "Daenerys marries Khal Drogo.",
+      "evidence": "Daenerys Targaryen wed Khal Drogo with fear and barbaric splendor",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "daenerys_targaryen",
+      "target_id": "khal_drogo",
+      "type": "killed",
+      "description": "Daenerys smothers Drogo to end his suffering.",
+      "evidence": "She knelt, kissed Drogo on the lips, and pressed the cushion down across his face.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "jorah_mormont",
+      "target_id": "daenerys_targaryen",
+      "type": "sworn_to",
+      "description": "Jorah swears fealty to Daenerys.",
+      "evidence": "I vow to serve you, to obey you, to die for you if need be.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "khal_drogo",
+      "target_id": "viserys_targaryen",
+      "type": "killed",
+      "description": "Drogo kills Viserys with molten gold.",
+      "evidence": "A crown for Cart King!” And upended the pot over the head of the man who had been her brother.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "eddard_stark",
+      "target_id": "robert_baratheon",
+      "type": "sworn_to",
+      "description": "Ned Stark serves as Hand of the King to Robert.",
+      "evidence": "Lord Eddard Stark, I would name you the Hand of the King.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "petyr_baelish",
+      "target_id": "eddard_stark",
+      "type": "killed",
+      "description": "Littlefinger betrays Ned, leading to his execution.",
+      "evidence": "I did warn you not to trust me, you know.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 0.9,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "joffrey_baratheon",
+      "target_id": "eddard_stark",
+      "type": "killed",
+      "description": "Joffrey orders Ned's execution.",
+      "evidence": "Ser Ilyn, bring me his head!",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "catelyn_stark",
+      "target_id": "tyrion_lannister",
+      "type": "killed",
+      "description": "Catelyn arrests Tyrion (not killed, but hostile action).",
+      "evidence": "I call upon you to seize him and help me return him to Winterfell",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 0.9,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "robb_stark",
+      "target_id": "eddard_stark",
+      "type": "parent_of",
+      "description": "Ned is Robb's father.",
+      "evidence": "My lord father taught me that it was death to bare steel against your liege lord",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "jon_snow",
+      "target_id": "eddard_stark",
+      "type": "parent_of",
+      "description": "Ned is Jon's father (alleged/publicly acknowledged).",
+      "evidence": "Lord Eddard Stark is my father",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "jon_snow",
+      "target_id": "jeor_mormont",
+      "type": "sworn_to",
+      "description": "Jon serves as steward to Lord Commander Mormont.",
+      "evidence": "Lord Commander Mormont has requested you for his personal steward",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "jeor_mormont",
+      "target_id": "jon_snow",
+      "type": "wields",
+      "description": "Mormont gives Longclaw to Jon.",
+      "evidence": "He is giving me his son’s sword.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "tyrion_lannister",
+      "target_id": "tywin_lannister",
+      "type": "parent_of",
+      "description": "Tywin is Tyrion's father.",
+      "evidence": "You are my son.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "mirri_maz_duur",
+      "target_id": "khal_drogo",
+      "type": "killed",
+      "description": "Mirri Maz Duur's magic leaves Drogo in a vegetative state.",
+      "evidence": "You knew what I was buying, and you knew the price, and yet you let me pay it.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "daenerys_targaryen",
+      "target_id": "mirri_maz_duur",
+      "type": "killed",
+      "description": "Dany burns Mirri alive on Drogo's pyre.",
+      "evidence": "I thank you, Mirri Maz Duur,” she said, “for the lessons you have taught me.” ... The fires swept over Mirri Maz Duur.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "schema_proposals": []
+}

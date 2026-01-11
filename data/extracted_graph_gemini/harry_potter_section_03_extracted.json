@@ -1,0 +1,699 @@
+{
+  "entities": [
+    {
+      "id": "harry_potter",
+      "type": "Character",
+      "name": "Harry Potter",
+      "aliases": [
+        "The Boy Who Lived",
+        "The Chosen One"
+      ],
+      "attributes": {},
+      "description": "The protagonist, a young wizard who survived Voldemort's killing curse. Competes in the Triwizard Tournament as the fourth champion.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "sirius_black",
+      "type": "Character",
+      "name": "Sirius Black",
+      "aliases": [
+        "Padfoot",
+        "Snuffles",
+        "Prisoner of Azkaban"
+      ],
+      "attributes": {
+        "animagus_form": "Black Dog",
+        "hogwarts_house": "Gryffindor"
+      },
+      "description": "Harry's godfather, an Animagus who escaped Azkaban. Wrongly convicted of murdering Peter Pettigrew and Muggles.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "remus_lupin",
+      "type": "Character",
+      "name": "Remus Lupin",
+      "aliases": [
+        "Moony",
+        "Professor Lupin"
+      ],
+      "attributes": {
+        "condition": "Werewolf",
+        "hogwarts_house": "Gryffindor"
+      },
+      "description": "Defense Against the Dark Arts teacher in Harry's third year. A werewolf and one of the creators of the Marauder's Map.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "peter_pettigrew",
+      "type": "Character",
+      "name": "Peter Pettigrew",
+      "aliases": [
+        "Wormtail",
+        "Scabbers"
+      ],
+      "attributes": {
+        "animagus_form": "Rat",
+        "hogwarts_house": "Gryffindor"
+      },
+      "description": "A Death Eater who betrayed James and Lily Potter. Hid as Ron Weasley's pet rat Scabbers for twelve years.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "lord_voldemort",
+      "type": "Character",
+      "name": "Lord Voldemort",
+      "aliases": [
+        "You-Know-Who",
+        "The Dark Lord",
+        "Tom Riddle",
+        "He-Who-Must-Not-Be-Named"
+      ],
+      "attributes": {},
+      "description": "The primary antagonist. Regains a rudimentary body and later a full body using Harry's blood.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "barty_crouch_jr",
+      "type": "Character",
+      "name": "Barty Crouch Jr.",
+      "aliases": [],
+      "attributes": {},
+      "description": "A Death Eater who escaped Azkaban. Impersonates Alastor Moody to guide Harry through the Triwizard Tournament.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "alastor_moody",
+      "type": "Character",
+      "name": "Alastor Moody",
+      "aliases": [
+        "Mad-Eye Moody",
+        "Mad-Eye"
+      ],
+      "attributes": {},
+      "description": "Famous ex-Auror hired to teach Defense Against the Dark Arts. Kidnapped and impersonated by Barty Crouch Jr. for most of the year.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "cedric_diggory",
+      "type": "Character",
+      "name": "Cedric Diggory",
+      "aliases": [],
+      "attributes": {
+        "hogwarts_house": "Hufflepuff"
+      },
+      "description": "Hogwarts champion in the Triwizard Tournament. Murdered by Peter Pettigrew on Voldemort's orders.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "viktor_krum",
+      "type": "Character",
+      "name": "Viktor Krum",
+      "aliases": [],
+      "attributes": {},
+      "description": "Durmstrang champion in the Triwizard Tournament and international Quidditch seeker for Bulgaria.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "fleur_delacour",
+      "type": "Character",
+      "name": "Fleur Delacour",
+      "aliases": [],
+      "attributes": {
+        "ancestry": "Part-Veela"
+      },
+      "description": "Beauxbatons champion in the Triwizard Tournament.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "rita_skeeter",
+      "type": "Character",
+      "name": "Rita Skeeter",
+      "aliases": [],
+      "attributes": {
+        "animagus_form": "Beetle"
+      },
+      "description": "Journalist for the Daily Prophet who writes sensationalist stories. An unregistered Animagus.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "marauders_map",
+      "type": "Artifact",
+      "name": "Marauder's Map",
+      "aliases": [],
+      "attributes": {},
+      "description": "A magical document that reveals all of Hogwarts School of Witchcraft and Wizardry. It shows every classroom, every hallway, and every corner of the castle, including secret passages.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "firebolt",
+      "type": "Artifact",
+      "name": "Firebolt",
+      "aliases": [],
+      "attributes": {},
+      "description": "A world-class racing broomstick sent to Harry by Sirius Black.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "triwizard_cup",
+      "type": "Artifact",
+      "name": "Triwizard Cup",
+      "aliases": [],
+      "attributes": {},
+      "description": "The trophy for the Triwizard Tournament. Turned into a Portkey by Barty Crouch Jr. to transport Harry to the graveyard.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "goblet_of_fire",
+      "type": "Artifact",
+      "name": "Goblet of Fire",
+      "aliases": [],
+      "attributes": {},
+      "description": "An impartial magical object used to select champions for the Triwizard Tournament.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "time_turner",
+      "type": "Artifact",
+      "name": "Time-Turner",
+      "aliases": [],
+      "attributes": {},
+      "description": "A device used by Hermione to attend multiple classes, and later by her and Harry to save Sirius Black and Buckbeak.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "triwizard_tournament",
+      "type": "Event",
+      "name": "Triwizard Tournament",
+      "aliases": [],
+      "attributes": {},
+      "description": "A magical competition between Hogwarts, Beauxbatons, and Durmstrang schools.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "quidditch_world_cup",
+      "type": "Event",
+      "name": "Quidditch World Cup",
+      "aliases": [],
+      "attributes": {},
+      "description": "A major sporting event between Ireland and Bulgaria, disrupted by Death Eaters.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "little_hangleton_graveyard",
+      "type": "Location",
+      "name": "Little Hangleton Graveyard",
+      "aliases": [],
+      "attributes": {},
+      "description": "The burial place of the Riddle family, where Voldemort was restored to his body and Cedric Diggory was murdered.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "buckbeak",
+      "type": "Creature",
+      "name": "Buckbeak",
+      "aliases": [
+        "Beaky"
+      ],
+      "attributes": {},
+      "description": "A Hippogriff sentenced to death but rescued by Harry and Hermione.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 3 & 4.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "sirius_black",
+      "target_id": "harry_potter",
+      "type": "familial_bond",
+      "description": "Godfather and godson relationship.",
+      "evidence": "\"I'm your godfather,\" said Black.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "remus_lupin",
+      "target_id": "harry_potter",
+      "type": "mentors",
+      "description": "Lupin teaches Harry the Patronus Charm.",
+      "evidence": "I'll try and help. But it'll have to wait until next term, I'm afraid.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "peter_pettigrew",
+      "target_id": "lord_voldemort",
+      "type": "member_of",
+      "description": "Pettigrew serves Voldemort as a Death Eater and helps resurrect him.",
+      "evidence": "\"Bone of the father... Flesh of the servant... Blood of the enemy...\"",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "peter_pettigrew",
+      "target_id": "cedric_diggory",
+      "type": "killed_by",
+      "description": "Pettigrew murders Cedric on Voldemort's orders.",
+      "evidence": "Avada Kedavra! ... Cedric was lying spread-eagled on the ground beside him. He was dead.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "lord_voldemort",
+      "type": "enemy_of",
+      "description": "Voldemort seeks to kill Harry; Harry fights to survive.",
+      "evidence": "\"I will kill him! He is mine!\" shrieked Voldemort.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "triwizard_tournament",
+      "type": "participated_in",
+      "description": "Harry is unwillingly entered as a champion and wins the tournament.",
+      "evidence": "Harry Potter managed to escape Lord Voldemort. He risked his own life to return Cedric's body to Hogwarts.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "barty_crouch_jr",
+      "target_id": "alastor_moody",
+      "type": "impersonates",
+      "description": "Crouch Jr. uses Polyjuice Potion to take the place of Alastor Moody.",
+      "evidence": "The imposter needed, of course, to keep the real Moody close by, so that he could continue making the potion.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "remus_lupin",
+      "target_id": "marauders_map",
+      "type": "creator_of",
+      "description": "Lupin, as 'Moony', helped create the map.",
+      "evidence": "\"I wrote it,\" said Lupin. \"I'm Moony.\"",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "hermione_granger",
+      "target_id": "viktor_krum",
+      "type": "participated_in",
+      "description": "Hermione attends the Yule Ball as Viktor Krum's partner.",
+      "evidence": "Krum had come to say good-bye to Hermione.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 0.9,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "rita_skeeter",
+      "target_id": "harry_potter",
+      "type": "enemy_of",
+      "description": "Rita writes slanderous articles about Harry.",
+      "evidence": "Harry Potter 'Disturbed and Dangerous' writes Rita Skeeter.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 0.9,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "firebolt",
+      "type": "wields",
+      "description": "Harry uses the Firebolt for Quidditch and the first task.",
+      "evidence": "\"Accio Firebolt!\" he shouted.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "schema_proposals": [
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "impersonates",
+      "description": "Indicates that the source entity disguises themselves as the target entity, typically using Polyjuice Potion or other magical means.",
+      "confidence": 1.0
+    }
+  ]
+}

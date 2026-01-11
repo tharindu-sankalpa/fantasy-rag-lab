@@ -1,0 +1,2085 @@
+{
+  "entities": [
+    {
+      "id": "harry_potter",
+      "type": "Character",
+      "name": "Harry Potter",
+      "aliases": [
+        "The Boy Who Lived",
+        "Potter"
+      ],
+      "attributes": {
+        "blood_status": "Half-blood",
+        "hogwarts_house": "Gryffindor",
+        "wand_wood": "Holly",
+        "wand_core": "Phoenix feather",
+        "gender": "Male"
+      },
+      "description": "The protagonist, an eleven-year-old wizard who survived Voldemort's killing curse as a baby, leaving him with a lightning bolt scar on his forehead. He lives with the Dursleys before discovering he is a wizard and attending Hogwarts.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "vernon_dursley",
+      "type": "Character",
+      "name": "Vernon Dursley",
+      "aliases": [
+        "Mr. Dursley",
+        "Uncle Vernon"
+      ],
+      "attributes": {
+        "blood_status": "Muggle",
+        "gender": "Male"
+      },
+      "description": "Harry's uncle, a big, beefy man with hardly any neck and a large mustache. Director of Grunnings, a drill-making firm. Proud to be perfectly normal and despises anything strange or magical.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "petunia_dursley",
+      "type": "Character",
+      "name": "Petunia Dursley",
+      "aliases": [
+        "Mrs. Dursley",
+        "Aunt Petunia"
+      ],
+      "attributes": {
+        "blood_status": "Muggle",
+        "gender": "Female"
+      },
+      "description": "Harry's aunt and Lily Potter's sister. Thin and blonde with nearly twice the usual amount of neck. Spends much time spying on neighbors. Pretends she doesn't have a sister and despises magic.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dudley_dursley",
+      "type": "Character",
+      "name": "Dudley Dursley",
+      "aliases": [
+        "Dudley",
+        "Duddydums",
+        "Ickle Dudleykins"
+      ],
+      "attributes": {
+        "blood_status": "Muggle",
+        "gender": "Male"
+      },
+      "description": "Harry's cousin, the Dursleys' spoiled son. Large, pink-faced boy who looks like Uncle Vernon. Very fat and hated exercise. Bullies Harry and is extremely spoiled by his parents.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "albus_dumbledore",
+      "type": "Character",
+      "name": "Albus Dumbledore",
+      "aliases": [
+        "Dumbledore",
+        "Professor Dumbledore"
+      ],
+      "attributes": {
+        "blood_status": "Half-blood",
+        "hogwarts_house": "Gryffindor",
+        "wand_wood": "Elder",
+        "gender": "Male"
+      },
+      "description": "Headmaster of Hogwarts. Tall, thin, very old wizard with silver hair and beard long enough to tuck into his belt. Wears long robes, purple cloak, and half-moon spectacles. Has a long, crooked nose and twinkling blue eyes. Considered the greatest wizard of modern times.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "minerva_mcgonagall",
+      "type": "Character",
+      "name": "Minerva McGonagall",
+      "aliases": [
+        "Professor McGonagall"
+      ],
+      "attributes": {
+        "blood_status": "Half-blood",
+        "hogwarts_house": "Gryffindor",
+        "gender": "Female"
+      },
+      "description": "Tall, black-haired witch in emerald-green robes with a very stern face. Deputy Headmistress of Hogwarts and Head of Gryffindor House. Teaches Transfiguration. Can transform into a tabby cat (Animagus).",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "rubeus_hagrid",
+      "type": "Character",
+      "name": "Rubeus Hagrid",
+      "aliases": [
+        "Hagrid"
+      ],
+      "attributes": {
+        "blood_status": "Half-giant",
+        "hogwarts_house": "Gryffindor",
+        "wand_wood": "Oak",
+        "gender": "Male"
+      },
+      "description": "Keeper of Keys and Grounds at Hogwarts. Almost twice as tall as a normal man and at least five times as wide. Has long tangles of bushy black hair and beard, hands the size of trash can lids. Expelled from Hogwarts in his third year but allowed to stay as gamekeeper.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "lord_voldemort",
+      "type": "Character",
+      "name": "Lord Voldemort",
+      "aliases": [
+        "You-Know-Who",
+        "He-Who-Must-Not-Be-Named",
+        "The Dark Lord",
+        "Tom Riddle",
+        "Tom Marvolo Riddle"
+      ],
+      "attributes": {
+        "blood_status": "Half-blood",
+        "hogwarts_house": "Slytherin",
+        "wand_wood": "Yew",
+        "wand_core": "Phoenix feather",
+        "gender": "Male"
+      },
+      "description": "The most powerful Dark wizard in history. Tried to kill Harry Potter as a baby but the curse rebounded, destroying his body. Killed Harry's parents, James and Lily Potter. People are too afraid to say his name.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "james_potter_i",
+      "type": "Character",
+      "name": "James Potter",
+      "aliases": [
+        "James",
+        "Prongs",
+        "Mr. Potter"
+      ],
+      "attributes": {
+        "blood_status": "Pure-blood",
+        "hogwarts_house": "Gryffindor",
+        "wand_wood": "Mahogany",
+        "gender": "Male"
+      },
+      "description": "Harry's father. Tall, thin, black-haired man who wore glasses. His hair stuck up at the back. Excellent Quidditch player and Head Boy at Hogwarts. Killed by Voldemort when Harry was a baby.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "lily_potter",
+      "type": "Character",
+      "name": "Lily Potter",
+      "aliases": [
+        "Lily",
+        "Mrs. Potter",
+        "Lily Evans"
+      ],
+      "attributes": {
+        "blood_status": "Muggle-born",
+        "hogwarts_house": "Gryffindor",
+        "wand_wood": "Willow",
+        "gender": "Female"
+      },
+      "description": "Harry's mother and Petunia Dursley's sister. Very pretty woman with dark red hair and bright green eyes (same as Harry's). Head Girl at Hogwarts. Died protecting Harry from Voldemort, and her sacrifice left protective magic on Harry.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "ronald_weasley",
+      "type": "Character",
+      "name": "Ronald Weasley",
+      "aliases": [
+        "Ron",
+        "Ron Weasley"
+      ],
+      "attributes": {
+        "blood_status": "Pure-blood",
+        "hogwarts_house": "Gryffindor",
+        "wand_wood": "Ash (Charlie's old wand)",
+        "wand_core": "Unicorn hair",
+        "gender": "Male"
+      },
+      "description": "Harry's best friend. Tall, thin, and gangling with freckles, big hands and feet, a long nose, and flaming red hair. Sixth in his family to attend Hogwarts. Comes from a poor but loving wizarding family.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "hermione_granger",
+      "type": "Character",
+      "name": "Hermione Granger",
+      "aliases": [
+        "Hermione"
+      ],
+      "attributes": {
+        "blood_status": "Muggle-born",
+        "hogwarts_house": "Gryffindor",
+        "gender": "Female"
+      },
+      "description": "Harry's friend and the brightest witch of her age. Has lots of bushy brown hair and rather large front teeth. Bossy and know-it-all at first but becomes loyal friend. Extremely studious and talented at magic. Both parents are dentists.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "draco_malfoy",
+      "type": "Character",
+      "name": "Draco Malfoy",
+      "aliases": [
+        "Malfoy"
+      ],
+      "attributes": {
+        "blood_status": "Pure-blood",
+        "hogwarts_house": "Slytherin",
+        "gender": "Male"
+      },
+      "description": "Harry's rival at Hogwarts. Pale boy with a pointed face, sleek blond hair, and cold grey eyes. Comes from a wealthy pure-blood family. Arrogant, prejudiced against Muggle-borns, and bullies others. Accompanied by Crabbe and Goyle.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "severus_snape",
+      "type": "Character",
+      "name": "Severus Snape",
+      "aliases": [
+        "Professor Snape",
+        "Snape"
+      ],
+      "attributes": {
+        "blood_status": "Half-blood",
+        "hogwarts_house": "Slytherin",
+        "gender": "Male"
+      },
+      "description": "Potions Master and Head of Slytherin House. Has greasy black hair, a hooked nose, and sallow skin. Cold and empty black eyes. Seems to hate Harry and favors Slytherin students. Knows a lot about the Dark Arts.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "quirinus_quirrell",
+      "type": "Character",
+      "name": "Quirinus Quirrell",
+      "aliases": [
+        "Professor Quirrell",
+        "Quirrell"
+      ],
+      "attributes": {
+        "blood_status": "Half-blood",
+        "hogwarts_house": "Ravenclaw",
+        "gender": "Male"
+      },
+      "description": "Defense Against the Dark Arts teacher. Nervous young man who wears a large purple turban (claimed to be a gift from an African prince). Stutters badly. Classroom smells of garlic. Actually harboring Voldemort on the back of his head under the turban.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "neville_longbottom",
+      "type": "Character",
+      "name": "Neville Longbottom",
+      "aliases": [
+        "Neville"
+      ],
+      "attributes": {
+        "blood_status": "Pure-blood",
+        "hogwarts_house": "Gryffindor",
+        "gender": "Male"
+      },
+      "description": "Round-faced boy who constantly loses his toad Trevor. Clumsy and forgetful, raised by his grandmother. Has an extraordinary number of accidents. Brave despite his nervousness.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "fred_weasley",
+      "type": "Character",
+      "name": "Fred Weasley",
+      "aliases": [
+        "Fred"
+      ],
+      "attributes": {
+        "blood_status": "Pure-blood",
+        "hogwarts_house": "Gryffindor",
+        "gender": "Male"
+      },
+      "description": "One of Ron's twin brothers. Beater on the Gryffindor Quidditch team. Mischievous and funny, always joking around with his twin George.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "george_weasley",
+      "type": "Character",
+      "name": "George Weasley",
+      "aliases": [
+        "George"
+      ],
+      "attributes": {
+        "blood_status": "Pure-blood",
+        "hogwarts_house": "Gryffindor",
+        "gender": "Male"
+      },
+      "description": "One of Ron's twin brothers. Beater on the Gryffindor Quidditch team. Mischievous and funny, always joking around with his twin Fred.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "percy_weasley",
+      "type": "Character",
+      "name": "Percy Weasley",
+      "aliases": [
+        "Percy"
+      ],
+      "attributes": {
+        "blood_status": "Pure-blood",
+        "hogwarts_house": "Gryffindor",
+        "gender": "Male"
+      },
+      "description": "Ron's older brother, a prefect at Hogwarts. Pompous and rule-abiding, very proud of his prefect status. Wears a shiny red and gold prefect badge.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "oliver_wood",
+      "type": "Character",
+      "name": "Oliver Wood",
+      "aliases": [
+        "Wood"
+      ],
+      "attributes": {
+        "blood_status": "Unknown",
+        "hogwarts_house": "Gryffindor",
+        "gender": "Male"
+      },
+      "description": "Burly fifth-year boy, Captain and Keeper of the Gryffindor Quidditch team. Very passionate about Quidditch and determined to win the House Cup.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "nicolas_flamel",
+      "type": "Character",
+      "name": "Nicolas Flamel",
+      "aliases": [
+        "Flamel"
+      ],
+      "attributes": {
+        "blood_status": "Unknown",
+        "gender": "Male"
+      },
+      "description": "Noted alchemist and opera lover, only known maker of the Sorcerer's Stone. Celebrated his 665th birthday recently. Friend and partner of Albus Dumbledore. Lives in Devon with his wife Perenelle.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "sirius_black",
+      "type": "Character",
+      "name": "Sirius Black",
+      "aliases": [
+        "Padfoot"
+      ],
+      "attributes": {
+        "blood_status": "Pure-blood",
+        "hogwarts_house": "Gryffindor",
+        "gender": "Male"
+      },
+      "description": "Lent Hagrid his flying motorcycle to transport baby Harry to the Dursleys. Friend of James Potter.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 0.9,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "argus_filch",
+      "type": "Character",
+      "name": "Argus Filch",
+      "aliases": [
+        "Filch",
+        "Mr. Filch"
+      ],
+      "attributes": {
+        "blood_status": "Squib",
+        "gender": "Male"
+      },
+      "description": "Hogwarts caretaker. Hates students and loves catching them breaking rules. Owns a cat called Mrs. Norris. Knows the secret passageways better than anyone except the Weasley twins.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "nearly_headless_nick",
+      "type": "Character",
+      "name": "Nicholas de Mimsy-Porpington",
+      "aliases": [
+        "Nearly Headless Nick",
+        "Sir Nicholas"
+      ],
+      "attributes": {
+        "gender": "Male"
+      },
+      "description": "Gryffindor House ghost. Wears a ruff and tights. His head is nearly severed and hangs on a hinge. Resident ghost of Gryffindor Tower.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "peeves",
+      "type": "Character",
+      "name": "Peeves",
+      "aliases": [],
+      "attributes": {},
+      "description": "Poltergeist at Hogwarts. Little man with wicked dark eyes and a wide mouth. Causes mischief and chaos. Only the Bloody Baron can control him.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "hogwarts",
+      "type": "Location",
+      "name": "Hogwarts School of Witchcraft and Wizardry",
+      "aliases": [
+        "Hogwarts"
+      ],
+      "attributes": {
+        "magical_concealment": "Yes",
+        "unplottable": "Yes",
+        "owner": "Unknown",
+        "affiliation": "British Ministry of Magic"
+      },
+      "description": "A vast castle with many turrets and towers perched atop a high mountain. The premier wizarding school in Britain. Has four houses: Gryffindor, Hufflepuff, Ravenclaw, and Slytherin. Protected by powerful enchantments.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "privet_drive",
+      "type": "Location",
+      "name": "4 Privet Drive",
+      "aliases": [
+        "Privet Drive",
+        "Number Four Privet Drive"
+      ],
+      "attributes": {
+        "owner": "Vernon and Petunia Dursley",
+        "affiliation": "Dursley family"
+      },
+      "description": "The Dursley family home in Little Whinging, Surrey. A perfectly normal suburban house where Harry lived in the cupboard under the stairs before attending Hogwarts.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "diagon_alley",
+      "type": "Location",
+      "name": "Diagon Alley",
+      "aliases": [],
+      "attributes": {
+        "magical_concealment": "Yes",
+        "affiliation": "Wizarding community"
+      },
+      "description": "A cobbled wizarding shopping street in London, hidden from Muggles. Contains shops selling magical supplies including Gringotts bank, Ollivanders wand shop, and various other magical establishments. Accessed through the Leaky Cauldron.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "gringotts",
+      "type": "Location",
+      "name": "Gringotts Wizarding Bank",
+      "aliases": [
+        "Gringotts"
+      ],
+      "attributes": {
+        "owner": "Goblins",
+        "affiliation": "Goblin-run"
+      },
+      "description": "A snowy white building that towers over other shops in Diagon Alley. The only wizarding bank, run by goblins. Has burnished bronze doors and is hundreds of miles deep under London. Considered the safest place in the world except perhaps Hogwarts. Guarded by dragons and enchantments.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "forbidden_forest",
+      "type": "Location",
+      "name": "Forbidden Forest",
+      "aliases": [
+        "The Forest"
+      ],
+      "attributes": {
+        "affiliation": "Hogwarts grounds"
+      },
+      "description": "A dense, dark forest on the grounds of Hogwarts. Forbidden to students. Home to dangerous creatures including centaurs, unicorns, and other magical beasts.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "platform_nine_and_three_quarters",
+      "type": "Location",
+      "name": "Platform Nine and Three-Quarters",
+      "aliases": [
+        "Platform 9¾"
+      ],
+      "attributes": {
+        "magical_concealment": "Yes",
+        "affiliation": "Hogwarts Express"
+      },
+      "description": "A hidden magical platform at King's Cross station in London. Accessed by walking through the barrier between platforms nine and ten. Where the Hogwarts Express departs from.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "gryffindor_house",
+      "type": "Organization",
+      "name": "Gryffindor House",
+      "aliases": [
+        "Gryffindor"
+      ],
+      "attributes": {
+        "motto": "Unknown",
+        "founded_date": "Medieval period",
+        "ideology": "Values bravery, daring, nerve, and chivalry",
+        "headquarters": "Gryffindor Tower"
+      },
+      "description": "One of the four Hogwarts houses, founded by Godric Gryffindor. House colors are scarlet and gold, symbol is a lion. Known for producing brave wizards. Head of House is Professor McGonagall.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "slytherin_house",
+      "type": "Organization",
+      "name": "Slytherin House",
+      "aliases": [
+        "Slytherin"
+      ],
+      "attributes": {
+        "motto": "Unknown",
+        "founded_date": "Medieval period",
+        "ideology": "Values cunning, ambition, and resourcefulness",
+        "headquarters": "Slytherin Dungeon"
+      },
+      "description": "One of the four Hogwarts houses, founded by Salazar Slytherin. House colors are green and silver, symbol is a serpent. Known for producing Dark wizards including Voldemort. Head of House is Professor Snape.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "sorcerers_stone",
+      "type": "Artifact",
+      "name": "Sorcerer's Stone",
+      "aliases": [
+        "Philosopher's Stone",
+        "The Stone"
+      ],
+      "attributes": {
+        "creator": "Nicolas Flamel",
+        "magical_properties": "Transforms metal into gold, produces Elixir of Life which grants immortality",
+        "is_horcrux": "No",
+        "is_hallow": "No"
+      },
+      "description": "A legendary alchemical substance with astonishing powers. Can transform any metal into pure gold and produces the Elixir of Life. The only Stone in existence belongs to Nicolas Flamel. Hidden at Hogwarts and guarded by various enchantments including Fluffy the three-headed dog.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "invisibility_cloak",
+      "type": "Artifact",
+      "name": "Invisibility Cloak",
+      "aliases": [
+        "The Cloak"
+      ],
+      "attributes": {
+        "creator": "Unknown",
+        "magical_properties": "Makes the wearer invisible",
+        "is_hallow": "Yes"
+      },
+      "description": "A silvery-grey cloak that makes the wearer invisible. Belonged to James Potter and was given to Harry by Dumbledore for Christmas. Fluid and strange to the touch, like water woven into material.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "harrys_wand",
+      "type": "Artifact",
+      "name": "Harry Potter's Wand",
+      "aliases": [],
+      "attributes": {
+        "creator": "Garrick Ollivander",
+        "magical_properties": "Holly and phoenix feather, eleven inches, nice and supple. Brother wand to Voldemort's wand (same phoenix feather core)"
+      },
+      "description": "Harry's wand purchased from Ollivanders. Made of holly with a phoenix feather core from Fawkes. The phoenix gave only one other feather, which is in Voldemort's wand.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "nimbus_two_thousand",
+      "type": "Artifact",
+      "name": "Nimbus Two Thousand",
+      "aliases": [
+        "Nimbus 2000"
+      ],
+      "attributes": {
+        "magical_properties": "High-quality racing broomstick, very fast and responsive"
+      },
+      "description": "A top-of-the-line racing broomstick. Sleek and shiny with a mahogany handle and long tail of neat, straight twigs. Given to Harry by Professor McGonagall for the Gryffindor Quidditch team.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "mirror_of_erised",
+      "type": "Artifact",
+      "name": "Mirror of Erised",
+      "aliases": [
+        "The Mirror"
+      ],
+      "attributes": {
+        "magical_properties": "Shows the deepest, most desperate desire of the viewer's heart",
+        "creator": "Unknown"
+      },
+      "description": "A magnificent mirror as high as the ceiling with an ornate gold frame, standing on two clawed feet. Inscription reads 'Erised stra ehru oyt ube cafru oyt on wohsi' (I show not your face but your heart's desire backwards). Used by Dumbledore to protect the Sorcerer's Stone.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "fluffy",
+      "type": "Creature",
+      "name": "Fluffy",
+      "aliases": [
+        "Three-headed dog"
+      ],
+      "attributes": {
+        "ministry_classification": "Unknown",
+        "magical_abilities": "Enormous size, three heads, falls asleep to music"
+      },
+      "description": "A monstrous three-headed dog that fills the space between ceiling and floor. Owned by Hagrid, borrowed by Dumbledore to guard the trapdoor leading to the Sorcerer's Stone. Falls asleep when music is played.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "norbert",
+      "type": "Creature",
+      "name": "Norbert",
+      "aliases": [],
+      "attributes": {
+        "ministry_classification": "XXXXX",
+        "native_region": "Norway",
+        "magical_abilities": "Breathes fire, grows rapidly"
+      },
+      "description": "A Norwegian Ridgeback dragon hatched from an egg won by Hagrid. Black with spiny wings, long snout, bulging orange eyes. Sent to Romania to Charlie Weasley.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "hedwig",
+      "type": "Creature",
+      "name": "Hedwig",
+      "aliases": [],
+      "attributes": {
+        "magical_abilities": "Delivers mail, highly intelligent"
+      },
+      "description": "Harry's snowy owl, a birthday present from Hagrid. Beautiful white owl with amber eyes. Very loyal and intelligent.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "scabbers",
+      "type": "Creature",
+      "name": "Scabbers",
+      "aliases": [],
+      "attributes": {},
+      "description": "Ron's old, fat grey rat. Formerly owned by Percy. Sleeps most of the time and is generally useless.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "wingardium_leviosa",
+      "type": "Spell",
+      "name": "Wingardium Leviosa",
+      "aliases": [
+        "Levitation Charm"
+      ],
+      "attributes": {
+        "incantation": "Wingardium Leviosa",
+        "type": "Charm",
+        "effect": "Levitates objects",
+        "hand_movement": "Swish and flick"
+      },
+      "description": "A levitation charm that makes objects fly. Taught by Professor Flitwick in first year. Requires proper pronunciation and wand movement.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "alohomora",
+      "type": "Spell",
+      "name": "Alohomora",
+      "aliases": [
+        "Unlocking Charm"
+      ],
+      "attributes": {
+        "incantation": "Alohomora",
+        "type": "Charm",
+        "effect": "Unlocks doors and windows"
+      },
+      "description": "A charm that unlocks doors and windows. Used by Hermione to escape from Filch.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "petrificus_totalus",
+      "type": "Spell",
+      "name": "Petrificus Totalus",
+      "aliases": [
+        "Full Body-Bind Curse",
+        "Body-Bind"
+      ],
+      "attributes": {
+        "incantation": "Petrificus Totalus",
+        "type": "Curse",
+        "effect": "Binds the victim's body in a rigid, immobile position"
+      },
+      "description": "A curse that causes the victim's arms to snap to their sides and legs to spring together, making them rigid and unable to move. Used by Hermione on Neville.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "halloween_troll_incident",
+      "type": "Event",
+      "name": "Halloween Troll Incident",
+      "aliases": [],
+      "attributes": {
+        "date": "October 31",
+        "outcome": "Troll defeated, Harry, Ron, and Hermione become friends"
+      },
+      "description": "A mountain troll was let into Hogwarts on Halloween. Harry and Ron saved Hermione from it in the girls' bathroom, and the three became friends. Later revealed that Quirrell let the troll in as a diversion.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "potters_death",
+      "type": "Event",
+      "name": "Murder of James and Lily Potter",
+      "aliases": [
+        "The Potters' Death"
+      ],
+      "attributes": {
+        "date": "October 31, ten years before story",
+        "outcome": "James and Lily killed, Harry survived with a scar, Voldemort's body destroyed",
+        "casualties": "James Potter, Lily Potter"
+      },
+      "description": "Voldemort murdered James and Lily Potter in Godric's Hollow when Harry was a baby. When he tried to kill Harry, the curse rebounded due to Lily's sacrificial protection, destroying Voldemort's body and leaving Harry with a lightning-bolt scar.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "quidditch_match_gryffindor_slytherin",
+      "type": "Event",
+      "name": "First Quidditch Match: Gryffindor vs Slytherin",
+      "aliases": [],
+      "attributes": {
+        "date": "November",
+        "outcome": "Gryffindor won 170-60"
+      },
+      "description": "Harry's first Quidditch match as Seeker. His broomstick was jinxed by Quirrell (though everyone thought it was Snape). Harry caught the Snitch in his mouth after nearly falling off his broom.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "confrontation_with_quirrell",
+      "type": "Event",
+      "name": "Confrontation with Quirrell and Voldemort",
+      "aliases": [],
+      "attributes": {
+        "date": "End of school year",
+        "outcome": "Quirrell died, Voldemort fled, Sorcerer's Stone destroyed",
+        "casualties": "Quirinus Quirrell"
+      },
+      "description": "Harry confronted Quirrell in the chamber with the Mirror of Erised. Discovered Voldemort was on the back of Quirrell's head. Harry retrieved the Stone from the mirror and defeated Quirrell through physical contact, which burned Quirrell due to Lily's protective magic.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "harry_potter",
+      "target_id": "james_potter_i",
+      "type": "familial_bond",
+      "description": "Harry is the son of James Potter",
+      "evidence": "Your father left this in my possession before he died.",
+      "properties": {
+        "relation_type": "son",
+        "is_adoptive": "false"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "lily_potter",
+      "type": "familial_bond",
+      "description": "Harry is the son of Lily Potter",
+      "evidence": "Your mother died to save you.",
+      "properties": {
+        "relation_type": "son",
+        "is_adoptive": "false"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "petunia_dursley",
+      "target_id": "lily_potter",
+      "type": "familial_bond",
+      "description": "Petunia is Lily's sister",
+      "evidence": "Mrs. Potter was Mrs. Dursley's sister",
+      "properties": {
+        "relation_type": "sister",
+        "is_adoptive": "false"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "vernon_dursley",
+      "type": "familial_bond",
+      "description": "Vernon is Harry's uncle by marriage",
+      "evidence": "It was Uncle Vernon, still purple-faced, still mustached",
+      "properties": {
+        "relation_type": "uncle",
+        "is_adoptive": "false"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "dudley_dursley",
+      "type": "familial_bond",
+      "description": "Dudley is Harry's cousin",
+      "evidence": "The Dursleys had a small son called Dudley",
+      "properties": {
+        "relation_type": "cousin",
+        "is_adoptive": "false"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ronald_weasley",
+      "target_id": "fred_weasley",
+      "type": "familial_bond",
+      "description": "Ron and Fred are brothers",
+      "evidence": "Ron's twin brothers",
+      "properties": {
+        "relation_type": "brother",
+        "is_adoptive": "false"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ronald_weasley",
+      "target_id": "george_weasley",
+      "type": "familial_bond",
+      "description": "Ron and George are brothers",
+      "evidence": "Ron's twin brothers",
+      "properties": {
+        "relation_type": "brother",
+        "is_adoptive": "false"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ronald_weasley",
+      "target_id": "percy_weasley",
+      "type": "familial_bond",
+      "description": "Ron and Percy are brothers",
+      "evidence": "Percy the Prefect... Ron's brother",
+      "properties": {
+        "relation_type": "brother",
+        "is_adoptive": "false"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "gryffindor_house",
+      "type": "member_of",
+      "description": "Harry is a member of Gryffindor House",
+      "evidence": "better be GRYFFINDOR!",
+      "properties": {
+        "role": "Student",
+        "start_date": "First year"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ronald_weasley",
+      "target_id": "gryffindor_house",
+      "type": "member_of",
+      "description": "Ron is a member of Gryffindor House",
+      "evidence": "the hat had shouted, 'GRYFFINDOR!'",
+      "properties": {
+        "role": "Student",
+        "start_date": "First year"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "hermione_granger",
+      "target_id": "gryffindor_house",
+      "type": "member_of",
+      "description": "Hermione is a member of Gryffindor House",
+      "evidence": "'GRYFFINDOR!' shouted the hat",
+      "properties": {
+        "role": "Student",
+        "start_date": "First year"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "draco_malfoy",
+      "target_id": "slytherin_house",
+      "type": "member_of",
+      "description": "Draco is a member of Slytherin House",
+      "evidence": "the hat had barely touched his head when it screamed, 'SLYTHERIN!'",
+      "properties": {
+        "role": "Student",
+        "start_date": "First year"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "severus_snape",
+      "target_id": "slytherin_house",
+      "type": "member_of",
+      "description": "Snape is Head of Slytherin House",
+      "evidence": "Snape's Head of Slytherin House",
+      "properties": {
+        "role": "Head of House"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "minerva_mcgonagall",
+      "target_id": "gryffindor_house",
+      "type": "member_of",
+      "description": "McGonagall is Head of Gryffindor House",
+      "evidence": "Professor McGonagall was head of Gryffindor House",
+      "properties": {
+        "role": "Head of House"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "harrys_wand",
+      "type": "wields",
+      "description": "Harry owns and uses his holly and phoenix feather wand",
+      "evidence": "Harry took the wand. He felt a sudden warmth in his fingers.",
+      "properties": {
+        "ownership_status": "Owner",
+        "acquisition_method": "Purchased from Ollivanders"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "invisibility_cloak",
+      "type": "wields",
+      "description": "Harry owns and uses the Invisibility Cloak inherited from his father",
+      "evidence": "Your father left this in my possession before he died. It is time it was returned to you.",
+      "properties": {
+        "ownership_status": "Owner",
+        "acquisition_method": "Inherited from father via Dumbledore"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "nimbus_two_thousand",
+      "type": "wields",
+      "description": "Harry uses the Nimbus Two Thousand broomstick as Gryffindor Seeker",
+      "evidence": "A Nimbus Two Thousand, sir... And it's really thanks to Malfoy here that I've got it",
+      "properties": {
+        "ownership_status": "Owner",
+        "acquisition_method": "Gift from Professor McGonagall"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "lord_voldemort",
+      "target_id": "james_potter_i",
+      "type": "killed_by",
+      "description": "Voldemort killed James Potter",
+      "evidence": "I killed your father first, and he put up a courageous fight",
+      "properties": {
+        "method": "Magic",
+        "spell_used": "Killing Curse"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "lord_voldemort",
+      "target_id": "lily_potter",
+      "type": "killed_by",
+      "description": "Voldemort killed Lily Potter",
+      "evidence": "your mother needn't have died … she was trying to protect you",
+      "properties": {
+        "method": "Magic",
+        "spell_used": "Killing Curse"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "albus_dumbledore",
+      "target_id": "minerva_mcgonagall",
+      "type": "mentors",
+      "description": "Dumbledore is McGonagall's superior as Headmaster",
+      "evidence": "Professor McGonagall was Deputy Headmistress under Dumbledore",
+      "properties": {
+        "subject": "Leadership"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 0.9,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "draco_malfoy",
+      "type": "enemy_of",
+      "description": "Harry and Draco are rivals and enemies",
+      "evidence": "I think I can tell who the wrong sort are for myself, thanks",
+      "properties": {
+        "reason": "Personality clash, different values",
+        "intensity": "High"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "lord_voldemort",
+      "type": "enemy_of",
+      "description": "Harry and Voldemort are mortal enemies",
+      "evidence": "Voldemort killed my parents, remember?",
+      "properties": {
+        "reason": "Voldemort killed Harry's parents and tried to kill Harry",
+        "intensity": "Extreme"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "halloween_troll_incident",
+      "type": "participated_in",
+      "description": "Harry participated in defeating the troll on Halloween",
+      "evidence": "Harry and Ron saved Hermione from the mountain troll",
+      "properties": {
+        "role": "Hero",
+        "side_taken": "Good"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "hermione_granger",
+      "target_id": "halloween_troll_incident",
+      "type": "participated_in",
+      "description": "Hermione was saved during the troll incident",
+      "evidence": "they were looking for me... I went looking for the troll",
+      "properties": {
+        "role": "Victim/Rescued",
+        "side_taken": "Good"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "confrontation_with_quirrell",
+      "type": "participated_in",
+      "description": "Harry confronted and defeated Quirrell/Voldemort",
+      "evidence": "Harry confronted Quirrell in the chamber and defeated him",
+      "properties": {
+        "role": "Hero",
+        "side_taken": "Good"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "quirinus_quirrell",
+      "target_id": "confrontation_with_quirrell",
+      "type": "participated_in",
+      "description": "Quirrell was defeated and killed in the confrontation",
+      "evidence": "Quirrell died after being touched by Harry",
+      "properties": {
+        "role": "Villain",
+        "side_taken": "Dark"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "nicolas_flamel",
+      "target_id": "sorcerers_stone",
+      "type": "creator_of",
+      "description": "Nicolas Flamel created the Sorcerer's Stone",
+      "evidence": "Nicolas Flamel is the only known maker of the Sorcerer's Stone",
+      "properties": {
+        "date_created": "Unknown",
+        "purpose": "Alchemy, immortality"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "hermione_granger",
+      "target_id": "wingardium_leviosa",
+      "type": "casts",
+      "description": "Hermione successfully cast the Levitation Charm",
+      "evidence": "Their feather rose off the desk and hovered about four feet above their heads",
+      "properties": {
+        "proficiency_level": "High"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "hermione_granger",
+      "target_id": "alohomora",
+      "type": "casts",
+      "description": "Hermione used Alohomora to unlock doors",
+      "evidence": "She grabbed Harry's wand, tapped the lock, and whispered, 'Alohomora!'",
+      "properties": {
+        "proficiency_level": "High"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "hermione_granger",
+      "target_id": "petrificus_totalus",
+      "type": "casts",
+      "description": "Hermione used the Full Body-Bind curse on Neville",
+      "evidence": "Petrificus Totalus! she cried, pointing it at Neville",
+      "properties": {
+        "proficiency_level": "Moderate"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "hogwarts",
+      "type": "located_in",
+      "description": "Harry attends and lives at Hogwarts during the school year",
+      "evidence": "Harry Potter arrived at Hogwarts and was sorted into Gryffindor",
+      "properties": {
+        "time_period": "School year"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "sorcerers_stone",
+      "target_id": "hogwarts",
+      "type": "located_in",
+      "description": "The Sorcerer's Stone was hidden at Hogwarts",
+      "evidence": "It was almost stolen outta Gringotts... That Stone's here fer a good reason",
+      "properties": {
+        "time_period": "During Harry's first year"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "fluffy",
+      "target_id": "hogwarts",
+      "type": "located_in",
+      "description": "Fluffy guards the trapdoor at Hogwarts",
+      "evidence": "Fluffy's a piece o' cake if yeh know how to calm him down",
+      "properties": {
+        "time_period": "During Harry's first year"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "gringotts",
+      "target_id": "diagon_alley",
+      "type": "located_in",
+      "description": "Gringotts bank is located in Diagon Alley",
+      "evidence": "They had reached a snowy white building that towered over the other little shops",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "schema_proposals": []
+}

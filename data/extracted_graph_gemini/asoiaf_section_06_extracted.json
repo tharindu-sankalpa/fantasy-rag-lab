@@ -1,0 +1,647 @@
+{
+  "entities": [
+    {
+      "id": "cersei_lannister",
+      "type": "Character",
+      "name": "Cersei Lannister",
+      "aliases": [
+        "Queen Regent",
+        "The Queen",
+        "Light of the West"
+      ],
+      "attributes": {
+        "culture": "Westermani",
+        "status": "Imprisoned (by end of text)",
+        "role": "Queen Regent"
+      },
+      "description": "The Queen Regent of the Seven Kingdoms, increasingly paranoid and power-hungry. She rearms the Faith Militant, plots against Margaery Tyrell, and is eventually arrested by the High Septon.",
+      "mentions": [
+        {
+          "file_name": "A Feast For Crows - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "jaime_lannister",
+      "type": "Character",
+      "name": "Jaime Lannister",
+      "aliases": [
+        "The Kingslayer",
+        "Goldenhand",
+        "Lord Commander"
+      ],
+      "attributes": {
+        "status": "Alive",
+        "role": "Lord Commander of the Kingsguard",
+        "hand": "Golden"
+      },
+      "description": "Lord Commander of the Kingsguard. He resolves the siege of Riverrun peacefully but grows increasingly estranged from his twin sister Cersei, ultimately burning her plea for help.",
+      "mentions": [
+        {
+          "file_name": "A Feast For Crows - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "brienne_of_tarth",
+      "type": "Character",
+      "name": "Brienne of Tarth",
+      "aliases": [
+        "The Maid of Tarth",
+        "Brienne the Beauty"
+      ],
+      "attributes": {
+        "gender": "Female",
+        "status": "Captured"
+      },
+      "description": "A warrior woman searching for Sansa Stark. She wields the Valyrian steel sword Oathkeeper. She is captured by the Brotherhood Without Banners and forced to choose between the sword and the noose by Lady Stoneheart.",
+      "mentions": [
+        {
+          "file_name": "A Feast For Crows - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "sansa_stark",
+      "type": "Character",
+      "name": "Sansa Stark",
+      "aliases": [
+        "Alayne Stone"
+      ],
+      "attributes": {
+        "hair_color": "Dyed brown (naturally auburn)",
+        "location": "The Eyrie"
+      },
+      "description": "Hiding in the Vale under the guise of Alayne Stone, the bastard daughter of Petyr Baelish. She acts as a mother figure to Robert Arryn.",
+      "mentions": [
+        {
+          "file_name": "A Feast For Crows - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "arya_stark",
+      "type": "Character",
+      "name": "Arya Stark",
+      "aliases": [
+        "Cat of the Canals",
+        "No one",
+        "Salty"
+      ],
+      "attributes": {
+        "location": "Braavos",
+        "status": "Acolyte"
+      },
+      "description": "Training at the House of Black and White in Braavos. She takes on the identity of Cat to sell oysters and gathers information, eventually being struck blind as part of her training.",
+      "mentions": [
+        {
+          "file_name": "A Feast For Crows - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "euron_greyjoy",
+      "type": "Character",
+      "name": "Euron Greyjoy",
+      "aliases": [
+        "Crow's Eye"
+      ],
+      "attributes": {
+        "title": "King of the Iron Islands",
+        "ship": "Silence"
+      },
+      "description": "The ruthless brother of Balon Greyjoy who claims the Seastone Chair at the Kingsmoot. He possesses a dragon horn and plans to conquer Westeros.",
+      "mentions": [
+        {
+          "file_name": "A Feast For Crows - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "victarion_greyjoy",
+      "type": "Character",
+      "name": "Victarion Greyjoy",
+      "aliases": [
+        "The Iron Captain"
+      ],
+      "attributes": {
+        "role": "Lord Captain of the Iron Fleet"
+      },
+      "description": "A formidable warrior and captain of the Iron Fleet. He despises his brother Euron but obeys him, agreeing to sail to Slaver's Bay to fetch Daenerys Targaryen.",
+      "mentions": [
+        {
+          "file_name": "A Feast For Crows - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "samwell_tarly",
+      "type": "Character",
+      "name": "Samwell Tarly",
+      "aliases": [
+        "Sam the Slayer",
+        "Black Sam"
+      ],
+      "attributes": {
+        "role": "Brother of the Night's Watch"
+      },
+      "description": "Sent to Oldtown to become a maester. He accompanies Maester Aemon and Gilly. After Aemon's death, he arrives at the Citadel and meets Marwyn the Mage.",
+      "mentions": [
+        {
+          "file_name": "A Feast For Crows - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "arianne_martell",
+      "type": "Character",
+      "name": "Arianne Martell",
+      "aliases": [
+        "Princess of Dorne"
+      ],
+      "attributes": {
+        "status": "Heir to Sunspear"
+      },
+      "description": "The daughter of Prince Doran Martell. She attempts to crown Myrcella Baratheon to force a war with the Lannisters but is thwarted and imprisoned, later learning of her father's true plans.",
+      "mentions": [
+        {
+          "file_name": "A Feast For Crows - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "doran_martell",
+      "type": "Character",
+      "name": "Doran Martell",
+      "aliases": [
+        "Prince of Dorne"
+      ],
+      "attributes": {
+        "health": "Gout-ridden"
+      },
+      "description": "The cautious and calculating Prince of Dorne. He reveals his long-held secret plan to restore House Targaryen through the marriage of his children.",
+      "mentions": [
+        {
+          "file_name": "A Feast For Crows - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "lady_stoneheart",
+      "type": "Character",
+      "name": "Lady Stoneheart",
+      "aliases": [
+        "Mother Merciless",
+        "The Hangwoman"
+      ],
+      "attributes": {
+        "identity": "Resurrected Catelyn Stark"
+      },
+      "description": "The resurrected form of Catelyn Stark, leading the Brotherhood Without Banners on a campaign of vengeance against House Frey and anyone associated with the Lannisters.",
+      "mentions": [
+        {
+          "file_name": "A Feast For Crows - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "high_sparrow",
+      "type": "Character",
+      "name": "The High Sparrow",
+      "aliases": [
+        "High Septon"
+      ],
+      "attributes": {
+        "role": "High Septon"
+      },
+      "description": "A devout and humble religious leader who becomes High Septon. He rearms the Faith Militant and arrests both Margaery Tyrell and Cersei Lannister.",
+      "mentions": [
+        {
+          "file_name": "A Feast For Crows - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "margaery_tyrell",
+      "type": "Character",
+      "name": "Margaery Tyrell",
+      "aliases": [
+        "The Little Queen"
+      ],
+      "attributes": {
+        "title": "Queen Consort"
+      },
+      "description": "The young queen married to Tommen Baratheon. She is popular with the smallfolk but targeted by Cersei's schemes, leading to her arrest by the Faith.",
+      "mentions": [
+        {
+          "file_name": "A Feast For Crows - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "maester_aemon",
+      "type": "Character",
+      "name": "Aemon Targaryen",
+      "aliases": [
+        "Maester Aemon"
+      ],
+      "attributes": {
+        "age": "102"
+      },
+      "description": "The ancient maester of the Night's Watch. He dies of old age and illness on the voyage to Oldtown, tasking Samwell with telling the Citadel about Daenerys and her dragons.",
+      "mentions": [
+        {
+          "file_name": "A Feast For Crows - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "marwyn",
+      "type": "Character",
+      "name": "Marwyn",
+      "aliases": [
+        "Marwyn the Mage"
+      ],
+      "attributes": {
+        "role": "Archmaester"
+      },
+      "description": "An Archmaester of the Citadel who studies magic. He listens to Samwell's story and departs immediately to find Daenerys Targaryen.",
+      "mentions": [
+        {
+          "file_name": "A Feast For Crows - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "oathkeeper",
+      "type": "Artifact",
+      "name": "Oathkeeper",
+      "aliases": [],
+      "attributes": {
+        "material": "Valyrian Steel",
+        "color": "Red and Black ripples"
+      },
+      "description": "A Valyrian steel sword forged from the melted-down Ice (House Stark's sword). Given to Brienne of Tarth by Jaime Lannister.",
+      "mentions": [
+        {
+          "file_name": "A Feast For Crows - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "kingsmoot",
+      "type": "Event",
+      "name": "The Kingsmoot",
+      "aliases": [],
+      "attributes": {
+        "location": "Old Wyk"
+      },
+      "description": "A traditional Ironborn ceremony called by Aeron Greyjoy to choose a new king. Euron Greyjoy wins the crown over Victarion and Asha.",
+      "mentions": [
+        {
+          "file_name": "A Feast For Crows - George RR Martin.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "asoiaf_section_06.txt",
+          "chunk_id": "6"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "cersei_lannister",
+      "target_id": "tommen_baratheon",
+      "type": "parent_of",
+      "description": "Cersei is the mother of King Tommen.",
+      "evidence": "Tommen, come here... I am your mother.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "brienne_of_tarth",
+      "target_id": "oathkeeper",
+      "type": "wields",
+      "description": "Brienne carries the sword Oathkeeper given to her by Jaime.",
+      "evidence": "She ripped Oathkeeper from her sheath and whirled.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "areo_hotah",
+      "target_id": "arys_oakheart",
+      "type": "killed",
+      "description": "Areo Hotah kills Arys Oakheart when the knight charges him.",
+      "evidence": "Hotah's longaxe took his right arm off at the shoulder... and came flashing back again in a terrible two-handed slash that removed the head of Arys Oakheart.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "euron_greyjoy",
+      "target_id": "victarion_greyjoy",
+      "type": "related_to",
+      "description": "Euron is the older brother of Victarion.",
+      "evidence": "I am your elder... and soon, your rightful king.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "cersei_lannister",
+      "target_id": "margaery_tyrell",
+      "type": "antagonist_of",
+      "description": "Cersei plots to destroy Margaery by accusing her of treason and adultery.",
+      "evidence": "Margaery Tyrell is done, she thought, exulting.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "petyr_baelish",
+      "target_id": "sansa_stark",
+      "type": "guardian_of",
+      "description": "Petyr Baelish acts as guardian to Sansa (posing as Alayne) and plans to marry her to Harry the Heir.",
+      "evidence": "I have made a marriage contract for you... You are promised to Harrold Hardyng, sweetling.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "lady_stoneheart",
+      "target_id": "brienne_of_tarth",
+      "type": "captor_of",
+      "description": "Lady Stoneheart captures Brienne and orders her hanging.",
+      "evidence": "Lady Stoneheart spoke again... 'Hang them,' she croaked.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "jaime_lannister",
+      "target_id": "cersei_lannister",
+      "type": "estranged_from",
+      "description": "Jaime grows distant from Cersei and burns her letter pleading for help.",
+      "evidence": "Jaime rolled the parchment up again... 'No,' he said. 'Put this in the fire.'",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_06.txt",
+        "chunk_id": "6"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "schema_proposals": [
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "antagonist_of",
+      "description": "Indicates a relationship where one entity actively opposes, plots against, or is an enemy of another.",
+      "confidence": 0.9
+    },
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "guardian_of",
+      "description": "Indicates a relationship where one entity has legal or de facto custody and responsibility for another (e.g., wardship).",
+      "confidence": 0.8
+    },
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "captor_of",
+      "description": "Indicates a relationship where one entity holds another prisoner.",
+      "confidence": 0.9
+    },
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "estranged_from",
+      "description": "Indicates a breakdown in a previously close relationship (family or romantic).",
+      "confidence": 0.8
+    },
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "related_to",
+      "description": "General familial relationship when specific parent/child/spouse types do not apply (e.g., siblings).",
+      "confidence": 0.9
+    }
+  ]
+}

@@ -1,0 +1,809 @@
+{
+  "entities": [
+    {
+      "id": "harry_potter",
+      "type": "Character",
+      "name": "Harry Potter",
+      "aliases": [
+        "The Boy Who Lived",
+        "The Chosen One",
+        "Saint Potter",
+        "Scarhead"
+      ],
+      "attributes": {
+        "blood_status": "Half-blood",
+        "hogwarts_house": "Gryffindor",
+        "wand_wood": "Holly",
+        "wand_core": "Phoenix feather",
+        "patronus_form": "Stag",
+        "gender": "Male"
+      },
+      "description": "The protagonist, a young wizard famous for surviving the killing curse as an infant. He possesses a lightning-shaped scar on his forehead and is a Parselmouth.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "ronald_weasley",
+      "type": "Character",
+      "name": "Ronald Weasley",
+      "aliases": [
+        "Ron",
+        "Wheezy"
+      ],
+      "attributes": {
+        "blood_status": "Pure-blood",
+        "hogwarts_house": "Gryffindor",
+        "wand_wood": "Willow",
+        "wand_core": "Unicorn hair",
+        "gender": "Male"
+      },
+      "description": "Harry's best friend, the youngest son of the Weasley family. He is loyal, plays wizard chess well, and suffers from arachnophobia.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "hermione_granger",
+      "type": "Character",
+      "name": "Hermione Granger",
+      "aliases": [
+        "Miss Granger"
+      ],
+      "attributes": {
+        "blood_status": "Muggle-born",
+        "hogwarts_house": "Gryffindor",
+        "wand_wood": "Vine",
+        "wand_core": "Dragon heartstring",
+        "gender": "Female"
+      },
+      "description": "Harry's best friend, extremely intelligent and studious. She solves the mystery of the Basilisk but is Petrified.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "lord_voldemort",
+      "type": "Character",
+      "name": "Lord Voldemort",
+      "aliases": [
+        "Tom Marvolo Riddle",
+        "You-Know-Who",
+        "He-Who-Must-Not-Be-Named",
+        "The Dark Lord"
+      ],
+      "attributes": {
+        "blood_status": "Half-blood",
+        "hogwarts_house": "Slytherin",
+        "wand_wood": "Yew",
+        "wand_core": "Phoenix feather",
+        "gender": "Male"
+      },
+      "description": "The main antagonist, a Dark Wizard who killed Harry's parents. He appears as a parasite on Quirrell in the first book and as a memory preserved in a diary in the second.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "albus_dumbledore",
+      "type": "Character",
+      "name": "Albus Dumbledore",
+      "aliases": [
+        "Professor Dumbledore"
+      ],
+      "attributes": {
+        "hogwarts_house": "Gryffindor",
+        "gender": "Male"
+      },
+      "description": "The Headmaster of Hogwarts, considered the greatest wizard of modern times and the only one Voldemort fears.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "severus_snape",
+      "type": "Character",
+      "name": "Severus Snape",
+      "aliases": [
+        "Professor Snape",
+        "Snivellus"
+      ],
+      "attributes": {
+        "blood_status": "Half-blood",
+        "hogwarts_house": "Slytherin",
+        "gender": "Male"
+      },
+      "description": "The Potions Master and Head of Slytherin House. He holds a grudge against Harry but protects him.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "rubeus_hagrid",
+      "type": "Character",
+      "name": "Rubeus Hagrid",
+      "aliases": [
+        "Hagrid"
+      ],
+      "attributes": {
+        "blood_status": "Half-breed (Giant)",
+        "hogwarts_house": "Gryffindor",
+        "wand_wood": "Oak",
+        "gender": "Male"
+      },
+      "description": "The Keeper of Keys and Grounds at Hogwarts. He was framed for opening the Chamber of Secrets fifty years ago.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "draco_malfoy",
+      "type": "Character",
+      "name": "Draco Malfoy",
+      "aliases": [
+        "Malfoy"
+      ],
+      "attributes": {
+        "blood_status": "Pure-blood",
+        "hogwarts_house": "Slytherin",
+        "wand_wood": "Hawthorn",
+        "wand_core": "Unicorn hair",
+        "gender": "Male"
+      },
+      "description": "Harry's nemesis at Hogwarts, a wealthy pure-blood student who bullies others.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "ginny_weasley",
+      "type": "Character",
+      "name": "Ginevra Weasley",
+      "aliases": [
+        "Ginny"
+      ],
+      "attributes": {
+        "blood_status": "Pure-blood",
+        "hogwarts_house": "Gryffindor",
+        "gender": "Female"
+      },
+      "description": "Ron's younger sister who is possessed by Tom Riddle's diary and forced to open the Chamber of Secrets.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "gilderoy_lockhart",
+      "type": "Character",
+      "name": "Gilderoy Lockhart",
+      "aliases": [],
+      "attributes": {
+        "hogwarts_house": "Ravenclaw",
+        "gender": "Male"
+      },
+      "description": "The Defense Against the Dark Arts teacher in Harry's second year. He is a celebrity wizard and a fraud who steals other wizards' achievements.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dobby",
+      "type": "Character",
+      "name": "Dobby",
+      "aliases": [],
+      "attributes": {
+        "gender": "Male"
+      },
+      "description": "A house-elf who tries to warn Harry about the plot to reopen the Chamber of Secrets. He serves the Malfoy family until Harry frees him.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "hogwarts_school",
+      "type": "Organization",
+      "name": "Hogwarts School of Witchcraft and Wizardry",
+      "aliases": [
+        "Hogwarts"
+      ],
+      "attributes": {
+        "motto": "Draco Dormiens Nunquam Titillandus",
+        "headquarters": "Scotland"
+      },
+      "description": "A British wizarding boarding school teaching the magical arts.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "chamber_of_secrets",
+      "type": "Location",
+      "name": "The Chamber of Secrets",
+      "aliases": [],
+      "attributes": {
+        "magical_concealment": "Hidden entrance in girls' bathroom",
+        "owner": "Salazar Slytherin"
+      },
+      "description": "A legendary secret room constructed by Salazar Slytherin to house a monster intended to purge the school of Muggle-borns.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "sorcerers_stone",
+      "type": "Artifact",
+      "name": "The Sorcerer's Stone",
+      "aliases": [
+        "The Philosopher's Stone"
+      ],
+      "attributes": {
+        "creator": "Nicolas Flamel",
+        "magical_properties": "Turns metal to gold, produces Elixir of Life"
+      },
+      "description": "A legendary alchemical substance capable of turning any metal into gold and producing the Elixir of Life.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 1 - Harry Potter and the Sorcerer_s Stone.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "tom_riddles_diary",
+      "type": "Artifact",
+      "name": "Tom Riddle's Diary",
+      "aliases": [],
+      "attributes": {
+        "creator": "Tom Marvolo Riddle",
+        "is_horcrux": "true",
+        "magical_properties": "Preserves memory, can possess writer"
+      },
+      "description": "A diary created by Tom Riddle that can think for itself and possess those who write in it. It was used to open the Chamber of Secrets.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "godric_gryffindors_sword",
+      "type": "Artifact",
+      "name": "Godric Gryffindor's Sword",
+      "aliases": [],
+      "attributes": {
+        "creator": "Goblins",
+        "magical_properties": "Appears to true Gryffindors in need"
+      },
+      "description": "A goblin-made sword belonging to Godric Gryffindor, pulled from the Sorting Hat by Harry Potter.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "basilisk",
+      "type": "Creature",
+      "name": "The Basilisk",
+      "aliases": [
+        "King of Serpents",
+        "The Monster of Slytherin"
+      ],
+      "attributes": {
+        "ministry_classification": "XXXXX",
+        "magical_abilities": "Petrifying gaze, venomous fangs"
+      },
+      "description": "A giant serpent bred by Salazar Slytherin and hidden in the Chamber of Secrets. Its gaze kills, but indirect eye contact causes petrification.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aragog",
+      "type": "Creature",
+      "name": "Aragog",
+      "aliases": [],
+      "attributes": {
+        "ministry_classification": "XXXXX",
+        "native_region": "Borneo",
+        "diet": "Carnivorous"
+      },
+      "description": "An Acromantula (giant spider) raised by Hagrid. He lives in the Forbidden Forest with his colony.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "fawkes",
+      "type": "Creature",
+      "name": "Fawkes",
+      "aliases": [],
+      "attributes": {
+        "magical_abilities": "Healing tears, rebirth from ashes, immense strength"
+      },
+      "description": "Albus Dumbledore's pet phoenix. He helps Harry defeat the Basilisk.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "harry_potter",
+      "target_id": "ronald_weasley",
+      "type": "participated_in",
+      "description": "Harry and Ron become best friends and participate in numerous adventures together, including saving the Sorcerer's Stone and entering the Chamber of Secrets.",
+      "evidence": "Harry and Ron moved closer together to block the fire from view; they were sure it wouldn’t be allowed.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "hermione_granger",
+      "type": "participated_in",
+      "description": "Harry and Hermione are close friends who solve mysteries together.",
+      "evidence": "But from that moment on, Hermione Granger became their friend. There are some things you can’t share without ending up liking each other, and knocking out a twelve-foot mountain troll is one of them.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "lord_voldemort",
+      "type": "enemy_of",
+      "description": "Voldemort killed Harry's parents and attempts to kill Harry multiple times.",
+      "evidence": "Voldemort,” said Riddle softly, “is my past, present, and future, Harry Potter. …",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "draco_malfoy",
+      "type": "enemy_of",
+      "description": "Harry and Draco are school rivals.",
+      "evidence": "Harry had never believed he would meet a boy he hated more than Dudley, but that was before he met Draco Malfoy.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "albus_dumbledore",
+      "type": "mentors",
+      "description": "Dumbledore acts as a mentor and protector to Harry.",
+      "evidence": "First of all, Harry, I want to thank you,” said Dumbledore, eyes twinkling again. “You must have shown me real loyalty down in the Chamber.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "godric_gryffindors_sword",
+      "type": "wields",
+      "description": "Harry pulls the sword from the Sorting Hat and uses it to kill the Basilisk.",
+      "evidence": "Harry threw his whole weight behind the sword and drove it to the hilt into the roof of the serpent’s mouth",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "basilisk",
+      "type": "killed_by",
+      "description": "Harry is bitten by the Basilisk but saved by Fawkes; Harry kills the Basilisk with the sword.",
+      "evidence": "The basilisk lunged again, and this time its aim was true — Harry threw his whole weight behind the sword and drove it to the hilt into the roof of the serpent’s mouth",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ginny_weasley",
+      "target_id": "tom_riddles_diary",
+      "type": "wields",
+      "description": "Ginny writes in the diary and is possessed by it.",
+      "evidence": "His d-diary!” Ginny sobbed. “I’ve b-been writing in it, and he’s been w-writing back all year —”",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "lord_voldemort",
+      "target_id": "tom_riddles_diary",
+      "type": "creator_of",
+      "description": "Tom Riddle created the diary to preserve his sixteen-year-old self.",
+      "evidence": "I decided to leave behind a diary, preserving my sixteen-year-old self in its pages",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "chamber_of_secrets",
+      "type": "located_in",
+      "description": "Harry enters the Chamber to save Ginny.",
+      "evidence": "He was standing at the end of a very long, dimly lit chamber.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "rubeus_hagrid",
+      "target_id": "aragog",
+      "type": "mentors",
+      "description": "Hagrid raised Aragog from an egg.",
+      "evidence": "A traveler gave me to Hagrid when I was an egg. Hagrid was only a boy, but he cared for me",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "dobby",
+      "type": "mentors",
+      "description": "Harry frees Dobby from the Malfoys.",
+      "evidence": "Harry Potter freed Dobby!” said the elf shrilly... “Harry Potter set Dobby free!”",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "schema_proposals": [
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "friend_of",
+      "description": "Indicates a close platonic bond between characters, distinct from familial bonds or mentorship.",
+      "confidence": 1.0
+    },
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "owned_by",
+      "description": "Indicates ownership or a pet-master relationship between a creature and a character (e.g., Hagrid and Fang, Harry and Hedwig).",
+      "confidence": 0.9
+    },
+    {
+      "proposal_type": "new_entity_type",
+      "name": "House",
+      "description": "A subdivision of a school (e.g., Gryffindor, Slytherin). Currently mapped to Organization, but distinct in function.",
+      "confidence": 0.7
+    }
+  ]
+}

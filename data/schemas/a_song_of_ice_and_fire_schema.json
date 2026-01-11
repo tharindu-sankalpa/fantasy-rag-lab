@@ -1,0 +1,226 @@
+{
+  "series_name": "A Song of Ice and Fire",
+  "version_info": {
+    "version": "1.0.0",
+    "created_at": "2025-12-28T13:54:05.082128",
+    "changelog": [],
+    "evolution_suggestions": []
+  },
+  "entity_types": [
+    {
+      "name": "Character",
+      "description": "An individual sentient being, human or non-human humanoid (e.g., Giants, Children of the Forest), appearing in the narrative.",
+      "attributes": [
+        "gender",
+        "birth_year",
+        "death_year",
+        "culture",
+        "alias_list"
+      ]
+    },
+    {
+      "name": "NobleHouse",
+      "description": "A dynasty or family of nobility holding land, titles, or significant political influence.",
+      "attributes": [
+        "words",
+        "sigil",
+        "region",
+        "current_head"
+      ]
+    },
+    {
+      "name": "Organization",
+      "description": "A formal group, guild, order, or military unit that is not strictly a noble family.",
+      "attributes": [
+        "type",
+        "headquarters",
+        "founding_date"
+      ]
+    },
+    {
+      "name": "Location",
+      "description": "A geographical place, ranging from specific structures (castles) to cities and entire regions or continents.",
+      "attributes": [
+        "region",
+        "type",
+        "climate"
+      ]
+    },
+    {
+      "name": "Creature",
+      "description": "A non-human animal or magical beast significant to the plot.",
+      "attributes": [
+        "species",
+        "is_magical",
+        "status"
+      ]
+    },
+    {
+      "name": "Artifact",
+      "description": "An inanimate object of significance, often magical or legendary weapons.",
+      "attributes": [
+        "material",
+        "creator",
+        "type"
+      ]
+    },
+    {
+      "name": "Event",
+      "description": "A specific occurrence in time, such as a battle, wedding, tourney, or council.",
+      "attributes": [
+        "year",
+        "outcome",
+        "casualties"
+      ]
+    },
+    {
+      "name": "Religion",
+      "description": "A system of belief or worship followed by cultures or characters.",
+      "attributes": [
+        "deities",
+        "holy_text",
+        "clergy_title"
+      ]
+    },
+    {
+      "name": "Culture",
+      "description": "A distinct social group with shared customs, ethnicity, or heritage.",
+      "attributes": [
+        "language",
+        "origin_location"
+      ]
+    }
+  ],
+  "relationship_types": [
+    {
+      "name": "parent_of",
+      "description": "Biological or adoptive parentage.",
+      "source_type": "Character",
+      "target_type": "Character",
+      "properties": [
+        "type"
+      ]
+    },
+    {
+      "name": "spouse_of",
+      "description": "Legal or acknowledged marriage alliance.",
+      "source_type": "Character",
+      "target_type": "Character",
+      "properties": [
+        "start_date",
+        "end_date",
+        "is_political_match"
+      ]
+    },
+    {
+      "name": "sworn_to",
+      "description": "Feudal allegiance or oath of loyalty (e.g., a bannerman to a liege lord, or a house to a paramount house).",
+      "source_type": "NobleHouse",
+      "target_type": "NobleHouse",
+      "properties": [
+        "allegiance_level"
+      ]
+    },
+    {
+      "name": "member_of",
+      "description": "Membership in an organization, house, or order.",
+      "source_type": "Character",
+      "target_type": "Organization",
+      "properties": [
+        "rank",
+        "role"
+      ]
+    },
+    {
+      "name": "belongs_to_house",
+      "description": "Affiliation with a noble family by blood or marriage.",
+      "source_type": "Character",
+      "target_type": "NobleHouse",
+      "properties": [
+        "status"
+      ]
+    },
+    {
+      "name": "seat_of",
+      "description": "Indicates the primary castle or location ruled by a specific house.",
+      "source_type": "Location",
+      "target_type": "NobleHouse",
+      "properties": []
+    },
+    {
+      "name": "killed",
+      "description": "Indicates one entity causing the death of another.",
+      "source_type": "Character",
+      "target_type": "Character",
+      "properties": [
+        "method",
+        "event_context"
+      ]
+    },
+    {
+      "name": "wields",
+      "description": "Possession and usage of a specific artifact.",
+      "source_type": "Character",
+      "target_type": "Artifact",
+      "properties": [
+        "acquisition_date"
+      ]
+    },
+    {
+      "name": "bonded_with",
+      "description": "A magical or intense psychological bond between a human and a creature (e.g., Warging, Dragonriding).",
+      "source_type": "Character",
+      "target_type": "Creature",
+      "properties": [
+        "bond_type"
+      ]
+    },
+    {
+      "name": "participated_in",
+      "description": "Active involvement in an event.",
+      "source_type": "Character",
+      "target_type": "Event",
+      "properties": [
+        "role",
+        "side"
+      ]
+    },
+    {
+      "name": "located_in",
+      "description": "Geospatial containment.",
+      "source_type": "Location",
+      "target_type": "Location",
+      "properties": []
+    },
+    {
+      "name": "worships",
+      "description": "Adherence to a specific religion.",
+      "source_type": "Character",
+      "target_type": "Religion",
+      "properties": [
+        "piety_level"
+      ]
+    }
+  ],
+  "canonical_renaming_rules": {
+    "The Imp": "Tyrion Lannister",
+    "Littlefinger": "Petyr Baelish",
+    "The Kingslayer": "Jaime Lannister",
+    "Ned Stark": "Eddard Stark",
+    "The Hound": "Sandor Clegane",
+    "The Mountain": "Gregor Clegane",
+    "Khaleesi": "Daenerys Targaryen",
+    "The Young Wolf": "Robb Stark",
+    "The Spider": "Varys",
+    "Lord Snow": "Jon Snow",
+    "The Bastard of Bolton": "Ramsay Snow",
+    "Crow's Eye": "Euron Greyjoy",
+    "The Red Woman": "Melisandre",
+    "Barristan the Bold": "Barristan Selmy",
+    "The Onion Knight": "Davos Seaworth",
+    "King Robert": "Robert Baratheon",
+    "The Mad King": "Aerys II Targaryen",
+    "Bran Stark": "Brandon Stark",
+    "Blackfish": "Brynden Tully"
+  }
+}

@@ -1,0 +1,890 @@
+{
+  "entities": [
+    {
+      "id": "aegon_i_targaryen",
+      "type": "Character",
+      "name": "Aegon I Targaryen",
+      "aliases": [
+        "Aegon the Conqueror",
+        "Aegon the Dragon"
+      ],
+      "attributes": {},
+      "description": "The first Lord of the Seven Kingdoms and king on the Iron Throne, who conquered Westeros with his sisters.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "visenya_targaryen",
+      "type": "Character",
+      "name": "Visenya Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "Elder sister and wife of Aegon I, a warrior and dragonrider.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "rhaenys_targaryen",
+      "type": "Character",
+      "name": "Rhaenys Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "Younger sister and wife of Aegon I, known for her love of flying and the arts.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "balerion",
+      "type": "Creature",
+      "name": "Balerion",
+      "aliases": [
+        "The Black Dread"
+      ],
+      "attributes": {},
+      "description": "The largest and most terrifying dragon of house Targaryen, ridden by Aegon I, Maegor I, and Viserys I.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aenys_i_targaryen",
+      "type": "Character",
+      "name": "Aenys I Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "The second Targaryen king, son of Aegon I and Rhaenys, known for being weak and indecisive.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "maegor_i_targaryen",
+      "type": "Character",
+      "name": "Maegor I Targaryen",
+      "aliases": [
+        "Maegor the Cruel"
+      ],
+      "attributes": {},
+      "description": "The third Targaryen king, son of Aegon I and Visenya, known for his brutality and war against the Faith Militant.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "jaehaerys_i_targaryen",
+      "type": "Character",
+      "name": "Jaehaerys I Targaryen",
+      "aliases": [
+        "The Old King",
+        "The Conciliator"
+      ],
+      "attributes": {},
+      "description": "The fourth Targaryen king who reigned for fifty-five years, bringing peace and prosperity to the realm.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "alysanne_targaryen",
+      "type": "Character",
+      "name": "Alysanne Targaryen",
+      "aliases": [
+        "Good Queen Alysanne"
+      ],
+      "attributes": {},
+      "description": "Sister-wife of Jaehaerys I, known for her wisdom and the laws she inspired.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "viserys_i_targaryen",
+      "type": "Character",
+      "name": "Viserys I Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "The fifth Targaryen king, whose death precipitated the Dance of the Dragons.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "rhaenyra_targaryen",
+      "type": "Character",
+      "name": "Rhaenyra Targaryen",
+      "aliases": [
+        "The Realm's Delight",
+        "The Half-Year Queen"
+      ],
+      "attributes": {},
+      "description": "Daughter of Viserys I and claimant to the throne during the Dance of the Dragons.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aegon_ii_targaryen",
+      "type": "Character",
+      "name": "Aegon II Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "Son of Viserys I and Alicent Hightower, who fought his half-sister Rhaenyra for the throne.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aegon_iii_targaryen",
+      "type": "Character",
+      "name": "Aegon III Targaryen",
+      "aliases": [
+        "The Dragonbane",
+        "Aegon the Unlucky"
+      ],
+      "attributes": {},
+      "description": "Son of Rhaenyra Targaryen who succeeded Aegon II, known for his gloomy reign and the death of the last dragon.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "viserys_ii_targaryen",
+      "type": "Character",
+      "name": "Viserys II Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "Brother of Aegon III, who served as Hand and later King, returned from Lys with his wife Larra Rogare.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "duncan_the_tall",
+      "type": "Character",
+      "name": "Duncan the Tall",
+      "aliases": [
+        "Dunk",
+        "Ser Duncan",
+        "Gallows Knight"
+      ],
+      "attributes": {},
+      "description": "A hedge knight of immense height from Flea Bottom who travels Westeros with his squire Egg.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aegon_v_targaryen",
+      "type": "Character",
+      "name": "Aegon V Targaryen",
+      "aliases": [
+        "Egg"
+      ],
+      "attributes": {},
+      "description": "The fourth son of Maekar Targaryen who serves as squire to Ser Duncan the Tall in disguise.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "baelor_targaryen",
+      "type": "Character",
+      "name": "Baelor Targaryen",
+      "aliases": [
+        "Baelor Breakspear"
+      ],
+      "attributes": {},
+      "description": "Prince of Dragonstone and Hand of the King, known for his chivalry, killed at the Ashford Tourney.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "maekar_targaryen",
+      "type": "Character",
+      "name": "Maekar Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "Prince of Summerhall and father to Egg, Aerion, Daeron, and Aemon.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aerion_targaryen",
+      "type": "Character",
+      "name": "Aerion Targaryen",
+      "aliases": [
+        "Aerion Brightflame",
+        "The Bright Prince"
+      ],
+      "attributes": {},
+      "description": "Cruel son of Maekar who was exiled to Lys after the Ashford Tourney.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "brynden_rivers",
+      "type": "Character",
+      "name": "Brynden Rivers",
+      "aliases": [
+        "Bloodraven"
+      ],
+      "attributes": {},
+      "description": "The Hand of the King and a Great Bastard, a sorcerer with one eye and a winestain birthmark.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "daemon_ii_blackfyre",
+      "type": "Character",
+      "name": "Daemon II Blackfyre",
+      "aliases": [
+        "John the Fiddler"
+      ],
+      "attributes": {},
+      "description": "A pretender to the throne who tried to incite the Second Blackfyre Rebellion at Whitewalls.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "eustace_osgrey",
+      "type": "Character",
+      "name": "Eustace Osgrey",
+      "aliases": [],
+      "attributes": {},
+      "description": "An aging landed knight of Standfast and former supporter of the Black Dragon.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "rohanne_webber",
+      "type": "Character",
+      "name": "Rohanne Webber",
+      "aliases": [
+        "The Red Widow"
+      ],
+      "attributes": {},
+      "description": "Lady of Coldmoat, known for her red braid and burying four husbands.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "glendon_flowers",
+      "type": "Character",
+      "name": "Glendon Flowers",
+      "aliases": [
+        "Glendon Ball",
+        "The Knight of the Pussywillows"
+      ],
+      "attributes": {},
+      "description": "A young knight who claimed to be the bastard son of Quentyn Ball (Fireball) and proved his prowess at Whitewalls.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "blackfyre",
+      "type": "Artifact",
+      "name": "Blackfyre",
+      "aliases": [],
+      "attributes": {},
+      "description": "The Valyrian steel sword of Aegon the Conqueror, wielded by Targaryen kings and later Daemon Blackfyre.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dark_sister",
+      "type": "Artifact",
+      "name": "Dark Sister",
+      "aliases": [],
+      "attributes": {},
+      "description": "Visenya Targaryen's Valyrian steel sword, later wielded by Prince Daemon and Bloodraven.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "ashford_tourney",
+      "type": "Event",
+      "name": "Ashford Tourney",
+      "aliases": [],
+      "attributes": {},
+      "description": "A tourney where a Trial of Seven took place involving Dunk, Egg, and royal princes.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "whitewalls_tourney",
+      "type": "Event",
+      "name": "Whitewalls Tourney",
+      "aliases": [],
+      "attributes": {},
+      "description": "A wedding tourney that served as a cover for the Second Blackfyre Rebellion.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dance_of_the_dragons",
+      "type": "Event",
+      "name": "Dance of the Dragons",
+      "aliases": [],
+      "attributes": {},
+      "description": "A civil war between Rhaenyra Targaryen and her half-brother Aegon II for the Iron Throne.",
+      "mentions": [
+        {
+          "file_name": "asoiaf_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "aegon_i_targaryen",
+      "target_id": "balerion",
+      "type": "bonded_with",
+      "description": "Aegon the Conqueror rode the dragon Balerion.",
+      "evidence": "commanding his dragon Balerion—known as the Black Dread",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "maegor_i_targaryen",
+      "target_id": "balerion",
+      "type": "bonded_with",
+      "description": "Maegor claimed Balerion after his father's death.",
+      "evidence": "flying on Balerion, the Black Dread—whom he had taken as his own mount after his father’s death",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "viserys_i_targaryen",
+      "target_id": "balerion",
+      "type": "bonded_with",
+      "description": "Viserys rode Balerion shortly before the dragon's death.",
+      "evidence": "Prince Viserys became a dragonrider, claiming Balerion for himself.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "aenys_i_targaryen",
+      "target_id": "aegon_i_targaryen",
+      "type": "parent_of",
+      "description": "Aegon I was the father of Aenys I.",
+      "evidence": "Aegon’s eldest son Aenys",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "maegor_i_targaryen",
+      "target_id": "aegon_i_targaryen",
+      "type": "parent_of",
+      "description": "Aegon I was the father of Maegor I.",
+      "evidence": "Maegor was born the next year on Dragonstone... Like his father",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "maegor_i_targaryen",
+      "target_id": "visenya_targaryen",
+      "type": "parent_of",
+      "description": "Visenya was the mother of Maegor I.",
+      "evidence": "Visenya announced that she was with child. Maegor was born",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "aenys_i_targaryen",
+      "target_id": "rhaenys_targaryen",
+      "type": "parent_of",
+      "description": "Rhaenys was the mother of Aenys I.",
+      "evidence": "Her son was named Aenys.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "maegor_i_targaryen",
+      "target_id": "blackfyre",
+      "type": "wields",
+      "description": "Maegor wielded Blackfyre.",
+      "evidence": "Aegon killed Qhorin Volmark with the Valyrian steel sword Blackfyre... Maegor took... the sword Blackfyre with him",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "jaehaerys_i_targaryen",
+      "target_id": "aenys_i_targaryen",
+      "type": "parent_of",
+      "description": "Aenys I was the father of Jaehaerys I.",
+      "evidence": "Aenys and Alyssa had... Jaehaerys in 34 AC",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "viserys_i_targaryen",
+      "target_id": "rhaenyra_targaryen",
+      "type": "parent_of",
+      "description": "Viserys I was the father of Rhaenyra.",
+      "evidence": "Viserys had but a single heir when he ascended the throne: his daughter, Rhaenyra",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "viserys_i_targaryen",
+      "target_id": "aegon_ii_targaryen",
+      "type": "parent_of",
+      "description": "Viserys I was the father of Aegon II.",
+      "evidence": "Queen Alicent swiftly gave birth to a living son, named Aegon",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "rhaenyra_targaryen",
+      "target_id": "aegon_iii_targaryen",
+      "type": "parent_of",
+      "description": "Rhaenyra was the mother of Aegon III.",
+      "evidence": "Aegon III, nephew of the late king and son of Rhaenyra",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "duncan_the_tall",
+      "target_id": "aegon_v_targaryen",
+      "type": "squire_of",
+      "description": "Egg served as squire to Ser Duncan the Tall.",
+      "evidence": "I am your squire... Egg had served Dunk for a good year and a half",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "maekar_targaryen",
+      "target_id": "aegon_v_targaryen",
+      "type": "parent_of",
+      "description": "Maekar was the father of Egg (Aegon V).",
+      "evidence": "Aegon of House Targaryen was the fourth and youngest son of Maekar",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "maekar_targaryen",
+      "target_id": "baelor_targaryen",
+      "type": "killed",
+      "description": "Maekar accidentally killed his brother Baelor in a trial of seven.",
+      "evidence": "Prince Baelor’s death... And it was my mace that dealt the fatal blow, I have no doubt.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "brynden_rivers",
+      "target_id": "daemon_ii_blackfyre",
+      "type": "participated_in",
+      "description": "Bloodraven thwarted Daemon II's rebellion at Whitewalls.",
+      "evidence": "Bloodraven himself had come to Whitewalls... Lord Bloodraven’s men surrounded him... and clasped him into golden fetters.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "eustace_osgrey",
+      "target_id": "rohanne_webber",
+      "type": "spouse_of",
+      "description": "Eustace Osgrey married Rohanne Webber to reconcile their houses.",
+      "evidence": "His lordship and my lady were wed this morning... Eustace Osgrey is the Lord of Coldmoat",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "brynden_rivers",
+      "target_id": "dark_sister",
+      "type": "wields",
+      "description": "Bloodraven wielded the sword Dark Sister.",
+      "evidence": "garbed in smoke and scarlet with Dark Sister on his hip",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "schema_proposals": [
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "squire_of",
+      "description": "Indicates a character serves as a squire to a knight.",
+      "confidence": 1.0
+    }
+  ]
+}

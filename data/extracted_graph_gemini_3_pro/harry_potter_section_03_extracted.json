@@ -1,0 +1,548 @@
+{
+  "entities": [
+    {
+      "id": "harry_potter",
+      "type": "Character",
+      "name": "Harry Potter",
+      "aliases": [
+        "The Boy Who Lived"
+      ],
+      "attributes": {
+        "scar": "lightning-shaped",
+        "wand_core": "phoenix feather",
+        "wand_wood": "holly",
+        "parseltongue": "true"
+      },
+      "description": "A fourteen-year-old wizard and Hogwarts student who is unwillingly entered into the Triwizard Tournament and witnesses the return of Lord Voldemort.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "lord_voldemort",
+      "type": "Character",
+      "name": "Lord Voldemort",
+      "aliases": [
+        "You-Know-Who",
+        "He-Who-Must-Not-Be-Named",
+        "The Dark Lord",
+        "Tom Marvolo Riddle"
+      ],
+      "attributes": {
+        "appearance": "whiter than a skull, wide livid scarlet eyes, flat nose with slits",
+        "wand_core": "phoenix feather",
+        "wand_wood": "yew"
+      },
+      "description": "The Dark Wizard who regains his physical body and power through a dark ritual using Harry Potter's blood.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "peter_pettigrew",
+      "type": "Character",
+      "name": "Peter Pettigrew",
+      "aliases": [
+        "Wormtail",
+        "Scabbers"
+      ],
+      "attributes": {
+        "animagus_form": "rat",
+        "physical_trait": "missing finger/silver hand"
+      },
+      "description": "A servant of Lord Voldemort who aids in his resurrection by sacrificing his own hand.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "frank_bryce",
+      "type": "Character",
+      "name": "Frank Bryce",
+      "aliases": [],
+      "attributes": {
+        "occupation": "gardener",
+        "status": "deceased"
+      },
+      "description": "The elderly gardener of the Riddle House who is murdered by Voldemort after overhearing his plans.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "cedric_diggory",
+      "type": "Character",
+      "name": "Cedric Diggory",
+      "aliases": [],
+      "attributes": {
+        "hogwarts_house": "Hufflepuff",
+        "role": "Hogwarts Champion",
+        "status": "deceased"
+      },
+      "description": "A Hogwarts student and Triwizard Champion who is murdered by Peter Pettigrew in the Little Hangleton graveyard.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "barty_crouch_jr",
+      "type": "Character",
+      "name": "Barty Crouch Jr.",
+      "aliases": [
+        "Alastor Moody"
+      ],
+      "attributes": {
+        "affiliation": "Death Eater",
+        "disguise": "Polyjuice Potion"
+      },
+      "description": "A Death Eater who escapes Azkaban, imprisons Alastor Moody, and impersonates him at Hogwarts to manipulate the Triwizard Tournament.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "barty_crouch_sr",
+      "type": "Character",
+      "name": "Barty Crouch Sr.",
+      "aliases": [
+        "Mr. Crouch"
+      ],
+      "attributes": {
+        "occupation": "Head of the Department of International Magical Cooperation"
+      },
+      "description": "A high-ranking Ministry official who is killed by his own son after escaping house arrest.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "alastor_moody",
+      "type": "Character",
+      "name": "Alastor Moody",
+      "aliases": [
+        "Mad-Eye"
+      ],
+      "attributes": {
+        "occupation": "Ex-Auror",
+        "physical_trait": "magical eye, wooden leg"
+      },
+      "description": "A famous Auror hired to teach Defense Against the Dark Arts, but who is imprisoned in his own trunk for most of the year.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "rita_skeeter",
+      "type": "Character",
+      "name": "Rita Skeeter",
+      "aliases": [],
+      "attributes": {
+        "occupation": "Journalist",
+        "animagus_form": "beetle"
+      },
+      "description": "A sensationalist reporter for the Daily Prophet who writes defamatory articles about Harry and his friends.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "winky",
+      "type": "Creature",
+      "name": "Winky",
+      "aliases": [],
+      "attributes": {
+        "species": "House-elf",
+        "former_master": "Barty Crouch Sr."
+      },
+      "description": "A house-elf dismissed by Barty Crouch Sr. who later works in the Hogwarts kitchens.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "triwizard_tournament",
+      "type": "Event",
+      "name": "Triwizard Tournament",
+      "aliases": [],
+      "attributes": {
+        "participants": "Hogwarts, Beauxbatons, Durmstrang",
+        "prize": "1000 Galleons"
+      },
+      "description": "A magical competition between three wizarding schools involving three dangerous tasks.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "little_hangleton_graveyard",
+      "type": "Location",
+      "name": "Little Hangleton Graveyard",
+      "aliases": [],
+      "attributes": {
+        "significance": "Burial place of the Riddle family"
+      },
+      "description": "The location where the Triwizard Cup transports Harry and Cedric, and where Voldemort is restored.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dark_mark",
+      "type": "Concept",
+      "name": "The Dark Mark",
+      "aliases": [],
+      "attributes": {
+        "symbol": "Skull with a snake protruding from its mouth"
+      },
+      "description": "The symbol of Lord Voldemort, conjured in the sky at the Quidditch World Cup and branded on the arms of Death Eaters.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "s_p_e_w",
+      "type": "Organization",
+      "name": "S.P.E.W.",
+      "aliases": [
+        "Society for the Promotion of Elfish Welfare"
+      ],
+      "attributes": {
+        "founder": "Hermione Granger"
+      },
+      "description": "An organization founded by Hermione Granger to campaign for the rights of house-elves.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 4 - Harry Potter and the Goblet of Fire.epub",
+          "chunk_id": null
+        },
+        {
+          "file_name": "harry_potter_section_03.txt",
+          "chunk_id": "3"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "lord_voldemort",
+      "target_id": "frank_bryce",
+      "type": "killed_by",
+      "description": "Voldemort kills Frank Bryce with the Killing Curse after Frank overhears his plans.",
+      "evidence": "There was a flash of green light, a rushing sound, and Frank Bryce crumpled. He was dead before he hit the floor.",
+      "properties": {
+        "spell_used": "Avada Kedavra"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "cedric_diggory",
+      "target_id": "peter_pettigrew",
+      "type": "killed_by",
+      "description": "Peter Pettigrew kills Cedric Diggory on Voldemort's orders.",
+      "evidence": "A swishing noise and a second voice, which screeched the words to the night: 'Avada Kedavra!' ... Cedric was lying spread-eagled on the ground beside him. He was dead.",
+      "properties": {
+        "spell_used": "Avada Kedavra"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "barty_crouch_sr",
+      "target_id": "barty_crouch_jr",
+      "type": "killed_by",
+      "description": "Barty Crouch Jr. confesses to killing his father.",
+      "evidence": "I killed my father... Transfigured my father's body. He became a bone ... I buried it",
+      "properties": {
+        "method": "Transfiguration/Burial"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "triwizard_tournament",
+      "type": "participated_in",
+      "description": "Harry competes as the fourth champion in the Triwizard Tournament.",
+      "evidence": "Harry Potter is the fourth Triwizard champion.",
+      "properties": {
+        "role": "Champion"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "lord_voldemort",
+      "type": "enemy_of",
+      "description": "Harry duels Voldemort in the graveyard.",
+      "evidence": "Voldemort raised his wand, and before Harry could do anything to defend himself... he had been hit again by the Cruciatus Curse.",
+      "properties": {
+        "intensity": "Mortal enemies"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "barty_crouch_jr",
+      "target_id": "lord_voldemort",
+      "type": "member_of",
+      "description": "Barty Crouch Jr. is revealed as a faithful servant of Voldemort.",
+      "evidence": "I will be his dearest, his closest supporter ... closer than a son.",
+      "properties": {
+        "role": "Faithful Servant"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "hermione_granger",
+      "target_id": "s_p_e_w",
+      "type": "member_of",
+      "description": "Hermione founds the Society for the Promotion of Elfish Welfare.",
+      "evidence": "It's S-P-E-W. Stands for the Society for the Promotion of Elfish Welfare.",
+      "properties": {
+        "role": "Founder"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "little_hangleton_graveyard",
+      "type": "located_in",
+      "description": "Harry is transported to the graveyard via Portkey.",
+      "evidence": "They were standing instead in a dark and overgrown graveyard...",
+      "properties": {
+        "time_period": "End of Third Task"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_03.txt",
+        "chunk_id": "3"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "schema_proposals": [
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "impersonates",
+      "description": "Indicates that one character is disguising themselves as another (e.g., using Polyjuice Potion).",
+      "confidence": 0.9
+    }
+  ]
+}

@@ -1,0 +1,1498 @@
+{
+  "entities": [
+    {
+      "id": "house_targaryen",
+      "type": "NobleHouse",
+      "name": "House Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "Dragonlords of ancient lineage who escaped the Doom of Valyria and settled on Dragonstone before conquering Westeros.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aegon_i_targaryen",
+      "type": "Character",
+      "name": "Aegon I Targaryen",
+      "aliases": [
+        "Aegon the Conqueror",
+        "Aegon the Dragon"
+      ],
+      "attributes": {},
+      "description": "The first King of the Seven Kingdoms, who conquered Westeros riding the dragon Balerion.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "visenya_targaryen",
+      "type": "Character",
+      "name": "Visenya Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "Elder sister and wife of Aegon the Conqueror, a warrior who rode the dragon Vhagar and wielded Dark Sister.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "rhaenys_targaryen",
+      "type": "Character",
+      "name": "Rhaenys Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "Younger sister and wife of Aegon the Conqueror, who rode the dragon Meraxes.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "balerion",
+      "type": "Creature",
+      "name": "Balerion",
+      "aliases": [
+        "The Black Dread"
+      ],
+      "attributes": {},
+      "description": "The largest and oldest of the Targaryen dragons during the Conquest, ridden by Aegon I.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "vhagar",
+      "type": "Creature",
+      "name": "Vhagar",
+      "aliases": [],
+      "attributes": {},
+      "description": "A dragon ridden by Visenya Targaryen during the Conquest.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "meraxes",
+      "type": "Creature",
+      "name": "Meraxes",
+      "aliases": [],
+      "attributes": {},
+      "description": "A dragon ridden by Rhaenys Targaryen during the Conquest.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aenar_targaryen",
+      "type": "Character",
+      "name": "Aenar Targaryen",
+      "aliases": [
+        "Aenar the Exile"
+      ],
+      "attributes": {},
+      "description": "A Targaryen lord who moved his family to Dragonstone before the Doom of Valyria.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "daenys_targaryen",
+      "type": "Character",
+      "name": "Daenys Targaryen",
+      "aliases": [
+        "Daenys the Dreamer"
+      ],
+      "attributes": {},
+      "description": "Daughter of Aenar Targaryen who foresaw the destruction of Valyria.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "valyria",
+      "type": "Location",
+      "name": "Valyria",
+      "aliases": [
+        "The Freehold"
+      ],
+      "attributes": {},
+      "description": "The ancient home of the dragonlords, destroyed in the Doom.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dragonstone",
+      "type": "Location",
+      "name": "Dragonstone",
+      "aliases": [],
+      "attributes": {},
+      "description": "An island fortress in the narrow sea, the ancestral seat of House Targaryen.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "harrenhal",
+      "type": "Location",
+      "name": "Harrenhal",
+      "aliases": [],
+      "attributes": {},
+      "description": "A colossal castle built by Harren the Black, destroyed by Aegon I and Balerion.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "harren_hoare",
+      "type": "Character",
+      "name": "Harren Hoare",
+      "aliases": [
+        "Harren the Black"
+      ],
+      "attributes": {},
+      "description": "King of the Isles and the Rivers who built Harrenhal and died in dragonfire.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "argilac_durrandon",
+      "type": "Character",
+      "name": "Argilac Durrandon",
+      "aliases": [
+        "Argilac the Arrogant"
+      ],
+      "attributes": {},
+      "description": "The last Storm King, slain by Orys Baratheon.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "orys_baratheon",
+      "type": "Character",
+      "name": "Orys Baratheon",
+      "aliases": [],
+      "attributes": {},
+      "description": "Aegon's bastard half-brother and general, who founded House Baratheon.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "house_baratheon",
+      "type": "NobleHouse",
+      "name": "House Baratheon",
+      "aliases": [],
+      "attributes": {},
+      "description": "Noble house founded by Orys Baratheon after the defeat of Argilac the Arrogant.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "blackfyre",
+      "type": "Artifact",
+      "name": "Blackfyre",
+      "aliases": [],
+      "attributes": {},
+      "description": "The Valyrian steel sword of Aegon the Conqueror.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dark_sister",
+      "type": "Artifact",
+      "name": "Dark Sister",
+      "aliases": [],
+      "attributes": {},
+      "description": "The Valyrian steel sword wielded by Visenya Targaryen.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "iron_throne",
+      "type": "Artifact",
+      "name": "Iron Throne",
+      "aliases": [],
+      "attributes": {},
+      "description": "The seat of kings in the Seven Kingdoms, forged from the swords of Aegon's enemies.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "field_of_fire",
+      "type": "Event",
+      "name": "Field of Fire",
+      "aliases": [],
+      "attributes": {},
+      "description": "A pivotal battle where Aegon and his sisters unleashed all three dragons to defeat the combined armies of the Reach and the Rock.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "torrhen_stark",
+      "type": "Character",
+      "name": "Torrhen Stark",
+      "aliases": [
+        "The King Who Knelt"
+      ],
+      "attributes": {},
+      "description": "King in the North who submitted to Aegon I without battle.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aenys_i_targaryen",
+      "type": "Character",
+      "name": "Aenys I Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "Son of Aegon I and Rhaenys, second King of the Seven Kingdoms.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "maegor_i_targaryen",
+      "type": "Character",
+      "name": "Maegor I Targaryen",
+      "aliases": [
+        "Maegor the Cruel"
+      ],
+      "attributes": {},
+      "description": "Son of Aegon I and Visenya, third King of the Seven Kingdoms.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "jaehaerys_i_targaryen",
+      "type": "Character",
+      "name": "Jaehaerys I Targaryen",
+      "aliases": [
+        "The Old King",
+        "The Conciliator"
+      ],
+      "attributes": {},
+      "description": "Fourth King of the Seven Kingdoms, son of Aenys I.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "viserys_i_targaryen",
+      "type": "Character",
+      "name": "Viserys I Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "Grandson of Jaehaerys I, King of the Seven Kingdoms.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aegon_ii_targaryen",
+      "type": "Character",
+      "name": "Aegon II Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "Eldest son of Viserys I, whose ascent sparked the Dance of the Dragons.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "rhaenyra_targaryen",
+      "type": "Character",
+      "name": "Rhaenyra Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "Daughter of Viserys I, who disputed the throne with her half-brother Aegon II.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aegon_iii_targaryen",
+      "type": "Character",
+      "name": "Aegon III Targaryen",
+      "aliases": [
+        "The Dragonbane",
+        "Aegon the Unlucky",
+        "Aegon the Unhappy",
+        "The Broken King"
+      ],
+      "attributes": {},
+      "description": "Son of Rhaenyra Targaryen, who succeeded Aegon II.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "daeron_i_targaryen",
+      "type": "Character",
+      "name": "Daeron I Targaryen",
+      "aliases": [
+        "The Young Dragon",
+        "The Boy King"
+      ],
+      "attributes": {},
+      "description": "Eldest son of Aegon III who conquered Dorne but failed to hold it.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "baelor_i_targaryen",
+      "type": "Character",
+      "name": "Baelor I Targaryen",
+      "aliases": [
+        "The Beloved",
+        "The Blessed"
+      ],
+      "attributes": {},
+      "description": "Septon and king, second son of Aegon III.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "viserys_ii_targaryen",
+      "type": "Character",
+      "name": "Viserys II Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "Younger brother of Aegon III.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aegon_iv_targaryen",
+      "type": "Character",
+      "name": "Aegon IV Targaryen",
+      "aliases": [
+        "The Unworthy"
+      ],
+      "attributes": {},
+      "description": "Eldest son of Viserys II.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "daeron_ii_targaryen",
+      "type": "Character",
+      "name": "Daeron II Targaryen",
+      "aliases": [
+        "The Good"
+      ],
+      "attributes": {},
+      "description": "Son of Queen Naerys and Aegon IV (or Aemon the Dragonknight).",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aerys_i_targaryen",
+      "type": "Character",
+      "name": "Aerys I Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "Second son of Daeron II.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "maekar_i_targaryen",
+      "type": "Character",
+      "name": "Maekar I Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "Fourth son of Daeron II.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aegon_v_targaryen",
+      "type": "Character",
+      "name": "Aegon V Targaryen",
+      "aliases": [
+        "The Unlikely"
+      ],
+      "attributes": {},
+      "description": "Fourth son of Maekar I.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "jaehaerys_ii_targaryen",
+      "type": "Character",
+      "name": "Jaehaerys II Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "Second son of Aegon the Unlikely.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aerys_ii_targaryen",
+      "type": "Character",
+      "name": "Aerys II Targaryen",
+      "aliases": [
+        "The Mad King"
+      ],
+      "attributes": {},
+      "description": "Only son of Jaehaerys II.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "rhaegar_targaryen",
+      "type": "Character",
+      "name": "Rhaegar Targaryen",
+      "aliases": [],
+      "attributes": {},
+      "description": "Crown prince and heir to Aerys II, slain by Robert Baratheon.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "robert_baratheon",
+      "type": "Character",
+      "name": "Robert Baratheon",
+      "aliases": [
+        "King Robert"
+      ],
+      "attributes": {},
+      "description": "Rebel lord who slew Rhaegar Targaryen on the Trident.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "kings_landing",
+      "type": "Location",
+      "name": "King's Landing",
+      "aliases": [],
+      "attributes": {},
+      "description": "The capital city established by Aegon I at the mouth of the Blackwater Rush.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "oldtown",
+      "type": "Location",
+      "name": "Oldtown",
+      "aliases": [],
+      "attributes": {},
+      "description": "Ancient city and center of the Faith, where Aegon I was crowned.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dance_of_the_dragons",
+      "type": "Event",
+      "name": "Dance of the Dragons",
+      "aliases": [],
+      "attributes": {},
+      "description": "Civil war between Rhaenyra Targaryen and Aegon II.",
+      "mentions": [
+        {
+          "file_name": "Fire _ Blood by George R.r. Martin.epub",
+          "chunk_id": "1"
+        },
+        {
+          "file_name": "asoiaf_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "aegon_i_targaryen",
+      "target_id": "balerion",
+      "type": "bonded_with",
+      "description": "Aegon I rode the dragon Balerion.",
+      "evidence": "Of the five dragons who had flown with Aenar the Exile from Valyria, only one survived to Aegon’s day: the great beast called Balerion, the Black Dread.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "visenya_targaryen",
+      "target_id": "vhagar",
+      "type": "bonded_with",
+      "description": "Visenya rode the dragon Vhagar.",
+      "evidence": "The dragons Vhagar and Meraxes were younger... Visenya, eldest of the three siblings... descended on them from above with Vhagar",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "rhaenys_targaryen",
+      "target_id": "meraxes",
+      "type": "bonded_with",
+      "description": "Rhaenys rode the dragon Meraxes.",
+      "evidence": "Rhaenys... loved to fly. She once was heard to say that before she died she meant to fly Meraxes across the Sunset Sea",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "aegon_i_targaryen",
+      "target_id": "visenya_targaryen",
+      "type": "spouse_of",
+      "description": "Aegon I married his sister Visenya.",
+      "evidence": "Aegon took both his sisters to bride... Aegon wed Visenya out of duty",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "aegon_i_targaryen",
+      "target_id": "rhaenys_targaryen",
+      "type": "spouse_of",
+      "description": "Aegon I married his sister Rhaenys.",
+      "evidence": "Aegon took both his sisters to bride... Rhaenys out of desire.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "aegon_i_targaryen",
+      "target_id": "blackfyre",
+      "type": "wields",
+      "description": "Aegon I wielded the sword Blackfyre.",
+      "evidence": "Armed with the Valyrian steel blade Blackfyre, he was counted amongst the greatest warriors of his age",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "visenya_targaryen",
+      "target_id": "dark_sister",
+      "type": "wields",
+      "description": "Visenya wielded the sword Dark Sister.",
+      "evidence": "She carried the Valyrian longsword Dark Sister, and was skilled in its use",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "aegon_i_targaryen",
+      "target_id": "harren_hoare",
+      "type": "killed",
+      "description": "Aegon I and Balerion burned Harrenhal, killing Harren the Black.",
+      "evidence": "Harren and his last sons died in the fires that engulfed his monstrous fortress that night.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "orys_baratheon",
+      "target_id": "argilac_durrandon",
+      "type": "killed",
+      "description": "Orys Baratheon slew Argilac the Arrogant in single combat.",
+      "evidence": "in the end the last of the Durrandon got his wish, and died with a sword in his hand... Orys Baratheon unchained her... took the arms and words of the Durrandon for his own.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "house_baratheon",
+      "target_id": "house_targaryen",
+      "type": "sworn_to",
+      "description": "House Baratheon was founded by Orys, Aegon's half-brother and champion, and was sworn to Targaryen rule.",
+      "evidence": "Orys Baratheon he proclaimed to be 'my shield, my stalwart, my strong right hand.'... The crowned stag became his sigil, Storm’s End became his seat",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "aegon_i_targaryen",
+      "target_id": "aenys_i_targaryen",
+      "type": "parent_of",
+      "description": "Aenys I was the son of Aegon I and Rhaenys.",
+      "evidence": "son of Aegon I and Rhaenys",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "aegon_i_targaryen",
+      "target_id": "maegor_i_targaryen",
+      "type": "parent_of",
+      "description": "Maegor I was the son of Aegon I and Visenya.",
+      "evidence": "son of Aegon I and Visenya",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "aenys_i_targaryen",
+      "target_id": "jaehaerys_i_targaryen",
+      "type": "parent_of",
+      "description": "Jaehaerys I was the son of Aenys I.",
+      "evidence": "Aenys’s son",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "viserys_i_targaryen",
+      "target_id": "aegon_ii_targaryen",
+      "type": "parent_of",
+      "description": "Aegon II was the eldest son of Viserys I.",
+      "evidence": "eldest son of Viserys",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "viserys_i_targaryen",
+      "target_id": "rhaenyra_targaryen",
+      "type": "parent_of",
+      "description": "Rhaenyra was the daughter of Viserys I.",
+      "evidence": "Aegon II’s ascent was disputed by his half-sister Rhaenyra",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "rhaenyra_targaryen",
+      "target_id": "aegon_iii_targaryen",
+      "type": "parent_of",
+      "description": "Aegon III was the son of Rhaenyra.",
+      "evidence": "Rhaenyra’s son",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "aegon_iii_targaryen",
+      "target_id": "daeron_i_targaryen",
+      "type": "parent_of",
+      "description": "Daeron I was the eldest son of Aegon III.",
+      "evidence": "eldest son of Aegon III",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "aegon_iii_targaryen",
+      "target_id": "baelor_i_targaryen",
+      "type": "parent_of",
+      "description": "Baelor I was the second son of Aegon III.",
+      "evidence": "second son of Aegon III",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "viserys_ii_targaryen",
+      "target_id": "aegon_iv_targaryen",
+      "type": "parent_of",
+      "description": "Aegon IV was the eldest son of Viserys II.",
+      "evidence": "eldest son of Viserys",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "aegon_iv_targaryen",
+      "target_id": "daeron_ii_targaryen",
+      "type": "parent_of",
+      "description": "Daeron II was the son of Aegon IV (or Aemon the Dragonknight).",
+      "evidence": "Queen Naerys’s son, by Aegon or Aemon",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "daeron_ii_targaryen",
+      "target_id": "aerys_i_targaryen",
+      "type": "parent_of",
+      "description": "Aerys I was the second son of Daeron II.",
+      "evidence": "second son of Daeron II",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "daeron_ii_targaryen",
+      "target_id": "maekar_i_targaryen",
+      "type": "parent_of",
+      "description": "Maekar I was the fourth son of Daeron II.",
+      "evidence": "fourth son of Daeron II",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "maekar_i_targaryen",
+      "target_id": "aegon_v_targaryen",
+      "type": "parent_of",
+      "description": "Aegon V was the fourth son of Maekar I.",
+      "evidence": "Maekar’s fourth son",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "aegon_v_targaryen",
+      "target_id": "jaehaerys_ii_targaryen",
+      "type": "parent_of",
+      "description": "Jaehaerys II was the second son of Aegon V.",
+      "evidence": "second son of Aegon the Unlikely",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "jaehaerys_ii_targaryen",
+      "target_id": "aerys_ii_targaryen",
+      "type": "parent_of",
+      "description": "Aerys II was the only son of Jaehaerys II.",
+      "evidence": "only son of Jaehaerys II",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "aerys_ii_targaryen",
+      "target_id": "rhaegar_targaryen",
+      "type": "parent_of",
+      "description": "Rhaegar was the heir of Aerys II.",
+      "evidence": "his heir, the crown prince, Rhaegar Targaryen",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "robert_baratheon",
+      "target_id": "rhaegar_targaryen",
+      "type": "killed",
+      "description": "Robert Baratheon slew Rhaegar Targaryen on the Trident.",
+      "evidence": "slain by Robert Baratheon on the Trident",
+      "properties": {},
+      "source_ref": {
+        "file_name": "asoiaf_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "schema_proposals": []
+}

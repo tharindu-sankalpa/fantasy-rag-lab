@@ -1,0 +1,756 @@
+{
+  "entities": [
+    {
+      "id": "harry_potter",
+      "type": "Character",
+      "name": "Harry Potter",
+      "aliases": [
+        "The Boy Who Lived",
+        "Potter",
+        "Harry"
+      ],
+      "attributes": {},
+      "description": "The protagonist, a young wizard with a lightning-shaped scar who survived a killing curse from Lord Voldemort as a baby. He attends Hogwarts and possesses qualities of a true Gryffindor.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "ronald_weasley",
+      "type": "Character",
+      "name": "Ronald Weasley",
+      "aliases": [
+        "Ron",
+        "Weasley"
+      ],
+      "attributes": {},
+      "description": "Harry's best friend, the youngest son of the Weasley family. He is loyal, plays wizard chess well, and attends Hogwarts in Gryffindor.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "hermione_granger",
+      "type": "Character",
+      "name": "Hermione Granger",
+      "aliases": [
+        "Hermione",
+        "Miss Granger"
+      ],
+      "attributes": {},
+      "description": "Harry's best friend, a Muggle-born witch of high intelligence and academic prowess. She solves the mystery of the Basilisk.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "albus_dumbledore",
+      "type": "Character",
+      "name": "Albus Dumbledore",
+      "aliases": [
+        "Dumbledore",
+        "Headmaster"
+      ],
+      "attributes": {},
+      "description": "The Headmaster of Hogwarts, considered the greatest wizard of modern times and the only one Lord Voldemort fears.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "lord_voldemort",
+      "type": "Character",
+      "name": "Lord Voldemort",
+      "aliases": [
+        "You-Know-Who",
+        "He-Who-Must-Not-Be-Named",
+        "Tom Marvolo Riddle",
+        "Tom Riddle",
+        "The Dark Lord"
+      ],
+      "attributes": {},
+      "description": "A dark wizard who killed Harry's parents and attempted to kill Harry. He appears as a parasite on Quirrell and later as a memory preserved in a diary.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "rubeus_hagrid",
+      "type": "Character",
+      "name": "Rubeus Hagrid",
+      "aliases": [
+        "Hagrid"
+      ],
+      "attributes": {},
+      "description": "The Keeper of Keys and Grounds at Hogwarts. He is half-giant, fond of dangerous creatures, and was wrongly expelled from Hogwarts fifty years prior.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "severus_snape",
+      "type": "Character",
+      "name": "Severus Snape",
+      "aliases": [
+        "Snape",
+        "Professor Snape"
+      ],
+      "attributes": {},
+      "description": "The Potions Master at Hogwarts and Head of Slytherin House. He holds a grudge against Harry but works to protect him.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "draco_malfoy",
+      "type": "Character",
+      "name": "Draco Malfoy",
+      "aliases": [
+        "Malfoy"
+      ],
+      "attributes": {},
+      "description": "A student in Slytherin House and Harry's rival. He comes from a wealthy pure-blood family and is made the Slytherin Quidditch Seeker.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "ginny_weasley",
+      "type": "Character",
+      "name": "Ginevra Weasley",
+      "aliases": [
+        "Ginny"
+      ],
+      "attributes": {},
+      "description": "Ron's younger sister who starts Hogwarts in Harry's second year. She is possessed by Tom Riddle through his diary and opens the Chamber of Secrets.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "gilderoy_lockhart",
+      "type": "Character",
+      "name": "Gilderoy Lockhart",
+      "aliases": [
+        "Lockhart"
+      ],
+      "attributes": {},
+      "description": "The Defense Against the Dark Arts teacher in Harry's second year. He is a celebrity wizard who is revealed to be a fraud.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "quirinus_quirrell",
+      "type": "Character",
+      "name": "Quirinus Quirrell",
+      "aliases": [
+        "Professor Quirrell",
+        "Quirrell"
+      ],
+      "attributes": {},
+      "description": "The Defense Against the Dark Arts teacher in Harry's first year. He is possessed by Voldemort and attempts to steal the Sorcerer's Stone.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "hogwarts_school",
+      "type": "Organization",
+      "name": "Hogwarts School of Witchcraft and Wizardry",
+      "aliases": [
+        "Hogwarts"
+      ],
+      "attributes": {},
+      "description": "A British school for magic located in a castle, consisting of four houses.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "chamber_of_secrets",
+      "type": "Location",
+      "name": "The Chamber of Secrets",
+      "aliases": [
+        "The Chamber"
+      ],
+      "attributes": {},
+      "description": "A hidden chamber within Hogwarts built by Salazar Slytherin, containing a Basilisk intended to purge the school of Muggle-borns.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "sorcerers_stone",
+      "type": "Artifact",
+      "name": "The Sorcerer's Stone",
+      "aliases": [
+        "The Stone"
+      ],
+      "attributes": {},
+      "description": "A legendary substance capable of turning metal into gold and producing the Elixir of Life.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "tom_riddles_diary",
+      "type": "Artifact",
+      "name": "Tom Riddle's Diary",
+      "aliases": [
+        "The Diary",
+        "Riddle's Diary"
+      ],
+      "attributes": {},
+      "description": "A magical diary created by Tom Riddle that can think, communicate, and possess the writer.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "sorting_hat",
+      "type": "Artifact",
+      "name": "The Sorting Hat",
+      "aliases": [],
+      "attributes": {},
+      "description": "A sentient hat that sorts new Hogwarts students into their houses. It also provides the Sword of Gryffindor to Harry.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "sword_of_gryffindor",
+      "type": "Artifact",
+      "name": "The Sword of Gryffindor",
+      "aliases": [],
+      "attributes": {},
+      "description": "A silver sword with rubies that presents itself to a true Gryffindor in times of need.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "basilisk",
+      "type": "Creature",
+      "name": "Basilisk",
+      "aliases": [
+        "The King of Serpents",
+        "The Monster of Slytherin"
+      ],
+      "attributes": {},
+      "description": "A giant serpent living in the Chamber of Secrets. Its stare is fatal, and it can be controlled by the Heir of Slytherin.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "fawkes",
+      "type": "Creature",
+      "name": "Fawkes",
+      "aliases": [],
+      "attributes": {},
+      "description": "Albus Dumbledore's pet phoenix. Its tears have healing powers and it can carry immense weight.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dobby",
+      "type": "Creature",
+      "name": "Dobby",
+      "aliases": [
+        "Dobby the House-Elf"
+      ],
+      "attributes": {},
+      "description": "A house-elf formerly serving the Malfoy family who tries to warn and protect Harry Potter.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aragog",
+      "type": "Creature",
+      "name": "Aragog",
+      "aliases": [],
+      "attributes": {},
+      "description": "A giant spider (Acromantula) raised by Hagrid, living in the Forbidden Forest.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "invisibility_cloak",
+      "type": "Artifact",
+      "name": "Invisibility Cloak",
+      "aliases": [
+        "The Cloak"
+      ],
+      "attributes": {},
+      "description": "A magical cloak that renders the wearer invisible, inherited by Harry from his father.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "nimbus_2000",
+      "type": "Artifact",
+      "name": "Nimbus 2000",
+      "aliases": [],
+      "attributes": {},
+      "description": "A high-quality racing broomstick given to Harry in his first year.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "flying_ford_anglia",
+      "type": "Artifact",
+      "name": "Flying Ford Anglia",
+      "aliases": [
+        "The Car"
+      ],
+      "attributes": {},
+      "description": "A Muggle car enchanted by Arthur Weasley to fly and become invisible.",
+      "mentions": [
+        {
+          "file_name": "harry_potter_section_01.txt",
+          "chunk_id": "1"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "harry_potter",
+      "target_id": "lord_voldemort",
+      "type": "enemy_of",
+      "description": "Harry is the primary antagonist to Voldemort, having survived his killing curse.",
+      "evidence": "Voldemort,' said Riddle softly, 'is my past, present, and future, Harry Potter.' ... 'So ends the famous Harry Potter,' said Riddle's distant voice. 'Alone in the Chamber of Secrets... defeated at last by the Dark Lord he so unwisely challenged.'",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "albus_dumbledore",
+      "target_id": "harry_potter",
+      "type": "mentors",
+      "description": "Dumbledore provides guidance, protection, and explanation of events to Harry.",
+      "evidence": "'First of all, Harry, I want to thank you,' said Dumbledore, eyes twinkling again. 'You must have shown me real loyalty down in the Chamber.'",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "hogwarts_school",
+      "type": "member_of",
+      "description": "Harry is a student at Hogwarts.",
+      "evidence": "Harry Potter was a wizard — a wizard fresh from his first year at Hogwarts School of Witchcraft and Wizardry.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "sorcerers_stone",
+      "type": "wields",
+      "description": "Harry retrieves the Stone from the Mirror of Erised to protect it.",
+      "evidence": "Harry felt something heavy drop into his real pocket. Somehow — incredibly — he’d gotten the Stone.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "lord_voldemort",
+      "target_id": "tom_riddles_diary",
+      "type": "creator_of",
+      "description": "Voldemort created the diary as a Horcrux (implied) to preserve his sixteen-year-old self.",
+      "evidence": "'I decided to leave behind a diary, preserving my sixteen-year-old self in its pages...'",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "basilisk",
+      "type": "killed_by",
+      "description": "Harry kills the Basilisk with the Sword of Gryffindor.",
+      "evidence": "Harry threw his whole weight behind the sword and drove it to the hilt into the roof of the serpent’s mouth",
+      "properties": {
+        "method": "Sword of Gryffindor"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "quirinus_quirrell",
+      "target_id": "lord_voldemort",
+      "type": "wields",
+      "description": "Quirrell hosts Voldemort's spirit on the back of his head.",
+      "evidence": "Where there should have been a back to Quirrell’s head, there was a face, the most terrible face Harry had ever seen.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ginny_weasley",
+      "target_id": "tom_riddles_diary",
+      "type": "wields",
+      "description": "Ginny writes in the diary and is possessed by it.",
+      "evidence": "'It was me, Harry — but I — I s-swear I d-didn’t mean to — R-Riddle made me, he t-took me over'",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "gilderoy_lockhart",
+      "target_id": "ronald_weasley",
+      "type": "casts",
+      "description": "Lockhart attempts to cast Obliviate on Harry and Ron using Ron's broken wand, which backfires.",
+      "evidence": "He raised Ron’s Spellotaped wand high over his head and yelled, 'Obliviate!' The wand exploded with the force of a small bomb.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "sword_of_gryffindor",
+      "type": "wields",
+      "description": "Harry pulls the sword from the Sorting Hat and uses it to kill the Basilisk.",
+      "evidence": "Harry seized it... He rammed it onto his head... A gleaming silver sword had appeared inside the hat",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "chamber_of_secrets",
+      "type": "located_in",
+      "description": "Harry enters the Chamber to rescue Ginny.",
+      "evidence": "He was standing at the end of a very long, dimly lit chamber.",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "dobby",
+      "target_id": "harry_potter",
+      "type": "mentors",
+      "description": "Dobby tries to protect Harry, albeit in destructive ways, warning him of danger.",
+      "evidence": "'Harry Potter must not go back to Hogwarts... Dobby has come to protect Harry Potter, to warn him'",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 0.9,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "invisibility_cloak",
+      "type": "wields",
+      "description": "Harry receives and uses his father's Invisibility Cloak.",
+      "evidence": "Harry picked the shining, silvery cloth off the floor... 'It’s an Invisibility Cloak,' said Ron",
+      "properties": {},
+      "source_ref": {
+        "file_name": "harry_potter_section_01.txt",
+        "chunk_id": "1"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "schema_proposals": [
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "friend_of",
+      "description": "Indicates a close platonic friendship between characters.",
+      "confidence": 1.0
+    },
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "owns_creature",
+      "description": "Indicates ownership or companionship between a character and a creature (e.g., pets).",
+      "confidence": 0.9
+    },
+    {
+      "proposal_type": "new_relationship_type",
+      "name": "attacked_by",
+      "description": "Indicates a character was attacked or petrified by another entity, distinct from 'killed_by'.",
+      "confidence": 0.8
+    }
+  ]
+}

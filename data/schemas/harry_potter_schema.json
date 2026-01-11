@@ -1,0 +1,237 @@
+{
+  "series_name": "Harry Potter",
+  "version_info": {
+    "version": "1.0.0",
+    "created_at": "2025-12-28T13:54:05.081553",
+    "changelog": [],
+    "evolution_suggestions": []
+  },
+  "entity_types": [
+    {
+      "name": "Character",
+      "description": "A specific individual person, wizard, ghost, or named being within the universe.",
+      "attributes": [
+        "blood_status",
+        "hogwarts_house",
+        "patronus_form",
+        "wand_wood",
+        "wand_core",
+        "boggart",
+        "gender"
+      ]
+    },
+    {
+      "name": "Location",
+      "description": "A physical place, ranging from specific rooms to buildings, towns, or geographical regions.",
+      "attributes": [
+        "magical_concealment",
+        "unplottable",
+        "owner",
+        "affiliation"
+      ]
+    },
+    {
+      "name": "Organization",
+      "description": "A group, team, department, or society with a shared purpose or membership.",
+      "attributes": [
+        "motto",
+        "founded_date",
+        "ideology",
+        "headquarters"
+      ]
+    },
+    {
+      "name": "Artifact",
+      "description": "A magical object or item of significance.",
+      "attributes": [
+        "is_horcrux",
+        "is_hallow",
+        "creator",
+        "magical_properties",
+        "sentience"
+      ]
+    },
+    {
+      "name": "Creature",
+      "description": "A non-human magical beast or species instance.",
+      "attributes": [
+        "ministry_classification",
+        "native_region",
+        "diet",
+        "magical_abilities"
+      ]
+    },
+    {
+      "name": "Spell",
+      "description": "A specific magical incantation, hex, jinx, curse, or charm.",
+      "attributes": [
+        "incantation",
+        "type",
+        "light_color",
+        "hand_movement",
+        "effect"
+      ]
+    },
+    {
+      "name": "Potion",
+      "description": "A magical mixture brewed from ingredients.",
+      "attributes": [
+        "color",
+        "ingredients",
+        "brewing_time",
+        "effect"
+      ]
+    },
+    {
+      "name": "Event",
+      "description": "A significant occurrence, meeting, battle, or timeline marker.",
+      "attributes": [
+        "date",
+        "outcome",
+        "casualties"
+      ]
+    },
+    {
+      "name": "Concept",
+      "description": "Abstract magical laws, ancient magic forms, or cultural constructs.",
+      "attributes": [
+        "origin",
+        "consequences"
+      ]
+    }
+  ],
+  "relationship_types": [
+    {
+      "name": "familial_bond",
+      "description": "Indicates a family relationship (parent, sibling, spouse) between characters.",
+      "source_type": "Character",
+      "target_type": "Character",
+      "properties": [
+        "relation_type",
+        "is_adoptive"
+      ]
+    },
+    {
+      "name": "member_of",
+      "description": "Indicates membership in an organization, house, or team.",
+      "source_type": "Character",
+      "target_type": "Organization",
+      "properties": [
+        "role",
+        "start_date",
+        "end_date"
+      ]
+    },
+    {
+      "name": "wields",
+      "description": "Indicates the possession or usage of an artifact (usually a wand or weapon).",
+      "source_type": "Character",
+      "target_type": "Artifact",
+      "properties": [
+        "ownership_status",
+        "acquisition_method"
+      ]
+    },
+    {
+      "name": "located_in",
+      "description": "Spatial containment of an entity within a location.",
+      "source_type": "Character",
+      "target_type": "Location",
+      "properties": [
+        "time_period"
+      ]
+    },
+    {
+      "name": "casts",
+      "description": "The action of performing a specific spell.",
+      "source_type": "Character",
+      "target_type": "Spell",
+      "properties": [
+        "proficiency_level",
+        "is_signature_spell"
+      ]
+    },
+    {
+      "name": "brews",
+      "description": "The action of creating a potion.",
+      "source_type": "Character",
+      "target_type": "Potion",
+      "properties": [
+        "success_rate"
+      ]
+    },
+    {
+      "name": "killed_by",
+      "description": "Indicates the cause of death for a character.",
+      "source_type": "Character",
+      "target_type": "Character",
+      "properties": [
+        "method",
+        "spell_used"
+      ]
+    },
+    {
+      "name": "participated_in",
+      "description": "Involvement in a specific event.",
+      "source_type": "Character",
+      "target_type": "Event",
+      "properties": [
+        "role",
+        "side_taken"
+      ]
+    },
+    {
+      "name": "creator_of",
+      "description": "The act of inventing a spell, potion, or artifact.",
+      "source_type": "Character",
+      "target_type": "Artifact",
+      "properties": [
+        "date_created",
+        "purpose"
+      ]
+    },
+    {
+      "name": "mentors",
+      "description": "A teaching or guiding relationship.",
+      "source_type": "Character",
+      "target_type": "Character",
+      "properties": [
+        "subject",
+        "duration"
+      ]
+    },
+    {
+      "name": "enemy_of",
+      "description": "Antagonistic relationship between entities.",
+      "source_type": "Character",
+      "target_type": "Character",
+      "properties": [
+        "reason",
+        "intensity"
+      ]
+    }
+  ],
+  "canonical_renaming_rules": {
+    "The Boy Who Lived": "Harry Potter",
+    "The Chosen One": "Harry Potter",
+    "He-Who-Must-Not-Be-Named": "Lord Voldemort",
+    "You-Know-Who": "Lord Voldemort",
+    "The Dark Lord": "Lord Voldemort",
+    "Tom Marvolo Riddle": "Lord Voldemort",
+    "Tom Riddle": "Lord Voldemort",
+    "Ron Weasley": "Ronald Weasley",
+    "Ginny Weasley": "Ginevra Weasley",
+    "The Half-Blood Prince": "Severus Snape",
+    "Snivellus": "Severus Snape",
+    "Padfoot": "Sirius Black",
+    "Prongs": "James Potter I",
+    "Moony": "Remus Lupin",
+    "Wormtail": "Peter Pettigrew",
+    "Mad-Eye": "Alastor Moody",
+    "Dumbledore": "Albus Dumbledore",
+    "Bella": "Bellatrix Lestrange",
+    "The Grey Lady": "Helena Ravenclaw",
+    "The Bloody Baron": "Waldo",
+    "Nearly Headless Nick": "Nicholas de Mimsy-Porpington"
+  }
+}

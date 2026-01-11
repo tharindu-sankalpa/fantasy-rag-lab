@@ -1,0 +1,2690 @@
+{
+  "entities": [
+    {
+      "id": "harry_potter",
+      "type": "Character",
+      "name": "Harry Potter",
+      "aliases": [
+        "The Boy Who Lived",
+        "The Chosen One"
+      ],
+      "attributes": {
+        "blood_status": "half-blood",
+        "hogwarts_house": "Gryffindor",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "A twelve-year-old wizard in his second year at Hogwarts, famous for surviving Voldemort's attack as a baby. He has a lightning-shaped scar on his forehead, brilliant green eyes, and jet-black hair. He can speak Parseltongue.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "ronald_weasley",
+      "type": "Character",
+      "name": "Ronald Weasley",
+      "aliases": [
+        "Ron",
+        "Ron Weasley"
+      ],
+      "attributes": {
+        "blood_status": "pure-blood",
+        "hogwarts_house": "Gryffindor",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "Harry's best friend, a red-haired boy from a large pure-blood wizarding family. He is in Gryffindor and second year at Hogwarts.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "hermione_granger",
+      "type": "Character",
+      "name": "Hermione Granger",
+      "aliases": [],
+      "attributes": {
+        "blood_status": "Muggle-born",
+        "hogwarts_house": "Gryffindor",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "female"
+      },
+      "description": "Harry's best friend, a Muggle-born witch known for her intelligence and academic excellence. She is in Gryffindor and second year at Hogwarts.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "vernon_dursley",
+      "type": "Character",
+      "name": "Vernon Dursley",
+      "aliases": [
+        "Uncle Vernon"
+      ],
+      "attributes": {
+        "blood_status": "Muggle",
+        "hogwarts_house": "none",
+        "patronus_form": "none",
+        "wand_wood": "none",
+        "wand_core": "none",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "Harry's Muggle uncle, a large, neckless man with an enormous black mustache. He is the director of a drill-making company and despises magic.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "petunia_dursley",
+      "type": "Character",
+      "name": "Petunia Dursley",
+      "aliases": [
+        "Aunt Petunia"
+      ],
+      "attributes": {
+        "blood_status": "Muggle",
+        "hogwarts_house": "none",
+        "patronus_form": "none",
+        "wand_wood": "none",
+        "wand_core": "none",
+        "boggart": "unknown",
+        "gender": "female"
+      },
+      "description": "Harry's Muggle aunt, described as horse-faced and bony. She is Harry's mother's sister and despises magic.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dudley_dursley",
+      "type": "Character",
+      "name": "Dudley Dursley",
+      "aliases": [],
+      "attributes": {
+        "blood_status": "Muggle",
+        "hogwarts_house": "none",
+        "patronus_form": "none",
+        "wand_wood": "none",
+        "wand_core": "none",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "Harry's cousin, a spoiled, overweight boy with blond hair. He is extremely pampered by his parents.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "lord_voldemort",
+      "type": "Character",
+      "name": "Lord Voldemort",
+      "aliases": [
+        "He-Who-Must-Not-Be-Named",
+        "You-Know-Who",
+        "The Dark Lord",
+        "Tom Marvolo Riddle",
+        "Tom Riddle"
+      ],
+      "attributes": {
+        "blood_status": "half-blood",
+        "hogwarts_house": "Slytherin",
+        "patronus_form": "none",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "The greatest Dark sorcerer of all time who killed Harry's parents and tried to kill Harry as a baby. His powers were destroyed when he failed to kill Harry. He was once a student named Tom Riddle at Hogwarts fifty years ago.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "hedwig",
+      "type": "Creature",
+      "name": "Hedwig",
+      "aliases": [],
+      "attributes": {
+        "ministry_classification": "unknown",
+        "native_region": "unknown",
+        "diet": "unknown",
+        "magical_abilities": "mail delivery"
+      },
+      "description": "Harry's snowy owl, used for delivering mail. She was angry with Harry about the car journey and was kept locked in her cage by Uncle Vernon.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "severus_snape",
+      "type": "Character",
+      "name": "Severus Snape",
+      "aliases": [
+        "Snape",
+        "Professor Snape"
+      ],
+      "attributes": {
+        "blood_status": "unknown",
+        "hogwarts_house": "Slytherin",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "The Potions master at Hogwarts, a thin man with sallow skin, a hooked nose, and greasy shoulder-length black hair. He is Harry's least favorite teacher and head of Slytherin House.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "rubeus_hagrid",
+      "type": "Character",
+      "name": "Rubeus Hagrid",
+      "aliases": [
+        "Hagrid"
+      ],
+      "attributes": {
+        "blood_status": "half-blood",
+        "hogwarts_house": "Gryffindor",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "The gamekeeper at Hogwarts, a half-giant with a shaggy black beard. He was expelled from Hogwarts fifty years ago and was falsely accused of opening the Chamber of Secrets. He has a cabin next to the Forbidden Forest.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "albus_dumbledore",
+      "type": "Character",
+      "name": "Albus Dumbledore",
+      "aliases": [
+        "Dumbledore",
+        "Professor Dumbledore"
+      ],
+      "attributes": {
+        "blood_status": "unknown",
+        "hogwarts_house": "Gryffindor",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "The headmaster of Hogwarts, with long silver beard and half-moon glasses. He is considered the greatest wizard of the age. He was suspended by the school governors but returned after Ginny was taken into the Chamber.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "gilderoy_lockhart",
+      "type": "Character",
+      "name": "Gilderoy Lockhart",
+      "aliases": [
+        "Lockhart",
+        "Professor Lockhart"
+      ],
+      "attributes": {
+        "blood_status": "unknown",
+        "hogwarts_house": "unknown",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "The Defense Against the Dark Arts teacher, a handsome wizard with wavy blond hair and bright blue eyes. He is a fraud who took credit for other wizards' achievements using Memory Charms. His own Memory Charm backfired in the Chamber of Secrets.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "draco_malfoy",
+      "type": "Character",
+      "name": "Draco Malfoy",
+      "aliases": [
+        "Malfoy"
+      ],
+      "attributes": {
+        "blood_status": "pure-blood",
+        "hogwarts_house": "Slytherin",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "A Slytherin student in Harry's year with pale, pointed features and cold gray eyes. He is Harry's enemy and comes from a wealthy pure-blood family. He became Slytherin's new Seeker.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "lucius_malfoy",
+      "type": "Character",
+      "name": "Lucius Malfoy",
+      "aliases": [
+        "Mr. Malfoy"
+      ],
+      "attributes": {
+        "blood_status": "pure-blood",
+        "hogwarts_house": "Slytherin",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "Draco's father, a school governor with pale, pointed features and cold gray eyes. He planted Tom Riddle's diary on Ginny Weasley to reopen the Chamber of Secrets and discredit Arthur Weasley. He was sacked as a school governor.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "ginevra_weasley",
+      "type": "Character",
+      "name": "Ginevra Weasley",
+      "aliases": [
+        "Ginny",
+        "Ginny Weasley"
+      ],
+      "attributes": {
+        "blood_status": "pure-blood",
+        "hogwarts_house": "Gryffindor",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "female"
+      },
+      "description": "Ron's younger sister with flaming red hair, starting her first year at Hogwarts. She was possessed by Tom Riddle through his diary and forced to open the Chamber of Secrets. She was taken into the Chamber but rescued by Harry.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "arthur_weasley",
+      "type": "Character",
+      "name": "Arthur Weasley",
+      "aliases": [
+        "Mr. Weasley"
+      ],
+      "attributes": {
+        "blood_status": "pure-blood",
+        "hogwarts_house": "unknown",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "Ron's father, a thin man going bald with red hair, wearing long green robes. He works at the Ministry of Magic in the Misuse of Muggle Artifacts Office and is fascinated by Muggles. He enchanted a Ford Anglia to fly.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "molly_weasley",
+      "type": "Character",
+      "name": "Molly Weasley",
+      "aliases": [
+        "Mrs. Weasley"
+      ],
+      "attributes": {
+        "blood_status": "pure-blood",
+        "hogwarts_house": "unknown",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "female"
+      },
+      "description": "Ron's mother, a short, plump, kind-faced woman who is very caring toward Harry. She sent Ron a Howler after he and Harry flew the car to Hogwarts.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "fred_weasley",
+      "type": "Character",
+      "name": "Fred Weasley",
+      "aliases": [
+        "Fred"
+      ],
+      "attributes": {
+        "blood_status": "pure-blood",
+        "hogwarts_house": "Gryffindor",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "One of Ron's twin brothers, a Gryffindor Beater on the Quidditch team. He and George are known for their pranks and jokes.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "george_weasley",
+      "type": "Character",
+      "name": "George Weasley",
+      "aliases": [
+        "George"
+      ],
+      "attributes": {
+        "blood_status": "pure-blood",
+        "hogwarts_house": "Gryffindor",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "One of Ron's twin brothers, a Gryffindor Beater on the Quidditch team. He and Fred are known for their pranks and jokes.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "percy_weasley",
+      "type": "Character",
+      "name": "Percy Weasley",
+      "aliases": [
+        "Percy"
+      ],
+      "attributes": {
+        "blood_status": "pure-blood",
+        "hogwarts_house": "Gryffindor",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "Ron's older brother, a Gryffindor prefect who is very pompous and rule-following. He has a secret girlfriend, Penelope Clearwater.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "minerva_mcgonagall",
+      "type": "Character",
+      "name": "Minerva McGonagall",
+      "aliases": [
+        "Professor McGonagall"
+      ],
+      "attributes": {
+        "blood_status": "unknown",
+        "hogwarts_house": "Gryffindor",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "female"
+      },
+      "description": "The Transfiguration teacher and Head of Gryffindor House, a bespectacled witch with her hair in a tight bun. She is strict but fair.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "dobby",
+      "type": "Creature",
+      "name": "Dobby",
+      "aliases": [],
+      "attributes": {
+        "ministry_classification": "unknown",
+        "native_region": "unknown",
+        "diet": "unknown",
+        "magical_abilities": "house-elf magic, can Apparate, powerful defensive magic"
+      },
+      "description": "A house-elf with large bat-like ears and bulging green eyes, wearing a pillowcase. He tried to prevent Harry from returning to Hogwarts to protect him from danger. He was enslaved to the Malfoy family until Harry freed him with a sock.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "colin_creevey",
+      "type": "Character",
+      "name": "Colin Creevey",
+      "aliases": [],
+      "attributes": {
+        "blood_status": "Muggle-born",
+        "hogwarts_house": "Gryffindor",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "A first-year Gryffindor student with mousy hair who is a huge fan of Harry. He was Petrified by the basilisk while trying to visit Harry in the hospital wing.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "mrs_norris",
+      "type": "Creature",
+      "name": "Mrs. Norris",
+      "aliases": [],
+      "attributes": {
+        "ministry_classification": "unknown",
+        "native_region": "unknown",
+        "diet": "unknown",
+        "magical_abilities": "none"
+      },
+      "description": "Argus Filch's skeletal gray cat who was Petrified by the basilisk on Halloween. She was revived by Mandrake Restorative Draught.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "argus_filch",
+      "type": "Character",
+      "name": "Argus Filch",
+      "aliases": [
+        "Filch"
+      ],
+      "attributes": {
+        "blood_status": "Squib",
+        "hogwarts_house": "none",
+        "patronus_form": "none",
+        "wand_wood": "none",
+        "wand_core": "none",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "The Hogwarts caretaker, a Squib (non-magical person born to wizarding parents) who is bitter and hates students. He owns Mrs. Norris and was taking a Kwikspell correspondence course.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "nearly_headless_nick",
+      "type": "Character",
+      "name": "Nicholas de Mimsy-Porpington",
+      "aliases": [
+        "Nearly Headless Nick",
+        "Nick"
+      ],
+      "attributes": {
+        "blood_status": "unknown",
+        "hogwarts_house": "Gryffindor",
+        "patronus_form": "none",
+        "wand_wood": "none",
+        "wand_core": "none",
+        "boggart": "none",
+        "gender": "male"
+      },
+      "description": "The ghost of Gryffindor Tower, wearing a plumed hat and ruff to conceal his nearly-severed neck. He was Petrified by the basilisk and later revived.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "moaning_myrtle",
+      "type": "Character",
+      "name": "Moaning Myrtle",
+      "aliases": [
+        "Myrtle"
+      ],
+      "attributes": {
+        "blood_status": "unknown",
+        "hogwarts_house": "unknown",
+        "patronus_form": "none",
+        "wand_wood": "none",
+        "wand_core": "none",
+        "boggart": "none",
+        "gender": "female"
+      },
+      "description": "A ghost who haunts a girls' bathroom on the first floor. She was killed by the basilisk fifty years ago when Tom Riddle first opened the Chamber of Secrets. She has thick, pearly spectacles and lank hair.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "justin_finch_fletchley",
+      "type": "Character",
+      "name": "Justin Finch-Fletchley",
+      "aliases": [
+        "Justin"
+      ],
+      "attributes": {
+        "blood_status": "Muggle-born",
+        "hogwarts_house": "Hufflepuff",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "A Hufflepuff student who was Petrified by the basilisk. He is Muggle-born and was originally down for Eton.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "cornelius_fudge",
+      "type": "Character",
+      "name": "Cornelius Fudge",
+      "aliases": [
+        "Fudge"
+      ],
+      "attributes": {
+        "blood_status": "unknown",
+        "hogwarts_house": "unknown",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "The Minister of Magic, wearing a strange mixture of Muggle and wizard clothing including a pinstriped suit and pointed purple boots. He took Hagrid to Azkaban as a precaution.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "aragog",
+      "type": "Creature",
+      "name": "Aragog",
+      "aliases": [],
+      "attributes": {
+        "ministry_classification": "unknown",
+        "native_region": "distant land",
+        "diet": "carnivorous",
+        "magical_abilities": "speech, intelligence"
+      },
+      "description": "An ancient Acromantula (giant spider) the size of a small elephant with milky white eyes, blind. Hagrid raised him from an egg fifty years ago. He lives in the Forbidden Forest with his wife Mosag and many offspring.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "fawkes",
+      "type": "Creature",
+      "name": "Fawkes",
+      "aliases": [],
+      "attributes": {
+        "ministry_classification": "unknown",
+        "native_region": "unknown",
+        "diet": "unknown",
+        "magical_abilities": "rebirth from ashes, healing tears, immense strength, loyalty-based summoning"
+      },
+      "description": "Dumbledore's phoenix, a crimson bird the size of a swan with a glittering golden tail and gleaming golden talons. Phoenix tears have healing powers and they can carry immensely heavy loads. Fawkes helped Harry in the Chamber of Secrets by blinding the basilisk and healing Harry's wound.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "basilisk",
+      "type": "Creature",
+      "name": "Basilisk",
+      "aliases": [
+        "King of Serpents",
+        "Serpent of Slytherin"
+      ],
+      "attributes": {
+        "ministry_classification": "unknown",
+        "native_region": "Chamber of Secrets",
+        "diet": "carnivorous",
+        "magical_abilities": "killing stare, deadly venom, Petrification through indirect viewing"
+      },
+      "description": "A gigantic serpent, bright poisonous green, thick as an oak trunk, with deadly venomous fangs. It can kill with its stare and is born from a chicken's egg hatched beneath a toad. The basilisk in the Chamber was controlled by Tom Riddle through Parseltongue and killed by Harry with the Sword of Gryffindor.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "oliver_wood",
+      "type": "Character",
+      "name": "Oliver Wood",
+      "aliases": [
+        "Wood"
+      ],
+      "attributes": {
+        "blood_status": "unknown",
+        "hogwarts_house": "Gryffindor",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "male"
+      },
+      "description": "A tall and burly sixth year, Captain of the Gryffindor Quidditch team. He is obsessed with winning the Quidditch Cup.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "penelope_clearwater",
+      "type": "Character",
+      "name": "Penelope Clearwater",
+      "aliases": [],
+      "attributes": {
+        "blood_status": "unknown",
+        "hogwarts_house": "Ravenclaw",
+        "patronus_form": "unknown",
+        "wand_wood": "unknown",
+        "wand_core": "unknown",
+        "boggart": "unknown",
+        "gender": "female"
+      },
+      "description": "A Ravenclaw prefect who is Percy Weasley's secret girlfriend. She was Petrified by the basilisk.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "hogwarts",
+      "type": "Location",
+      "name": "Hogwarts School of Witchcraft and Wizardry",
+      "aliases": [
+        "Hogwarts"
+      ],
+      "attributes": {
+        "magical_concealment": "yes",
+        "unplottable": "yes",
+        "owner": "unknown",
+        "affiliation": "Ministry of Magic"
+      },
+      "description": "A castle school for young witches and wizards, founded over a thousand years ago by Godric Gryffindor, Helga Hufflepuff, Rowena Ravenclaw, and Salazar Slytherin. It contains the Chamber of Secrets, built by Slytherin.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "chamber_of_secrets",
+      "type": "Location",
+      "name": "Chamber of Secrets",
+      "aliases": [
+        "The Chamber"
+      ],
+      "attributes": {
+        "magical_concealment": "yes",
+        "unplottable": "unknown",
+        "owner": "Salazar Slytherin",
+        "affiliation": "Slytherin"
+      },
+      "description": "A hidden chamber built by Salazar Slytherin deep under Hogwarts, accessible through Moaning Myrtle's bathroom via Parseltongue. It houses a basilisk and can only be opened by Slytherin's heir. The entrance is marked by serpents with emerald eyes.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "privet_drive",
+      "type": "Location",
+      "name": "Number Four, Privet Drive",
+      "aliases": [
+        "Privet Drive"
+      ],
+      "attributes": {
+        "magical_concealment": "no",
+        "unplottable": "no",
+        "owner": "Vernon and Petunia Dursley",
+        "affiliation": "Muggle"
+      },
+      "description": "The Dursley family home in Little Whinging, Surrey, where Harry lives with his aunt, uncle, and cousin during summer holidays. The Dursleys keep Harry's wizarding belongings locked in a cupboard under the stairs.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "the_burrow",
+      "type": "Location",
+      "name": "The Burrow",
+      "aliases": [],
+      "attributes": {
+        "magical_concealment": "yes",
+        "unplottable": "unknown",
+        "owner": "Arthur and Molly Weasley",
+        "affiliation": "Weasley family"
+      },
+      "description": "The Weasley family home near Ottery St. Catchpole, a crooked multi-story house that looks like it's held up by magic. It has a tumbledown garage, a yard with chickens, and a vegetable garden.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "diagon_alley",
+      "type": "Location",
+      "name": "Diagon Alley",
+      "aliases": [],
+      "attributes": {
+        "magical_concealment": "yes",
+        "unplottable": "unknown",
+        "owner": "various",
+        "affiliation": "wizarding community"
+      },
+      "description": "A wizarding shopping area in London with shops like Flourish and Blotts bookshop, Gringotts Bank, and Quality Quidditch Supplies. Accessible through the Leaky Cauldron.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "knockturn_alley",
+      "type": "Location",
+      "name": "Knockturn Alley",
+      "aliases": [],
+      "attributes": {
+        "magical_concealment": "yes",
+        "unplottable": "unknown",
+        "owner": "various",
+        "affiliation": "Dark Arts practitioners"
+      },
+      "description": "A dark, dingy alleyway near Diagon Alley filled with shops devoted to the Dark Arts, including Borgin and Burkes. Harry accidentally ended up there via Floo powder.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "forbidden_forest",
+      "type": "Location",
+      "name": "Forbidden Forest",
+      "aliases": [
+        "The Forest"
+      ],
+      "attributes": {
+        "magical_concealment": "yes",
+        "unplottable": "unknown",
+        "owner": "Hogwarts",
+        "affiliation": "Hogwarts"
+      },
+      "description": "A dark, dangerous forest on the grounds of Hogwarts, home to many magical creatures including Aragog and his spider colony, centaurs, and unicorns.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "azkaban",
+      "type": "Location",
+      "name": "Azkaban",
+      "aliases": [],
+      "attributes": {
+        "magical_concealment": "yes",
+        "unplottable": "yes",
+        "owner": "Ministry of Magic",
+        "affiliation": "Ministry of Magic"
+      },
+      "description": "The wizard prison where Hagrid was temporarily held as a precaution during the Chamber of Secrets attacks.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "riddle_diary",
+      "type": "Artifact",
+      "name": "Tom Riddle's Diary",
+      "aliases": [
+        "The Diary"
+      ],
+      "attributes": {
+        "is_horcrux": "yes",
+        "is_hallow": "no",
+        "creator": "Tom Riddle",
+        "magical_properties": "preserves memories, possesses writers, immune to normal damage",
+        "sentience": "yes"
+      },
+      "description": "A small black diary from fifty years ago with T.M. Riddle's name in it. It preserved Tom Riddle's sixteen-year-old memory and could possess people who wrote in it. Lucius Malfoy planted it on Ginny Weasley. Harry destroyed it with a basilisk fang.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "sword_of_gryffindor",
+      "type": "Artifact",
+      "name": "Sword of Gryffindor",
+      "aliases": [
+        "The Sword"
+      ],
+      "attributes": {
+        "is_horcrux": "no",
+        "is_hallow": "no",
+        "creator": "Godric Gryffindor",
+        "magical_properties": "appears to worthy Gryffindors in need, absorbs basilisk venom",
+        "sentience": "no"
+      },
+      "description": "A gleaming silver sword with a handle glittering with rubies the size of eggs, engraved with 'Godric Gryffindor' below the hilt. It appeared from the Sorting Hat to Harry in the Chamber of Secrets and he used it to kill the basilisk.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "sorting_hat",
+      "type": "Artifact",
+      "name": "Sorting Hat",
+      "aliases": [
+        "The Hat"
+      ],
+      "attributes": {
+        "is_horcrux": "no",
+        "is_hallow": "no",
+        "creator": "Hogwarts founders",
+        "magical_properties": "reads minds, sorts students, can produce Gryffindor artifacts",
+        "sentience": "yes"
+      },
+      "description": "An old, patched, frayed wizard's hat that sorts students into Hogwarts houses. It can communicate telepathically and produced the Sword of Gryffindor for Harry in the Chamber of Secrets.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "nimbus_two_thousand",
+      "type": "Artifact",
+      "name": "Nimbus Two Thousand",
+      "aliases": [],
+      "attributes": {
+        "is_horcrux": "no",
+        "is_hallow": "no",
+        "creator": "unknown",
+        "magical_properties": "fast flying",
+        "sentience": "no"
+      },
+      "description": "Harry's racing broomstick, considered top-of-the-line. It was given to him in his first year.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "flying_ford_anglia",
+      "type": "Artifact",
+      "name": "Flying Ford Anglia",
+      "aliases": [
+        "The Car"
+      ],
+      "attributes": {
+        "is_horcrux": "no",
+        "is_hallow": "no",
+        "creator": "Arthur Weasley (enchanter)",
+        "magical_properties": "flight, invisibility, sentience, magically expanded interior",
+        "sentience": "yes"
+      },
+      "description": "An old turquoise Ford Anglia that Arthur Weasley enchanted to fly and made invisible with an Invisibility Booster. It became wild after crashing into the Whomping Willow and lived in the Forbidden Forest. It rescued Harry and Ron from Aragog's spiders.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "invisibility_cloak",
+      "type": "Artifact",
+      "name": "Invisibility Cloak",
+      "aliases": [
+        "The Cloak"
+      ],
+      "attributes": {
+        "is_horcrux": "no",
+        "is_hallow": "yes",
+        "creator": "unknown",
+        "magical_properties": "invisibility",
+        "sentience": "no"
+      },
+      "description": "A long and silvery cloak that makes the wearer invisible. Harry inherited it from his father James Potter.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "polyjuice_potion",
+      "type": "Potion",
+      "name": "Polyjuice Potion",
+      "aliases": [],
+      "attributes": {
+        "color": "varies based on target",
+        "ingredients": "lacewing flies, leeches, fluxweed, knotgrass, bicorn horn, boomslang skin, hair of target",
+        "brewing_time": "one month",
+        "effect": "transforms drinker into another person for one hour"
+      },
+      "description": "A complicated potion that transforms the drinker into another person for about an hour. Requires lacewing flies, leeches, fluxweed, knotgrass, powdered bicorn horn, shredded boomslang skin, and a bit of the person to transform into. Takes a month to brew.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "mandrake_restorative_draught",
+      "type": "Potion",
+      "name": "Mandrake Restorative Draught",
+      "aliases": [],
+      "attributes": {
+        "color": "unknown",
+        "ingredients": "mature Mandrakes",
+        "brewing_time": "unknown",
+        "effect": "revives Petrified victims"
+      },
+      "description": "A potion made from mature Mandrakes that can revive Petrified people. Professor Sprout brewed it to revive the basilisk's victims.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "expelliarmus",
+      "type": "Spell",
+      "name": "Expelliarmus",
+      "aliases": [
+        "Disarming Charm"
+      ],
+      "attributes": {
+        "incantation": "Expelliarmus",
+        "type": "charm",
+        "light_color": "scarlet",
+        "hand_movement": "unknown",
+        "effect": "disarms opponent"
+      },
+      "description": "A spell that disarms an opponent by making their wand fly out of their hand. Snape taught it at the Dueling Club and Harry used it against Lockhart.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "obliviate",
+      "type": "Spell",
+      "name": "Obliviate",
+      "aliases": [
+        "Memory Charm"
+      ],
+      "attributes": {
+        "incantation": "Obliviate",
+        "type": "charm",
+        "light_color": "unknown",
+        "hand_movement": "unknown",
+        "effect": "erases or modifies memories"
+      },
+      "description": "A spell that erases or modifies memories. Lockhart used it on many wizards to steal credit for their achievements. His Memory Charm backfired when he used Ron's broken wand.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "chamber_opening_event",
+      "type": "Event",
+      "name": "Opening of the Chamber of Secrets",
+      "aliases": [],
+      "attributes": {
+        "date": "1942-1943 and 1992-1993",
+        "outcome": "basilisk killed, diary destroyed, victims revived",
+        "casualties": "Myrtle (first opening), no deaths (second opening)"
+      },
+      "description": "The Chamber of Secrets was opened twice: first fifty years ago by Tom Riddle, resulting in Myrtle's death and Hagrid's expulsion; and again in Harry's second year when Ginny Weasley was possessed by Riddle's diary. Multiple students were Petrified before Harry defeated the basilisk and destroyed the diary.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "parseltongue",
+      "type": "Concept",
+      "name": "Parseltongue",
+      "aliases": [
+        "Snake language"
+      ],
+      "attributes": {
+        "origin": "Salazar Slytherin",
+        "consequences": "often associated with Dark wizards, allows control of serpents"
+      },
+      "description": "The ability to speak to snakes, a very rare gift associated with Salazar Slytherin and his descendants. Harry can speak it because Voldemort transferred some of his powers to Harry when he tried to kill him as a baby.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "id": "heir_of_slytherin",
+      "type": "Concept",
+      "name": "Heir of Slytherin",
+      "aliases": [],
+      "attributes": {
+        "origin": "Salazar Slytherin",
+        "consequences": "can open Chamber of Secrets, speak Parseltongue, control basilisk"
+      },
+      "description": "The descendant of Salazar Slytherin who can open the Chamber of Secrets and control the basilisk. Tom Riddle/Voldemort is the last remaining heir of Slytherin.",
+      "mentions": [
+        {
+          "file_name": "Harry Potter 2 - Harry Potter and the Chamber of Secrets - J. K. Rowling _ Mary Grandpre.epub",
+          "chunk_id": "2"
+        },
+        {
+          "file_name": "harry_potter_section_02.txt",
+          "chunk_id": "2"
+        }
+      ],
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "harry_potter",
+      "target_id": "ronald_weasley",
+      "type": "familial_bond",
+      "description": "Harry and Ron are best friends who met at Hogwarts and have been through many adventures together.",
+      "evidence": "Harry missed his best friends, Ron Weasley and Hermione Granger.",
+      "properties": {
+        "relation_type": "best friend",
+        "is_adoptive": "no"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "hermione_granger",
+      "type": "familial_bond",
+      "description": "Harry and Hermione are best friends who met at Hogwarts.",
+      "evidence": "Harry missed his best friends, Ron Weasley and Hermione Granger.",
+      "properties": {
+        "relation_type": "best friend",
+        "is_adoptive": "no"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "vernon_dursley",
+      "type": "familial_bond",
+      "description": "Vernon is Harry's uncle by marriage, who treats him poorly and despises magic.",
+      "evidence": "Mr. Vernon Dursley had been woken in the early hours of the morning by a loud, hooting noise from his nephew Harry's room.",
+      "properties": {
+        "relation_type": "uncle",
+        "is_adoptive": "no"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "petunia_dursley",
+      "type": "familial_bond",
+      "description": "Petunia is Harry's aunt, his mother's sister, who raised him after his parents died.",
+      "evidence": "Harry had been brought up by his dead mother's sister and her husband.",
+      "properties": {
+        "relation_type": "aunt",
+        "is_adoptive": "no"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "dudley_dursley",
+      "type": "familial_bond",
+      "description": "Dudley is Harry's cousin who bullied him throughout childhood.",
+      "evidence": "He had spent ten years with the Dursleys, never understanding why he kept making odd things happen without meaning to.",
+      "properties": {
+        "relation_type": "cousin",
+        "is_adoptive": "no"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "lord_voldemort",
+      "type": "enemy_of",
+      "description": "Voldemort killed Harry's parents and tried to kill Harry as a baby, but failed and lost his powers.",
+      "evidence": "At the age of one year old, Harry had somehow survived a curse from the greatest Dark sorcerer of all time, Lord Voldemort.",
+      "properties": {
+        "reason": "Voldemort tried to kill Harry and murdered his parents",
+        "intensity": "extreme"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "hedwig",
+      "type": "wields",
+      "description": "Hedwig is Harry's pet owl who delivers his mail.",
+      "evidence": "Uncle Vernon had even padlocked Harry's owl, Hedwig, inside her cage.",
+      "properties": {
+        "ownership_status": "owner",
+        "acquisition_method": "gift"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "hogwarts",
+      "type": "located_in",
+      "description": "Harry attends Hogwarts School of Witchcraft and Wizardry.",
+      "evidence": "Harry Potter was a wizard — a wizard fresh from his first year at Hogwarts School of Witchcraft and Wizardry.",
+      "properties": {
+        "time_period": "school year"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "chamber_of_secrets",
+      "type": "participated_in",
+      "description": "Harry entered the Chamber of Secrets to rescue Ginny Weasley and defeated the basilisk.",
+      "evidence": "Harry entered the Chamber, killed the basilisk with the Sword of Gryffindor, and destroyed Tom Riddle's diary.",
+      "properties": {
+        "role": "hero",
+        "side_taken": "good"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "sword_of_gryffindor",
+      "type": "wields",
+      "description": "Harry pulled the Sword of Gryffindor from the Sorting Hat and used it to kill the basilisk.",
+      "evidence": "A gleaming silver sword had appeared inside the hat... Harry drove it to the hilt into the roof of the serpent's mouth.",
+      "properties": {
+        "ownership_status": "temporary wielder",
+        "acquisition_method": "appeared from Sorting Hat"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "invisibility_cloak",
+      "type": "wields",
+      "description": "Harry owns an Invisibility Cloak inherited from his father.",
+      "evidence": "Harry had inherited just one thing from his father: a long and silvery Invisibility Cloak.",
+      "properties": {
+        "ownership_status": "owner",
+        "acquisition_method": "inheritance"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "harry_potter",
+      "target_id": "expelliarmus",
+      "type": "casts",
+      "description": "Harry learned and used the Disarming Charm.",
+      "evidence": "Harry pulled out his wand and shouted, 'Expelliarmus!'",
+      "properties": {
+        "proficiency_level": "competent",
+        "is_signature_spell": "no"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ronald_weasley",
+      "target_id": "arthur_weasley",
+      "type": "familial_bond",
+      "description": "Arthur is Ron's father.",
+      "evidence": "Ron's father, Mr. Weasley, works at the Ministry of Magic.",
+      "properties": {
+        "relation_type": "son",
+        "is_adoptive": "no"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ronald_weasley",
+      "target_id": "molly_weasley",
+      "type": "familial_bond",
+      "description": "Molly is Ron's mother.",
+      "evidence": "Mrs. Weasley was marching across the yard... 'Have you any idea how worried I've been?'",
+      "properties": {
+        "relation_type": "son",
+        "is_adoptive": "no"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ronald_weasley",
+      "target_id": "fred_weasley",
+      "type": "familial_bond",
+      "description": "Fred is Ron's older twin brother.",
+      "evidence": "Grinning at Harry from the front seats were Fred and George, Ron's elder twin brothers.",
+      "properties": {
+        "relation_type": "brother",
+        "is_adoptive": "no"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ronald_weasley",
+      "target_id": "george_weasley",
+      "type": "familial_bond",
+      "description": "George is Ron's older twin brother.",
+      "evidence": "Grinning at Harry from the front seats were Fred and George, Ron's elder twin brothers.",
+      "properties": {
+        "relation_type": "brother",
+        "is_adoptive": "no"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ronald_weasley",
+      "target_id": "percy_weasley",
+      "type": "familial_bond",
+      "description": "Percy is Ron's older brother.",
+      "evidence": "Percy Weasley was sitting in a chair behind Lee, but for once he didn't seem keen to make his views heard.",
+      "properties": {
+        "relation_type": "brother",
+        "is_adoptive": "no"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ronald_weasley",
+      "target_id": "ginevra_weasley",
+      "type": "familial_bond",
+      "description": "Ginny is Ron's younger sister.",
+      "evidence": "'Ginny,' said Ron in an undertone to Harry. 'My sister.'",
+      "properties": {
+        "relation_type": "brother",
+        "is_adoptive": "no"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ronald_weasley",
+      "target_id": "hogwarts",
+      "type": "located_in",
+      "description": "Ron attends Hogwarts School of Witchcraft and Wizardry.",
+      "evidence": "Ron is in his second year at Hogwarts in Gryffindor House.",
+      "properties": {
+        "time_period": "school year"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ronald_weasley",
+      "target_id": "chamber_of_secrets",
+      "type": "participated_in",
+      "description": "Ron helped Harry investigate the Chamber of Secrets and accompanied him partway into it.",
+      "evidence": "Ron followed Harry into the Chamber entrance but was separated by a rock fall.",
+      "properties": {
+        "role": "supporter",
+        "side_taken": "good"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "hermione_granger",
+      "target_id": "hogwarts",
+      "type": "located_in",
+      "description": "Hermione attends Hogwarts School of Witchcraft and Wizardry.",
+      "evidence": "Hermione is in her second year at Hogwarts in Gryffindor House.",
+      "properties": {
+        "time_period": "school year"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "hermione_granger",
+      "target_id": "polyjuice_potion",
+      "type": "brews",
+      "description": "Hermione brewed Polyjuice Potion to help investigate Draco Malfoy.",
+      "evidence": "Hermione had been stirring the Polyjuice Potion in Moaning Myrtle's bathroom.",
+      "properties": {
+        "success_rate": "successful"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "lord_voldemort",
+      "target_id": "hogwarts",
+      "type": "located_in",
+      "description": "Tom Riddle attended Hogwarts fifty years ago.",
+      "evidence": "Tom Riddle had been at Hogwarts fifty years ago.",
+      "properties": {
+        "time_period": "fifty years ago"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "lord_voldemort",
+      "target_id": "chamber_of_secrets",
+      "type": "participated_in",
+      "description": "Tom Riddle opened the Chamber of Secrets fifty years ago and again through his diary.",
+      "evidence": "Tom Riddle opened the Chamber of Secrets as a student and preserved his memory in a diary to open it again.",
+      "properties": {
+        "role": "perpetrator",
+        "side_taken": "evil"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "lord_voldemort",
+      "target_id": "riddle_diary",
+      "type": "creator_of",
+      "description": "Tom Riddle created the diary to preserve his sixteen-year-old memory.",
+      "evidence": "I decided to leave behind a diary, preserving my sixteen-year-old self in its pages.",
+      "properties": {
+        "date_created": "unknown",
+        "purpose": "preserve memory and reopen Chamber"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "lord_voldemort",
+      "target_id": "basilisk",
+      "type": "creator_of",
+      "description": "Tom Riddle controlled the basilisk through Parseltongue.",
+      "evidence": "Riddle opened his mouth wide and hissed... The basilisk was moving toward Harry.",
+      "properties": {
+        "date_created": "unknown",
+        "purpose": "weapon to purge Muggle-borns"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 0.9,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "albus_dumbledore",
+      "target_id": "hogwarts",
+      "type": "located_in",
+      "description": "Dumbledore is the headmaster of Hogwarts.",
+      "evidence": "Professor Dumbledore, the headmaster, sat watching the Sorting from the staff table.",
+      "properties": {
+        "time_period": "current"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "albus_dumbledore",
+      "target_id": "fawkes",
+      "type": "wields",
+      "description": "Fawkes is Dumbledore's pet phoenix.",
+      "evidence": "'Fawkes is a phoenix, Harry,' said Dumbledore.",
+      "properties": {
+        "ownership_status": "owner",
+        "acquisition_method": "unknown"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "albus_dumbledore",
+      "target_id": "lord_voldemort",
+      "type": "mentors",
+      "description": "Dumbledore taught Tom Riddle at Hogwarts fifty years ago.",
+      "evidence": "I taught him myself, fifty years ago, at Hogwarts.",
+      "properties": {
+        "subject": "general education",
+        "duration": "student years"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "rubeus_hagrid",
+      "target_id": "hogwarts",
+      "type": "located_in",
+      "description": "Hagrid is the gamekeeper at Hogwarts.",
+      "evidence": "Hagrid, the Hogwarts gamekeeper, came striding toward them.",
+      "properties": {
+        "time_period": "current"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "rubeus_hagrid",
+      "target_id": "aragog",
+      "type": "creator_of",
+      "description": "Hagrid raised Aragog from an egg when he was a student.",
+      "evidence": "A traveler gave me to Hagrid when I was an egg. Hagrid was only a boy, but he cared for me.",
+      "properties": {
+        "date_created": "fifty years ago",
+        "purpose": "pet"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "rubeus_hagrid",
+      "target_id": "chamber_opening_event",
+      "type": "participated_in",
+      "description": "Hagrid was falsely accused of opening the Chamber of Secrets fifty years ago and expelled.",
+      "evidence": "They believed that I was the monster that dwells in what they call the Chamber of Secrets. They thought that Hagrid had opened the Chamber and set me free.",
+      "properties": {
+        "role": "falsely accused",
+        "side_taken": "innocent"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "gilderoy_lockhart",
+      "target_id": "hogwarts",
+      "type": "located_in",
+      "description": "Lockhart is the Defense Against the Dark Arts teacher at Hogwarts.",
+      "evidence": "Gilderoy Lockhart, the Defense Against the Dark Arts teacher.",
+      "properties": {
+        "time_period": "Harry's second year"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "gilderoy_lockhart",
+      "target_id": "obliviate",
+      "type": "casts",
+      "description": "Lockhart frequently used Memory Charms to steal credit for other wizards' achievements.",
+      "evidence": "If there's one thing I pride myself on, it's my Memory Charms.",
+      "properties": {
+        "proficiency_level": "expert",
+        "is_signature_spell": "yes"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "draco_malfoy",
+      "target_id": "lucius_malfoy",
+      "type": "familial_bond",
+      "description": "Lucius is Draco's father.",
+      "evidence": "The man who followed could only be Draco's father.",
+      "properties": {
+        "relation_type": "son",
+        "is_adoptive": "no"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "draco_malfoy",
+      "target_id": "harry_potter",
+      "type": "enemy_of",
+      "description": "Draco and Harry are enemies at Hogwarts.",
+      "evidence": "Draco Malfoy... He hates me.",
+      "properties": {
+        "reason": "rivalry and opposing values",
+        "intensity": "strong"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "lucius_malfoy",
+      "target_id": "riddle_diary",
+      "type": "wields",
+      "description": "Lucius Malfoy planted Tom Riddle's diary on Ginny Weasley to reopen the Chamber of Secrets.",
+      "evidence": "'Because you gave it to her,' said Harry. 'In Flourish and Blotts. You picked up her old Transfiguration book and slipped the diary inside it.'",
+      "properties": {
+        "ownership_status": "former owner",
+        "acquisition_method": "unknown"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "lucius_malfoy",
+      "target_id": "dobby",
+      "type": "wields",
+      "description": "Dobby was enslaved to the Malfoy family until Harry freed him.",
+      "evidence": "Dobby serves the Malfoy family... 'Master has given a sock,' said the elf. 'Dobby is free.'",
+      "properties": {
+        "ownership_status": "former master",
+        "acquisition_method": "unknown"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ginevra_weasley",
+      "target_id": "riddle_diary",
+      "type": "wields",
+      "description": "Ginny wrote in Tom Riddle's diary and was possessed by it.",
+      "evidence": "Little Ginny's been writing in it for months and months, telling me all her pitiful worries and woes.",
+      "properties": {
+        "ownership_status": "victim",
+        "acquisition_method": "planted by Lucius Malfoy"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ginevra_weasley",
+      "target_id": "chamber_of_secrets",
+      "type": "participated_in",
+      "description": "Ginny was possessed by Tom Riddle and forced to open the Chamber of Secrets.",
+      "evidence": "Ginny Weasley opened the Chamber of Secrets. She strangled the school roosters and daubed threatening messages on the walls.",
+      "properties": {
+        "role": "unwilling perpetrator",
+        "side_taken": "possessed"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "ginevra_weasley",
+      "target_id": "percy_weasley",
+      "type": "familial_bond",
+      "description": "Percy is Ginny's older brother.",
+      "evidence": "Percy keeps telling me I'm pale and I'm not myself.",
+      "properties": {
+        "relation_type": "sister",
+        "is_adoptive": "no"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "arthur_weasley",
+      "target_id": "flying_ford_anglia",
+      "type": "creator_of",
+      "description": "Arthur Weasley enchanted a Ford Anglia to fly.",
+      "evidence": "Arthur Weasley... enchanting it to make it fly.",
+      "properties": {
+        "date_created": "before Harry's second year",
+        "purpose": "transportation"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "fred_weasley",
+      "target_id": "george_weasley",
+      "type": "familial_bond",
+      "description": "Fred and George are twin brothers.",
+      "evidence": "Fred and George, Ron's elder twin brothers.",
+      "properties": {
+        "relation_type": "twin",
+        "is_adoptive": "no"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "percy_weasley",
+      "target_id": "penelope_clearwater",
+      "type": "familial_bond",
+      "description": "Percy and Penelope are secretly dating.",
+      "evidence": "'Percy's got a girlfriend.' 'It's that Ravenclaw prefect, Penelope Clearwater.'",
+      "properties": {
+        "relation_type": "girlfriend",
+        "is_adoptive": "no"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "moaning_myrtle",
+      "target_id": "basilisk",
+      "type": "killed_by",
+      "description": "Myrtle was killed by the basilisk fifty years ago.",
+      "evidence": "'I just remember seeing a pair of great, big, yellow eyes. My whole body sort of seized up, and then I was floating away.'",
+      "properties": {
+        "method": "basilisk stare",
+        "spell_used": "none"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "moaning_myrtle",
+      "target_id": "chamber_opening_event",
+      "type": "participated_in",
+      "description": "Myrtle was the victim who died when the Chamber was first opened.",
+      "evidence": "The body of the girl who was killed was discovered in a bathroom.",
+      "properties": {
+        "role": "victim",
+        "side_taken": "innocent"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "fawkes",
+      "target_id": "basilisk",
+      "type": "enemy_of",
+      "description": "Fawkes fought the basilisk and blinded it to protect Harry.",
+      "evidence": "Fawkes was soaring around its head, and the basilisk was snapping furiously at him... its eyes, both its great, bulbous yellow eyes, had been punctured by the phoenix.",
+      "properties": {
+        "reason": "protecting Harry",
+        "intensity": "combat"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "chamber_of_secrets",
+      "target_id": "hogwarts",
+      "type": "located_in",
+      "description": "The Chamber of Secrets is hidden deep under Hogwarts.",
+      "evidence": "We must be miles under the school... Under the lake, probably.",
+      "properties": {
+        "time_period": "always"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    },
+    {
+      "source_id": "basilisk",
+      "target_id": "chamber_of_secrets",
+      "type": "located_in",
+      "description": "The basilisk lives in the Chamber of Secrets.",
+      "evidence": "The monster in the Chamber's a basilisk — a giant serpent!",
+      "properties": {
+        "time_period": "thousand years"
+      },
+      "source_ref": {
+        "file_name": "harry_potter_section_02.txt",
+        "chunk_id": "2"
+      },
+      "confidence": {
+        "score": 1.0,
+        "needs_review": false,
+        "review_reason": null
+      }
+    }
+  ],
+  "schema_proposals": []
+}
