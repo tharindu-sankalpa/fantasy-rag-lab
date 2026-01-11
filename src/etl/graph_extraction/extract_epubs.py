@@ -45,20 +45,35 @@ class EpubProcessor:
     Attributes:
         data_dir (Path): The root directory containing raw EPUB files.
         output_dir (Path): The directory where processed text files will be saved.
+        target_context_window (int): Maximum context window size in tokens for the target LLM.
+        max_content_tokens (int): Maximum tokens for content (reserves 20% for prompt/schema).
     """
 
-    def __init__(self, data_dir: str = "data", output_dir: str = "data/processed_books"):
+    def __init__(
+        self,
+        data_dir: str = "data",
+        output_dir: str = "data/processed_books",
+        target_context_window: int = 1_000_000
+    ):
         """Initializes the EpubProcessor.
 
         Args:
-            data_dir: Path to the directory containing input EPUB files. 
+            data_dir: Path to the directory containing input EPUB files.
                 Defaults to "data".
             output_dir: Path to the directory where output text files will be stored.
                 Defaults to "data/processed_books".
+            target_context_window: Maximum context window size in tokens for the target LLM.
+                Defaults to 1,000,000 (Gemini 1.5 Pro). Use 200,000 for Claude models,
+                400,000 for GPT-5.2, etc.
         """
         self.data_dir = Path(data_dir)
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
+
+        # Store context window configuration
+        self.target_context_window = target_context_window
+        # Reserve ~20% for prompt, schema, and response buffer
+        self.max_content_tokens = int(target_context_window * 0.80)
 
     def extract_text_from_epub(self, epub_path: Path) -> str:
         """Reads an EPUB file and extracts clean text from all chapters.
@@ -232,15 +247,21 @@ class EpubProcessor:
                 break
 
 
-def get_series_definitions(data_root: Path) -> Dict[str, Tuple[Path, List[List[str]]]]:
+def get_series_definitions(
+    data_root: Path,
+    max_tokens: int = 1_000_000
+) -> Dict[str, Tuple[Path, List[List[str]]]]:
     """Defines the file groups and directory structures for specific book series.
 
     This configuration function maps series names to their directory paths and
-    logical groupings of books. Groupings are strictly 2 books per section with
-    a 1-book overlap (sliding window).
+    logical groupings of books. Groupings are created using a sliding window
+    strategy with 1-book overlap, respecting the specified token budget.
 
     Args:
         data_root: The root path where series subdirectories are located.
+        max_tokens: Maximum token budget per section (default: 1,000,000 for Gemini).
+            Use 200,000 for Claude models, 400,000 for GPT-5.2, etc.
+            This determines how many books can be grouped together.
 
     Returns:
         A dictionary where:
@@ -248,6 +269,11 @@ def get_series_definitions(data_root: Path) -> Dict[str, Tuple[Path, List[List[s
         - Values are tuples containing:
             1. The Path to the series directory.
             2. A List of Lists of strings (the filename groups).
+
+    Note:
+        The grouping strategy adapts to the specified max_tokens:
+        - Larger context windows (1M): Can pair multiple books together
+        - Smaller context windows (200K): May require individual book processing
     """
     
 
@@ -272,7 +298,31 @@ def get_series_definitions(data_root: Path) -> Dict[str, Tuple[Path, List[List[s
                 return tokens
         return 0 # Should not happen with correct keys
 
-    def create_safe_sliding_windows(books: List[str]) -> List[List[str]]:
+    def create_safe_sliding_windows(
+        books: List[str],
+        max_tokens: int = 1_000_000
+    ) -> List[List[str]]:
+        """
+        Creates sliding window groups of books based on token budget.
+
+        Groups consecutive books together while respecting the maximum token limit.
+        Uses a sliding window with 1-book overlap strategy to maintain narrative continuity.
+
+        Args:
+            books: List of book filenames to group.
+            max_tokens: Maximum token budget per group (default: 1,000,000 for Gemini).
+                Use 200,000 for Claude models, 400,000 for GPT-5.2, etc.
+
+        Returns:
+            List of lists, where each inner list contains book filenames that fit
+            within the token budget.
+
+        Strategy:
+            - Pairs consecutive books (book1+book2, book2+book3, etc.)
+            - If a pair fits under max_tokens, include it
+            - If a pair exceeds the limit, break it into singletons
+            - Ensures every book appears in at least one section
+        """
         if not books:
             return []
         if len(books) == 1:
@@ -280,25 +330,28 @@ def get_series_definitions(data_root: Path) -> Dict[str, Tuple[Path, List[List[s
 
         groups = []
         pairs = []
-        # Generate candidate pairs
+
+        # Generate candidate pairs (sliding window with 1-book overlap)
         for i in range(len(books) - 1):
             pairs.append((books[i], books[i+1]))
 
+        # Evaluate each pair against the token budget
         for i, (b1, b2) in enumerate(pairs):
             s1 = get_token_estimate(b1)
             s2 = get_token_estimate(b2)
             total_tokens = s1 + s2
-             
-            if total_tokens < 1_000_000:
+
+            # Check if the pair fits within the configured max_tokens limit
+            if total_tokens < max_tokens:
                 groups.append([b1, b2])
             else:
-                # Pair exceeds limit. 
-                # Strategy: Break the link. Valid strategy is "one book only".
-                
+                # Pair exceeds limit.
+                # Strategy: Break the link and handle books as singletons.
+
                 # If this is the very first pair and it failed, we must ensure b1 is covered.
                 if i == 0:
                     groups.append([b1])
-                
+
                 # Now decide for b2.
                 # If the NEXT pair is safe, b2 will be covered there (as the first element of next pair).
                 # If the next pair is NOT safe (or doesn't exist), we must cover b2 here as a singleton.
@@ -307,12 +360,14 @@ def get_series_definitions(data_root: Path) -> Dict[str, Tuple[Path, List[List[s
                     nb1, nb2 = pairs[i+1]
                     ns1 = get_token_estimate(nb1)
                     ns2 = get_token_estimate(nb2)
-                    if ns1 + ns2 < 1_000_000:
+                    # Check next pair against max_tokens limit
+                    if ns1 + ns2 < max_tokens:
                         next_is_safe = True
-                
+
+                # If next pair is unsafe or doesn't exist, add b2 as a singleton
                 if not next_is_safe:
                     groups.append([b2])
-                    
+
         return groups
 
     # Harry Potter
@@ -326,7 +381,8 @@ def get_series_definitions(data_root: Path) -> Dict[str, Tuple[Path, List[List[s
         "Harry Potter 6 - Harry Potter and the Half-Blood Prince - J. K. Rowling _ Mary Grandpre.epub",
         "Harry Potter 7 - Harry Potter and the Deathly Hallows - J. K. Rowling _ Mary Grandpre.epub",
     ]
-    hp_groups = create_safe_sliding_windows(hp_books)
+    # Apply the token budget to generate appropriate groupings for each series
+    hp_groups = create_safe_sliding_windows(hp_books, max_tokens)
 
     # ASOIAF (A Song of Ice and Fire) - Timeline Order
     asoiaf_dir = data_root / "song_of_ice_and_fire"
@@ -340,7 +396,7 @@ def get_series_definitions(data_root: Path) -> Dict[str, Tuple[Path, List[List[s
         "A Feast For Crows - George RR Martin.epub",
         "A Dance With Dragons - George RR Martin.epub",
     ]
-    asoiaf_groups = create_safe_sliding_windows(asoiaf_books)
+    asoiaf_groups = create_safe_sliding_windows(asoiaf_books, max_tokens)
 
     # Wheel of Time
     wot_dir = data_root / "wheel_of_time"
@@ -362,7 +418,7 @@ def get_series_definitions(data_root: Path) -> Dict[str, Tuple[Path, List[List[s
         "14. A Memory of Light.epub",
         "The Wheel of Time Companion _ The People, Places and History of the Bestselling Series.epub"
     ]
-    wot_groups = create_safe_sliding_windows(wot_books)
+    wot_groups = create_safe_sliding_windows(wot_books, max_tokens)
 
     return {
         "harry_potter": (hp_dir, hp_groups),
@@ -375,17 +431,90 @@ def get_series_definitions(data_root: Path) -> Dict[str, Tuple[Path, List[List[s
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="Process EPUB series into text datasets.")
-    parser.add_argument("--dry-run", action="store_true", help="Process only the first book of each series to verify.")
-    parser.add_argument("--series", type=str, help="Specific series to process (optional).")
+    parser = argparse.ArgumentParser(
+        description="Process EPUB series into text datasets with model-aware chunking.",
+        epilog="""
+Examples:
+  # Process for Gemini (1M context window) - default
+  python extract_epubs.py
+
+  # Process for Claude models (200k context window)
+  python extract_epubs.py --context-window 200000 --output-dir data/processed_books_claude_200k
+
+  # Process for GPT-5.2 (400k context window)
+  python extract_epubs.py --context-window 400000 --output-dir data/processed_books_gpt_400k
+
+  # Dry run for testing
+  python extract_epubs.py --dry-run --context-window 200000
+        """,
+        formatter_class=argparse.RawDescriptionHelpFormatter
+    )
+
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Process only the first book of each series to verify configuration."
+    )
+
+    parser.add_argument(
+        "--series",
+        type=str,
+        help="Specific series to process (harry_potter, asoiaf, wheel_of_time). If not specified, processes all series."
+    )
+
+    parser.add_argument(
+        "--context-window",
+        type=int,
+        default=1_000_000,
+        help="Maximum context window size in tokens for the target LLM. "
+             "Examples: 1000000 (Gemini), 200000 (Claude Opus/Sonnet 4.5), 400000 (GPT-5.2). "
+             "Default: 1000000"
+    )
+
+    parser.add_argument(
+        "--output-dir",
+        type=str,
+        default="data/processed_books",
+        help="Directory to save processed text files. "
+             "Use descriptive names like 'data/processed_books_claude_200k' or 'data/processed_books_gpt_400k' "
+             "to distinguish different chunking strategies. "
+             "Default: data/processed_books"
+    )
+
     args = parser.parse_args()
 
-    processor = EpubProcessor()
-    definitions = get_series_definitions(processor.data_dir)
+    # Log the configuration for transparency
+    logger.info(
+        "epub_processor_initialized",
+        context_window=args.context_window,
+        output_dir=args.output_dir,
+        dry_run=args.dry_run,
+        series_filter=args.series or "all"
+    )
 
+    # Initialize processor with configured context window
+    processor = EpubProcessor(
+        output_dir=args.output_dir,
+        target_context_window=args.context_window
+    )
+
+    # Get series definitions using the configured max token budget
+    definitions = get_series_definitions(
+        processor.data_dir,
+        max_tokens=processor.max_content_tokens
+    )
+
+    # Process each series
     for series_name, (dir_path, groups) in definitions.items():
         if args.series and args.series != series_name:
             continue
 
-        logger.info("starting_series", series=series_name)
+        logger.info(
+            "starting_series",
+            series=series_name,
+            num_groups=len(groups),
+            context_window=args.context_window
+        )
         processor.process_series(series_name, groups, dir_path, dry_run=args.dry_run)
+
+    logger.info("epub_processing_complete", output_dir=args.output_dir)
