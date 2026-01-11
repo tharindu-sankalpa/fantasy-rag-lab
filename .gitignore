@@ -8,3 +8,7 @@ cache/
 data/wheel_of_time/*
 data/song_of_ice_and_fire/*
 data/harry_potter/*
+data/chunks/*
+data/processed_books_claude_200k/*
+data/processed_books_gemini_1m/*
+data/processed_books_gpt_400k/*
