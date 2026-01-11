@@ -1,4 +1,4 @@
-from typing import List, Dict, Optional, Literal, Any
+from typing import List, Dict, Optional, Literal, Any, Union
 from datetime import datetime
 from pydantic import BaseModel, Field
 
@@ -116,7 +116,7 @@ class EntityInstance(BaseModel):
     type: str = Field(..., description="Entity type from the ontology.")
     name: str = Field(..., description="Canonical display name.")
     aliases: List[str] = Field(default_factory=list, description="Aliases found in the text.")
-    attributes: Dict[str, str] = Field(default_factory=dict, description="Extracted attributes.")
+    attributes: Union[Dict[str, Any], str] = Field(default_factory=dict, description="Extracted attributes.")
     description: str = Field(..., description="Brief description/summary from the text.")
     
     # Provenance & Quality
@@ -141,7 +141,7 @@ class RelationshipInstance(BaseModel):
     type: str = Field(..., description="Relationship type from the ontology.")
     description: str = Field(..., description="Contextual description of the relationship.")
     evidence: str = Field(..., description="Quote or text snippet proving the relationship.")
-    properties: Dict[str, str] = Field(default_factory=dict, description="Extracted properties (e.g., duration).")
+    properties: Union[Dict[str, Any], str] = Field(default_factory=dict, description="Extracted properties (e.g., duration).")
     
     # Provenance & Quality
     source_ref: Optional[SourceReference] = Field(None, description="Where this relationship was found.")
