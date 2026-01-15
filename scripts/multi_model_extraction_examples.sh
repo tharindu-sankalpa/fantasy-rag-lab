@@ -192,6 +192,47 @@ echo "rm data/extracted_graph_claude_opus/*_extracted.json"
 echo ""
 
 # =============================================================================
+# STEP 7: Batch API Extraction (50% Cost Reduction)
+# =============================================================================
+
+echo "=== Batch API: Full Workflow (Submit, Poll, Retrieve) ==="
+echo "# Extract Harry Potter with Claude Opus 4.5 using batch API"
+echo "python src/knowledge_graph/extract_entities_batch.py \\"
+echo "    --model claude-opus-4-5-20251101 \\"
+echo "    --input-dir data/processed_books_claude_200k \\"
+echo "    --output-dir data/extracted_graph_claude_opus_batch \\"
+echo "    --series 'Harry Potter'"
+echo ""
+
+echo "=== Batch API: Submit Only (Get Batch ID) ==="
+echo "python src/knowledge_graph/extract_entities_batch.py \\"
+echo "    --mode submit \\"
+echo "    --model claude-opus-4-5-20251101 \\"
+echo "    --input-dir data/processed_books_claude_200k \\"
+echo "    --output-dir data/extracted_graph_claude_opus_batch"
+echo ""
+
+echo "=== Batch API: Check Status ==="
+echo "python src/knowledge_graph/extract_entities_batch.py \\"
+echo "    --mode status \\"
+echo "    --batch-id msgbatch_xxx"
+echo ""
+
+echo "=== Batch API: Retrieve Results ==="
+echo "python src/knowledge_graph/extract_entities_batch.py \\"
+echo "    --mode retrieve \\"
+echo "    --batch-id msgbatch_xxx \\"
+echo "    --output-dir data/extracted_graph_claude_opus_batch"
+echo ""
+
+echo "=== Batch API: Extract All Series ==="
+echo "python src/knowledge_graph/extract_entities_batch.py \\"
+echo "    --model claude-opus-4-5-20251101 \\"
+echo "    --input-dir data/processed_books_claude_200k \\"
+echo "    --output-dir data/extracted_graph_claude_opus_batch"
+echo ""
+
+# =============================================================================
 # Quick Reference: Model Context Windows
 # =============================================================================
 
@@ -204,5 +245,14 @@ echo "| claude-sonnet-4-5         | ~200,000       | 160,000 tokens       |"
 echo "| gpt-5.2-pro               | ~400,000       | 320,000 tokens       |"
 echo ""
 
+echo "=== Cost Comparison: Real-time vs Batch API ==="
+echo "| API Mode   | Cost      | Processing Time | Best For              |"
+echo "|------------|-----------|-----------------|----------------------|"
+echo "| Real-time  | Full      | Immediate       | Interactive, testing |"
+echo "| Batch      | 50% off   | Up to 24 hours  | Bulk extraction      |"
+echo ""
+
 echo "=== End of Examples ==="
-echo "For detailed documentation, see: docs/MULTI_MODEL_EXTRACTION_GUIDE.md"
+echo "For detailed documentation, see:"
+echo "  - docs/MULTI_MODEL_EXTRACTION_GUIDE.md"
+echo "  - docs/BATCH_API_GUIDE.md"
