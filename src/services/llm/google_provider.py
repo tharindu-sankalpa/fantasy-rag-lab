@@ -484,3 +484,89 @@ class GoogleProvider(BaseLLMProvider):
         except Exception as e:
             log.exception("structured_generation_failed", error=str(e), model=model)
             raise
+
+    async def generate_embeddings(
+        self,
+        texts: list[str],
+        model: str = "text-embedding-004",
+        **kwargs,
+    ) -> dict[str, Any]:
+        """
+        Generate embeddings using Google's text-embedding models.
+
+        Google's embedding models convert text to dense vectors for semantic search,
+        clustering, and retrieval applications.
+
+        Available Models:
+        - text-embedding-004: Latest, best quality (768 dimensions)
+        - gemini-embedding-001: Experimental Gemini embedding
+
+        Args:
+            texts: List of texts to embed
+            model: Embedding model name (default: text-embedding-004)
+            **kwargs: Additional parameters (task_type, output_dimensionality)
+
+        Returns:
+            Dictionary with:
+            - 'embeddings': List of embedding vectors
+            - 'usage': UsageMetrics with token counts
+
+        Raises:
+            google.api_core.exceptions.GoogleAPIError: If API request fails
+
+        Example:
+            result = await provider.generate_embeddings(
+                texts=["Hello world", "Machine learning"],
+                model="text-embedding-004"
+            )
+            # result['embeddings'] is a list of 768-dim vectors
+        """
+        log = self.log.bind(model=model, endpoint="generate_embeddings")
+
+        try:
+            log.info(
+                "generating_embeddings",
+                num_texts=len(texts),
+            )
+
+            embeddings_list = []
+            total_tokens = 0
+
+            # Process texts in batches (Google API may have limits)
+            for text in texts:
+                response = await self.client.aio.models.embed_content(
+                    model=model, content=text, **kwargs
+                )
+
+                # Extract embedding vector
+                if hasattr(response, "embedding"):
+                    embeddings_list.append(response.embedding)
+                elif hasattr(response, "embeddings") and response.embeddings:
+                    embeddings_list.append(response.embeddings[0].values)
+                else:
+                    raise ValueError(f"Unexpected embedding response format: {response}")
+
+                # Approximate token count (Google doesn't always provide this)
+                total_tokens += len(text.split())
+
+            usage = UsageMetrics(
+                total_tokens=total_tokens,
+                input_tokens=total_tokens,
+                output_tokens=0,
+                provider=ProviderType.GOOGLE.value,
+                model=model,
+                api_key_last4=self._mask_api_key(),
+            )
+
+            log.info(
+                "embeddings_generated",
+                num_embeddings=len(embeddings_list),
+                embedding_dim=len(embeddings_list[0]) if embeddings_list else 0,
+                total_tokens=total_tokens,
+            )
+
+            return {"embeddings": embeddings_list, "usage": usage}
+
+        except Exception as e:
+            log.exception("embedding_generation_failed", error=str(e), model=model)
+            raise
