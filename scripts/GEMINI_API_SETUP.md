@@ -117,7 +117,7 @@ Replace `<PROJECT_ID>` with your actual project ID.
 ```bash
 gcloud alpha services quota list \
     --service=generativelanguage.googleapis.com \
-    --consumer=projects/idyllic-kit-374405 \
+    --consumer=projects/keen-jigsaw-484410-t4 \
     --format="table(metric, limit, usage)" | grep "gemini-3"
 ```
 

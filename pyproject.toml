@@ -8,13 +8,11 @@ dependencies = [
     # Web framework and server
     "fastapi",
     "uvicorn",
-
     # LLM providers (official SDKs)
-    "anthropic>=0.50.0",  # Anthropic/Claude
+    "anthropic[vertex]>=0.50.0",  # Anthropic/Claude
     "openai>=1.0.0",  # OpenAI/GPT
     "google-genai>=1.0.0",  # Google Gemini (unified SDK)
     "voyageai>=0.3.0",  # Voyage embeddings
-
     # Core utilities
     "python-dotenv",
     "structlog>=25.5.0",
@@ -22,27 +20,22 @@ dependencies = [
     "pydantic-settings>=2.12.0",
     "httpx>=0.28.1",
     "tenacity>=9.0.0",  # Retry logic
-
     # Vector and graph databases
     "pymilvus",
     "neo4j",
-
     # Document processing
     "pypdf",
     "ebooklib",
     "unstructured",
     "pypandoc>=1.16.2",
     "beautifulsoup4",
-
     # Embeddings and ML
     "sentence-transformers",
     "tiktoken",
-
     # Data processing
     "pandas",
     "pyarrow",
     "requests",
-
     # Development and notebooks
     "jupyter",
     "notebook",
