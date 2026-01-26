@@ -234,6 +234,17 @@ db.rag_chunks.aggregate([
     },
   },
 ]);
+
+// Graph data group by included_books for specific series
+
+db.graph_chunks.aggregate([
+  {
+    $group: {
+      _id: "$included_books",
+      count: { $sum: 1 },
+    },
+  },
+]);
 ```
 
 ## Deleting a Universe (Re-ingestion)

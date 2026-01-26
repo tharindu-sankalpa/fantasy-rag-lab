@@ -573,6 +573,210 @@ class MongoDBService:
         return result.upserted_count + result.modified_count
 
     # =========================================================================
+    # WOT_QNA COLLECTION (QA pairs for RAG evaluation)
+    # =========================================================================
+
+    async def upsert_qa_pair(self, qa_doc: dict[str, Any]) -> str:
+        """Insert or update a QA pair.
+
+        These are Question-Answer pairs generated from graph chunks for RAG evaluation.
+
+        Args:
+            qa_doc: QA document with required fields:
+                - qa_id: Unique identifier ({chunk_id}_{index:04d})
+                - question: The question text
+                - answer: The answer text
+                - question_type: Type classification
+                - complexity: Complexity level
+                - evidence_quote: Supporting quote from chunk
+                - metadata: {source_chunk_id, included_books, series}
+
+        Returns:
+            The qa_id of the upserted document.
+        """
+        log = self.log.bind(qa_id=qa_doc.get("qa_id"), collection="wot_qna")
+
+        qa_doc["updated_at"] = datetime.now(timezone.utc)
+        if "created_at" not in qa_doc:
+            qa_doc["created_at"] = qa_doc["updated_at"]
+
+        try:
+            result = await self.db.wot_qna.update_one(
+                {"qa_id": qa_doc["qa_id"]},
+                {"$set": qa_doc},
+                upsert=True,
+            )
+
+            if result.upserted_id:
+                log.info("qa_pair_inserted")
+            else:
+                log.info("qa_pair_updated")
+
+            return qa_doc["qa_id"]
+
+        except PyMongoError as e:
+            log.error("qa_pair_upsert_failed", error=str(e))
+            raise
+
+    async def get_qa_pair(self, qa_id: str) -> Optional[dict[str, Any]]:
+        """Retrieve a QA pair by ID.
+
+        Args:
+            qa_id: The unique QA identifier.
+
+        Returns:
+            The QA document or None if not found.
+        """
+        return await self.db.wot_qna.find_one({"qa_id": qa_id})
+
+    async def get_qa_pairs_by_chunk(self, chunk_id: str) -> list[dict[str, Any]]:
+        """Retrieve all QA pairs generated from a specific chunk.
+
+        Args:
+            chunk_id: The source chunk identifier.
+
+        Returns:
+            List of QA documents sorted by qa_id.
+        """
+        cursor = self.db.wot_qna.find(
+            {"metadata.source_chunk_id": chunk_id}
+        ).sort("qa_id", 1)
+        return await cursor.to_list(length=None)
+
+    async def get_qa_pairs_by_series(
+        self,
+        series: str,
+        question_type: Optional[str] = None,
+        complexity: Optional[str] = None,
+        limit: Optional[int] = None,
+    ) -> list[dict[str, Any]]:
+        """Retrieve QA pairs for a series with optional filtering.
+
+        Args:
+            series: The series identifier.
+            question_type: Optional filter by question type.
+            complexity: Optional filter by complexity level.
+            limit: Optional limit on number of results.
+
+        Returns:
+            List of QA documents.
+        """
+        query = {"metadata.series": series}
+
+        if question_type:
+            query["question_type"] = question_type
+        if complexity:
+            query["complexity"] = complexity
+
+        cursor = self.db.wot_qna.find(query).sort("qa_id", 1)
+
+        if limit:
+            cursor = cursor.limit(limit)
+
+        return await cursor.to_list(length=None)
+
+    async def bulk_upsert_qa_pairs(self, qa_docs: list[dict[str, Any]]) -> int:
+        """Bulk upsert multiple QA pairs.
+
+        Args:
+            qa_docs: List of QA documents.
+
+        Returns:
+            Number of documents upserted/modified.
+        """
+        if not qa_docs:
+            return 0
+
+        now = datetime.now(timezone.utc)
+        operations = []
+
+        for qa_doc in qa_docs:
+            qa_doc["updated_at"] = now
+            if "created_at" not in qa_doc:
+                qa_doc["created_at"] = now
+
+            operations.append(
+                UpdateOne(
+                    {"qa_id": qa_doc["qa_id"]},
+                    {"$set": qa_doc},
+                    upsert=True,
+                )
+            )
+
+        result = await self.db.wot_qna.bulk_write(operations)
+        self.log.info(
+            "qa_pairs_bulk_upsert_complete",
+            inserted=result.upserted_count,
+            modified=result.modified_count,
+        )
+        return result.upserted_count + result.modified_count
+
+    async def delete_qa_pairs_by_chunk(self, chunk_id: str) -> int:
+        """Delete all QA pairs generated from a specific chunk.
+
+        Args:
+            chunk_id: The source chunk identifier.
+
+        Returns:
+            Number of documents deleted.
+        """
+        result = await self.db.wot_qna.delete_many(
+            {"metadata.source_chunk_id": chunk_id}
+        )
+        self.log.info(
+            "qa_pairs_deleted",
+            chunk_id=chunk_id,
+            count=result.deleted_count,
+        )
+        return result.deleted_count
+
+    async def delete_qa_pairs_by_series(self, series: str) -> int:
+        """Delete all QA pairs for a series.
+
+        Args:
+            series: The series identifier.
+
+        Returns:
+            Number of documents deleted.
+        """
+        result = await self.db.wot_qna.delete_many({"metadata.series": series})
+        self.log.info("qa_pairs_deleted", series=series, count=result.deleted_count)
+        return result.deleted_count
+
+    async def get_qa_stats(self, series: str) -> dict[str, Any]:
+        """Get statistics about QA pairs for a series.
+
+        Args:
+            series: The series identifier.
+
+        Returns:
+            Dictionary with statistics.
+        """
+        pipeline = [
+            {"$match": {"metadata.series": series}},
+            {
+                "$group": {
+                    "_id": None,
+                    "total_count": {"$sum": 1},
+                    "unique_chunks": {"$addToSet": "$metadata.source_chunk_id"},
+                }
+            },
+        ]
+
+        cursor = self.db.wot_qna.aggregate(pipeline)
+        results = await cursor.to_list(length=1)
+
+        if not results:
+            return {"series": series, "total_qa_pairs": 0, "unique_source_chunks": 0}
+
+        result = results[0]
+        return {
+            "series": series,
+            "total_qa_pairs": result["total_count"],
+            "unique_source_chunks": len(result["unique_chunks"]),
+        }
+
+    # =========================================================================
     # UTILITY METHODS
     # =========================================================================
 
@@ -589,6 +793,7 @@ class MongoDBService:
             "extraction_results",
             "schemas",
             "embedding_cache",
+            "wot_qna",
         ]:
             count = await self.db[collection_name].count_documents({})
             stats[collection_name] = count
@@ -623,6 +828,13 @@ class MongoDBService:
         await self.db.embedding_cache.create_index(
             [("text_hash", 1), ("model", 1)], unique=True
         )
+
+        # wot_qna indexes (QA pairs for RAG evaluation)
+        await self.db.wot_qna.create_index("qa_id", unique=True)
+        await self.db.wot_qna.create_index("metadata.source_chunk_id")
+        await self.db.wot_qna.create_index("metadata.series")
+        await self.db.wot_qna.create_index("question_type")
+        await self.db.wot_qna.create_index("complexity")
 
         self.log.info("indexes_created")
 
