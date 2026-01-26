@@ -394,8 +394,35 @@ def process_chunks(
     return documents
 
 
+async def save_to_mongodb(documents: list[dict[str, Any]]) -> int:
+    """Save processed chunks to MongoDB.
+
+    Args:
+        documents: List of chunk documents to save.
+
+    Returns:
+        Number of documents saved.
+    """
+    from src.services.mongodb_service import MongoDBService
+
+    log = logger.bind(task="save_to_mongodb")
+    log.info("connecting_to_mongodb")
+
+    mongodb = MongoDBService()
+    await mongodb.connect()
+
+    try:
+        count = await mongodb.bulk_upsert_graph_chunks(documents)
+        log.info("graph_chunks_saved_to_mongodb", count=count)
+        return count
+    finally:
+        await mongodb.disconnect()
+
+
 def main() -> None:
     """Main execution function with CLI argument parsing."""
+    import asyncio
+
     parser = argparse.ArgumentParser(
         description="Extract and chunk EPUB files for LLM processing.",
         epilog="""
@@ -408,9 +435,13 @@ Examples:
   uv run python -m src.etl.graph_extraction.epubs_to_chunks \\
       --series harry_potter --context-window 200000 --safety-margin 0.15
 
-  # Custom output directory
+  # Save directly to MongoDB (also saves files locally)
   uv run python -m src.etl.graph_extraction.epubs_to_chunks \\
-      --series asoiaf --context-window 500000 --output-dir data/custom_chunks
+      --series wheel_of_time --context-window 1000000 --mongodb
+
+  # MongoDB only (no local file output)
+  uv run python -m src.etl.graph_extraction.epubs_to_chunks \\
+      --series wheel_of_time --context-window 1000000 --mongodb --no-files
         """,
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
@@ -444,7 +475,23 @@ Examples:
         help="Output directory for chunks. Default: data/processed_books_{series}",
     )
 
+    parser.add_argument(
+        "--mongodb",
+        action="store_true",
+        help="Save chunks to MongoDB Atlas (requires MONGODB_URI in .env)",
+    )
+
+    parser.add_argument(
+        "--no-files",
+        action="store_true",
+        help="Skip saving files locally (only valid with --mongodb)",
+    )
+
     args = parser.parse_args()
+
+    # Validate args
+    if args.no_files and not args.mongodb:
+        parser.error("--no-files requires --mongodb")
 
     log = logger.bind(task="main_execution")
     log.info(
@@ -452,6 +499,7 @@ Examples:
         series=args.series,
         context_window=args.context_window,
         safety_margin=args.safety_margin,
+        mongodb=args.mongodb,
     )
 
     # Determine output directory
@@ -471,20 +519,164 @@ Examples:
         log.error("no_epubs_found", series=args.series)
         return
 
-    # Process chunks
-    documents = process_chunks(
-        epub_paths=epub_paths,
-        series=args.series,
-        context_window=args.context_window,
-        safety_margin=args.safety_margin,
-        output_dir=output_dir,
-    )
+    # Process chunks (always generates documents, optionally saves files)
+    if args.no_files:
+        # Process without saving files - need custom processing
+        log.info("processing_without_local_files")
+        documents = process_chunks_no_files(
+            epub_paths=epub_paths,
+            series=args.series,
+            context_window=args.context_window,
+            safety_margin=args.safety_margin,
+        )
+    else:
+        # Normal processing with file output
+        documents = process_chunks(
+            epub_paths=epub_paths,
+            series=args.series,
+            context_window=args.context_window,
+            safety_margin=args.safety_margin,
+            output_dir=output_dir,
+        )
 
     log.info(
-        "script_finished",
+        "chunks_processed",
         total_chunks=len(documents),
-        output_dir=str(output_dir),
+        output_dir=str(output_dir) if not args.no_files else "none",
     )
+
+    # Save to MongoDB if requested
+    if args.mongodb:
+        mongodb_count = asyncio.run(save_to_mongodb(documents))
+        log.info("mongodb_save_complete", count=mongodb_count)
+
+    log.info("script_finished", total_chunks=len(documents))
+
+
+def process_chunks_no_files(
+    epub_paths: list[Path],
+    series: str,
+    context_window: int,
+    safety_margin: float,
+) -> list[dict[str, Any]]:
+    """Process EPUBs into chunks without saving files (MongoDB-only mode).
+
+    Same as process_chunks but doesn't write to disk.
+    """
+    safe_limit = int(context_window * (1 - safety_margin))
+
+    log = logger.bind(
+        task="process_chunks_no_files",
+        series=series,
+        context_window=context_window,
+        safe_limit=safe_limit,
+    )
+
+    log.info("processing_started")
+
+    encoding = get_base_encoding()
+    documents = []
+
+    current_chunk_text = ""
+    current_chunk_tokens = 0
+    current_books: list[Path] = []
+    chunk_counter = 1
+
+    def create_document(text: str, books: list[Path], index: int) -> dict[str, Any]:
+        """Create a document dict without saving to disk."""
+        if not text.strip():
+            return {}
+
+        token_count = len(encoding.encode(text))
+        base_filename = f"{series}_section_{index:02d}"
+
+        return {
+            "chunk_id": base_filename,
+            "series": series,
+            "text_content": text,
+            "token_count": token_count,
+            "character_count": len(text),
+            "context_window_used": context_window,
+            "safety_margin": safety_margin,
+            "included_books": [b.name for b in books],
+            "created_at": datetime.now(timezone.utc).isoformat(),
+        }
+
+    for epub_path in epub_paths:
+        book_name = epub_path.name
+        log.info("processing_book", book=book_name)
+
+        text = extract_text_from_epub(epub_path)
+
+        if not text:
+            log.warning("skipping_empty_book", book=book_name)
+            continue
+
+        text_tokens = len(encoding.encode(text))
+
+        if text_tokens > safe_limit:
+            log.info("large_book_detected", book=book_name, tokens=text_tokens)
+
+            if current_chunk_text:
+                doc = create_document(current_chunk_text, current_books, chunk_counter)
+                if doc:
+                    documents.append(doc)
+                chunk_counter += 1
+                current_chunk_text = ""
+                current_chunk_tokens = 0
+                current_books = []
+
+            paragraphs = text.split("\n\n")
+            temp_chunk = ""
+            temp_count = 0
+
+            for para in paragraphs:
+                para_tokens = len(encoding.encode(para)) + 1
+
+                if temp_count + para_tokens > safe_limit:
+                    doc = create_document(temp_chunk, [epub_path], chunk_counter)
+                    if doc:
+                        documents.append(doc)
+                    chunk_counter += 1
+                    temp_chunk = para + "\n\n"
+                    temp_count = para_tokens
+                else:
+                    temp_chunk += para + "\n\n"
+                    temp_count += para_tokens
+
+            if temp_chunk:
+                doc = create_document(temp_chunk, [epub_path], chunk_counter)
+                if doc:
+                    documents.append(doc)
+                chunk_counter += 1
+
+            continue
+
+        if current_chunk_tokens + text_tokens > safe_limit:
+            doc = create_document(current_chunk_text, current_books, chunk_counter)
+            if doc:
+                documents.append(doc)
+            chunk_counter += 1
+
+            current_chunk_text = text
+            current_chunk_tokens = text_tokens
+            current_books = [epub_path]
+        else:
+            if current_chunk_text:
+                current_chunk_text += "\n\n" + text
+            else:
+                current_chunk_text = text
+
+            current_chunk_tokens += text_tokens
+            current_books.append(epub_path)
+
+    if current_chunk_text:
+        doc = create_document(current_chunk_text, current_books, chunk_counter)
+        if doc:
+            documents.append(doc)
+
+    log.info("processing_complete", total_chunks=len(documents))
+    return documents
 
 
 if __name__ == "__main__":
