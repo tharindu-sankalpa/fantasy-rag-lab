@@ -5,10 +5,11 @@
 MongoDB Atlas service for Fantasy RAG Lab.
 
 This module provides async MongoDB operations using the Motor driver for storing
-and retrieving processed chunks, extraction results, schemas, and embedding caches.
+and retrieving chunks, extraction results, schemas, and embedding caches.
 
 Collections:
-- processed_chunks: Processed book text chunks from EPUB files
+- graph_chunks: Large chunks for LLM entity/relationship extraction (100k-900k tokens)
+- rag_chunks: Small chunks for vector search and RAG (1000 chars)
 - extraction_results: Entity/relationship extractions from LLM
 - schemas: Ontology schemas per series
 - embedding_cache: Cached embeddings for text chunks
@@ -37,7 +38,8 @@ class MongoDBService:
     MongoDB Atlas deployments.
 
     Collections:
-    - processed_chunks: Text chunks from processed books
+    - graph_chunks: Large chunks for entity extraction (from epubs_to_chunks.py)
+    - rag_chunks: Small chunks for semantic search (from processor.py/ingest.py)
     - extraction_results: Entity/relationship extractions
     - schemas: Ontology schemas per series
     - embedding_cache: Cached text embeddings
@@ -63,7 +65,9 @@ class MongoDBService:
         """
         self.uri = uri or settings.MONGODB_URI or os.getenv("MONGODB_URI")
         self.database_name = (
-            database or settings.MONGODB_DATABASE or os.getenv("MONGODB_DATABASE", "fantasy_rag")
+            database
+            or settings.MONGODB_DATABASE
+            or os.getenv("MONGODB_DATABASE", "fantasy_rag")
         )
 
         if not self.uri:
@@ -100,53 +104,52 @@ class MongoDBService:
             self.log.info("mongodb_disconnected")
 
     # =========================================================================
-    # PROCESSED CHUNKS COLLECTION
+    # GRAPH CHUNKS COLLECTION (Large chunks for entity extraction)
     # =========================================================================
 
-    async def upsert_chunk(self, chunk: dict[str, Any]) -> str:
-        """Insert or update a processed chunk.
+    async def upsert_graph_chunk(self, chunk: dict[str, Any]) -> str:
+        """Insert or update a graph extraction chunk.
+
+        These are large chunks (100k-900k tokens) used for LLM entity extraction.
 
         Args:
             chunk: Chunk document with required fields:
-                - chunk_id: Unique identifier
+                - chunk_id: Unique identifier (e.g., "wheel_of_time_section_01")
                 - series: Series name
                 - text_content: The chunk text
                 - token_count: Number of tokens
+                - context_window_used: Context window size used
                 - included_books: List of book names
 
         Returns:
             The chunk_id of the upserted document.
-
-        Raises:
-            PyMongoError: If the operation fails.
         """
-        log = self.log.bind(chunk_id=chunk.get("chunk_id"))
+        log = self.log.bind(chunk_id=chunk.get("chunk_id"), collection="graph_chunks")
 
-        # Add timestamps
         chunk["updated_at"] = datetime.now(timezone.utc)
         if "created_at" not in chunk:
             chunk["created_at"] = chunk["updated_at"]
 
         try:
-            result = await self.db.processed_chunks.update_one(
+            result = await self.db.graph_chunks.update_one(
                 {"chunk_id": chunk["chunk_id"]},
                 {"$set": chunk},
                 upsert=True,
             )
 
             if result.upserted_id:
-                log.info("chunk_inserted")
+                log.info("graph_chunk_inserted")
             else:
-                log.info("chunk_updated")
+                log.info("graph_chunk_updated")
 
             return chunk["chunk_id"]
 
         except PyMongoError as e:
-            log.error("chunk_upsert_failed", error=str(e))
+            log.error("graph_chunk_upsert_failed", error=str(e))
             raise
 
-    async def get_chunk(self, chunk_id: str) -> Optional[dict[str, Any]]:
-        """Retrieve a processed chunk by ID.
+    async def get_graph_chunk(self, chunk_id: str) -> Optional[dict[str, Any]]:
+        """Retrieve a graph chunk by ID.
 
         Args:
             chunk_id: The unique chunk identifier.
@@ -154,10 +157,10 @@ class MongoDBService:
         Returns:
             The chunk document or None if not found.
         """
-        return await self.db.processed_chunks.find_one({"chunk_id": chunk_id})
+        return await self.db.graph_chunks.find_one({"chunk_id": chunk_id})
 
-    async def get_chunks_by_series(self, series: str) -> list[dict[str, Any]]:
-        """Retrieve all chunks for a series.
+    async def get_graph_chunks_by_series(self, series: str) -> list[dict[str, Any]]:
+        """Retrieve all graph chunks for a series.
 
         Args:
             series: The series identifier.
@@ -165,11 +168,11 @@ class MongoDBService:
         Returns:
             List of chunk documents sorted by chunk_id.
         """
-        cursor = self.db.processed_chunks.find({"series": series}).sort("chunk_id", 1)
+        cursor = self.db.graph_chunks.find({"series": series}).sort("chunk_id", 1)
         return await cursor.to_list(length=None)
 
-    async def bulk_upsert_chunks(self, chunks: list[dict[str, Any]]) -> int:
-        """Bulk upsert multiple chunks.
+    async def bulk_upsert_graph_chunks(self, chunks: list[dict[str, Any]]) -> int:
+        """Bulk upsert multiple graph chunks.
 
         Args:
             chunks: List of chunk documents.
@@ -196,13 +199,160 @@ class MongoDBService:
                 )
             )
 
-        result = await self.db.processed_chunks.bulk_write(operations)
+        result = await self.db.graph_chunks.bulk_write(operations)
         self.log.info(
-            "bulk_upsert_complete",
+            "graph_chunks_bulk_upsert_complete",
             inserted=result.upserted_count,
             modified=result.modified_count,
         )
         return result.upserted_count + result.modified_count
+
+    async def delete_graph_chunks_by_series(self, series: str) -> int:
+        """Delete all graph chunks for a series.
+
+        Args:
+            series: The series identifier.
+
+        Returns:
+            Number of documents deleted.
+        """
+        result = await self.db.graph_chunks.delete_many({"series": series})
+        self.log.info("graph_chunks_deleted", series=series, count=result.deleted_count)
+        return result.deleted_count
+
+    # =========================================================================
+    # RAG CHUNKS COLLECTION (Small chunks for vector search)
+    # =========================================================================
+
+    async def upsert_rag_chunk(self, chunk: dict[str, Any]) -> str:
+        """Insert or update a RAG chunk.
+
+        These are small chunks (~1000 chars) used for vector search and RAG.
+
+        Args:
+            chunk: Chunk document with required fields:
+                - chunk_id: Unique identifier
+                - series: Series name (universe)
+                - text_content: The chunk text
+                - book_name: Source book
+                - chapter_number: Chapter number
+                - chapter_title: Chapter title
+
+        Returns:
+            The chunk_id of the upserted document.
+        """
+        log = self.log.bind(chunk_id=chunk.get("chunk_id"), collection="rag_chunks")
+
+        chunk["updated_at"] = datetime.now(timezone.utc)
+        if "created_at" not in chunk:
+            chunk["created_at"] = chunk["updated_at"]
+
+        try:
+            result = await self.db.rag_chunks.update_one(
+                {"chunk_id": chunk["chunk_id"]},
+                {"$set": chunk},
+                upsert=True,
+            )
+
+            if result.upserted_id:
+                log.info("rag_chunk_inserted")
+            else:
+                log.info("rag_chunk_updated")
+
+            return chunk["chunk_id"]
+
+        except PyMongoError as e:
+            log.error("rag_chunk_upsert_failed", error=str(e))
+            raise
+
+    async def get_rag_chunk(self, chunk_id: str) -> Optional[dict[str, Any]]:
+        """Retrieve a RAG chunk by ID.
+
+        Args:
+            chunk_id: The unique chunk identifier.
+
+        Returns:
+            The chunk document or None if not found.
+        """
+        return await self.db.rag_chunks.find_one({"chunk_id": chunk_id})
+
+    async def get_rag_chunks_by_series(self, series: str) -> list[dict[str, Any]]:
+        """Retrieve all RAG chunks for a series.
+
+        Args:
+            series: The series identifier.
+
+        Returns:
+            List of chunk documents sorted by chunk_id.
+        """
+        cursor = self.db.rag_chunks.find({"series": series}).sort("chunk_id", 1)
+        return await cursor.to_list(length=None)
+
+    async def get_rag_chunks_by_book(
+        self, series: str, book_name: str
+    ) -> list[dict[str, Any]]:
+        """Retrieve all RAG chunks for a specific book.
+
+        Args:
+            series: The series identifier.
+            book_name: The book name.
+
+        Returns:
+            List of chunk documents.
+        """
+        cursor = self.db.rag_chunks.find(
+            {"series": series, "book_name": book_name}
+        ).sort("chunk_id", 1)
+        return await cursor.to_list(length=None)
+
+    async def bulk_upsert_rag_chunks(self, chunks: list[dict[str, Any]]) -> int:
+        """Bulk upsert multiple RAG chunks.
+
+        Args:
+            chunks: List of chunk documents.
+
+        Returns:
+            Number of documents upserted/modified.
+        """
+        if not chunks:
+            return 0
+
+        now = datetime.now(timezone.utc)
+        operations = []
+
+        for chunk in chunks:
+            chunk["updated_at"] = now
+            if "created_at" not in chunk:
+                chunk["created_at"] = now
+
+            operations.append(
+                UpdateOne(
+                    {"chunk_id": chunk["chunk_id"]},
+                    {"$set": chunk},
+                    upsert=True,
+                )
+            )
+
+        result = await self.db.rag_chunks.bulk_write(operations)
+        self.log.info(
+            "rag_chunks_bulk_upsert_complete",
+            inserted=result.upserted_count,
+            modified=result.modified_count,
+        )
+        return result.upserted_count + result.modified_count
+
+    async def delete_rag_chunks_by_series(self, series: str) -> int:
+        """Delete all RAG chunks for a series.
+
+        Args:
+            series: The series identifier.
+
+        Returns:
+            Number of documents deleted.
+        """
+        result = await self.db.rag_chunks.delete_many({"series": series})
+        self.log.info("rag_chunks_deleted", series=series, count=result.deleted_count)
+        return result.deleted_count
 
     # =========================================================================
     # EXTRACTION RESULTS COLLECTION
@@ -213,7 +363,7 @@ class MongoDBService:
 
         Args:
             extraction: Extraction document with required fields:
-                - chunk_id: Source chunk identifier
+                - chunk_id: Source chunk identifier (from graph_chunks)
                 - series: Series name
                 - entities: List of extracted entities
                 - relationships: List of extracted relationships
@@ -434,7 +584,8 @@ class MongoDBService:
         """
         stats = {}
         for collection_name in [
-            "processed_chunks",
+            "graph_chunks",
+            "rag_chunks",
             "extraction_results",
             "schemas",
             "embedding_cache",
@@ -452,9 +603,14 @@ class MongoDBService:
         """
         self.log.info("creating_indexes")
 
-        # processed_chunks indexes
-        await self.db.processed_chunks.create_index("chunk_id", unique=True)
-        await self.db.processed_chunks.create_index("series")
+        # graph_chunks indexes
+        await self.db.graph_chunks.create_index("chunk_id", unique=True)
+        await self.db.graph_chunks.create_index("series")
+
+        # rag_chunks indexes
+        await self.db.rag_chunks.create_index("chunk_id", unique=True)
+        await self.db.rag_chunks.create_index("series")
+        await self.db.rag_chunks.create_index([("series", 1), ("book_name", 1)])
 
         # extraction_results indexes
         await self.db.extraction_results.create_index("chunk_id", unique=True)

@@ -488,7 +488,7 @@ class GoogleProvider(BaseLLMProvider):
     async def generate_embeddings(
         self,
         texts: list[str],
-        model: str = "text-embedding-004",
+        model: str = "gemini-embedding-001",
         **kwargs,
     ) -> dict[str, Any]:
         """
@@ -498,12 +498,12 @@ class GoogleProvider(BaseLLMProvider):
         clustering, and retrieval applications.
 
         Available Models:
-        - text-embedding-004: Latest, best quality (768 dimensions)
-        - gemini-embedding-001: Experimental Gemini embedding
+        - gemini-embedding-001: Latest Gemini embedding model (768 dimensions)
+        - text-embedding-004: Previous generation (also 768 dimensions)
 
         Args:
             texts: List of texts to embed
-            model: Embedding model name (default: text-embedding-004)
+            model: Embedding model name (default: gemini-embedding-001)
             **kwargs: Additional parameters (task_type, output_dimensionality)
 
         Returns:
@@ -517,7 +517,7 @@ class GoogleProvider(BaseLLMProvider):
         Example:
             result = await provider.generate_embeddings(
                 texts=["Hello world", "Machine learning"],
-                model="text-embedding-004"
+                model="gemini-embedding-001"
             )
             # result['embeddings'] is a list of 768-dim vectors
         """
@@ -534,15 +534,21 @@ class GoogleProvider(BaseLLMProvider):
 
             # Process texts in batches (Google API may have limits)
             for text in texts:
+                # Google GenAI SDK uses 'contents' parameter (not 'content')
                 response = await self.client.aio.models.embed_content(
-                    model=model, content=text, **kwargs
+                    model=model, contents=text, **kwargs
                 )
 
-                # Extract embedding vector
-                if hasattr(response, "embedding"):
-                    embeddings_list.append(response.embedding)
+                # Extract embedding vector from response
+                # The response structure varies by SDK version
+                if hasattr(response, "embedding") and response.embedding:
+                    embeddings_list.append(list(response.embedding))
                 elif hasattr(response, "embeddings") and response.embeddings:
-                    embeddings_list.append(response.embeddings[0].values)
+                    # Handle list of embeddings
+                    if hasattr(response.embeddings[0], "values"):
+                        embeddings_list.append(list(response.embeddings[0].values))
+                    else:
+                        embeddings_list.append(list(response.embeddings[0]))
                 else:
                     raise ValueError(f"Unexpected embedding response format: {response}")
 

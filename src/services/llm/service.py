@@ -41,7 +41,7 @@ Example Usage:
     # Embeddings
     embeddings = await service.generate_embeddings(
         texts=["doc 1", "doc 2"],
-        model="text-embedding-004"
+        model="gemini-embedding-001"
     )
 
     # Get cost summary
@@ -434,11 +434,11 @@ class UnifiedLLMService:
     async def generate_embeddings(
         self,
         texts: Union[str, list[str]],
-        model: str = "text-embedding-004",
+        model: str = "gemini-embedding-001",
         **kwargs,
     ) -> dict[str, Any]:
         """
-        Generate embeddings using Google's text-embedding models.
+        Generate embeddings using Google's Gemini embedding models.
 
         Embeddings convert text to dense vectors useful for:
         - Semantic search and retrieval
@@ -448,7 +448,7 @@ class UnifiedLLMService:
 
         Args:
             texts: Single text or list of texts to embed
-            model: Embedding model name (default: text-embedding-004)
+            model: Embedding model name (default: gemini-embedding-001)
             **kwargs: Additional parameters
 
         Returns:
@@ -463,7 +463,7 @@ class UnifiedLLMService:
             # Embed documents for indexing
             doc_embeddings = await service.generate_embeddings(
                 texts=["Document 1", "Document 2", "Document 3"],
-                model="text-embedding-004"
+                model="gemini-embedding-001"
             )
 
             # Embed search query

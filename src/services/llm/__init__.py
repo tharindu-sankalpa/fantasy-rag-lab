@@ -34,7 +34,7 @@ Example:
     # Embeddings
     embeddings = await service.generate_embeddings(
         texts=["doc1", "doc2"],
-        model="text-embedding-004"
+        model="gemini-embedding-001"
     )
 
 Module Structure:
