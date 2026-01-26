@@ -201,3 +201,35 @@ All generated QA pairs are **strictly grounded** in the source text:
 - An `evidence_quote` field contains the exact supporting text
 - No external knowledge or hallucination is allowed
 - This ensures fair RAG evaluation (the answer exists in the corpus)
+
+## Verification Queries
+
+To verify the generation status and count unique chunks per category, you can use the following MongoDB aggregation query:
+
+```javascript
+/* Count unique source chunks processed per category */
+db.wot_qna.aggregate([
+  {
+    $group: {
+      _id: "$category",
+      uniqueSourceChunks: { $addToSet: "$metadata.source_chunk_id" },
+    },
+  },
+  {
+    $project: {
+      _id: 0,
+      category: "$_id",
+      uniqueChunkCount: { $size: "$uniqueSourceChunks" },
+    },
+  },
+]);
+```
+
+**Expected Output:**
+
+```json
+[
+  { "category": "events", "uniqueChunkCount": 5 },
+  { "category": "characters", "uniqueChunkCount": 12 }
+]
+```

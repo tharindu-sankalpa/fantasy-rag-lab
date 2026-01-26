@@ -29,10 +29,10 @@ Usage:
     # Show statistics only
     uv run python -m src.qna_generation.generate --stats-only
 
-Rate Limits (Gemini Pro):
-    - Requests per minute: 25
-    - Requests per day: 250
-    - Input tokens per minute: 1,000,000
+Rate Limits (Gemini 3 Flash Paid Tier 1):
+    - Requests per minute: 1,000 (default)
+    - Requests per day: 10,000 (default)
+    - Input tokens per minute: 1,000,000 (default)
 
 Expected Output:
     - 47 chunks × 5 categories × ~15-25 questions = ~3,500-5,800 questions
@@ -86,6 +86,9 @@ async def main(args: argparse.Namespace) -> int:
         model=args.model,
         max_output_tokens=args.max_output_tokens,
         temperature=args.temperature,
+        requests_per_minute=args.rpm,
+        requests_per_day=args.rpd,
+        tokens_per_minute=args.tpm,
     )
 
     try:
@@ -227,15 +230,15 @@ Examples:
     parser.add_argument(
         "--model",
         type=str,
-        default="gemini-3-pro-preview",
-        help="Gemini model to use (default: gemini-3-pro-preview)",
+        default="gemini-3-flash-preview",
+        help="Gemini model to use (default: gemini-3-flash-preview)",
     )
 
     parser.add_argument(
         "--max-output-tokens",
         type=int,
-        default=8192,
-        help="Maximum output tokens per request (default: 8192)",
+        default=65536,
+        help="Maximum output tokens per request (default: 65536)",
     )
 
     parser.add_argument(
@@ -243,6 +246,28 @@ Examples:
         type=float,
         default=0.3,
         help="Generation temperature (default: 0.3)",
+    )
+
+    # Rate limiting arguments
+    parser.add_argument(
+        "--rpm",
+        type=int,
+        default=1000,
+        help="Requests per minute limit (default: 1000)",
+    )
+
+    parser.add_argument(
+        "--rpd",
+        type=int,
+        default=10000,
+        help="Requests per day limit (default: 10000)",
+    )
+
+    parser.add_argument(
+        "--tpm",
+        type=int,
+        default=1000000,
+        help="Input tokens per minute limit (default: 1000000)",
     )
 
     parser.add_argument(

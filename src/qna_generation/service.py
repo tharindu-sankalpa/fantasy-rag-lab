@@ -62,15 +62,15 @@ class RateLimiter:
 
     def __init__(
         self,
-        requests_per_minute: int = 25,
-        requests_per_day: int = 250,
+        requests_per_minute: int = 1000,
+        requests_per_day: int = 10000,
         tokens_per_minute: int = 1_000_000,
     ):
         """Initialize rate limiter with quota limits.
 
         Args:
-            requests_per_minute: Max requests per minute (default: 25)
-            requests_per_day: Max requests per day (default: 250)
+            requests_per_minute: Max requests per minute (default: 1000)
+            requests_per_day: Max requests per day (default: 10000)
             tokens_per_minute: Max input tokens per minute (default: 1M)
         """
         self.rpm_limit = requests_per_minute
@@ -201,25 +201,38 @@ class QAGenerationService:
         self,
         mongodb_service: Optional[MongoDBService] = None,
         google_provider: Optional[GoogleProvider] = None,
-        model: str = "gemini-3-pro-preview",
-        max_output_tokens: int = 8192,
+        model: str = "gemini-3-flash-preview",
+        max_output_tokens: int = 65536,
         temperature: float = 0.3,
+        # Rate limit overrides
+        requests_per_minute: int = 1000,
+        requests_per_day: int = 10000,
+        tokens_per_minute: int = 1_000_000,
     ):
         """Initialize the QA generation service.
 
         Args:
             mongodb_service: MongoDB service instance (created if not provided)
             google_provider: Google LLM provider (created if not provided)
-            model: Gemini model to use (default: gemini-2.5-pro for large context)
+            model: Gemini model (default: gemini-3-flash-preview)
             max_output_tokens: Max tokens for generated output
             temperature: Generation temperature (0.3 for balanced creativity)
+            requests_per_minute: Custom RPM limit
+            requests_per_day: Custom RPD limit
+            tokens_per_minute: Custom TPM limit
         """
         self.mongodb = mongodb_service
         self.provider = google_provider
         self.model = model
         self.max_output_tokens = max_output_tokens
         self.temperature = temperature
-        self.rate_limiter = RateLimiter()
+        
+        # Initialize rate limiter with provided or default limits
+        self.rate_limiter = RateLimiter(
+            requests_per_minute=requests_per_minute,
+            requests_per_day=requests_per_day,
+            tokens_per_minute=tokens_per_minute,
+        )
         self.log = logger.bind(component="QAGenerationService", model=model)
 
     async def initialize(self) -> None:
@@ -267,6 +280,9 @@ class QAGenerationService:
     ) -> list[QAPair]:
         """Generate QA pairs for a single chunk with a specific category.
 
+        Tries the primary model first, falls back to secondary model if the
+        primary fails (e.g., 503 overloaded errors).
+
         Args:
             chunk: Graph chunk document from MongoDB
             category: The question category to focus on
@@ -274,8 +290,10 @@ class QAGenerationService:
         Returns:
             List of generated QA pairs
 
+            List of generated QA pairs
+
         Raises:
-            ValueError: If generation or parsing fails
+            Exception: If generation or parsing fails
         """
         chunk_id = chunk["chunk_id"]
         text_content = chunk["text_content"]
@@ -294,42 +312,50 @@ class QAGenerationService:
         # Build the category-specific prompt
         prompt = get_category_prompt(category, text_content)
 
-        # Generate with retry logic
-        async for attempt in AsyncRetrying(
-            stop=stop_after_attempt(3),
-            wait=wait_exponential(multiplier=2, min=4, max=60),
-            retry=retry_if_exception_type((Exception,)),
-            reraise=True,
-        ):
-            with attempt:
-                log.info(
-                    "generation_attempt",
-                    attempt_number=attempt.retry_state.attempt_number,
-                )
+        # Generate with retry logic (3 attempts)
+        try:
+            async for attempt in AsyncRetrying(
+                stop=stop_after_attempt(3),
+                wait=wait_exponential(multiplier=2, min=4, max=60),
+                retry=retry_if_exception_type((Exception,)),
+                reraise=True,
+            ):
+                with attempt:
+                    log.info(
+                        "generation_attempt",
+                        attempt_number=attempt.retry_state.attempt_number,
+                        model=self.model,
+                    )
 
-                result = await self.provider.generate_structured(
-                    prompt=prompt,
-                    model=self.model,
-                    schema=QAGenerationResult,
-                    max_tokens=self.max_output_tokens,
-                    temperature=self.temperature,
-                    system_instruction=SYSTEM_INSTRUCTION,
-                )
+                    result = await self.provider.generate_structured(
+                        prompt=prompt,
+                        model=self.model,
+                        schema=QAGenerationResult,
+                        max_tokens=self.max_output_tokens,
+                        temperature=self.temperature,
+                        system_instruction=SYSTEM_INSTRUCTION,
+                    )
 
-                parsed: QAGenerationResult = result["parsed"]
-                usage = result["usage"]
+                    parsed: QAGenerationResult = result["parsed"]
+                    usage = result["usage"]
 
-                log.info(
-                    "qa_generated",
-                    num_pairs=len(parsed.qa_pairs),
-                    input_tokens=usage.input_tokens,
-                    output_tokens=usage.output_tokens,
-                )
+                    log.info(
+                        "qa_generated",
+                        model=self.model,
+                        num_pairs=len(parsed.qa_pairs),
+                        input_tokens=usage.input_tokens,
+                        output_tokens=usage.output_tokens,
+                    )
 
-                return parsed.qa_pairs
+                    return parsed.qa_pairs
 
-        # This line should not be reached due to reraise=True
-        return []
+        except Exception as e:
+            log.error(
+                "model_failed",
+                model=self.model,
+                error=str(e),
+            )
+            raise
 
     async def _store_qa_pairs(
         self,
