@@ -209,14 +209,84 @@ class MongoDBEmbeddingCache:
             self.log.info("mongodb_cache_updated", new_entries=count)
 
 
+async def _save_rag_chunks_to_mongodb(
+    docs: list,
+    universe: str,
+    log,
+    batch_size: int = 1000,
+) -> int:
+    """Save RAG chunks to MongoDB in batches.
+
+    Args:
+        docs: List of LangChain Document objects.
+        universe: The fantasy universe name.
+        log: Logger instance.
+        batch_size: Number of documents per batch (default 1000).
+
+    Returns:
+        Number of documents saved.
+    """
+    from datetime import datetime, timezone
+    from src.services.mongodb_service import MongoDBService
+
+    log.info("saving_rag_chunks_to_mongodb", count=len(docs), batch_size=batch_size)
+
+    # Convert LangChain Documents to MongoDB format
+    chunks = []
+    for i, doc in enumerate(docs):
+        chunk = {
+            "chunk_id": f"{universe.lower().replace(' ', '_')}_rag_{i:05d}",
+            "series": universe.lower().replace(" ", "_"),
+            "text_content": doc.page_content,
+            "character_count": len(doc.page_content),
+            "metadata": {
+                "book_name": doc.metadata.get("book_name"),
+                "chapter_number": doc.metadata.get("chapter_number"),
+                "chapter_title": doc.metadata.get("chapter_title"),
+                "universe": doc.metadata.get("universe"),
+            },
+            "created_at": datetime.now(timezone.utc).isoformat(),
+        }
+        chunks.append(chunk)
+
+    mongodb = MongoDBService()
+    await mongodb.connect()
+
+    try:
+        total_saved = 0
+        total_batches = (len(chunks) + batch_size - 1) // batch_size
+
+        for batch_num in range(total_batches):
+            start_idx = batch_num * batch_size
+            end_idx = min(start_idx + batch_size, len(chunks))
+            batch = chunks[start_idx:end_idx]
+
+            count = await mongodb.bulk_upsert_rag_chunks(batch)
+            total_saved += count
+
+            log.info(
+                "batch_saved",
+                batch=batch_num + 1,
+                total_batches=total_batches,
+                batch_count=count,
+                total_saved=total_saved,
+            )
+
+        log.info("rag_chunks_saved_to_mongodb", total_count=total_saved)
+        return total_saved
+    finally:
+        await mongodb.disconnect()
+
+
 async def ingest(
     directory: str,
     universe: str,
-    embedding_model: str = "text-embedding-004",
+    embedding_model: str = "gemini-embedding-001",
     batch_size: int = 50,
     dry_run: bool = False,
     output: Optional[str] = None,
     use_mongodb_cache: bool = False,
+    save_to_mongodb: bool = False,
 ) -> None:
     """Main ingestion function to process, embed, and store fantasy books.
 
@@ -228,6 +298,7 @@ async def ingest(
         dry_run: If True, only processes chunks and prints analysis.
         output: File path to save dry-run analysis output.
         use_mongodb_cache: If True, use MongoDB for embedding cache.
+        save_to_mongodb: If True, save RAG chunks to MongoDB.
     """
     log = logger.bind(
         task="ingestion",
@@ -279,6 +350,10 @@ async def ingest(
         return
 
     log.info("documents_processed", count=len(docs))
+
+    # Save RAG chunks to MongoDB if requested
+    if save_to_mongodb:
+        await _save_rag_chunks_to_mongodb(docs, universe, log)
 
     if dry_run:
         analyzer = ChunkAnalyzer(docs)
@@ -358,17 +433,21 @@ def main() -> None:
         description="Ingest fantasy books into Milvus with Google embeddings.",
         epilog="""
 Examples:
-  # Basic ingestion
+  # Basic ingestion (Milvus only)
   uv run python -m src.etl.rag_ingestion.ingest \\
       --dir data/wheel_of_time --universe "Wheel of Time"
 
-  # Dry run to analyze chunks
+  # Dry run to analyze chunks (no embedding/storage)
   uv run python -m src.etl.rag_ingestion.ingest \\
       --dir data/harry_potter --universe "Harry Potter" --dry-run
 
-  # Use MongoDB for embedding cache
+  # Save RAG chunks to MongoDB
   uv run python -m src.etl.rag_ingestion.ingest \\
-      --dir data/wheel_of_time --universe "Wheel of Time" --mongodb-cache
+      --dir data/wheel_of_time --universe "Wheel of Time" --mongodb --dry-run
+
+  # Full pipeline: MongoDB chunks + Milvus embeddings
+  uv run python -m src.etl.rag_ingestion.ingest \\
+      --dir data/wheel_of_time --universe "Wheel of Time" --mongodb
         """,
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
@@ -381,8 +460,8 @@ Examples:
     )
     parser.add_argument(
         "--embedding-model",
-        default="text-embedding-004",
-        help="Google embedding model to use (default: text-embedding-004)",
+        default="gemini-embedding-001",
+        help="Google embedding model to use (default: gemini-embedding-001)",
     )
     parser.add_argument(
         "--batch-size",
@@ -403,6 +482,11 @@ Examples:
         action="store_true",
         help="Use MongoDB for embedding cache instead of file-based cache",
     )
+    parser.add_argument(
+        "--mongodb",
+        action="store_true",
+        help="Save RAG chunks to MongoDB (rag_chunks collection)",
+    )
 
     args = parser.parse_args()
 
@@ -415,6 +499,7 @@ Examples:
             dry_run=args.dry_run,
             output=args.output,
             use_mongodb_cache=args.mongodb_cache,
+            save_to_mongodb=args.mongodb,
         )
     )
 
