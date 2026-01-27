@@ -19,7 +19,10 @@ We process the same source data (EPUBs) in two different ways to optimize for di
 
 - **Goal**: Create discrete, searchable chunks for Milvus/Vector Search.
 - **Method**: Uses `UnstructuredEPubLoader` to standardize text, followed by `RecursiveCharacterTextSplitter` from LangChain.
-- **Chunking**: Splits text into ~1000 character chunks with overlap.
+- **Chunking**:
+  - **Chunk Size**: 4000 characters (~1000 tokens)
+  - **Overlap**: 800 characters (~200 tokens)
+  - **Conversion**: 1 token ≈ 4 characters
 - **Metadata**:
   - `universe`: The fantasy universe (e.g., "wheel_of_time").
   - `book_name`: The source filename.
@@ -56,41 +59,120 @@ All commands use `uv` for dependency management.
 
 ### 1. RAG Ingestion (Vector Search)
 
-Extracts chapters, chunks text, creates embeddings (Google), and saves to MongoDB (`rag_chunks`) and Milvus.
+The RAG pipeline supports three modes: **Analysis**, **MongoDB Storage**, and **Full Embedding**.
+
+#### A. Analysis Only (Dry Run)
+
+Processes EPUBs and outputs chunk statistics without any database writes. Use this to verify extraction quality.
 
 ```bash
-# Dry Run (Check extraction quality without writing DB)
+# Basic analysis (logs to console)
 uv run python -m src.etl.rag_ingestion.ingest \
   --dir data/wheel_of_time \
   --universe "Wheel of Time" \
   --dry-run
 
-# Production Run (Save to MongoDB + Milvus)
+# Analysis with JSON output
+uv run python -m src.etl.rag_ingestion.ingest \
+  --dir data/wheel_of_time \
+  --universe "Wheel of Time" \
+  --dry-run \
+  --output analysis_wot.json
+```
+
+#### B. MongoDB Only (Save RAG Chunks)
+
+Saves chunks to MongoDB `rag_chunks` collection without generating embeddings. Useful for inspecting data before committing to expensive embedding calls.
+
+```bash
+uv run python -m src.etl.rag_ingestion.ingest \
+  --dir data/wheel_of_time \
+  --universe "Wheel of Time" \
+  --mongodb \
+  --dry-run
+```
+
+#### C. Full Pipeline (MongoDB + Milvus Embeddings)
+
+Processes EPUBs, saves chunks to MongoDB, generates embeddings via Google, and stores vectors in Milvus.
+
+```bash
+# Standard embedding run
 uv run python -m src.etl.rag_ingestion.ingest \
   --dir data/wheel_of_time \
   --universe "Wheel of Time" \
   --mongodb \
   --batch-size 50
+
+# With MongoDB-based embedding cache (for distributed runs)
+uv run python -m src.etl.rag_ingestion.ingest \
+  --dir data/wheel_of_time \
+  --universe "Wheel of Time" \
+  --mongodb \
+  --mongodb-cache \
+  --batch-size 50
 ```
+
+#### RAG Ingestion CLI Reference
+
+| Flag | Description |
+|------|-------------|
+| `--dir` | Directory containing EPUB files (required) |
+| `--universe` | Fantasy universe name (required) |
+| `--dry-run` | Analysis only, no DB writes |
+| `--output` | Save analysis to file (JSON/CSV/Parquet) |
+| `--mongodb` | Save chunks to MongoDB `rag_chunks` |
+| `--mongodb-cache` | Use MongoDB for embedding cache |
+| `--embedding-model` | Google model (default: `gemini-embedding-001`) |
+| `--batch-size` | Docs per batch (default: 50) |
 
 ### 2. Graph Extraction (Context Window Chunking)
 
-Creates massive text blocks for the Graph Builder.
+Creates massive text blocks for the Graph Builder using token-based chunking.
+
+#### A. Local Files Only
+
+Saves chunks as `.txt` and `.meta.json` files for inspection.
 
 ```bash
-# Process Wheel of Time for Gemini 3 Pro preview (1M Context)
+uv run python -m src.etl.graph_extraction.epubs_to_chunks \
+  --series wheel_of_time \
+  --context-window 1000000
+```
+
+#### B. MongoDB Only (Recommended)
+
+Saves directly to MongoDB `graph_chunks` without local files.
+
+```bash
 uv run python -m src.etl.graph_extraction.epubs_to_chunks \
   --series wheel_of_time \
   --context-window 1000000 \
   --mongodb --no-files
+```
 
-# Process Harry Potter for smaller context (200k) with 15% safety margin
+#### C. Both Local + MongoDB
+
+Saves to both local files and MongoDB (useful for debugging).
+
+```bash
 uv run python -m src.etl.graph_extraction.epubs_to_chunks \
   --series harry_potter \
   --context-window 200000 \
   --safety-margin 0.15 \
   --mongodb
 ```
+
+#### Graph Extraction CLI Reference
+
+| Flag | Description |
+|------|-------------|
+| `--series` | Series to process: `wheel_of_time`, `harry_potter`, `song_of_ice_and_fire`, `asoiaf` |
+| `--context-window` | Max tokens per chunk (e.g., `1000000` for 1M) |
+| `--safety-margin` | Buffer percentage (default: `0.10` = 10%) |
+| `--output-dir` | Custom output directory |
+| `--mongodb` | Save to MongoDB `graph_chunks` |
+| `--no-files` | Skip local file output (requires `--mongodb`) |
 
 ## Storage Modes
 

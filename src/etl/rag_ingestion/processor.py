@@ -149,14 +149,16 @@ class FantasyBookProcessor:
     """
 
     def __init__(
-        self, universe: str, chunk_size: int = 1000, chunk_overlap: int = 200
+        self, universe: str, chunk_size: int = 4000, chunk_overlap: int = 800
     ):
         """Initialize the processor with customizable chunking parameters.
 
         Args:
             universe: The name of the fantasy universe (e.g., "Wheel of Time").
             chunk_size: Target size of text chunks in characters.
+                        Default 4000 chars ≈ 1000 tokens (1 token ≈ 4 chars).
             chunk_overlap: Number of characters to overlap between chunks.
+                           Default 800 chars ≈ 200 tokens.
         """
         self.universe = universe
         self.chunk_size = chunk_size
