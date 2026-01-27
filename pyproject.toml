@@ -8,11 +8,8 @@ dependencies = [
     # Web framework and server
     "fastapi",
     "uvicorn",
-    # LLM providers (official SDKs)
-    "anthropic[vertex]>=0.50.0",  # Anthropic/Claude
-    "openai>=1.0.0",  # OpenAI/GPT
-    "google-genai>=1.0.0",  # Google Gemini (unified SDK)
-    "voyageai>=0.3.0",  # Voyage embeddings
+    # LLM provider (Google-only)
+    "google-genai>=1.0.0",  # Google Gemini (unified SDK for Developer API + Vertex AI)
     # Core utilities
     "python-dotenv",
     "structlog>=25.5.0",
@@ -20,6 +17,13 @@ dependencies = [
     "pydantic-settings>=2.12.0",
     "httpx>=0.28.1",
     "tenacity>=9.0.0",  # Retry logic
+    # MongoDB Atlas
+    "motor>=3.0.0",  # Async MongoDB driver
+    "pymongo>=4.0.0",  # MongoDB driver
+    # LangChain (for RAG processing)
+    "langchain-community>=0.2.0",
+    "langchain-text-splitters>=0.2.0",
+    "langchain-core>=0.2.0",
     # Vector and graph databases
     "pymilvus",
     "neo4j",

@@ -43,11 +43,7 @@ class ProviderType(str, Enum):
     Provider names are lowercase and match common naming conventions.
     """
 
-    ANTHROPIC = "anthropic"  # Claude models via Anthropic API
-    OPENAI = "openai"  # GPT models via OpenAI API
-    GOOGLE = "google"  # Gemini models via Google Gen AI SDK
-    VOYAGE = "voyage"  # Voyage AI embeddings (embeddings only)
-    OPENROUTER = "openrouter"  # Multi-provider gateway with unified access
+    GOOGLE = "google"  # Gemini models via Google Gen AI SDK (Developer API + Vertex AI)
 
 
 class EndpointType(str, Enum):
