@@ -41,7 +41,7 @@ Expected Output:
 import argparse
 import asyncio
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 
 import structlog
 
@@ -131,7 +131,7 @@ async def main(args: argparse.Namespace) -> int:
         )
 
         # Print final summary
-        duration = datetime.now() - progress.started_at.replace(tzinfo=None)
+        duration = datetime.now(timezone.utc) - progress.started_at
         log.info(
             "generation_complete",
             series=progress.series,
