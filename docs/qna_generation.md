@@ -233,3 +233,151 @@ db.wot_qna.aggregate([
   { "category": "characters", "uniqueChunkCount": 12 }
 ]
 ```
+
+---
+
+# RAG Evaluation Q&A Generation
+
+A separate pipeline for generating Q&A pairs specifically designed for RAG system evaluation. This differs from the category-based generation above.
+
+## Key Differences
+
+| Aspect | Category-Based (generate.py) | RAG Evaluation (generate_rag_eval.py) |
+|--------|------------------------------|---------------------------------------|
+| Source | Graph chunks (~1M tokens) | RAG chunks (~1000 tokens) |
+| Batch size | 1 chunk per request | 100 chunks per request |
+| Categories | 5 pillars (characters, events, etc.) | Single: `rag_evaluation` |
+| Chunk tracking | Single `source_chunk_id` | Array `source_chunk_ids` |
+| Purpose | Comprehensive Q&A dataset | RAG retrieval evaluation |
+
+## Why RAG Evaluation Needs Different Approach
+
+For proper RAG evaluation, we need:
+
+1. **Source chunk tracking**: Know exactly which chunks contain the answer
+2. **Smaller chunks**: Match the actual retrieval unit size (~1000 tokens)
+3. **Multi-chunk questions**: Test retrieval when info spans multiple chunks
+4. **Ground truth retrieval targets**: The `source_chunk_ids` array serves as the "expected retrieved chunks" for evaluation metrics
+
+## Quick Start
+
+```bash
+# Generate RAG evaluation Q&A for wheel_of_time
+uv run python -m src.qna_generation.generate_rag_eval --series wheel_of_time
+
+# Process only 2 batches (testing)
+uv run python -m src.qna_generation.generate_rag_eval --series wheel_of_time --max-batches 2
+
+# Resume from batch 5
+uv run python -m src.qna_generation.generate_rag_eval --series wheel_of_time --start-batch 5
+
+# View statistics
+uv run python -m src.qna_generation.generate_rag_eval --series wheel_of_time --stats-only
+
+# Custom batch size (50 chunks instead of 100)
+uv run python -m src.qna_generation.generate_rag_eval --series wheel_of_time --batch-size 50
+```
+
+## How It Works
+
+1. **Load RAG chunks**: Fetches all chunks from `rag_chunks` collection, sorted by `chunk_id`
+2. **Batch processing**: Groups chunks into batches of ~100 (~100k tokens total)
+3. **Generate with tracking**: LLM generates Q&A pairs and specifies which chunk IDs contain the answer
+4. **Validate chunk IDs**: Ensures returned chunk IDs are valid
+5. **Store**: Saves to `wot_qna` with `category="rag_evaluation"`
+
+## MongoDB Schema (RAG Evaluation)
+
+```javascript
+{
+  "qa_id": "wheel_of_time_rag_eval_0001_0005",
+  "question": "What warning does Moiraine give about the dangers of channeling?",
+  "answer": "Moiraine warns that channeling without proper training...",
+  "category": "rag_evaluation",
+  "complexity": "rag_eval",
+  "evidence_quote": "Direct quote from the chunks...",
+  "metadata": {
+    "source_chunk_ids": [
+      "wheel_of_time_rag_00142",
+      "wheel_of_time_rag_00143"
+    ],
+    "included_books": ["The Eye of the World"],
+    "included_chapters": ["Strangers and Friends"],
+    "series": "wheel_of_time",
+    "batch_index": 1,
+    "generation_model": "gemini-3-flash-preview"
+  },
+  "created_at": ISODate("..."),
+  "updated_at": ISODate("...")
+}
+```
+
+## CLI Reference (RAG Evaluation)
+
+```
+usage: generate_rag_eval.py [--series SERIES]
+                            [--batch-size BATCH_SIZE]
+                            [--start-batch START_BATCH]
+                            [--max-batches MAX_BATCHES]
+                            [--model MODEL]
+                            [--no-skip-processed]
+                            [--stats-only]
+
+Options:
+  --series           Series identifier (default: wheel_of_time)
+  --batch-size       Chunks per batch (default: 100, ~100k tokens)
+  --start-batch      Batch index to start from (default: 0)
+  --max-batches      Max batches to process (for testing)
+  --model            Gemini model (default: gemini-3-flash-preview)
+  --no-skip-processed  Reprocess existing batches
+  --stats-only       Show statistics only
+```
+
+## Using for RAG Evaluation
+
+The `source_chunk_ids` field enables proper RAG evaluation:
+
+```python
+# Pseudo-code for RAG evaluation
+for qa in rag_eval_qa_pairs:
+    question = qa["question"]
+    expected_chunks = qa["metadata"]["source_chunk_ids"]
+
+    # Run RAG retrieval
+    retrieved_chunks = rag_system.retrieve(question, top_k=10)
+
+    # Calculate metrics
+    recall = len(set(retrieved_chunks) & set(expected_chunks)) / len(expected_chunks)
+    precision = len(set(retrieved_chunks) & set(expected_chunks)) / len(retrieved_chunks)
+```
+
+## File Structure (RAG Evaluation)
+
+```
+src/qna_generation/
+├── rag_eval_schemas.py   # RAGEvalQAPair, RAGEvalQADocument
+├── rag_eval_prompts.py   # RAG evaluation-specific prompts
+├── rag_eval_service.py   # RAGEvalQAService
+└── generate_rag_eval.py  # CLI entry point
+```
+
+## Verification Queries (RAG Evaluation)
+
+```javascript
+/* Count RAG evaluation Q&A pairs */
+db.wot_qna.countDocuments({ category: "rag_evaluation" })
+
+/* Get sample with source chunks */
+db.wot_qna.findOne(
+  { category: "rag_evaluation" },
+  { question: 1, "metadata.source_chunk_ids": 1 }
+)
+
+/* Count Q&A pairs by number of source chunks */
+db.wot_qna.aggregate([
+  { $match: { category: "rag_evaluation" } },
+  { $project: { numSources: { $size: "$metadata.source_chunk_ids" } } },
+  { $group: { _id: "$numSources", count: { $sum: 1 } } },
+  { $sort: { _id: 1 } }
+])
+```

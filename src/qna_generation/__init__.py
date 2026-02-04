@@ -3,25 +3,26 @@
 This package provides tools for automatically generating high-quality
 Question & Answer datasets from large context chunks for RAG evaluation.
 
-The system uses 5 question categories (pillars) for comprehensive coverage:
-1. Characters & Identities - Who people really are
-2. Major Events & Deaths - What happened
-3. Magic & Power Mechanics - How the system works
-4. Artifacts & Places - Special objects/locations
-5. Lore & World-Building - Deep history & metaphysics
+Two generation modes are available:
 
-Modules:
-- schemas: Pydantic models for QA data structures
-- prompts: Category-specific prompt templates for Gemini
-- service: Core QA generation service with rate limiting
-- generate: CLI entry point
+1. Category-Based (generate.py):
+   Uses 5 question categories for comprehensive coverage:
+   - Characters & Identities - Who people really are
+   - Major Events & Deaths - What happened
+   - Magic & Power Mechanics - How the system works
+   - Artifacts & Places - Special objects/locations
+   - Lore & World-Building - Deep history & metaphysics
+
+2. RAG Evaluation (generate_rag_eval.py):
+   Generates Q&A pairs with explicit source chunk tracking for RAG system evaluation.
+   Uses smaller RAG chunks (~1000 tokens) and tracks which chunks contain answers.
 
 Usage:
-    # Generate questions for a category
+    # Category-based generation
     uv run python -m src.qna_generation.generate --category characters
 
-    # Show statistics
-    uv run python -m src.qna_generation.generate --stats-only
+    # RAG evaluation generation
+    uv run python -m src.qna_generation.generate_rag_eval --series wheel_of_time
 """
 
 from .prompts import CATEGORY_INFO, QuestionCategory, get_category_prompt
@@ -34,18 +35,34 @@ from .schemas import (
 )
 from .service import QAGenerationService, RateLimiter
 
+# RAG Evaluation imports
+from .rag_eval_schemas import (
+    RAGEvalGenerationResult,
+    RAGEvalProgress,
+    RAGEvalQADocument,
+    RAGEvalQAPair,
+)
+from .rag_eval_service import RAGEvalQAService
+
 __all__ = [
-    # Schemas
+    # Category-Based Schemas
     "QAPair",
     "QADocument",
     "QAGenerationResult",
     "QuestionComplexity",
     "GenerationProgress",
-    # Prompts
+    # Category-Based Prompts
     "QuestionCategory",
     "CATEGORY_INFO",
     "get_category_prompt",
-    # Service
+    # Category-Based Service
     "QAGenerationService",
     "RateLimiter",
+    # RAG Evaluation Schemas
+    "RAGEvalQAPair",
+    "RAGEvalQADocument",
+    "RAGEvalGenerationResult",
+    "RAGEvalProgress",
+    # RAG Evaluation Service
+    "RAGEvalQAService",
 ]
