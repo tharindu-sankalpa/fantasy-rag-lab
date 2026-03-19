@@ -66,7 +66,7 @@ class RAGEvalGenerationResult(BaseModel):
 class RAGEvalQADocument(BaseModel):
     """MongoDB document schema for RAG evaluation Q&A pairs.
 
-    Stored in the wot_qna collection with category="rag_evaluation".
+    Stored in the wot_rag_qna collection with category="rag_evaluation".
     The source_chunk_ids array enables proper RAG evaluation by linking
     each question to its ground truth retrieval targets.
     """

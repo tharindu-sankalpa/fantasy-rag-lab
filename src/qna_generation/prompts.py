@@ -183,12 +183,12 @@ You are working with The Wheel of Time fantasy series by Robert Jordan.
 Generate as many high-quality questions as possible WITHOUT compromising quality. Let the content richness determine the quantity - quality is non-negotiable."""
 
 
-def get_category_prompt(category: QuestionCategory, chunk_text: str) -> str:
+def get_category_prompt(category: QuestionCategory, chunks_text: str) -> str:
     """Generate a category-specific prompt for QA generation.
 
     Args:
         category: The question category to focus on
-        chunk_text: The source text chunk
+        chunks_text: The source text from multiple chunks, annotated with their chunk IDs
 
     Returns:
         Formatted prompt string
@@ -244,10 +244,17 @@ def get_category_prompt(category: QuestionCategory, chunk_text: str) -> str:
 
 DO NOT generate any "simple" complexity questions.
 
+### Source Chunk IDs (Ground Truth Selection) MUST:
+- This is the MOST CRITICAL step for our RAG evaluation dataset. You must identify exactly which chunks contain the knowledge required to answer the question.
+- Include the chunk(s) that contain the direct evidence quote.
+- Include ALL chunks that provide the necessary context, setup, or background that makes the question and answer fully understandable.
+- If the narrative spans multiple chunks and the answer relies on a holistic understanding of that continuous sequence, include the IDs for ALL those chunks.
+- Do NOT just select the chunk with the final keyword or climax. Treat every chunk that contributes essential context to the final answer as a ground truth chunk.
+
 ---
 
 <text>
-{chunk_text}
+{chunks_text}
 </text>
 
 ---

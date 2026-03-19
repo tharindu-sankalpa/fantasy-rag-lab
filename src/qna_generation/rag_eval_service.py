@@ -8,7 +8,7 @@ Key features:
 - Batches ~100 chunks at a time (~100k tokens total)
 - Orders chunks by chunk_id for sequential processing
 - Tracks source_chunk_ids for each Q&A pair
-- Stores results in wot_qna with category="rag_evaluation"
+- Stores results in wot_rag_qna with category="rag_evaluation"
 """
 
 import asyncio
@@ -103,10 +103,10 @@ class RAGEvalQAService:
 
     async def _create_indexes(self) -> None:
         """Create indexes for RAG evaluation Q&A."""
-        await self.mongodb.db.wot_qna.create_index("qa_id", unique=True)
-        await self.mongodb.db.wot_qna.create_index("category")
-        await self.mongodb.db.wot_qna.create_index("metadata.source_chunk_ids")
-        await self.mongodb.db.wot_qna.create_index(
+        await self.mongodb.db.wot_rag_qna.create_index("qa_id", unique=True)
+        await self.mongodb.db.wot_rag_qna.create_index("category")
+        await self.mongodb.db.wot_rag_qna.create_index("metadata.source_chunk_ids")
+        await self.mongodb.db.wot_rag_qna.create_index(
             [("category", 1), ("metadata.series", 1)]
         )
         self.log.info("rag_eval_indexes_created")
@@ -291,7 +291,7 @@ class RAGEvalQAService:
         ]
 
         if operations:
-            result = await self.mongodb.db.wot_qna.bulk_write(operations)
+            result = await self.mongodb.db.wot_rag_qna.bulk_write(operations)
             stored_count = result.upserted_count + result.modified_count
             self.log.info(
                 "rag_eval_qa_stored",
@@ -398,7 +398,7 @@ class RAGEvalQAService:
         # Get already processed batch indices if skipping
         processed_batches = set()
         if skip_processed:
-            cursor = self.mongodb.db.wot_qna.distinct(
+            cursor = self.mongodb.db.wot_rag_qna.distinct(
                 "metadata.batch_index",
                 {
                     "metadata.series": series,
@@ -499,7 +499,7 @@ class RAGEvalQAService:
             },
         ]
 
-        cursor = self.mongodb.db.wot_qna.aggregate(pipeline)
+        cursor = self.mongodb.db.wot_rag_qna.aggregate(pipeline)
         results = await cursor.to_list(length=1)
 
         if not results:

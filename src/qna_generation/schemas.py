@@ -69,6 +69,11 @@ class QAPair(BaseModel):
         description="Direct quote from the chunk that supports the answer",
         min_length=20,
     )
+    source_chunk_ids: list[str] = Field(
+        ...,
+        description="List of chunk IDs that were actually used to generate this question and answer",
+        min_items=1,
+    )
 
 
 class QAGenerationResult(BaseModel):
@@ -89,7 +94,7 @@ class QAGenerationResult(BaseModel):
 class QADocument(BaseModel):
     """MongoDB document schema for storing generated QA pairs.
 
-    This is the final document structure stored in the wot_qna collection.
+    This is the final document structure stored in the wot_rag_qna collection.
     Each document represents a single QA pair with full provenance tracking.
     """
 

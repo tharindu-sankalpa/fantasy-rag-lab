@@ -191,7 +191,7 @@ class QAGenerationService:
     1. Loads graph chunks from MongoDB
     2. Sends chunks to Gemini with category-specific prompts
     3. Parses and validates the output
-    4. Stores results in the wot_qna collection
+    4. Stores results in the wot_rag_qna collection
     5. Tracks progress for resumable processing
 
     The service respects Gemini API quotas and implements robust error handling.
@@ -257,57 +257,63 @@ class QAGenerationService:
                 )
             self.provider = GoogleProvider(api_key=api_key)
 
-        # Create indexes for wot_qna collection
+        # Create indexes for wot_rag_qna collection
         await self._create_indexes()
 
         self.log.info("service_initialized")
 
     async def _create_indexes(self) -> None:
-        """Create indexes for the wot_qna collection."""
-        await self.mongodb.db.wot_qna.create_index("qa_id", unique=True)
-        await self.mongodb.db.wot_qna.create_index("metadata.source_chunk_id")
-        await self.mongodb.db.wot_qna.create_index("category")
-        await self.mongodb.db.wot_qna.create_index("complexity")
-        await self.mongodb.db.wot_qna.create_index(
+        """Create indexes for the wot_rag_qna collection."""
+        await self.mongodb.db.wot_rag_qna.create_index("qa_id", unique=True)
+        await self.mongodb.db.wot_rag_qna.create_index("metadata.source_chunk_id")
+        await self.mongodb.db.wot_rag_qna.create_index("category")
+        await self.mongodb.db.wot_rag_qna.create_index("complexity")
+        await self.mongodb.db.wot_rag_qna.create_index(
             [("metadata.source_chunk_id", 1), ("category", 1)]
         )
-        self.log.info("wot_qna_indexes_created")
+        self.log.info("wot_rag_qna_indexes_created")
 
-    async def _generate_qa_for_chunk(
+    async def _generate_qa_for_chunks(
         self,
-        chunk: dict[str, Any],
+        chunks: list[dict[str, Any]],
         category: QuestionCategory,
+        batch_id: str,
     ) -> list[QAPair]:
-        """Generate QA pairs for a single chunk with a specific category.
+        """Generate QA pairs for a batch of RAG chunks with a specific category.
 
         Tries the primary model first, falls back to secondary model if the
         primary fails (e.g., 503 overloaded errors).
 
         Args:
-            chunk: Graph chunk document from MongoDB
+            chunks: List of RAG chunk documents from MongoDB
             category: The question category to focus on
+            batch_id: Identifier for this batch of chunks
 
         Returns:
-            List of generated QA pairs
-
             List of generated QA pairs
 
         Raises:
             Exception: If generation or parsing fails
         """
-        chunk_id = chunk["chunk_id"]
-        text_content = chunk["text_content"]
-        token_count = chunk.get("token_count", len(text_content.split()))
+        # Combine text content with chunk IDs
+        text_content = ""
+        total_token_count = 0
+        for chunk in chunks:
+            chunk_content = chunk.get("text_content", "")
+            chunk_id = chunk["chunk_id"]
+            text_content += f"\n\n[Chunk ID: {chunk_id}]\n{chunk_content}"
+            total_token_count += chunk.get("token_count", len(chunk_content.split()))
 
         log = self.log.bind(
-            chunk_id=chunk_id,
-            token_count=token_count,
+            batch_id=batch_id,
+            token_count=total_token_count,
+            chunk_count=len(chunks),
             category=category.value,
         )
         log.info("generating_qa_for_chunk")
 
         # Acquire rate limit
-        await self.rate_limiter.acquire(token_count)
+        await self.rate_limiter.acquire(total_token_count)
 
         # Build the category-specific prompt
         prompt = get_category_prompt(category, text_content)
@@ -360,29 +366,35 @@ class QAGenerationService:
     async def _store_qa_pairs(
         self,
         qa_pairs: list[QAPair],
-        chunk: dict[str, Any],
+        chunks: list[dict[str, Any]],
         category: QuestionCategory,
+        batch_id: str,
     ) -> int:
         """Store generated QA pairs in MongoDB.
 
         Args:
             qa_pairs: List of QA pairs to store
-            chunk: Source chunk for metadata
+            chunks: Source chunks for metadata
             category: The question category
+            batch_id: Identifier for this batch of chunks
 
         Returns:
             Number of documents stored
         """
-        chunk_id = chunk["chunk_id"]
-        included_books = chunk.get("included_books", [])
-        series = chunk.get("series", "wheel_of_time")
+        # Get unique books across all chunks (RAG chunks store this in metadata.book_name)
+        included_books = list(set(
+            c.get("metadata", {}).get("book_name") or c.get("book_name")
+            for c in chunks
+            if c.get("metadata", {}).get("book_name") or c.get("book_name")
+        ))
+        series = chunks[0].get("series", "wheel_of_time") if chunks else "wheel_of_time"
 
         documents = []
         now = datetime.now(timezone.utc)
 
         for idx, qa in enumerate(qa_pairs):
-            # Include category in qa_id for uniqueness across passes
-            qa_id = f"{chunk_id}_{category.value}_{idx:04d}"
+            # Include category and batch_id in qa_id for uniqueness across passes
+            qa_id = f"{batch_id}_{category.value}_{idx:04d}"
 
             doc = {
                 "qa_id": qa_id,
@@ -392,7 +404,9 @@ class QAGenerationService:
                 "complexity": qa.complexity.value,
                 "evidence_quote": qa.evidence_quote,
                 "metadata": {
-                    "source_chunk_id": chunk_id,
+                    "source_batch_id": batch_id,
+                    "source_chunk_ids": qa.source_chunk_ids,
+                    "all_batch_chunk_ids": [c["chunk_id"] for c in chunks],
                     "included_books": included_books,
                     "series": series,
                     "generation_model": self.model,
@@ -416,11 +430,11 @@ class QAGenerationService:
         ]
 
         if operations:
-            result = await self.mongodb.db.wot_qna.bulk_write(operations)
+            result = await self.mongodb.db.wot_rag_qna.bulk_write(operations)
             stored_count = result.upserted_count + result.modified_count
             self.log.info(
                 "qa_pairs_stored",
-                chunk_id=chunk_id,
+                batch_id=batch_id,
                 category=category.value,
                 stored_count=stored_count,
             )
@@ -428,37 +442,39 @@ class QAGenerationService:
 
         return 0
 
-    async def process_chunk(
+    async def process_chunk_batch(
         self,
-        chunk: dict[str, Any],
+        chunks: list[dict[str, Any]],
         category: QuestionCategory,
+        batch_id: str,
     ) -> int:
-        """Process a single chunk for a specific category.
+        """Process a batch of chunks for a specific category.
 
         Args:
-            chunk: Graph chunk document
+            chunks: List of RAG chunk documents
             category: The question category to generate
+            batch_id: Identifier for this batch
 
         Returns:
             Number of QA pairs generated and stored
         """
         try:
-            qa_pairs = await self._generate_qa_for_chunk(chunk, category)
+            qa_pairs = await self._generate_qa_for_chunks(chunks, category, batch_id)
             if qa_pairs:
-                return await self._store_qa_pairs(qa_pairs, chunk, category)
+                return await self._store_qa_pairs(qa_pairs, chunks, category, batch_id)
             return 0
         except RetryError as e:
             self.log.error(
-                "chunk_processing_failed_after_retries",
-                chunk_id=chunk["chunk_id"],
+                "chunk_batch_processing_failed_after_retries",
+                batch_id=batch_id,
                 category=category.value,
                 error=str(e.last_attempt.exception()),
             )
             raise
         except Exception as e:
             self.log.error(
-                "chunk_processing_failed",
-                chunk_id=chunk["chunk_id"],
+                "chunk_batch_processing_failed",
+                batch_id=batch_id,
                 category=category.value,
                 error=str(e),
             )
@@ -470,14 +486,18 @@ class QAGenerationService:
         category: QuestionCategory = QuestionCategory.CHARACTERS,
         skip_processed: bool = True,
         chunk_ids: Optional[list[str]] = None,
+        batch_size: int = 10,
+        batch_overlap: int = 2,
     ) -> GenerationProgress:
-        """Process all chunks for a series with a specific category.
+        """Process chunks for a series with a specific category using sliding window.
 
         Args:
             series: Series identifier (default: wheel_of_time)
             category: Question category to generate
-            skip_processed: Skip chunks that already have QA pairs for this category
-            chunk_ids: Optional list of specific chunk IDs to process
+            skip_processed: Skip batches that already have QA pairs for this category
+            chunk_ids: Optional list of specific RAG chunk IDs to process
+            batch_size: Number of chunks per generation window
+            batch_overlap: Number of overlapping chunks between batches
 
         Returns:
             GenerationProgress with processing results
@@ -486,17 +506,19 @@ class QAGenerationService:
             "starting_series_processing",
             series=series,
             category=category.value,
+            batch_size=batch_size,
+            batch_overlap=batch_overlap,
         )
 
-        # Load all graph chunks for the series
+        # Load all RAG chunks for the series
         if chunk_ids:
             chunks = []
             for cid in chunk_ids:
-                chunk = await self.mongodb.get_graph_chunk(cid)
+                chunk = await self.mongodb.get_rag_chunk(cid)
                 if chunk:
                     chunks.append(chunk)
         else:
-            chunks = await self.mongodb.get_graph_chunks_by_series(series)
+            chunks = await self.mongodb.get_rag_chunks_by_series(series)
 
         if not chunks:
             self.log.warning("no_chunks_found", series=series)
@@ -507,69 +529,79 @@ class QAGenerationService:
                 processed_chunks=0,
             )
 
-        # Get already processed chunk IDs for this category if skipping
-        processed_chunk_ids = set()
+        # Create overlapping batches
+        batches = []
+        step = batch_size - batch_overlap if batch_size > batch_overlap else batch_size
+        for i in range(0, len(chunks), step):
+            batch = chunks[i:i+batch_size]
+            batches.append(batch)
+
+        # Get already processed batch IDs for this category if skipping
+        processed_batch_ids = set()
         if skip_processed:
-            cursor = self.mongodb.db.wot_qna.distinct(
-                "metadata.source_chunk_id",
+            cursor = self.mongodb.db.wot_rag_qna.distinct(
+                "metadata.source_batch_id",
                 {
                     "metadata.series": series,
                     "category": category.value,
                 },
             )
-            processed_chunk_ids = set(await cursor)
+            processed_batch_ids = set(await cursor)
             self.log.info(
-                "skipping_processed_chunks",
+                "skipping_processed_batches",
                 category=category.value,
-                already_processed=len(processed_chunk_ids),
+                already_processed=len(processed_batch_ids),
             )
 
         # Initialize progress tracking
         progress = GenerationProgress(
             series=series,
             category=category.value,
-            total_chunks=len(chunks),
+            total_chunks=len(batches),  # we consider batches as our progress units here
         )
 
-        for chunk in chunks:
-            chunk_id = chunk["chunk_id"]
+        for batch in batches:
+            if not batch:
+                continue
+                
+            batch_id = f"{batch[0]['chunk_id']}_to_{batch[-1]['chunk_id']}"
 
             # Skip if already processed for this category
-            if skip_processed and chunk_id in processed_chunk_ids:
+            if skip_processed and batch_id in processed_batch_ids:
                 self.log.info(
                     "skipping_already_processed",
-                    chunk_id=chunk_id,
+                    batch_id=batch_id,
                     category=category.value,
                 )
                 progress.processed_chunks += 1
                 continue
 
             try:
-                qa_count = await self.process_chunk(chunk, category)
+                qa_count = await self.process_chunk_batch(batch, category, batch_id)
                 progress.processed_chunks += 1
                 progress.total_qa_pairs += qa_count
-                progress.last_processed_chunk = chunk_id
+                progress.last_processed_chunk = batch_id
                 progress.updated_at = datetime.now(timezone.utc)
 
                 self.log.info(
-                    "chunk_completed",
-                    chunk_id=chunk_id,
+                    "batch_completed",
+                    batch_id=batch_id,
                     category=category.value,
                     qa_count=qa_count,
                     progress=f"{progress.processed_chunks}/{progress.total_chunks}",
                 )
 
-                # Small delay between chunks for stability
+                # Small delay between batches for stability
                 await asyncio.sleep(1)
 
             except Exception as e:
                 self.log.error(
-                    "chunk_failed",
-                    chunk_id=chunk_id,
+                    "batch_failed",
+                    batch_id=batch_id,
                     category=category.value,
                     error=str(e),
                 )
-                progress.failed_chunks.append(chunk_id)
+                progress.failed_chunks.append(batch_id)
 
                 # Check if we should abort (too many failures)
                 if len(progress.failed_chunks) >= 3:
@@ -584,7 +616,7 @@ class QAGenerationService:
             series=series,
             category=category.value,
             total_qa_pairs=progress.total_qa_pairs,
-            failed_chunks=len(progress.failed_chunks),
+            failed_batches=len(progress.failed_chunks),
         )
 
         return progress
@@ -610,7 +642,7 @@ class QAGenerationService:
             },
         ]
 
-        cursor = self.mongodb.db.wot_qna.aggregate(pipeline)
+        cursor = self.mongodb.db.wot_rag_qna.aggregate(pipeline)
         results = await cursor.to_list(length=1)
 
         if not results:
@@ -629,7 +661,7 @@ class QAGenerationService:
             {"$match": {"metadata.series": series}},
             {"$group": {"_id": "$category", "count": {"$sum": 1}}},
         ]
-        cursor = self.mongodb.db.wot_qna.aggregate(category_pipeline)
+        cursor = self.mongodb.db.wot_rag_qna.aggregate(category_pipeline)
         category_results = await cursor.to_list(length=None)
         category_counts = {r["_id"]: r["count"] for r in category_results}
 
@@ -638,7 +670,7 @@ class QAGenerationService:
             {"$match": {"metadata.series": series}},
             {"$group": {"_id": "$complexity", "count": {"$sum": 1}}},
         ]
-        cursor = self.mongodb.db.wot_qna.aggregate(complexity_pipeline)
+        cursor = self.mongodb.db.wot_rag_qna.aggregate(complexity_pipeline)
         complexity_results = await cursor.to_list(length=None)
         complexity_counts = {r["_id"]: r["count"] for r in complexity_results}
 

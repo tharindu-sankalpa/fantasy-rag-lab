@@ -121,13 +121,14 @@ async def main(args: argparse.Namespace) -> int:
             print_categories()
             return 1
 
-        # Process chunks
         chunk_ids = args.chunk_ids if args.chunk_ids else None
         progress = await service.process_series(
             series=args.series,
             category=category,
             skip_processed=not args.no_skip_processed,
             chunk_ids=chunk_ids,
+            batch_size=args.batch_size,
+            batch_overlap=args.batch_overlap,
         )
 
         # Print final summary
@@ -136,10 +137,10 @@ async def main(args: argparse.Namespace) -> int:
             "generation_complete",
             series=progress.series,
             category=progress.category,
-            total_chunks=progress.total_chunks,
-            processed_chunks=progress.processed_chunks,
+            total_batches=progress.total_chunks,
+            processed_batches=progress.processed_chunks,
             total_qa_pairs=progress.total_qa_pairs,
-            failed_chunks=progress.failed_chunks,
+            failed_batches=progress.failed_chunks,
             duration=str(duration),
         )
 
@@ -148,13 +149,13 @@ async def main(args: argparse.Namespace) -> int:
         print("=" * 60)
         print(f"Series: {progress.series}")
         print(f"Category: {progress.category}")
-        print(f"Chunks Processed: {progress.processed_chunks}/{progress.total_chunks}")
+        print(f"Batches Processed: {progress.processed_chunks}/{progress.total_chunks}")
         print(f"QA Pairs Generated: {progress.total_qa_pairs}")
-        print(f"Failed Chunks: {len(progress.failed_chunks)}")
+        print(f"Failed Batches: {len(progress.failed_chunks)}")
         print(f"Duration: {duration}")
 
         if progress.failed_chunks:
-            print(f"\nFailed Chunk IDs: {', '.join(progress.failed_chunks)}")
+            print(f"\nFailed Batch IDs: {', '.join(progress.failed_chunks)}")
 
         # Get final stats
         stats = await service.get_qa_stats(args.series)
@@ -232,6 +233,20 @@ Examples:
         type=str,
         default="gemini-3-flash-preview",
         help="Gemini model to use (default: gemini-3-flash-preview)",
+    )
+
+    parser.add_argument(
+        "--batch-size",
+        type=int,
+        default=10,
+        help="Number of chunks per generation window (default: 10)",
+    )
+
+    parser.add_argument(
+        "--batch-overlap",
+        type=int,
+        default=2,
+        help="Number of overlapping chunks between batches (default: 2)",
     )
 
     parser.add_argument(

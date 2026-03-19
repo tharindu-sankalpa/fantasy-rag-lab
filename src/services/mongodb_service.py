@@ -594,14 +594,14 @@ class MongoDBService:
         Returns:
             The qa_id of the upserted document.
         """
-        log = self.log.bind(qa_id=qa_doc.get("qa_id"), collection="wot_qna")
+        log = self.log.bind(qa_id=qa_doc.get("qa_id"), collection="wot_rag_qna")
 
         qa_doc["updated_at"] = datetime.now(timezone.utc)
         if "created_at" not in qa_doc:
             qa_doc["created_at"] = qa_doc["updated_at"]
 
         try:
-            result = await self.db.wot_qna.update_one(
+            result = await self.db.wot_rag_qna.update_one(
                 {"qa_id": qa_doc["qa_id"]},
                 {"$set": qa_doc},
                 upsert=True,
@@ -627,7 +627,7 @@ class MongoDBService:
         Returns:
             The QA document or None if not found.
         """
-        return await self.db.wot_qna.find_one({"qa_id": qa_id})
+        return await self.db.wot_rag_qna.find_one({"qa_id": qa_id})
 
     async def get_qa_pairs_by_chunk(self, chunk_id: str) -> list[dict[str, Any]]:
         """Retrieve all QA pairs generated from a specific chunk.
@@ -638,7 +638,7 @@ class MongoDBService:
         Returns:
             List of QA documents sorted by qa_id.
         """
-        cursor = self.db.wot_qna.find(
+        cursor = self.db.wot_rag_qna.find(
             {"metadata.source_chunk_id": chunk_id}
         ).sort("qa_id", 1)
         return await cursor.to_list(length=None)
@@ -668,7 +668,7 @@ class MongoDBService:
         if complexity:
             query["complexity"] = complexity
 
-        cursor = self.db.wot_qna.find(query).sort("qa_id", 1)
+        cursor = self.db.wot_rag_qna.find(query).sort("qa_id", 1)
 
         if limit:
             cursor = cursor.limit(limit)
@@ -703,7 +703,7 @@ class MongoDBService:
                 )
             )
 
-        result = await self.db.wot_qna.bulk_write(operations)
+        result = await self.db.wot_rag_qna.bulk_write(operations)
         self.log.info(
             "qa_pairs_bulk_upsert_complete",
             inserted=result.upserted_count,
@@ -720,7 +720,7 @@ class MongoDBService:
         Returns:
             Number of documents deleted.
         """
-        result = await self.db.wot_qna.delete_many(
+        result = await self.db.wot_rag_qna.delete_many(
             {"metadata.source_chunk_id": chunk_id}
         )
         self.log.info(
@@ -739,7 +739,7 @@ class MongoDBService:
         Returns:
             Number of documents deleted.
         """
-        result = await self.db.wot_qna.delete_many({"metadata.series": series})
+        result = await self.db.wot_rag_qna.delete_many({"metadata.series": series})
         self.log.info("qa_pairs_deleted", series=series, count=result.deleted_count)
         return result.deleted_count
 
@@ -763,7 +763,7 @@ class MongoDBService:
             },
         ]
 
-        cursor = self.db.wot_qna.aggregate(pipeline)
+        cursor = self.db.wot_rag_qna.aggregate(pipeline)
         results = await cursor.to_list(length=1)
 
         if not results:
@@ -793,7 +793,7 @@ class MongoDBService:
             "extraction_results",
             "schemas",
             "embedding_cache",
-            "wot_qna",
+            "wot_rag_qna",
         ]:
             count = await self.db[collection_name].count_documents({})
             stats[collection_name] = count
@@ -829,12 +829,12 @@ class MongoDBService:
             [("text_hash", 1), ("model", 1)], unique=True
         )
 
-        # wot_qna indexes (QA pairs for RAG evaluation)
-        await self.db.wot_qna.create_index("qa_id", unique=True)
-        await self.db.wot_qna.create_index("metadata.source_chunk_id")
-        await self.db.wot_qna.create_index("metadata.series")
-        await self.db.wot_qna.create_index("question_type")
-        await self.db.wot_qna.create_index("complexity")
+        # wot_rag_qna indexes (QA pairs for RAG evaluation)
+        await self.db.wot_rag_qna.create_index("qa_id", unique=True)
+        await self.db.wot_rag_qna.create_index("metadata.source_chunk_id")
+        await self.db.wot_rag_qna.create_index("metadata.series")
+        await self.db.wot_rag_qna.create_index("question_type")
+        await self.db.wot_rag_qna.create_index("complexity")
 
         self.log.info("indexes_created")
 
