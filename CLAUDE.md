@@ -125,7 +125,7 @@ db.wot_rag_qna.aggregate([
 
 **2. Count documents grouped by both AI model AND category:**
 ```javascript
-db.wot_rag_qna.aggregate([
+db.wot_qna.aggregate([
   { 
     $group: { 
       _id: { model: "$metadata.generation_model", category: "$category" }, 
