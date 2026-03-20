@@ -318,11 +318,11 @@ class QAGenerationService:
         # Build the category-specific prompt
         prompt = get_category_prompt(category, text_content)
 
-        # Generate with retry logic (3 attempts)
+        # Generate with retry logic (5 attempts)
         try:
             async for attempt in AsyncRetrying(
-                stop=stop_after_attempt(3),
-                wait=wait_exponential(multiplier=2, min=4, max=60),
+                stop=stop_after_attempt(5),
+                wait=wait_exponential(multiplier=2, min=10, max=120),
                 retry=retry_if_exception_type((Exception,)),
                 reraise=True,
             ):
