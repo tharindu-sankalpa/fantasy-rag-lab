@@ -61,6 +61,7 @@ from .base import (
     ProviderType,
 )
 from .google_provider import GoogleProvider
+from .litellm_provider import LiteLLMProvider
 
 # Load environment variables from .env file
 load_dotenv()
@@ -164,11 +165,24 @@ class UnifiedLLMService:
                         "provider_load_failed", provider="google_vertex", error=str(e)
                     )
 
+        # LiteLLM proxy (optional — active whenever LITELLM_BASE_URL is set)
+        from src.core.config import settings as _settings
+        litellm_url = _settings.LITELLM_BASE_URL
+        litellm_key = _settings.LITELLM_API_KEY
+        if litellm_url:
+            try:
+                self.providers["litellm"] = LiteLLMProvider(
+                    base_url=litellm_url, api_key=litellm_key
+                )
+                self.log.info("provider_loaded", provider="litellm", base_url=litellm_url)
+            except Exception as e:
+                self.log.error("provider_load_failed", provider="litellm", error=str(e))
+
         # Warn if no providers loaded
         if not self.providers:
             self.log.warning(
                 "no_providers_loaded",
-                message="No Google credentials found. Set GOOGLE_API_KEY or GOOGLE_CLOUD_PROJECT.",
+                message="No credentials found. Set GOOGLE_API_KEY or GOOGLE_CLOUD_PROJECT.",
             )
 
     def _get_provider(self, provider: str = "google") -> GoogleProvider:
@@ -434,22 +448,20 @@ class UnifiedLLMService:
     async def generate_embeddings(
         self,
         texts: Union[str, list[str]],
-        model: str = "gemini-embedding-001",
+        model: str = "gemini-embedding-2-preview",
+        provider: str = "google",
         **kwargs,
     ) -> dict[str, Any]:
         """
-        Generate embeddings using Google's Gemini embedding models.
-
-        Embeddings convert text to dense vectors useful for:
-        - Semantic search and retrieval
-        - Clustering and classification
-        - Similarity computation
-        - RAG (Retrieval-Augmented Generation) systems
+        Generate embeddings using Google Gemini or a LiteLLM proxy.
 
         Args:
-            texts: Single text or list of texts to embed
-            model: Embedding model name (default: gemini-embedding-001)
-            **kwargs: Additional parameters
+            texts: Single text or list of texts to embed.
+            model: Embedding model name.
+                   Google path: "gemini-embedding-2-preview"
+                   LiteLLM path: "gemini/gemini-embedding-2-preview"
+            provider: Which backend to use — "google" (default) or "litellm".
+            **kwargs: Additional parameters forwarded to the provider.
 
         Returns:
             Dictionary with:
@@ -457,29 +469,27 @@ class UnifiedLLMService:
             - 'usage': UsageMetrics with token counts
 
         Raises:
-            ValueError: If provider is not available
-
-        Example:
-            # Embed documents for indexing
-            doc_embeddings = await service.generate_embeddings(
-                texts=["Document 1", "Document 2", "Document 3"],
-                model="gemini-embedding-001"
-            )
-
-            # Embed search query
-            query_embedding = await service.generate_embeddings(
-                texts="python programming"
-            )
+            ValueError: If the requested provider is not initialised.
         """
-        log = self.log.bind(model=model, endpoint="generate_embeddings")
+        log = self.log.bind(model=model, provider=provider, endpoint="generate_embeddings")
 
         try:
-            # Get Google provider (prefer Vertex AI if available)
-            google_instance = self.providers.get("google_vertex") or self.providers.get("google")
-            if not google_instance:
-                raise ValueError(
-                    "Google provider not initialized (check GOOGLE_API_KEY or GOOGLE_CLOUD_PROJECT)"
-                )
+            # Select provider instance
+            if provider == "litellm":
+                instance = self.providers.get("litellm")
+                if not instance:
+                    raise ValueError(
+                        "LiteLLM provider not initialised. "
+                        "Set LITELLM_BASE_URL (and optionally LITELLM_API_KEY) in .env."
+                    )
+            else:
+                # Google: prefer Vertex AI if available, fall back to Developer API
+                instance = self.providers.get("google_vertex") or self.providers.get("google")
+                if not instance:
+                    raise ValueError(
+                        "Google provider not initialised. "
+                        "Set GOOGLE_API_KEY or GOOGLE_CLOUD_PROJECT in .env."
+                    )
 
             # Normalize to list
             if isinstance(texts, str):
@@ -488,12 +498,10 @@ class UnifiedLLMService:
             else:
                 was_single = False
 
-            log.info(
-                "generating_google_embeddings", num_texts=len(texts), model=model
-            )
+            log.info("generating_embeddings", num_texts=len(texts))
 
-            # Use GoogleProvider's generate_embeddings method
-            result = await google_instance.generate_embeddings(
+            # Delegate to the selected provider
+            result = await instance.generate_embeddings(
                 texts=texts, model=model, **kwargs
             )
 
@@ -502,8 +510,6 @@ class UnifiedLLMService:
 
             log.info(
                 "embeddings_generated",
-                provider="google",
-                model=model,
                 num_embeddings=len(result["embeddings"]) if isinstance(result["embeddings"], list) else 1,
                 total_tokens=result["usage"].total_tokens,
             )

@@ -213,7 +213,7 @@ class FantasyBookProcessor:
             section_patterns = [
                 r"\nPROLOGUE\s*\n",
                 r"\nEPILOGUE\s*\n",
-                rf"\n({pov_pattern})\s*\n",  # Only match known POV names
+                rf"\n(?:{pov_pattern})\s*\n",  # Only match known POV names
             ]
             separators = section_patterns + base_separators
 
@@ -388,11 +388,15 @@ class FantasyBookProcessor:
                 return ChapterInfo(number=match.group(1), title="N/A")
             return ChapterInfo(number="N/A", title="N/A")
 
-    def process_epub(self, epub_path: str) -> list[Document]:
+    def process_epub(
+        self, epub_path: str, book_name: str | None = None
+    ) -> list[Document]:
         """Process a single EPUB file into chunks with metadata.
 
         Args:
             epub_path: The absolute path to the EPUB file.
+            book_name: Optional override for the book name stored in metadata.
+                       When None, derived from the EPUB filename (sans extension).
 
         Returns:
             A list of processed document chunks.
@@ -401,8 +405,9 @@ class FantasyBookProcessor:
         loader = UnstructuredEPubLoader(epub_path)
         data = loader.load()
 
-        # Extract book name from path
-        book_name = os.path.basename(epub_path).replace(".epub", "")
+        # Derive book name from filename unless an override is supplied
+        if book_name is None:
+            book_name = os.path.basename(epub_path).replace(".epub", "")
 
         # Create text splitter and split document
         text_splitter = self._create_text_splitter()
@@ -434,7 +439,9 @@ class FantasyBookProcessor:
 
         return chunks
 
-    def process_series(self, epub_dir: str) -> list[Document]:
+    def process_series(
+        self, epub_dir: str, recursive: bool = False
+    ) -> list[Document]:
         """Process the entire fantasy series from a directory of EPUB files.
 
         This method processes all EPUB files in the specified directory, combining
@@ -443,27 +450,61 @@ class FantasyBookProcessor:
 
         Args:
             epub_dir: Directory containing EPUB files.
+            recursive: When True, walks one level of subdirectories and prepends
+                       the subdirectory name to each book's ``book_name`` metadata
+                       field (e.g. ``01_butlerian_jihad_01_the_butlerian_jihad.epub``).
+                       Use this for Dune's nested sub-series layout.
 
         Returns:
             List of all processed chunks across the entire series.
         """
-        log = logger.bind(task="process_series", directory=epub_dir)
+        log = logger.bind(task="process_series", directory=epub_dir, recursive=recursive)
         all_chunks = []
 
         if not os.path.exists(epub_dir):
             log.error("directory_not_found")
             return []
 
-        for filename in sorted(os.listdir(epub_dir)):
-            if filename.endswith(".epub"):
-                epub_path = os.path.join(epub_dir, filename)
-                try:
-                    chunks = self.process_epub(epub_path)
-                    all_chunks.extend(chunks)
-                    log.info(
-                        "file_processed", filename=filename, chunks_created=len(chunks)
-                    )
-                except Exception as e:
-                    log.exception("file_processing_failed", filename=filename)
+        if recursive:
+            # Walk one level of subdirectories (e.g. data/dune/01_butlerian_jihad/)
+            for subdir_name in sorted(os.listdir(epub_dir)):
+                subdir_path = os.path.join(epub_dir, subdir_name)
+                if not os.path.isdir(subdir_path):
+                    continue
+                for filename in sorted(os.listdir(subdir_path)):
+                    if not filename.endswith(".epub"):
+                        continue
+                    epub_path = os.path.join(subdir_path, filename)
+                    # Include sub-series context in book_name so MongoDB entries
+                    # are unambiguous across the entire Dune universe.
+                    book_name = f"{subdir_name}_{filename}"
+                    try:
+                        chunks = self.process_epub(epub_path, book_name=book_name)
+                        all_chunks.extend(chunks)
+                        log.info(
+                            "file_processed",
+                            subdir=subdir_name,
+                            filename=filename,
+                            book_name=book_name,
+                            chunks_created=len(chunks),
+                        )
+                    except Exception:
+                        log.exception(
+                            "file_processing_failed",
+                            subdir=subdir_name,
+                            filename=filename,
+                        )
+        else:
+            for filename in sorted(os.listdir(epub_dir)):
+                if filename.endswith(".epub"):
+                    epub_path = os.path.join(epub_dir, filename)
+                    try:
+                        chunks = self.process_epub(epub_path)
+                        all_chunks.extend(chunks)
+                        log.info(
+                            "file_processed", filename=filename, chunks_created=len(chunks)
+                        )
+                    except Exception:
+                        log.exception("file_processing_failed", filename=filename)
 
         return all_chunks

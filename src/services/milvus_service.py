@@ -1,166 +1,255 @@
 # Dependencies:
 # pip install pymilvus structlog
 
+"""Milvus / Zilliz Cloud vector database service.
+
+Supports:
+- Dense vector search (HNSW, COSINE) on Gemini 3072-dim embeddings
+- Full-text search (BM25 sparse vectors) on the text field
+- Hybrid search combining both via RRF reranking
+"""
+
 import structlog
-from typing import List, Dict, Any, Optional
+from typing import Any, Optional
+
 from pymilvus import (
+    AnnSearchRequest,
+    Collection,
+    CollectionSchema,
+    DataType,
+    FieldSchema,
+    Function,
+    FunctionType,
+    RRFRanker,
+    WeightedRanker,
     connections,
-    FieldSchema, CollectionSchema, DataType,
-    Collection, utility
+    utility,
 )
+
 from src.core.config import settings
 from src.utils.logger import logger
 
+
 class MilvusService:
-    """
-    Service for interacting with Milvus/Zilliz Cloud vector database.
-    
+    """Service for interacting with Milvus/Zilliz Cloud vector database.
+
     Attributes:
-        uri (str): Milvus URI.
-        token (str): Authentication token.
-        collection_name (str): Name of the collection.
-        log (structlog.stdlib.BoundLogger): Logger instance.
+        uri: Milvus connection URI.
+        token: Authentication token.
+        collection_name: Target collection name.
     """
 
+    COLLECTION_NAME = "fantasy_rag_collection"
+
     def __init__(self):
-        """
-        Initialize the Milvus Service and establish connection.
-        
-        Raises:
-            Exception: If connection to Milvus fails.
-        """
         self.log = logger.bind(component="milvus_service")
         self.uri = settings.MILVUS_URI
         self.token = settings.MILVUS_TOKEN
-        self.collection_name = "fantasy_rag_collection"
-        
+        self.collection_name = self.COLLECTION_NAME
+
         try:
-            connections.connect(
-                alias="default", 
-                uri=self.uri, 
-                token=self.token
-            )
+            connections.connect(alias="default", uri=self.uri, token=self.token)
             self.log.info("milvus_connected", uri=self.uri)
         except Exception as e:
             self.log.error("milvus_connect_failed", error=str(e))
-            raise e
+            raise
 
     def create_collection_if_not_exists(self) -> Collection:
-        """
-        Creates the collection with the specific schema if it doesn't exist.
-        
+        """Create the collection with HNSW + BM25 indexes if it doesn't exist.
+
+        Schema:
+          - embedding: FLOAT_VECTOR(3072)  → HNSW index (dense search)
+          - text:      VARCHAR             → BM25 Function source (full-text search)
+          - text_sparse: SPARSE_FLOAT_VECTOR → BM25 output (auto-populated)
+          - metadata fields: chunk_id, series, universe, book_title, chapter_*
+
         Returns:
-            Collection: The loaded Milvus Collection object.
+            Loaded Collection object ready for insert and search.
         """
         log = self.log.bind(collection=self.collection_name)
-        
+
         if utility.has_collection(self.collection_name):
             log.info("collection_exists")
             return Collection(self.collection_name)
 
         log.info("creating_new_collection")
-        
-        # Define Schema
+
         fields = [
-            # ID field
             FieldSchema(name="id", dtype=DataType.INT64, is_primary=True, auto_id=True),
-            # Embedding field (1536 dim for OpenAI)
-            FieldSchema(name="embedding", dtype=DataType.FLOAT_VECTOR, dim=1536),
-            # Text content
-            FieldSchema(name="text", dtype=DataType.VARCHAR, max_length=65535),
-            # Metadata fields for filtering
+            # Dense vector — Gemini Embedding 2 Preview (3072 dims)
+            FieldSchema(name="embedding", dtype=DataType.FLOAT_VECTOR, dim=3072),
+            # Source text — analyzer enabled so BM25 Function can tokenize it
+            FieldSchema(name="text", dtype=DataType.VARCHAR, max_length=65535,
+                        enable_analyzer=True),
+            # BM25 sparse vector — auto-populated by the Function below, never set manually
+            FieldSchema(name="text_sparse", dtype=DataType.SPARSE_FLOAT_VECTOR),
+            # Metadata
+            FieldSchema(name="chunk_id", dtype=DataType.VARCHAR, max_length=200),
+            FieldSchema(name="series", dtype=DataType.VARCHAR, max_length=100),
             FieldSchema(name="universe", dtype=DataType.VARCHAR, max_length=100),
-            FieldSchema(name="book_title", dtype=DataType.VARCHAR, max_length=200),
-            FieldSchema(name="chapter", dtype=DataType.VARCHAR, max_length=200)
+            FieldSchema(name="book_title", dtype=DataType.VARCHAR, max_length=500),
+            FieldSchema(name="chapter_number", dtype=DataType.VARCHAR, max_length=50),
+            FieldSchema(name="chapter_title", dtype=DataType.VARCHAR, max_length=1000),
         ]
-        
-        schema = CollectionSchema(fields=fields, description="Fantasy RAG Collection")
-        
-        collection = Collection(
-            name=self.collection_name, 
-            schema=schema, 
-            consistency_level="Strong"
+
+        # BM25 Function: text → text_sparse (runs server-side at insert and query time)
+        bm25_function = Function(
+            name="bm25",
+            function_type=FunctionType.BM25,
+            input_field_names=["text"],
+            output_field_names=["text_sparse"],
         )
-        
-        # Create Index for faster search
-        index_params = {
-            "metric_type": "COSINE",
-            "index_type": "AUTOINDEX", # Zilliz Cloud optimized
-            "params": {}
-        }
-        collection.create_index(field_name="embedding", index_params=index_params)
-        log.info("collection_created_and_indexed")
-        
+
+        schema = CollectionSchema(
+            fields=fields,
+            functions=[bm25_function],
+            description="Fantasy RAG Collection — dense + BM25 hybrid search",
+        )
+
+        collection = Collection(
+            name=self.collection_name,
+            schema=schema,
+            consistency_level="Strong",
+        )
+
+        # HNSW — max quality: M=64 (graph connections), efConstruction=512 (build depth)
+        collection.create_index(
+            field_name="embedding",
+            index_params={
+                "metric_type": "COSINE",
+                "index_type": "HNSW",
+                "params": {"M": 64, "efConstruction": 512},
+            },
+        )
+        log.info("hnsw_index_created", field="embedding", M=64, efConstruction=512)
+
+        # Sparse inverted index for BM25 full-text search
+        collection.create_index(
+            field_name="text_sparse",
+            index_params={
+                "metric_type": "BM25",
+                "index_type": "SPARSE_INVERTED_INDEX",
+                "params": {"bm25_k1": 1.5, "bm25_b": 0.75},
+            },
+        )
+        log.info("bm25_index_created", field="text_sparse")
+
+        # Zilliz Serverless auto-loads on first query — explicit load() not supported
         return collection
 
-    def insert_documents(self, documents: List[Dict[str, Any]]) -> Any:
-        """
-        Insert processed documents into Milvus.
+    def insert_documents(self, documents: list[dict[str, Any]]) -> Any:
+        """Insert a batch of documents. text_sparse is NOT included — BM25 fills it.
 
         Args:
-            documents: List of dictionaries matching the schema.
-                       Expected keys: embedding, text, universe, book_title, chapter.
+            documents: List of dicts with keys: embedding, text, chunk_id, series,
+                       universe, book_title, chapter_number, chapter_title.
 
         Returns:
-            MutationResult: Result of the insertion operation.
-
-        Raises:
-            Exception: If insertion fails.
+            MutationResult from Milvus.
         """
         collection = Collection(self.collection_name)
-        
-        # Flatten documents to match schema
-        data_rows = []
-        for doc in documents:
-            row = {
-                "embedding": doc.get("embedding"),
-                "text": doc.get("text")[:65535], # Truncate if too long safety check
-                "universe": doc.get("universe", "Unknown"),
-                "book_title": doc.get("book_title", "Unknown"),
-                "chapter": doc.get("chapter", "Unknown")
+
+        data_rows = [
+            {
+                "embedding": doc["embedding"],
+                "text": str(doc.get("text", ""))[:65535],
+                "chunk_id": str(doc.get("chunk_id", "")),
+                "series": str(doc.get("series", "")),
+                "universe": str(doc.get("universe", "")),
+                "book_title": str(doc.get("book_title", "")),
+                "chapter_number": str(doc.get("chapter_number", "")),
+                "chapter_title": str(doc.get("chapter_title", "")),
             }
-            data_rows.append(row)
-            
+            for doc in documents
+        ]
+
         try:
             res = collection.insert(data_rows)
-            # collection.flush() # Heavy operation, use sparsely in loop
-            self.log.info("documents_inserted", count=len(data_rows), ids_count=len(res.primary_keys))
+            self.log.info("documents_inserted", count=len(data_rows),
+                          ids_count=len(res.primary_keys))
             return res
         except Exception as e:
             self.log.error("insert_failed", error=str(e))
-            raise e
+            raise
 
-    def search(self, query_embedding: List[float], top_k: int = 20, universe: Optional[str] = None) -> Any:
-        """
-        Search for relevant documents using vector similarity.
+    def search(
+        self,
+        query_embedding: list[float],
+        top_k: int = 20,
+        universe: Optional[str] = None,
+    ) -> Any:
+        """Dense vector search only (ANN on HNSW index).
 
         Args:
-            query_embedding: The query vector.
-            top_k: Number of results to return.
-            universe: Optional filter by universe.
+            query_embedding: 3072-dim query vector.
+            top_k: Number of results.
+            universe: Optional metadata filter.
 
         Returns:
-            SearchResult: Milvus search results.
+            Milvus SearchResult.
         """
         collection = Collection(self.collection_name)
-        collection.load() # Ensure collection is loaded
-        
-        search_params = {
-            "metric_type": "COSINE", 
-            "params": {}
-        }
-        
-        expr = None
-        if universe:
-            expr = f"universe == '{universe}'"
-            
-        results = collection.search(
-            data=[query_embedding], 
-            anns_field="embedding", 
-            param=search_params, 
-            limit=top_k, 
+        expr = f"universe == '{universe}'" if universe else None
+
+        # ef >= top_k; 512 = maximum recall at query time
+        return collection.search(
+            data=[query_embedding],
+            anns_field="embedding",
+            param={"metric_type": "COSINE", "params": {"ef": 512}},
+            limit=top_k,
             expr=expr,
-            output_fields=["text", "universe", "book_title", "chapter"]
+            output_fields=["text", "chunk_id", "universe", "book_title",
+                           "chapter_number", "chapter_title", "series"],
         )
-        
-        return results
+
+    def hybrid_search(
+        self,
+        query_embedding: list[float],
+        query_text: str,
+        top_k: int = 20,
+        universe: Optional[str] = None,
+        dense_weight: float = 0.7,
+        sparse_weight: float = 0.3,
+    ) -> Any:
+        """Hybrid search: dense HNSW + BM25 sparse, reranked with RRF.
+
+        Args:
+            query_embedding: 3072-dim dense query vector.
+            query_text: Raw query string for BM25 (tokenized server-side).
+            top_k: Final number of results after reranking.
+            universe: Optional metadata filter applied to both legs.
+            dense_weight: RRF weight for the dense leg (default 0.7).
+            sparse_weight: RRF weight for the BM25 leg (default 0.3).
+
+        Returns:
+            Milvus search results after RRF reranking.
+        """
+        collection = Collection(self.collection_name)
+        collection.load()
+
+        expr = f"universe == '{universe}'" if universe else None
+        output_fields = ["text", "chunk_id", "universe", "book_title",
+                         "chapter_number", "chapter_title", "series"]
+
+        dense_req = AnnSearchRequest(
+            data=[query_embedding],
+            anns_field="embedding",
+            param={"metric_type": "COSINE", "params": {"ef": 512}},
+            limit=top_k,
+            expr=expr,
+        )
+
+        sparse_req = AnnSearchRequest(
+            data=[query_text],
+            anns_field="text_sparse",
+            param={"metric_type": "BM25"},
+            limit=top_k,
+            expr=expr,
+        )
+
+        return collection.hybrid_search(
+            reqs=[dense_req, sparse_req],
+            rerank=WeightedRanker(dense_weight, sparse_weight),
+            limit=top_k,
+            output_fields=output_fields,
+        )

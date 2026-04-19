@@ -12,3 +12,10 @@ data/chunks/*
 data/processed_books_claude_200k/*
 data/processed_books_gemini_1m/*
 data/processed_books_gpt_400k/*
+data/dune/*
+data/mistborn/*
+data/booklore.chapter_summaries.json
+data/booklore.chapters_content.json
+.gitignore
+data/chapters_export.csv
+data/chapters_export.json

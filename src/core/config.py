@@ -53,12 +53,16 @@ class Settings(BaseSettings):
     VERSION: str = "0.1.0"
     API_PREFIX: str = "/api/v1"
 
-    # Google Cloud (ONLY LLM PROVIDER)
+    # Google Cloud
     GOOGLE_API_KEY: str = ""
     GEMINI_API_KEY: str = ""
     GOOGLE_GENAI_USE_VERTEXAI: bool = False
     GOOGLE_CLOUD_PROJECT: str = ""
     GOOGLE_CLOUD_LOCATION: str = "us-central1"
+
+    # LiteLLM proxy (alternative embedding backend)
+    LITELLM_BASE_URL: str = "http://localhost:4000"
+    LITELLM_API_KEY: str = ""
 
     # MongoDB Atlas
     MONGODB_URI: str = ""

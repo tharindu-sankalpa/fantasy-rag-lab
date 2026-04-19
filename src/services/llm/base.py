@@ -43,7 +43,8 @@ class ProviderType(str, Enum):
     Provider names are lowercase and match common naming conventions.
     """
 
-    GOOGLE = "google"  # Gemini models via Google Gen AI SDK (Developer API + Vertex AI)
+    GOOGLE = "google"    # Gemini models via Google Gen AI SDK (Developer API + Vertex AI)
+    LITELLM = "litellm"  # Any model routed through a LiteLLM proxy (OpenAI-compatible REST)
 
 
 class EndpointType(str, Enum):

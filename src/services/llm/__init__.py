@@ -1,8 +1,8 @@
 """
-Unified LLM service package (Google-only).
+Unified LLM service package.
 
 This package provides a production-grade LLM service using Google's Gemini models
-via both the Developer API and Vertex AI.
+via the Developer API, Vertex AI, or a LiteLLM proxy.
 
 Architecture:
 - Thin abstractions tailored to actual use cases (not over-engineered)
@@ -55,21 +55,20 @@ from .base import (
     EndpointType,
 )
 
-# Google provider (for advanced use cases where direct access is needed)
+# Provider implementations
 from .google_provider import GoogleProvider
+from .litellm_provider import LiteLLMProvider
 
 # Define public API
 __all__ = [
-    # Main service (most users only need this)
     "UnifiedLLMService",
-    # Base classes and types
     "BaseLLMProvider",
     "GenerationResponse",
     "UsageMetrics",
     "ProviderType",
     "EndpointType",
-    # Google provider (for advanced use)
     "GoogleProvider",
+    "LiteLLMProvider",
 ]
 
 # Package metadata

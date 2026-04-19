@@ -281,12 +281,13 @@ async def _save_rag_chunks_to_mongodb(
 async def ingest(
     directory: str,
     universe: str,
-    embedding_model: str = "gemini-embedding-001",
+    embedding_model: str = "gemini-embedding-2-preview",
     batch_size: int = 50,
     dry_run: bool = False,
     output: Optional[str] = None,
     use_mongodb_cache: bool = False,
     save_to_mongodb: bool = False,
+    recursive: bool = False,
 ) -> None:
     """Main ingestion function to process, embed, and store fantasy books.
 
@@ -299,6 +300,8 @@ async def ingest(
         output: File path to save dry-run analysis output.
         use_mongodb_cache: If True, use MongoDB for embedding cache.
         save_to_mongodb: If True, save RAG chunks to MongoDB.
+        recursive: If True, walk one level of subdirectories (for Dune's
+                   nested sub-series layout).
     """
     log = logger.bind(
         task="ingestion",
@@ -343,7 +346,7 @@ async def ingest(
 
     # Process books
     processor = FantasyBookProcessor(universe=universe)
-    docs = processor.process_series(directory)
+    docs = processor.process_series(directory, recursive=recursive)
 
     if not docs:
         log.warning("no_documents_found", directory=directory)
@@ -411,9 +414,12 @@ async def ingest(
                 data = {
                     "text": doc.page_content,
                     "embedding": emb,
-                    "universe": doc.metadata.get("universe"),
-                    "book_title": doc.metadata.get("book_name"),
-                    "chapter": f"{doc.metadata.get('chapter_number')} - {doc.metadata.get('chapter_title')}",
+                    "chunk_id": "",
+                    "series": universe.lower().replace(" ", "_"),
+                    "universe": doc.metadata.get("universe", ""),
+                    "book_title": doc.metadata.get("book_name", ""),
+                    "chapter_number": doc.metadata.get("chapter_number", ""),
+                    "chapter_title": doc.metadata.get("chapter_title", ""),
                 }
                 insert_data.append(data)
 
@@ -441,6 +447,14 @@ Examples:
   uv run python -m src.etl.rag_ingestion.ingest \\
       --dir data/harry_potter --universe "Harry Potter" --dry-run
 
+  # A Song of Ice and Fire
+  uv run python -m src.etl.rag_ingestion.ingest \\
+      --dir data/song_of_ice_and_fire --universe "Song of Ice and Fire" --mongodb
+
+  # Dune (nested sub-series directories — requires --recursive)
+  uv run python -m src.etl.rag_ingestion.ingest \\
+      --dir data/dune --universe "Dune" --mongodb --recursive
+
   # Save RAG chunks to MongoDB
   uv run python -m src.etl.rag_ingestion.ingest \\
       --dir data/wheel_of_time --universe "Wheel of Time" --mongodb --dry-run
@@ -460,8 +474,8 @@ Examples:
     )
     parser.add_argument(
         "--embedding-model",
-        default="gemini-embedding-001",
-        help="Google embedding model to use (default: gemini-embedding-001)",
+        default="gemini-embedding-2-preview",
+        help="Google embedding model to use (default: gemini-embedding-2-preview)",
     )
     parser.add_argument(
         "--batch-size",
@@ -487,6 +501,15 @@ Examples:
         action="store_true",
         help="Save RAG chunks to MongoDB (rag_chunks collection)",
     )
+    parser.add_argument(
+        "--recursive",
+        action="store_true",
+        help=(
+            "Walk one level of subdirectories. "
+            "Required for Dune's nested sub-series layout. "
+            "Sets book_name to '<subdir>_<filename>.epub' in metadata."
+        ),
+    )
 
     args = parser.parse_args()
 
@@ -500,6 +523,7 @@ Examples:
             output=args.output,
             use_mongodb_cache=args.mongodb_cache,
             save_to_mongodb=args.mongodb,
+            recursive=args.recursive,
         )
     )
 
